@@ -47,8 +47,8 @@ FEEDS = [
 
 MAX_BYTES = 2_000_000
 TIMEOUT = 10
-MAX_ITEMS_PER_FEED = 4
-MAX_TOTAL = 7
+MAX_ITEMS_PER_FEED = 10
+ARCHIVE_MAX = 60
 SUMMARY_MAX = 200
 
 TAG_RE = re.compile(r"<[^>]+>")
@@ -143,34 +143,54 @@ def parse_feed(xml_bytes, category, avatar, host):
     return items
 
 
+def sort_key(it):
+    # proper RFC 822 date parsing -- raw pubDate strings start with a weekday
+    # name, so naive string comparison would sort wrong
+    try:
+        parsed = parsedate_tz(it.get("pubDate", ""))
+        return mktime_tz(parsed) if parsed else 0
+    except (TypeError, ValueError):
+        return 0
+
+
 def main():
-    all_items = []
+    new_items = []
     for feed in FEEDS:
         try:
             raw = fetch(feed["url"])
             host = urlparse(feed["url"]).hostname
-            all_items.extend(parse_feed(raw, feed["category"], feed["avatar"], host))
+            new_items.extend(parse_feed(raw, feed["category"], feed["avatar"], host))
         except Exception as e:
             print(f"warning: failed to fetch {feed['url']}: {e}")
 
-    # recency sort using proper RFC 822 date parsing (raw pubDate strings start
-    # with a weekday name, so naive string comparison sorts wrong)
-    def sort_key(it):
-        try:
-            parsed = parsedate_tz(it.get("pubDate", ""))
-            return mktime_tz(parsed) if parsed else 0
-        except (TypeError, ValueError):
-            return 0
-
-    all_items.sort(key=sort_key, reverse=True)
-    all_items = all_items[:MAX_TOTAL]
-
-    for it in all_items:
+    # resolve fallback images only for this run's freshly-fetched items, so
+    # the per-run network cost stays bounded no matter how large the archive
+    # of previously-seen items grows over time
+    for it in new_items:
         host = it.pop("_host", None)
         if "image" not in it and host:
             image = fetch_article_image(it["link"], host)
             if image:
                 it["image"] = image
+
+    # merge with the existing archive (this script runs every few hours via
+    # GitHub Actions, and each RSS feed only ever exposes its most recent
+    # ~10 items -- accumulating across runs, deduplicated by link, is what
+    # builds real multi-day history for the site's news archive)
+    existing_items = []
+    try:
+        with open("news.json", "r", encoding="utf-8") as f:
+            existing_items = json.load(f).get("items", [])
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
+
+    by_link = {it["link"]: it for it in existing_items}
+    for it in new_items:
+        by_link[it["link"]] = it
+    all_items = list(by_link.values())
+
+    all_items.sort(key=sort_key, reverse=True)
+    all_items = all_items[:ARCHIVE_MAX]
 
     output = {
         "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
@@ -180,7 +200,7 @@ def main():
     with open("news.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"wrote {len(all_items)} items to news.json")
+    print(f"wrote {len(all_items)} items to news.json ({len(new_items)} fetched this run)")
 
 
 if __name__ == "__main__":

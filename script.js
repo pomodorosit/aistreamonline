@@ -127,6 +127,95 @@ function populateFeaturedHero(item) {
   }
 }
 
+function groupByDay(items) {
+  const groups = [];
+  let currentKey = null;
+  let currentGroup = null;
+
+  items.forEach((item) => {
+    const d = new Date(item.pubDate);
+    const key = isNaN(d.getTime()) ? 'Earlier' : d.toDateString();
+    if (key !== currentKey) {
+      currentKey = key;
+      currentGroup = { label: isNaN(d.getTime()) ? 'Earlier' : d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }), items: [] };
+      groups.push(currentGroup);
+    }
+    currentGroup.items.push(item);
+  });
+
+  return groups;
+}
+
+function buildArchiveRow(item) {
+  const row = document.createElement('article');
+  row.className = 'archive-row';
+
+  if (item.image && isSafeHttpUrl(item.image)) {
+    const thumb = document.createElement('img');
+    thumb.className = 'archive-thumb';
+    thumb.src = item.image;
+    thumb.alt = '';
+    thumb.loading = 'lazy';
+    row.appendChild(thumb);
+  } else if (item.avatar && /^[\w-]+\.png$/.test(item.avatar)) {
+    const avatar = document.createElement('img');
+    avatar.className = 'archive-thumb archive-thumb-avatar';
+    avatar.src = item.avatar;
+    avatar.alt = '';
+    row.appendChild(avatar);
+  }
+
+  const body = document.createElement('div');
+  body.className = 'archive-row-body';
+
+  const meta = document.createElement('div');
+  meta.className = 'archive-row-meta';
+  const cat = document.createElement('span');
+  cat.className = 'archive-category';
+  cat.textContent = item.category || 'News';
+  meta.appendChild(cat);
+  const time = document.createElement('span');
+  time.textContent = formatNewsDate(item.pubDate);
+  meta.appendChild(time);
+  body.appendChild(meta);
+
+  const h4 = document.createElement('h4');
+  const link = document.createElement('a');
+  link.textContent = item.title || '';
+  if (isSafeHttpUrl(item.link)) {
+    link.href = item.link;
+    link.rel = 'noopener noreferrer nofollow';
+    link.target = '_blank';
+  } else {
+    link.href = '#';
+  }
+  h4.appendChild(link);
+  body.appendChild(h4);
+
+  row.appendChild(body);
+  return row;
+}
+
+function initNewsArchive(items) {
+  const container = document.getElementById('news-archive');
+  if (!container || items.length === 0) return;
+
+  container.innerHTML = '';
+  groupByDay(items).forEach((group) => {
+    const heading = document.createElement('h3');
+    heading.className = 'archive-day-heading';
+    heading.textContent = group.label;
+    container.appendChild(heading);
+
+    const list = document.createElement('div');
+    list.className = 'archive-day-list';
+    group.items.forEach((item) => {
+      list.appendChild(buildArchiveRow(item));
+    });
+    container.appendChild(list);
+  });
+}
+
 function initLiveNews() {
   const grid = document.getElementById('news-grid');
   if (!grid) return;
@@ -142,12 +231,15 @@ function initLiveNews() {
 
       populateFeaturedHero(items[0]);
 
-      const rest = items.slice(1);
-      if (rest.length === 0) return;
-      grid.innerHTML = '';
-      rest.forEach((item) => {
-        grid.appendChild(buildNewsCard(item, false));
-      });
+      const rest = items.slice(1, 7);
+      if (rest.length > 0) {
+        grid.innerHTML = '';
+        rest.forEach((item) => {
+          grid.appendChild(buildNewsCard(item, false));
+        });
+      }
+
+      initNewsArchive(items.slice(7));
     })
     .catch(() => {
       // network/parse failure: silently keep the static placeholder cards
