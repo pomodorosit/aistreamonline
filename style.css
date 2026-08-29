@@ -1240,3 +1240,57 @@ img { max-width: 100%; display: block; }
   color: var(--gold);
   text-decoration: underline;
 }
+
+/* ---------- AI intelligence layer (impact badges, why-it-matters) ---------- */
+
+.impact-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid;
+}
+
+.news-thumb .impact-badge {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+}
+
+.impact-low { color: var(--ink-faint); border-color: var(--line-strong); background: rgba(20, 12, 38, 0.6); }
+.impact-medium { color: var(--gold); border-color: var(--gold-dim); background: rgba(20, 12, 38, 0.6); }
+.impact-high { color: var(--coral); border-color: var(--coral-dim); background: rgba(20, 12, 38, 0.6); }
+.impact-critical { color: #fff; border-color: var(--coral); background: var(--coral); }
+
+.archive-row-meta .impact-badge {
+  padding: 2px 8px;
+}
+
+.ai-analysis {
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border-left: 2px solid var(--gold-dim);
+  background: rgba(230, 206, 142, 0.06);
+}
+
+.ai-analysis-label {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.ai-analysis p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.5;
+}

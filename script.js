@@ -110,6 +110,30 @@ function isSafeHttpUrl(url) {
   }
 }
 
+function buildImpactBadge(impactLevel) {
+  if (!impactLevel) return null;
+  const known = ['Low', 'Medium', 'High', 'Critical'];
+  if (!known.includes(impactLevel)) return null;
+  const badge = document.createElement('span');
+  badge.className = 'impact-badge impact-' + impactLevel.toLowerCase();
+  badge.textContent = impactLevel;
+  return badge;
+}
+
+function buildWhyItMatters(analysis) {
+  if (!analysis || !analysis.whyItMatters) return null;
+  const box = document.createElement('div');
+  box.className = 'ai-analysis';
+  const label = document.createElement('span');
+  label.className = 'ai-analysis-label';
+  label.textContent = 'AI ANALYSIS — Why it matters';
+  box.appendChild(label);
+  const text = document.createElement('p');
+  text.textContent = analysis.whyItMatters;
+  box.appendChild(text);
+  return box;
+}
+
 function buildNewsCard(item, isFeatured) {
   const card = document.createElement('article');
   card.className = 'news-card' + (isFeatured ? ' featured' : '');
@@ -128,6 +152,8 @@ function buildNewsCard(item, isFeatured) {
   }
   tag.appendChild(document.createTextNode(item.category || 'News'));
 
+  const impactBadge = buildImpactBadge(item.aiAnalysis && item.aiAnalysis.impactLevel);
+
   if (hasImage) {
     card.classList.add('has-thumb');
     const thumbWrap = document.createElement('div');
@@ -138,6 +164,7 @@ function buildNewsCard(item, isFeatured) {
     thumb.loading = 'lazy';
     thumbWrap.appendChild(thumb);
     thumbWrap.appendChild(tag);
+    if (impactBadge) thumbWrap.appendChild(impactBadge);
     card.appendChild(thumbWrap);
   }
 
@@ -147,6 +174,7 @@ function buildNewsCard(item, isFeatured) {
 
   if (!hasImage) {
     body.appendChild(tag);
+    if (impactBadge) body.appendChild(impactBadge);
   }
 
   const h3 = document.createElement('h3');
@@ -156,6 +184,9 @@ function buildNewsCard(item, isFeatured) {
   const p = document.createElement('p');
   p.textContent = item.summary || '';
   body.appendChild(p);
+
+  const whyItMatters = buildWhyItMatters(item.aiAnalysis);
+  if (whyItMatters) body.appendChild(whyItMatters);
 
   const meta = document.createElement('div');
   meta.className = 'news-meta';
@@ -249,6 +280,8 @@ function buildArchiveRow(item) {
   cat.className = 'archive-category';
   cat.textContent = item.category || 'News';
   meta.appendChild(cat);
+  const rowBadge = buildImpactBadge(item.aiAnalysis && item.aiAnalysis.impactLevel);
+  if (rowBadge) meta.appendChild(rowBadge);
   const time = document.createElement('span');
   time.textContent = formatNewsDate(item.pubDate);
   meta.appendChild(time);
