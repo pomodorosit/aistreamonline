@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-08-29T16:41:13Z",
+  "items": [
+    {
+      "title": "Nvidia’s AI advantage is moving beyond the GPU",
+      "link": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+      "pubDate": "Sat, 29 Aug 2026 13:00:00 +0000",
+      "summary": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png"
+    },
+    {
+      "title": "Neocloud Lambda secures $1B in debt to buy more chips",
+      "link": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/",
+      "pubDate": "Fri, 28 Aug 2026 20:24:11 +0000",
+      "summary": "Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft. It's the latest in a string of loans, underscoring the high cost of the AI boom.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png"
+    },
+    {
+      "title": "An Anthropic researcher just gave us a peek at self-improving AI",
+      "link": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
+      "pubDate": "Fri, 28 Aug 2026 19:30:38 +0000",
+      "summary": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png"
+    },
+    {
+      "title": "Open-weight AI companies are the Valley’s hottest acquisition targets",
+      "link": "https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/",
+      "pubDate": "Fri, 28 Aug 2026 18:19:40 +0000",
+      "summary": "There's a lot of capital pouring into the business of giving models away.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png"
+    },
+    {
+      "title": "Enterprise AI's real risk isn't autonomous agents. It's the complexity between them.",
+      "link": "https://venturebeat.com/ai/enterprise-ais-real-risk-isnt-autonomous-agents-its-the-complexity-between-them",
+      "pubDate": "Thu, 27 Aug 2026 14:01:00 GMT",
+      "summary": "Presented by Gravitee Agent complexity is the insidious shadow lurking inside enterprises right now that needs a light shone on it. That’s because enterprises don't deploy a single agent and watch it...",
+      "category": "Business",
+      "avatar": "char-woman-head.png"
+    },
+    {
+      "title": "When agents act on their own, governance has to live in the data layer",
+      "link": "https://venturebeat.com/security/when-agents-act-on-their-own-governance-has-to-live-in-the-data-layer",
+      "pubDate": "Thu, 27 Aug 2026 12:01:00 GMT",
+      "summary": "Presented by EDB As enterprises give AI agents more autonomy — the ability to plan, decide, and act across systems without a human approving each step — a hard question moves to the center of every...",
+      "category": "Business",
+      "avatar": "char-woman-head.png"
+    }
+  ]
+}
