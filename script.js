@@ -18,7 +18,82 @@ document.addEventListener('DOMContentLoaded', () => {
   initVerdict();
   initLiveNews();
   initStockTicker();
+  initAnalyticsConsent();
+  initNewsletterForm();
 });
+
+function initNewsletterForm() {
+  const form = document.getElementById('newsletter-form');
+  const status = document.getElementById('newsletter-status');
+  if (!form || !status) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    status.textContent = 'Sending…';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' },
+    })
+      .then((res) => {
+        if (res.ok) {
+          status.textContent = "Thanks — you're subscribed!";
+          form.reset();
+        } else {
+          status.textContent = 'Something went wrong. Please try again.';
+        }
+      })
+      .catch(() => {
+        status.textContent = 'Something went wrong. Please try again.';
+      });
+  });
+}
+
+const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // replace with your real ID from analytics.google.com
+const CONSENT_KEY = 'aistream_cookie_consent';
+
+function loadGoogleAnalytics() {
+  if (window.gaLoaded || GA_MEASUREMENT_ID.includes('XXXX')) return;
+  window.gaLoaded = true;
+
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', GA_MEASUREMENT_ID, { anonymize_ip: true });
+}
+
+function initAnalyticsConsent() {
+  const banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+
+  const stored = localStorage.getItem(CONSENT_KEY);
+  if (stored === 'accepted') {
+    loadGoogleAnalytics();
+    return;
+  }
+  if (stored === 'rejected') {
+    return;
+  }
+
+  banner.classList.add('visible');
+
+  document.getElementById('cookie-accept').addEventListener('click', () => {
+    localStorage.setItem(CONSENT_KEY, 'accepted');
+    banner.classList.remove('visible');
+    loadGoogleAnalytics();
+  });
+
+  document.getElementById('cookie-reject').addEventListener('click', () => {
+    localStorage.setItem(CONSENT_KEY, 'rejected');
+    banner.classList.remove('visible');
+  });
+}
 
 function formatNewsDate(pubDate) {
   const d = new Date(pubDate);
