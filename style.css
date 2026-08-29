@@ -727,41 +727,20 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
-.stream-thumb {
+.stream-video {
   aspect-ratio: 16/9;
   background: var(--bg-alt-2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-bottom: 1px solid var(--line);
 }
 
-.play-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  border: 1px solid var(--gold-dim);
-  color: var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  opacity: 0.7;
+.stream-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 .stream-info { padding: 22px; }
-
-.stream-badge {
-  display: inline-block;
-  color: var(--ink-faint);
-  font-size: 9px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  padding: 4px 11px;
-  margin-bottom: 14px;
-}
 
 .stream-info h3 { font-size: 17px; margin-bottom: 5px; text-transform: none; letter-spacing: 0; }
 .stream-info p { color: var(--ink-faint); font-size: 13px; margin: 0; font-weight: 300; }
