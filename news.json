@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-08-29T18:28:14Z",
+  "generatedAt": "2026-08-29T18:48:54Z",
   "items": [
+    {
+      "title": "Sony Music, Warner sue Anthropic, alleging a “brazen campaign” of intellectual property theft",
+      "link": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
+      "pubDate": "Sat, 29 Aug 2026 18:41:59 +0000",
+      "summary": "This latest lawsuit is particularly broad and homes in on accusations of illegal piracy.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png"
+    },
     {
       "title": "“We’re not doing 30 bets a year”: Vijay Pande on betting small after running $4 billion at a16z",
       "link": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/",
@@ -26,20 +34,13 @@
       "avatar": "char-robot-head.png"
     },
     {
-      "title": "An Anthropic researcher just gave us a peek at self-improving AI",
-      "link": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
-      "pubDate": "Fri, 28 Aug 2026 19:30:38 +0000",
-      "summary": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png"
-    },
-    {
       "title": "Enterprise AI's real risk isn't autonomous agents. It's the complexity between them.",
       "link": "https://venturebeat.com/ai/enterprise-ais-real-risk-isnt-autonomous-agents-its-the-complexity-between-them",
       "pubDate": "Thu, 27 Aug 2026 14:01:00 GMT",
       "summary": "Presented by Gravitee Agent complexity is the insidious shadow lurking inside enterprises right now that needs a light shone on it. That’s because enterprises don't deploy a single agent and watch it...",
       "category": "Business",
-      "avatar": "char-woman-head.png"
+      "avatar": "char-woman-head.png",
+      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/5ScHW6mZ2rQr3EvsxrwooK/43df8725b6e12cd4bcf550bb7b3b1cb4/Gravitee_hero.jpg?w=300&q=30"
     },
     {
       "title": "When agents act on their own, governance has to live in the data layer",
@@ -47,7 +48,8 @@
       "pubDate": "Thu, 27 Aug 2026 12:01:00 GMT",
       "summary": "Presented by EDB As enterprises give AI agents more autonomy — the ability to plan, decide, and act across systems without a human approving each step — a hard question moves to the center of every...",
       "category": "Business",
-      "avatar": "char-woman-head.png"
+      "avatar": "char-woman-head.png",
+      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/9VRh8KJhBqcFviSV8ClXc/feea8ec8fe76ffa0bc5cdb3dd95e1492/EDB_hero.jpeg?w=300&q=30"
     }
   ]
 }
