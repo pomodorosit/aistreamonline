@@ -12,10 +12,15 @@ Security notes:
   JSON. The frontend renders it with textContent (never innerHTML), so even
   if a feed included markup or script-like text, it cannot execute.
 - Only http(s) links are kept; anything else is dropped.
-- Per-article images (when a feed provides an <enclosure> tag) are only kept
-  if they are http(s) and end in a known image extension; everything else
-  (including any HTML in feed content) is never treated as an image source,
-  so ad banners embedded in article bodies can't leak in as "article images".
+- Per-article images come from either the feed's <enclosure> tag, or (as a
+  fallback) the article page's own <meta property="og:image"> tag. Article
+  pages are only ever fetched at a link taken from that same feed's <link>,
+  and only if its host matches the feed's own domain (checked before any
+  request is made), so this can't be used to make the server fetch arbitrary
+  attacker-supplied URLs. Fetched HTML is only scanned with a narrow regex
+  for one specific meta tag's content attribute -- never parsed as markup or
+  rendered -- and the extracted value still has to pass the same http(s)
+  URL check as every other image source before it's trusted.
 """
 
 import json
@@ -26,6 +31,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from email.utils import mktime_tz, parsedate_tz
 from html import unescape
+from urllib.parse import urlparse
 
 try:
     import certifi
@@ -50,12 +56,34 @@ WS_RE = re.compile(r"\s+")
 IMAGE_EXT_RE = re.compile(r"\.(jpe?g|png|webp|gif)(\?|$)", re.IGNORECASE)
 
 
-def safe_image_url(url):
+def safe_image_url(url, require_extension=True):
     if not url or not (url.startswith("https://") or url.startswith("http://")):
         return None
-    if not IMAGE_EXT_RE.search(url):
+    if require_extension and not IMAGE_EXT_RE.search(url):
         return None
     return url
+
+
+OG_IMAGE_RE = re.compile(
+    r'<meta[^>]+property=["\'](?:og:image(?::secure_url)?|twitter:image)["\'][^>]+content=["\']([^"\']+)["\']',
+    re.IGNORECASE,
+)
+
+
+def fetch_article_image(link, allowed_host):
+    parsed = urlparse(link)
+    if parsed.scheme != "https" or parsed.hostname != allowed_host:
+        return None
+    try:
+        req = urllib.request.Request(link, headers={"User-Agent": "AIStreamOnlineFetcher/1.0"})
+        with urllib.request.urlopen(req, timeout=TIMEOUT, context=SSL_CONTEXT) as resp:
+            html = resp.read(400_000).decode("utf-8", errors="ignore")
+    except Exception:
+        return None
+    m = OG_IMAGE_RE.search(html)
+    if not m:
+        return None
+    return safe_image_url(unescape(m.group(1)), require_extension=False)
 
 
 def strip_html(text):
@@ -76,7 +104,7 @@ def fetch(url):
         return data
 
 
-def parse_feed(xml_bytes, category, avatar):
+def parse_feed(xml_bytes, category, avatar, host):
     items = []
     try:
         root = ET.fromstring(xml_bytes)
@@ -107,6 +135,7 @@ def parse_feed(xml_bytes, category, avatar):
             "summary": desc,
             "category": category,
             "avatar": avatar,
+            "_host": host,
         }
         if image:
             entry["image"] = image
@@ -119,7 +148,8 @@ def main():
     for feed in FEEDS:
         try:
             raw = fetch(feed["url"])
-            all_items.extend(parse_feed(raw, feed["category"], feed["avatar"]))
+            host = urlparse(feed["url"]).hostname
+            all_items.extend(parse_feed(raw, feed["category"], feed["avatar"], host))
         except Exception as e:
             print(f"warning: failed to fetch {feed['url']}: {e}")
 
@@ -134,6 +164,13 @@ def main():
 
     all_items.sort(key=sort_key, reverse=True)
     all_items = all_items[:MAX_TOTAL]
+
+    for it in all_items:
+        host = it.pop("_host", None)
+        if "image" not in it and host:
+            image = fetch_article_image(it["link"], host)
+            if image:
+                it["image"] = image
 
     output = {
         "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),

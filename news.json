@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T18:48:54Z",
+  "generatedAt": "2026-08-29T18:57:42Z",
   "items": [
     {
       "title": "Sony Music, Warner sue Anthropic, alleging a “brazen campaign” of intellectual property theft",
@@ -7,7 +7,8 @@
       "pubDate": "Sat, 29 Aug 2026 18:41:59 +0000",
       "summary": "This latest lawsuit is particularly broad and homes in on accusations of illegal piracy.",
       "category": "Technology",
-      "avatar": "char-robot-head.png"
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/03/Dario-Amodei-Anthropic-1.jpg?w=1024"
     },
     {
       "title": "“We’re not doing 30 bets a year”: Vijay Pande on betting small after running $4 billion at a16z",
@@ -15,7 +16,8 @@
       "pubDate": "Sat, 29 Aug 2026 17:36:47 +0000",
       "summary": "Vijay Pande — who left a16z's roughly $4 billion biotech practice last year to start the much smaller, AI-native VZVC — talks about why biology is finally shifting from a \"discovery\" science to an...",
       "category": "Technology",
-      "avatar": "char-robot-head.png"
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/Vijay-Pande.png?resize=1200,800"
     },
     {
       "title": "Nvidia’s AI advantage is moving beyond the GPU",
@@ -23,7 +25,8 @@
       "pubDate": "Sat, 29 Aug 2026 13:00:00 +0000",
       "summary": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.",
       "category": "Technology",
-      "avatar": "char-robot-head.png"
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/jense-nvidi-chip-GettyImages-2266485392.jpg?resize=1200,800"
     },
     {
       "title": "Neocloud Lambda secures $1B in debt to buy more chips",
@@ -31,7 +34,8 @@
       "pubDate": "Fri, 28 Aug 2026 20:24:11 +0000",
       "summary": "Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft. It's the latest in a string of loans, underscoring the high cost of the AI boom.",
       "category": "Technology",
-      "avatar": "char-robot-head.png"
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/06/Chip-chips-dollar-signs-money.png?resize=1200,960"
     },
     {
       "title": "Enterprise AI's real risk isn't autonomous agents. It's the complexity between them.",

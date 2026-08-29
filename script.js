@@ -38,22 +38,7 @@ function buildNewsCard(item, isFeatured) {
   const card = document.createElement('article');
   card.className = 'news-card' + (isFeatured ? ' featured' : '');
 
-  const hasImage = item.image && isSafeHttpUrl(item.image) && /\.(jpe?g|png|webp|gif)(\?|$)/i.test(item.image);
-  if (hasImage) {
-    card.classList.add('has-thumb');
-    const thumbWrap = document.createElement('div');
-    thumbWrap.className = 'news-thumb';
-    const thumb = document.createElement('img');
-    thumb.src = item.image;
-    thumb.alt = '';
-    thumb.loading = 'lazy';
-    thumbWrap.appendChild(thumb);
-    card.appendChild(thumbWrap);
-  }
-
-  const body = document.createElement('div');
-  body.className = 'news-card-body';
-  card.appendChild(body);
+  const hasImage = item.image && isSafeHttpUrl(item.image);
 
   const tag = document.createElement('span');
   tag.className = 'news-tag';
@@ -66,7 +51,27 @@ function buildNewsCard(item, isFeatured) {
     tag.appendChild(img);
   }
   tag.appendChild(document.createTextNode(item.category || 'News'));
-  body.appendChild(tag);
+
+  if (hasImage) {
+    card.classList.add('has-thumb');
+    const thumbWrap = document.createElement('div');
+    thumbWrap.className = 'news-thumb';
+    const thumb = document.createElement('img');
+    thumb.src = item.image;
+    thumb.alt = '';
+    thumb.loading = 'lazy';
+    thumbWrap.appendChild(thumb);
+    thumbWrap.appendChild(tag);
+    card.appendChild(thumbWrap);
+  }
+
+  const body = document.createElement('div');
+  body.className = 'news-card-body';
+  card.appendChild(body);
+
+  if (!hasImage) {
+    body.appendChild(tag);
+  }
 
   const h3 = document.createElement('h3');
   h3.textContent = item.title || '';
