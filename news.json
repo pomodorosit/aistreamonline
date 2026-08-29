@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T18:57:42Z",
+  "generatedAt": "2026-08-29T19:14:35Z",
   "items": [
     {
       "title": "Sony Music, Warner sue Anthropic, alleging a “brazen campaign” of intellectual property theft",
@@ -54,6 +54,15 @@
       "category": "Business",
       "avatar": "char-woman-head.png",
       "image": "https://images.ctfassets.net/jdtwqhzvc2n1/9VRh8KJhBqcFviSV8ClXc/feea8ec8fe76ffa0bc5cdb3dd95e1492/EDB_hero.jpeg?w=300&q=30"
+    },
+    {
+      "title": "A quarter of Nvidia’s business next year comes from labs it is financing",
+      "link": "https://www.artificialintelligence-news.com/news/nvidia-circular-financing-ai-labs/",
+      "pubDate": "Thu, 27 Aug 2026 10:00:00 +0000",
+      "summary": "Nvidia has put nearly US$50 billion into the AI labs that buy its chips, and has lined up commitments for more than $500 billion Colette Kress, the company’s chief financial officer, told analysts on...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/voyager-exterior-sign-2-scaled.jpg"
     }
   ]
 }

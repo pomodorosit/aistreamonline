@@ -192,6 +192,63 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
 }
 
+/* ---------- featured story hero ---------- */
+
+.featured-hero {
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-height: 560px;
+  padding-top: 160px;
+  padding-bottom: 56px;
+}
+
+.featured-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.featured-hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 12, 38, 0.35) 0%, rgba(20, 12, 38, 0.75) 55%, var(--bg) 100%);
+}
+
+.featured-hero .hero-inner {
+  text-align: left;
+  max-width: 680px;
+  margin: 0;
+}
+
+.featured-hero .hero-tag {
+  margin-bottom: 18px;
+}
+
+.featured-hero .hero-title {
+  text-transform: none;
+  font-size: clamp(28px, 3.6vw, 44px);
+  letter-spacing: -0.5px;
+}
+
+.featured-hero .hero-sub {
+  margin: 20px 0 34px;
+  max-width: 560px;
+}
+
+.featured-hero .hero-cta {
+  justify-content: flex-start;
+}
+
+@media (max-width: 640px) {
+  .featured-hero {
+    min-height: 460px;
+    padding-top: 120px;
+  }
+}
+
 .btn {
   display: inline-block;
   padding: 15px 34px;
@@ -678,4 +735,165 @@ img { max-width: 100%; display: block; }
   .news-grid, .streams-grid { grid-template-columns: 1fr; }
   .news-card.featured { grid-column: span 1; }
   .footer-inner { flex-direction: column; text-align: center; }
+}
+
+/* ---------- stock ticker ---------- */
+
+.stock-ticker {
+  background: var(--bg-alt-2);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.stock-ticker-track {
+  display: inline-flex;
+  align-items: center;
+  animation: ticker-scroll 45s linear infinite;
+  padding: 9px 0;
+}
+
+.stock-ticker:hover .stock-ticker-track {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px;
+  border-right: 1px solid var(--line);
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+.ticker-symbol {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.ticker-price {
+  color: var(--ink-soft);
+}
+
+.ticker-up { color: var(--jade); }
+.ticker-down { color: var(--coral); }
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stock-ticker-track { animation: none; }
+}
+
+/* ---------- AI leadership strip ---------- */
+
+.leadership-strip {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+}
+
+.leadership-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.leadership-map {
+  width: 110px;
+  height: 55px;
+  flex-shrink: 0;
+}
+
+.leadership-land {
+  fill: var(--ink-faint);
+  opacity: 0.35;
+}
+
+.leadership-marker {
+  fill: var(--gold);
+}
+
+.leadership-marker-ping {
+  fill: var(--gold);
+  opacity: 0.5;
+  transform-origin: 32px 30px;
+  animation: leadership-ping 2s ease-out infinite;
+}
+
+@keyframes leadership-ping {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+.leadership-eyebrow {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.leadership-lead {
+  color: var(--ink);
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.leadership-rest {
+  color: var(--ink-faint);
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .leadership-map { display: none; }
+}
+
+/* ---------- top AI platforms ---------- */
+
+.platforms-section { background: var(--bg-alt); }
+
+.platforms-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 40px;
+}
+
+.platforms-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.platform-rank {
+  font-family: var(--font-display);
+  color: var(--gold-dim);
+  font-size: 20px;
+  flex-shrink: 0;
+  width: 32px;
+}
+
+.platform-name {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 16px;
+  flex: 1;
+}
+
+.platform-maker {
+  color: var(--ink-faint);
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .platforms-list { grid-template-columns: 1fr; }
 }

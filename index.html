@@ -8,10 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=14">
+<link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
 
+
+<div class="stock-ticker" id="stock-ticker" aria-label="AI-related stock prices">
+  <div class="stock-ticker-track" id="stock-ticker-track"></div>
+</div>
 
 <header class="site-header">
   <div class="wrap header-inner">
@@ -24,6 +28,7 @@
     </a>
     <nav class="main-nav">
       <a href="#news">News</a>
+      <a href="#platforms">Platforms</a>
       <a href="#streams">Streams</a>
       <a href="#about">About</a>
     </nav>
@@ -33,36 +38,39 @@
   </div>
 </header>
 
+<section class="leadership-strip">
+  <div class="wrap leadership-inner">
+    <svg class="leadership-map" viewBox="0 0 200 100" aria-hidden="true">
+      <ellipse class="leadership-land" cx="35" cy="35" rx="22" ry="18"></ellipse>
+      <ellipse class="leadership-land" cx="48" cy="72" rx="10" ry="18"></ellipse>
+      <ellipse class="leadership-land" cx="100" cy="28" rx="10" ry="8"></ellipse>
+      <ellipse class="leadership-land" cx="102" cy="56" rx="13" ry="20"></ellipse>
+      <ellipse class="leadership-land" cx="150" cy="35" rx="35" ry="20"></ellipse>
+      <ellipse class="leadership-land" cx="175" cy="76" rx="12" ry="8"></ellipse>
+      <circle class="leadership-marker-ping" cx="32" cy="30" r="6"></circle>
+      <circle class="leadership-marker" cx="32" cy="30" r="3.5"></circle>
+    </svg>
+    <div class="leadership-text">
+      <p class="leadership-eyebrow">Global AI Index</p>
+      <p class="leadership-lead"><strong>United States</strong> leads global AI development</p>
+      <p class="leadership-rest">2. China &nbsp;·&nbsp; 3. Singapore &nbsp;·&nbsp; 4. United Kingdom &nbsp;·&nbsp; 5. South Korea</p>
+    </div>
+  </div>
+</section>
+
 <main id="top">
 
-  <section class="hero">
+  <section class="hero featured-hero" id="featured-hero">
+    <img class="featured-hero-bg" id="featured-hero-bg" alt="" style="display:none">
+    <div class="featured-hero-scrim"></div>
     <div class="wrap hero-inner">
-      <p class="hero-eyebrow">The AI Intelligence Hub</p>
-      <h1 class="hero-title">THE NEWS<br>SHAPING<br>TOMORROW</h1>
-      <p class="hero-sub">Everything that matters in artificial intelligence — in one place, with a look that doesn't compromise. Live streams and exclusive content coming soon.</p>
+      <p class="hero-eyebrow">Top Story</p>
+      <span class="news-tag hero-tag" id="featured-hero-tag">AI News</span>
+      <h1 class="hero-title" id="featured-hero-title">Everything that matters in AI, in one place</h1>
+      <p class="hero-sub" id="featured-hero-sub">Live coverage from TechCrunch, VentureBeat and AI News — refreshed automatically throughout the day.</p>
       <div class="hero-cta">
-        <a href="#news" class="btn btn-gold">Latest News</a>
-        <a href="#streams" class="btn btn-outline">Streams</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="verdict" class="section verdict-section">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Good News or Bad News?</h2>
-        <p class="section-sub">Vote on today's stories — the crowd decides where each one lands</p>
-      </div>
-
-      <div class="verdict-grid">
-        <div class="verdict-column verdict-good">
-          <h3 class="verdict-col-title">Good News</h3>
-          <div class="verdict-list" id="good-list"></div>
-        </div>
-        <div class="verdict-column verdict-bad">
-          <h3 class="verdict-col-title">Bad News</h3>
-          <div class="verdict-list" id="bad-list"></div>
-        </div>
+        <a href="#news" class="btn btn-gold" id="featured-hero-link">Read Full Story</a>
+        <a href="#news" class="btn btn-outline">More News</a>
       </div>
     </div>
   </section>
@@ -128,6 +136,48 @@
     </div>
   </section>
 
+  <section id="verdict" class="section verdict-section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Good News or Bad News?</h2>
+        <p class="section-sub">Vote on today's stories — the crowd decides where each one lands</p>
+      </div>
+
+      <div class="verdict-grid">
+        <div class="verdict-column verdict-good">
+          <h3 class="verdict-col-title">Good News</h3>
+          <div class="verdict-list" id="good-list"></div>
+        </div>
+        <div class="verdict-column verdict-bad">
+          <h3 class="verdict-col-title">Bad News</h3>
+          <div class="verdict-list" id="bad-list"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="platforms" class="section platforms-section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Top 10 AI Platforms</h2>
+        <p class="section-sub">The tools defining this generation of AI — editorial ranking, updated periodically</p>
+      </div>
+
+      <ol class="platforms-list">
+        <li><span class="platform-rank">01</span><span class="platform-name">ChatGPT</span><span class="platform-maker">OpenAI</span></li>
+        <li><span class="platform-rank">02</span><span class="platform-name">Claude</span><span class="platform-maker">Anthropic</span></li>
+        <li><span class="platform-rank">03</span><span class="platform-name">Gemini</span><span class="platform-maker">Google DeepMind</span></li>
+        <li><span class="platform-rank">04</span><span class="platform-name">Copilot</span><span class="platform-maker">Microsoft</span></li>
+        <li><span class="platform-rank">05</span><span class="platform-name">Perplexity</span><span class="platform-maker">Perplexity AI</span></li>
+        <li><span class="platform-rank">06</span><span class="platform-name">Meta AI</span><span class="platform-maker">Meta</span></li>
+        <li><span class="platform-rank">07</span><span class="platform-name">Grok</span><span class="platform-maker">xAI</span></li>
+        <li><span class="platform-rank">08</span><span class="platform-name">Midjourney</span><span class="platform-maker">Midjourney, Inc.</span></li>
+        <li><span class="platform-rank">09</span><span class="platform-name">DeepSeek</span><span class="platform-maker">DeepSeek</span></li>
+        <li><span class="platform-rank">10</span><span class="platform-name">Le Chat</span><span class="platform-maker">Mistral AI</span></li>
+      </ol>
+    </div>
+  </section>
+
   <section id="streams" class="section streams-section">
     <div class="wrap">
       <div class="section-head section-head-light">
@@ -182,6 +232,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<script src="script.js?v=12"></script>
 </body>
 </html>

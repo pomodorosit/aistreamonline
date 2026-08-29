@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initVerdict();
   initLiveNews();
+  initStockTicker();
 });
 
 function formatNewsDate(pubDate) {
@@ -104,6 +105,28 @@ function buildNewsCard(item, isFeatured) {
   return card;
 }
 
+function populateFeaturedHero(item) {
+  const bg = document.getElementById('featured-hero-bg');
+  const tag = document.getElementById('featured-hero-tag');
+  const title = document.getElementById('featured-hero-title');
+  const sub = document.getElementById('featured-hero-sub');
+  const link = document.getElementById('featured-hero-link');
+  if (!bg || !tag || !title || !sub || !link) return;
+
+  if (item.image && isSafeHttpUrl(item.image)) {
+    bg.src = item.image;
+    bg.style.display = 'block';
+  }
+  tag.textContent = item.category || 'AI News';
+  title.textContent = item.title || title.textContent;
+  sub.textContent = item.summary || sub.textContent;
+  if (isSafeHttpUrl(item.link)) {
+    link.href = item.link;
+    link.rel = 'noopener noreferrer nofollow';
+    link.target = '_blank';
+  }
+}
+
 function initLiveNews() {
   const grid = document.getElementById('news-grid');
   if (!grid) return;
@@ -117,14 +140,65 @@ function initLiveNews() {
       const items = Array.isArray(data.items) ? data.items : [];
       if (items.length === 0) return; // keep static fallback cards
 
+      populateFeaturedHero(items[0]);
+
+      const rest = items.slice(1);
+      if (rest.length === 0) return;
       grid.innerHTML = '';
-      items.forEach((item, i) => {
-        grid.appendChild(buildNewsCard(item, i === 0));
+      rest.forEach((item) => {
+        grid.appendChild(buildNewsCard(item, false));
       });
     })
     .catch(() => {
       // network/parse failure: silently keep the static placeholder cards
     });
+}
+
+function initStockTicker() {
+  const track = document.getElementById('stock-ticker-track');
+  if (!track) return;
+
+  fetch('stocks.json', { cache: 'no-store' })
+    .then((res) => {
+      if (!res.ok) throw new Error('stocks.json not available');
+      return res.json();
+    })
+    .then((data) => {
+      const quotes = Array.isArray(data.quotes) ? data.quotes : [];
+      if (quotes.length === 0) return;
+
+      track.innerHTML = '';
+      // duplicate the list so the CSS marquee loop is seamless
+      [...quotes, ...quotes].forEach((q) => {
+        track.appendChild(buildTickerItem(q));
+      });
+    })
+    .catch(() => {
+      // leave the ticker empty on failure rather than showing stale/fake data
+    });
+}
+
+function buildTickerItem(quote) {
+  const item = document.createElement('span');
+  item.className = 'ticker-item';
+
+  const symbol = document.createElement('span');
+  symbol.className = 'ticker-symbol';
+  symbol.textContent = quote.symbol;
+  item.appendChild(symbol);
+
+  const price = document.createElement('span');
+  price.className = 'ticker-price';
+  price.textContent = '$' + Number(quote.price).toFixed(2);
+  item.appendChild(price);
+
+  const change = Number(quote.changePercent);
+  const changeSpan = document.createElement('span');
+  changeSpan.className = 'ticker-change ' + (change >= 0 ? 'ticker-up' : 'ticker-down');
+  changeSpan.textContent = (change >= 0 ? '▲ ' : '▼ ') + Math.abs(change).toFixed(2) + '%';
+  item.appendChild(changeSpan);
+
+  return item;
 }
 
 const VERDICT_ITEMS = [
