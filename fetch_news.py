@@ -12,6 +12,10 @@ Security notes:
   JSON. The frontend renders it with textContent (never innerHTML), so even
   if a feed included markup or script-like text, it cannot execute.
 - Only http(s) links are kept; anything else is dropped.
+- Per-article images (when a feed provides an <enclosure> tag) are only kept
+  if they are http(s) and end in a known image extension; everything else
+  (including any HTML in feed content) is never treated as an image source,
+  so ad banners embedded in article bodies can't leak in as "article images".
 """
 
 import json
@@ -43,6 +47,15 @@ SUMMARY_MAX = 200
 
 TAG_RE = re.compile(r"<[^>]+>")
 WS_RE = re.compile(r"\s+")
+IMAGE_EXT_RE = re.compile(r"\.(jpe?g|png|webp|gif)(\?|$)", re.IGNORECASE)
+
+
+def safe_image_url(url):
+    if not url or not (url.startswith("https://") or url.startswith("http://")):
+        return None
+    if not IMAGE_EXT_RE.search(url):
+        return None
+    return url
 
 
 def strip_html(text):
@@ -84,14 +97,20 @@ def parse_feed(xml_bytes, category, avatar):
         if len(desc) > SUMMARY_MAX:
             desc = desc[:SUMMARY_MAX].rsplit(" ", 1)[0] + "..."
 
-        items.append({
+        enclosure = item.find("enclosure")
+        image = safe_image_url(enclosure.get("url")) if enclosure is not None else None
+
+        entry = {
             "title": title[:200],
             "link": link,
             "pubDate": pub_date,
             "summary": desc,
             "category": category,
             "avatar": avatar,
-        })
+        }
+        if image:
+            entry["image"] = image
+        items.append(entry)
     return items
 
 

@@ -38,6 +38,23 @@ function buildNewsCard(item, isFeatured) {
   const card = document.createElement('article');
   card.className = 'news-card' + (isFeatured ? ' featured' : '');
 
+  const hasImage = item.image && isSafeHttpUrl(item.image) && /\.(jpe?g|png|webp|gif)(\?|$)/i.test(item.image);
+  if (hasImage) {
+    card.classList.add('has-thumb');
+    const thumbWrap = document.createElement('div');
+    thumbWrap.className = 'news-thumb';
+    const thumb = document.createElement('img');
+    thumb.src = item.image;
+    thumb.alt = '';
+    thumb.loading = 'lazy';
+    thumbWrap.appendChild(thumb);
+    card.appendChild(thumbWrap);
+  }
+
+  const body = document.createElement('div');
+  body.className = 'news-card-body';
+  card.appendChild(body);
+
   const tag = document.createElement('span');
   tag.className = 'news-tag';
   // avatar must be a bare local filename (no path/protocol) to block traversal
@@ -49,15 +66,15 @@ function buildNewsCard(item, isFeatured) {
     tag.appendChild(img);
   }
   tag.appendChild(document.createTextNode(item.category || 'News'));
-  card.appendChild(tag);
+  body.appendChild(tag);
 
   const h3 = document.createElement('h3');
   h3.textContent = item.title || '';
-  card.appendChild(h3);
+  body.appendChild(h3);
 
   const p = document.createElement('p');
   p.textContent = item.summary || '';
-  card.appendChild(p);
+  body.appendChild(p);
 
   const meta = document.createElement('div');
   meta.className = 'news-meta';
@@ -78,7 +95,7 @@ function buildNewsCard(item, isFeatured) {
   }
   meta.appendChild(link);
 
-  card.appendChild(meta);
+  body.appendChild(meta);
   return card;
 }
 
