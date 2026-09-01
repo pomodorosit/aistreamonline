@@ -1,14 +1,22 @@
 {
-  "generatedAt": "2026-09-01T00:27:16Z",
+  "generatedAt": "2026-09-01T08:26:06Z",
   "items": [
+    {
+      "title": "Why MCP servers are becoming AI’s newest attack surface",
+      "link": "https://www.artificialintelligence-news.com/news/why-mcp-servers-are-becoming-ais-newest-attack-surface/",
+      "pubDate": "Tue, 01 Sep 2026 07:37:26 +0000",
+      "summary": "As AI adoption gathers pace, so does the evolution of the infrastructure that supports it. New standards and connectors keep appearing, and the ones that catch on spread through the ecosystem within...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/scott-rodgerson-PSpf_XgOM5w-unsplash-scaled.jpg"
+    },
     {
       "title": "Apple shares ‘shocking evidence’ against former employee accused of stealing company data for OpenAI",
       "link": "https://techcrunch.com/2026/08/31/apple-shares-shocking-evidence-against-former-employee-accused-of-stealing-company-data-for-openai/",
       "pubDate": "Tue, 01 Sep 2026 00:13:00 +0000",
       "summary": "Apple says it has evidence that a former employee destroyed evidence of data theft after learning he was under investigation.",
       "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/04/GettyImages-2255009714.jpg?resize=1200,800"
+      "avatar": "char-robot-head.png"
     },
     {
       "title": "The Pentagon now has its own version of ChatGPT and Grok",
