@@ -1,65 +1,65 @@
 {
-  "generatedAt": "2026-09-02T16:13:29Z",
+  "generatedAt": "2026-09-02T20:45:20Z",
   "quotes": [
     {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
-      "price": 227.4,
-      "changePercent": 4.58
+      "price": 224.41,
+      "changePercent": 3.21
     },
     {
       "symbol": "MSFT",
       "name": "Microsoft Corporation",
-      "price": 494.65,
-      "changePercent": -1.27
+      "price": 496.82,
+      "changePercent": -0.84
     },
     {
       "symbol": "GOOGL",
       "name": "Alphabet Inc.",
-      "price": 338.39,
-      "changePercent": 1.01
+      "price": 337.12,
+      "changePercent": 0.63
     },
     {
       "symbol": "META",
       "name": "Meta Platforms, Inc.",
-      "price": 593.25,
-      "changePercent": 2.54
+      "price": 592.85,
+      "changePercent": 2.47
     },
     {
       "symbol": "AMZN",
       "name": "Amazon.com, Inc.",
-      "price": 254.87,
-      "changePercent": -0.02
+      "price": 254.98,
+      "changePercent": 0.02
     },
     {
       "symbol": "AMD",
       "name": "Advanced Micro Devices, Inc.",
-      "price": 459.05,
-      "changePercent": -0.12
+      "price": 457.06,
+      "changePercent": -0.56
     },
     {
       "symbol": "PLTR",
       "name": "Palantir Technologies Inc.",
-      "price": 166.69,
-      "changePercent": -7.36
+      "price": 169.46,
+      "changePercent": -5.81
     },
     {
       "symbol": "ORCL",
       "name": "Oracle Corporation",
-      "price": 143.97,
-      "changePercent": 1.88
+      "price": 145.75,
+      "changePercent": 3.13
     },
     {
       "symbol": "AAPL",
       "name": "Apple Inc.",
-      "price": 325.88,
-      "changePercent": 0.23
+      "price": 324.96,
+      "changePercent": -0.05
     },
     {
       "symbol": "TSM",
       "name": "Taiwan Semiconductor Manufactur",
-      "price": 412.59,
-      "changePercent": -0.34
+      "price": 415.5,
+      "changePercent": 0.36
     }
   ]
 }
