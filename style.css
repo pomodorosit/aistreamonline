@@ -398,6 +398,16 @@ img { max-width: 100%; display: block; }
   line-height: 1.4;
 }
 
+.verdict-card h4 a:hover { color: var(--gold); }
+
+.verdict-ai-score {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: var(--ink-faint);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
 .verdict-vote {
   display: flex;
   align-items: flex-end;
@@ -1098,6 +1108,73 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
   white-space: nowrap;
 }
+
+.leadership-rank-list li.clickable {
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+}
+
+.leadership-rank-list li.clickable:hover,
+.leadership-rank-list li.clickable:focus-visible {
+  border-color: var(--gold-dim);
+}
+
+.leadership-rank-list li.active {
+  border-color: var(--gold);
+  background: rgba(230, 206, 142, 0.1);
+}
+
+.leadership-hint {
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+.leadership-drilldown {
+  display: none;
+  max-width: 560px;
+  margin: 28px auto 0;
+  padding: 22px 26px;
+  background: var(--bg-alt-2);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.leadership-drilldown.visible { display: block; }
+
+.drilldown-heading {
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.drilldown-empty {
+  color: var(--ink-faint);
+  font-size: 14px;
+  margin: 0;
+}
+
+.drilldown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.drilldown-list li {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.drilldown-list li:last-child { border-bottom: none; padding-bottom: 0; }
+
+.drilldown-list a { color: var(--ink); }
+.drilldown-list a:hover { color: var(--gold); }
 
 /* ---------- top AI platforms ---------- */
 

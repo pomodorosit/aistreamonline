@@ -153,6 +153,139 @@ def sort_key(it):
         return 0
 
 
+# ---------------------------------------------------------------------------
+# Rule-based auto-tagging (no LLM/API key required).
+#
+# This is a placeholder intelligence layer: it extracts entities and a rough
+# impact/sentiment signal from keyword matches in the title+summary text.
+# It is intentionally NOT prose ("why it matters") -- that reads badly when
+# templated. Articles enriched this way are marked engine: "heuristic" so a
+# future real LLM pass can find and upgrade them without re-processing
+# articles that already went through it (engine: "llm").
+# ---------------------------------------------------------------------------
+
+COMPANY_PATTERNS = {
+    "OpenAI": [r"openai"],
+    "Anthropic": [r"anthropic", r"\bclaude\b"],
+    "Google": [r"\bgoogle\b", r"deepmind", r"\bgemini\b"],
+    "Microsoft": [r"microsoft", r"\bcopilot\b"],
+    "Meta": [r"\bmeta\b"],
+    "Amazon": [r"\bamazon\b", r"\baws\b"],
+    "Apple": [r"\bapple\b"],
+    "Nvidia": [r"nvidia"],
+    "xAI": [r"\bxai\b", r"\bgrok\b"],
+    "Tesla": [r"\btesla\b"],
+    "Mistral AI": [r"mistral"],
+    "DeepSeek": [r"deepseek"],
+    "Perplexity": [r"perplexity"],
+    "Midjourney": [r"midjourney"],
+    "Hugging Face": [r"hugging face"],
+    "Databricks": [r"databricks"],
+    "Palantir": [r"palantir"],
+    "Salesforce": [r"salesforce"],
+    "IBM": [r"\bibm\b"],
+    "Intel": [r"\bintel\b"],
+    "AMD": [r"\bamd\b"],
+    "Oracle": [r"\boracle\b"],
+    "Stripe": [r"\bstripe\b"],
+    "Qualcomm": [r"qualcomm"],
+    "Samsung": [r"samsung"],
+    "SpaceX": [r"spacex"],
+    "Baidu": [r"baidu"],
+    "Alibaba": [r"alibaba"],
+    "Tencent": [r"tencent"],
+    "ByteDance": [r"bytedance"],
+    "Huawei": [r"huawei"],
+    "SoftBank": [r"softbank"],
+    "CoreWeave": [r"coreweave"],
+    "a16z": [r"\ba16z\b", r"andreessen horowitz"],
+    "XPENG": [r"xpeng"],
+    "Lambda": [r"\blambda\b"],
+    "Gatik": [r"\bgatik\b"],
+}
+
+COUNTRY_PATTERNS = {
+    "United States": [r"\bu\.s\.", r"\bunited states\b", r"\bamerican\b"],
+    "China": [r"\bchina\b", r"\bchinese\b"],
+    "United Kingdom": [r"\bu\.k\.", r"\bunited kingdom\b", r"\bbritish\b", r"\bbritain\b"],
+    "India": [r"\bindia\b", r"\bindian\b"],
+    "Israel": [r"\bisrael\b", r"\bisraeli\b"],
+    "Singapore": [r"\bsingapore\b"],
+    "South Korea": [r"south korea", r"\bkorean\b"],
+    "Japan": [r"\bjapan\b", r"\bjapanese\b"],
+    "Germany": [r"\bgermany\b", r"\bgerman\b"],
+    "France": [r"\bfrance\b", r"\bfrench\b"],
+    "Canada": [r"\bcanada\b", r"\bcanadian\b"],
+    "United Arab Emirates": [r"\buae\b", r"united arab emirates"],
+    "Saudi Arabia": [r"saudi arabia", r"\bsaudi\b"],
+    "Qatar": [r"\bqatar\b"],
+    "Australia": [r"\baustralia\b", r"\baustralian\b"],
+    "Taiwan": [r"\btaiwan\b"],
+}
+
+TECH_PATTERNS = {
+    "Large language models": [r"\bllm\b", r"large language model"],
+    "Generative AI": [r"generative ai"],
+    "Agentic AI": [r"agentic ai", r"\bai agents?\b"],
+    "Robotics": [r"\brobot", r"humanoid"],
+    "Autonomous vehicles": [r"autonomous (vehicle|driving|truck|freight|drone)", r"self-driving"],
+    "AI chips": [r"\bchip", r"\bgpu\b", r"semiconductor"],
+    "AI infrastructure": [r"data center", r"cloud infrastructure", r"compute infrastructure"],
+    "Computer vision": [r"computer vision", r"image generation"],
+    "Voice AI": [r"voice ai", r"speech synthesis"],
+    "AI safety": [r"ai safety", r"alignment", r"misalign"],
+    "Open-weight models": [r"open[- ]weight", r"open[- ]source model"],
+    "AI regulation": [r"regulat", r"lawsuit", r"\bsues\b", r"copyright"],
+}
+
+POSITIVE_WORDS = [
+    "raises", "secures", "launches", "wins", "breakthrough", "partners",
+    "expands", "record", "success", "advance", "improves", "growth",
+    "unveils", "boosts",
+]
+NEGATIVE_WORDS = [
+    "sues", "lawsuit", "bans", "banned", "risk", "scrutiny", "debt",
+    "concern", "cuts", "fails", "failure", "shuts down", "scandal",
+    "backlash", "criticism", "layoffs", "fired", "warns",
+]
+
+HIGH_IMPACT_WORDS = ["sues", "lawsuit", "banned", "billion", "acquisition", "acquire", "shuts down", "regulat"]
+MEDIUM_IMPACT_WORDS = ["raises", "funding", "partners", "launches", "expands", "million", "secures"]
+
+
+def _match_any(patterns, text):
+    return any(re.search(p, text, re.IGNORECASE) for p in patterns)
+
+
+def analyze_item(item):
+    text = f"{item.get('title', '')} {item.get('summary', '')}"
+
+    companies = [name for name, pats in COMPANY_PATTERNS.items() if _match_any(pats, text)]
+    countries = [name for name, pats in COUNTRY_PATTERNS.items() if _match_any(pats, text)]
+    technologies = [name for name, pats in TECH_PATTERNS.items() if _match_any(pats, text)]
+
+    lower = text.lower()
+    if any(w in lower for w in HIGH_IMPACT_WORDS):
+        impact_level = "High"
+    elif any(w in lower for w in MEDIUM_IMPACT_WORDS):
+        impact_level = "Medium"
+    else:
+        impact_level = "Low"
+
+    pos = sum(1 for w in POSITIVE_WORDS if w in lower)
+    neg = sum(1 for w in NEGATIVE_WORDS if w in lower)
+    sentiment_score = max(-2, min(2, pos - neg))
+
+    return {
+        "impactLevel": impact_level,
+        "sentimentScore": sentiment_score,
+        "companies": companies[:5],
+        "countries": countries[:5],
+        "technologies": technologies[:5],
+        "engine": "heuristic",
+    }
+
+
 def main():
     new_items = []
     for feed in FEEDS:
@@ -186,8 +319,21 @@ def main():
 
     by_link = {it["link"]: it for it in existing_items}
     for it in new_items:
-        by_link[it["link"]] = it
+        # merge onto the existing entry (if any) instead of replacing it
+        # outright -- a re-fetched article must keep any aiAnalysis a
+        # previous run (or a one-off enrichment pass) already attached to it
+        merged = by_link.get(it["link"], {})
+        merged.update(it)
+        by_link[it["link"]] = merged
     all_items = list(by_link.values())
+
+    # auto-tag anything that has no intelligence layer yet (new items, or
+    # older archive entries from before this was added) with the rule-based
+    # heuristic analyzer -- never touches items that already have real
+    # (manual or LLM) analysis
+    for it in all_items:
+        if "aiAnalysis" not in it:
+            it["aiAnalysis"] = analyze_item(it)
 
     all_items.sort(key=sort_key, reverse=True)
     all_items = all_items[:ARCHIVE_MAX]

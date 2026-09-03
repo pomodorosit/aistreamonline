@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  initVerdict();
   initLiveNews();
   initStockTicker();
   initAnalyticsConsent();
@@ -348,10 +347,91 @@ function initLiveNews() {
       }
 
       initNewsArchive(items.slice(7));
+      initVerdict(items);
+      initLeadershipDrilldown(items);
     })
     .catch(() => {
       // network/parse failure: silently keep the static placeholder cards
     });
+}
+
+function initLeadershipDrilldown(newsItems) {
+  const list = document.querySelector('.leadership-rank-list');
+  const panel = document.getElementById('leadership-drilldown');
+  if (!list || !panel) return;
+
+  const items = newsItems || [];
+
+  function articlesForCountry(country) {
+    return items.filter(
+      (it) => it.aiAnalysis && Array.isArray(it.aiAnalysis.countries) && it.aiAnalysis.countries.includes(country)
+    );
+  }
+
+  function renderPanel(country, matches) {
+    panel.innerHTML = '';
+
+    const heading = document.createElement('h4');
+    heading.className = 'drilldown-heading';
+    heading.textContent = country + ' — recent AI stories';
+    panel.appendChild(heading);
+
+    if (matches.length === 0) {
+      const empty = document.createElement('p');
+      empty.className = 'drilldown-empty';
+      empty.textContent = 'No recent stories tagged to ' + country + ' yet.';
+      panel.appendChild(empty);
+    } else {
+      const list = document.createElement('ul');
+      list.className = 'drilldown-list';
+      matches.slice(0, 6).forEach((it) => {
+        const li = document.createElement('li');
+        const link = document.createElement('a');
+        link.textContent = it.title || '';
+        if (isSafeHttpUrl(it.link)) {
+          link.href = it.link;
+          link.rel = 'noopener noreferrer nofollow';
+          link.target = '_blank';
+        } else {
+          link.href = '#';
+        }
+        li.appendChild(link);
+        list.appendChild(li);
+      });
+      panel.appendChild(list);
+    }
+
+    panel.classList.add('visible');
+  }
+
+  list.querySelectorAll('li').forEach((li) => {
+    const countrySpan = li.querySelector('.rank-country');
+    if (!countrySpan) return;
+    const country = countrySpan.textContent.trim();
+
+    li.classList.add('clickable');
+    li.setAttribute('role', 'button');
+    li.setAttribute('tabindex', '0');
+
+    const activate = () => {
+      const alreadyActive = li.classList.contains('active');
+      list.querySelectorAll('li').forEach((other) => other.classList.remove('active'));
+      if (alreadyActive) {
+        panel.classList.remove('visible');
+        return;
+      }
+      li.classList.add('active');
+      renderPanel(country, articlesForCountry(country));
+    };
+
+    li.addEventListener('click', activate);
+    li.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activate();
+      }
+    });
+  });
 }
 
 function initStockTicker() {
@@ -401,16 +481,8 @@ function buildTickerItem(quote) {
   return item;
 }
 
-const VERDICT_ITEMS = [
-  { id: 'v1', category: 'Business', avatar: 'char-woman-head.png', headline: 'Startup raises record funding for green-energy AI', score: 4 },
-  { id: 'v2', category: 'Stock Market', avatar: 'char-mustache-head.png', headline: 'Markets rally as AI chipmakers post strong earnings', score: 2 },
-  { id: 'v3', category: 'Travel', avatar: 'char-cap-head.png', headline: 'AI-planned rail route cuts commute times in half', score: 3 },
-  { id: 'v4', category: 'Music', avatar: 'char-dog-head.png', headline: 'AI-generated album sparks copyright lawsuit', score: -2 },
-  { id: 'v5', category: 'Art', avatar: 'char-blob-head.png', headline: 'Gallery cancels exhibit after funding cuts blamed on automation', score: -3 },
-  { id: 'v6', category: 'Technology', avatar: 'char-robot-head.png', headline: 'Tech sell-off wipes billions off market cap', score: -4 },
-];
-
 const VERDICT_STORAGE_KEY = 'aistream_verdict_votes';
+const VERDICT_MAX_ITEMS = 10;
 
 function loadVerdictVotes() {
   try {
@@ -426,20 +498,51 @@ function saveVerdictVotes(votes) {
   } catch (e) { /* ignore */ }
 }
 
-function initVerdict() {
+// stable short id for a real article, so votes survive across page loads
+// without needing a backend -- same link always hashes to the same id
+function hashId(str) {
+  let h = 0;
+  for (let i = 0; i < str.length; i++) {
+    h = (Math.imul(31, h) + str.charCodeAt(i)) | 0;
+  }
+  return 'a' + (h >>> 0).toString(36);
+}
+
+function aiSentimentScore(analysis) {
+  if (!analysis) return 0;
+  if (typeof analysis.sentimentScore === 'number') return analysis.sentimentScore;
+  const good = Array.isArray(analysis.goodFor) ? analysis.goodFor.length : 0;
+  const bad = Array.isArray(analysis.badFor) ? analysis.badFor.length : 0;
+  return Math.max(-2, Math.min(2, good - bad));
+}
+
+function initVerdict(newsItems) {
   const goodList = document.getElementById('good-list');
   const badList = document.getElementById('bad-list');
   if (!goodList || !badList) return;
+
+  const verdictItems = (newsItems || [])
+    .filter((it) => it.aiAnalysis && aiSentimentScore(it.aiAnalysis) !== 0)
+    .slice(0, VERDICT_MAX_ITEMS)
+    .map((it) => ({
+      id: hashId(it.link),
+      category: it.category || 'News',
+      headline: it.title,
+      link: it.link,
+      aiScore: aiSentimentScore(it.aiAnalysis),
+    }));
+
+  if (verdictItems.length === 0) return; // keep empty columns rather than showing fake data
 
   const votes = loadVerdictVotes();
   let lastMovedId = null;
 
   function currentScore(item) {
-    return item.score + (votes[item.id] || 0);
+    return item.aiScore + (votes[item.id] || 0);
   }
 
   function render() {
-    const scored = VERDICT_ITEMS.map((item) => ({ item, score: currentScore(item) }));
+    const scored = verdictItems.map((item) => ({ item, score: currentScore(item) }));
     const good = scored.filter((s) => s.score >= 0).sort((a, b) => b.score - a.score);
     const bad = scored.filter((s) => s.score < 0).sort((a, b) => a.score - b.score);
 
@@ -456,10 +559,33 @@ function initVerdict() {
     if (item.id === lastMovedId) {
       card.classList.add('just-moved');
     }
-    card.innerHTML = `
-      <span class="verdict-tag">${item.category}</span>
-      <h4>${item.headline}</h4>
-      <div class="verdict-vote">
+
+    const tag = document.createElement('span');
+    tag.className = 'verdict-tag';
+    tag.textContent = item.category;
+    card.appendChild(tag);
+
+    const h4 = document.createElement('h4');
+    const link = document.createElement('a');
+    link.textContent = item.headline;
+    if (isSafeHttpUrl(item.link)) {
+      link.href = item.link;
+      link.rel = 'noopener noreferrer nofollow';
+      link.target = '_blank';
+    } else {
+      link.href = '#';
+    }
+    h4.appendChild(link);
+    card.appendChild(h4);
+
+    const aiRow = document.createElement('div');
+    aiRow.className = 'verdict-ai-score';
+    aiRow.textContent = 'AI says: ' + (item.aiScore > 0 ? '+' : '') + item.aiScore;
+    card.appendChild(aiRow);
+
+    const vote = document.createElement('div');
+    vote.className = 'verdict-vote';
+    vote.innerHTML = `
         <div class="vote-option">
           <span class="vote-label vote-label-good">Good</span>
           <button class="vote-round vote-up" data-id="${item.id}" aria-label="Vote good news">
@@ -473,13 +599,14 @@ function initVerdict() {
             <img src="vote-bad.png" alt="">
           </button>
         </div>
-      </div>
     `;
+    card.appendChild(vote);
+
     return card;
   }
 
   function handleVote(id, delta) {
-    const item = VERDICT_ITEMS.find((i) => i.id === id);
+    const item = verdictItems.find((i) => i.id === id);
     if (!item) return;
     const wasGood = currentScore(item) >= 0;
     votes[id] = (votes[id] || 0) + delta;

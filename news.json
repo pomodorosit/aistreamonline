@@ -1,6 +1,247 @@
 {
-  "generatedAt": "2026-08-29T19:39:43Z",
+  "generatedAt": "2026-09-03T10:20:38Z",
   "items": [
+    {
+      "title": "The Builders Stage brings practical strategies for scaling startups to TechCrunch Disrupt 2026",
+      "link": "https://techcrunch.com/2026/09/02/the-builders-stage-brings-practical-strategies-for-scaling-startups-to-techcrunch-disrupt-2026/",
+      "pubDate": "Wed, 02 Sep 2026 23:01:00 +0000",
+      "summary": "The Builders Stage is returning to TechCrunch Disrupt, bringing together founders, startup operators, and investors for practical conversations on what it takes to build and scale.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/07/Builders-Stage_ArticleHeader_tc26_V2.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Palo Alto Networks paid $500M for Thrive-backed Console, sources say",
+      "link": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/",
+      "pubDate": "Wed, 02 Sep 2026 22:44:56 +0000",
+      "summary": "The acquisition also leaves Sequoia-backed Serval as the de facto startup leader in AI IT service automation, industry watchers believe.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2025/07/GettyImages-2215666246.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "TechCrunch Disrupt 2026’s new Real World AI Stage features Nvidia, robots, and extinct animals",
+      "link": "https://techcrunch.com/2026/09/02/techcrunch-disrupt-2026s-new-real-world-ai-stage-features-nvidia-robots-and-extinct-animals/",
+      "pubDate": "Wed, 02 Sep 2026 22:24:09 +0000",
+      "summary": "On our new Real World AI stage, we’ll be focusing on the intersection between the digital and physical, and all the ways we’ll continue to see a blending of the two.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/Real-World-AI-Promo.png?w=1200",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Nvidia"
+        ],
+        "countries": [],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "OpenAI’s new reasoning technique alarms AI safety experts",
+      "link": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/",
+      "pubDate": "Wed, 02 Sep 2026 20:19:14 +0000",
+      "summary": "OpenAI’s new Astra model will use “recurrent depth,” a technique that allows the model to operate outside of the sequential thinking that characterizes most reasoning models.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/07/OpenAI-logo-in-Seoul.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI safety"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Pangram’s Max Spero on why AI detection is harder than ‘Real or Fake’",
+      "link": "https://techcrunch.com/video/pangrams-max-spero-on-why-ai-detection-is-harder-than-real-or-fake/",
+      "pubDate": "Wed, 02 Sep 2026 17:18:13 +0000",
+      "summary": "The internet has a trust problem, and it’s not just because social media feeds are filling up with AI slop. AI-generated text and images are now making their way into job applications, product...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/07/Pangram-founders.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "We’re ‘dangerously close’ to dead internet theory, says Pangram’s CEO",
+      "link": "https://techcrunch.com/podcast/were-dangerously-close-to-dead-internet-theory-says-pangrams-ceo/",
+      "pubDate": "Wed, 02 Sep 2026 17:09:57 +0000",
+      "summary": "The internet has a trust problem, and it’s not just because social media feeds are filling up with AI slop. AI-generated text and images are now making their way into job applications, product...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/Max-Headshot.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "US government sides with OpenAI on issue of training LLMs on copyrighted material",
+      "link": "https://techcrunch.com/2026/09/02/u-s-government-sides-with-openai-on-issue-of-training-llms-on-copyrighted-material/",
+      "pubDate": "Wed, 02 Sep 2026 17:09:06 +0000",
+      "summary": "\"The United States has a strong interest in continuing to develop a robust and competitive artificial intelligence industry that sets the standard for the practice and procedure of AI use globally,\"...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2263890424.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [
+          "United States"
+        ],
+        "technologies": [
+          "AI regulation"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Wonderful more than doubles its valuation to $5B in under 6 months",
+      "link": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+      "pubDate": "Wed, 02 Sep 2026 16:04:10 +0000",
+      "summary": "Wonderful said it will use its $550 million Series C funding to develop products faster, expand its FDE teams, and meet demand for its products.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2018/02/tc-backlight-e1689786273147.png?w=1200",
+      "aiAnalysis": {
+        "impactLevel": "Medium",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "India’s richest man now wants to turn aging computers into AI-ready PCs",
+      "link": "https://techcrunch.com/2026/09/02/indias-richest-man-now-wants-to-turn-aging-computers-into-ai-ready-pcs/",
+      "pubDate": "Wed, 02 Sep 2026 16:01:48 +0000",
+      "summary": "Jio is betting it can turn an aging computer into an AI-ready PC for as little as about $11 for two months.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/jiopc.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "India"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Motional and MIT AI explains self-driving car decisions",
+      "link": "https://www.artificialintelligence-news.com/news/motional-and-mit-ai-explains-self-driving-car-decisions/",
+      "pubDate": "Wed, 02 Sep 2026 15:25:12 +0000",
+      "summary": "Motional and MIT researchers have built a system that lets self-driving cars explain their decisions in real-time, tackling the black-box problem in autonomous vehicle AI. The work, published in...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/motional-mit-ai-self-driving-car-autonomous-vehicle-decisions-explainable-artificial-intelligence.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Autonomous vehicles"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "HiddenLayer nabs $100M as enterprises rush to secure their AI deployments",
+      "link": "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/",
+      "pubDate": "Wed, 02 Sep 2026 15:01:23 +0000",
+      "summary": "Security companies are scrambling to build products that can monitor not just agents but also the tools and add-ons they use.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/hiddenlayer.jpg?resize=1200,900",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "ChatGPT Ads passes $1B run rate in 200 days",
+      "link": "https://www.artificialintelligence-news.com/news/chatgpt-ads-passes-1b-run-rate-in-200-days/",
+      "pubDate": "Tue, 01 Sep 2026 16:05:27 +0000",
+      "summary": "ChatGPT Ads has hit $1 billion in annualised revenue run rate in under 200 days, and OpenAI is expanding self-service ads to new regions. Tens of thousands of advertisers now use the platform and...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/openai-chatgpt-ads-digital-marketing-advertising-artificial-intelligence-chat-web-search.jpg",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Why MCP servers are becoming AI’s newest attack surface",
+      "link": "https://www.artificialintelligence-news.com/news/why-mcp-servers-are-becoming-ais-newest-attack-surface/",
+      "pubDate": "Tue, 01 Sep 2026 07:37:26 +0000",
+      "summary": "As AI adoption gathers pace, so does the evolution of the infrastructure that supports it. New standards and connectors keep appearing, and the ones that catch on spread through the ecosystem within...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/scott-rodgerson-PSpf_XgOM5w-unsplash-scaled.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
     {
       "title": "Sony Music, Warner sue Anthropic, alleging a “brazen campaign” of intellectual property theft",
       "link": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
