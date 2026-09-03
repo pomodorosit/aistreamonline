@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T03:37:32Z",
+  "generatedAt": "2026-09-03T10:25:08Z",
   "items": [
     {
       "title": "The Builders Stage brings practical strategies for scaling startups to TechCrunch Disrupt 2026",
@@ -8,7 +8,15 @@
       "summary": "The Builders Stage is returning to TechCrunch Disrupt, bringing together founders, startup operators, and investors for practical conversations on what it takes to build and scale.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/07/Builders-Stage_ArticleHeader_tc26_V2.png?resize=1200,675"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/07/Builders-Stage_ArticleHeader_tc26_V2.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Palo Alto Networks paid $500M for Thrive-backed Console, sources say",
@@ -17,7 +25,15 @@
       "summary": "The acquisition also leaves Sequoia-backed Serval as the de facto startup leader in AI IT service automation, industry watchers believe.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2025/07/GettyImages-2215666246.jpg?resize=1200,800"
+      "image": "https://techcrunch.com/wp-content/uploads/2025/07/GettyImages-2215666246.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "TechCrunch Disrupt 2026’s new Real World AI Stage features Nvidia, robots, and extinct animals",
@@ -26,7 +42,19 @@
       "summary": "On our new Real World AI stage, we’ll be focusing on the intersection between the digital and physical, and all the ways we’ll continue to see a blending of the two.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/Real-World-AI-Promo.png?w=1200"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/Real-World-AI-Promo.png?w=1200",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Nvidia"
+        ],
+        "countries": [],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "OpenAI’s new reasoning technique alarms AI safety experts",
@@ -35,7 +63,19 @@
       "summary": "OpenAI’s new Astra model will use “recurrent depth,” a technique that allows the model to operate outside of the sequential thinking that characterizes most reasoning models.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/07/OpenAI-logo-in-Seoul.jpg?w=1024"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/07/OpenAI-logo-in-Seoul.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI safety"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Pangram’s Max Spero on why AI detection is harder than ‘Real or Fake’",
@@ -44,7 +84,15 @@
       "summary": "The internet has a trust problem, and it’s not just because social media feeds are filling up with AI slop. AI-generated text and images are now making their way into job applications, product...",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/07/Pangram-founders.png?resize=1200,675"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/07/Pangram-founders.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "We’re ‘dangerously close’ to dead internet theory, says Pangram’s CEO",
@@ -53,7 +101,15 @@
       "summary": "The internet has a trust problem, and it’s not just because social media feeds are filling up with AI slop. AI-generated text and images are now making their way into job applications, product...",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/Max-Headshot.png?resize=1200,675"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/Max-Headshot.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "US government sides with OpenAI on issue of training LLMs on copyrighted material",
@@ -62,7 +118,21 @@
       "summary": "\"The United States has a strong interest in continuing to develop a robust and competitive artificial intelligence industry that sets the standard for the practice and procedure of AI use globally,\"...",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2263890424.jpg?w=1024"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2263890424.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [
+          "United States"
+        ],
+        "technologies": [
+          "AI regulation"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Wonderful more than doubles its valuation to $5B in under 6 months",
@@ -71,7 +141,15 @@
       "summary": "Wonderful said it will use its $550 million Series C funding to develop products faster, expand its FDE teams, and meet demand for its products.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2018/02/tc-backlight-e1689786273147.png?w=1200"
+      "image": "https://techcrunch.com/wp-content/uploads/2018/02/tc-backlight-e1689786273147.png?w=1200",
+      "aiAnalysis": {
+        "impactLevel": "Medium",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "India’s richest man now wants to turn aging computers into AI-ready PCs",
@@ -80,7 +158,17 @@
       "summary": "Jio is betting it can turn an aging computer into an AI-ready PC for as little as about $11 for two months.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/jiopc.jpg?resize=1200,800"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/jiopc.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "India"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Motional and MIT AI explains self-driving car decisions",
@@ -88,7 +176,18 @@
       "pubDate": "Wed, 02 Sep 2026 15:25:12 +0000",
       "summary": "Motional and MIT researchers have built a system that lets self-driving cars explain their decisions in real-time, tackling the black-box problem in autonomous vehicle AI. The work, published in...",
       "category": "World News",
-      "avatar": "char-hooded-head.png"
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/motional-mit-ai-self-driving-car-autonomous-vehicle-decisions-explainable-artificial-intelligence.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Autonomous vehicles"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "HiddenLayer nabs $100M as enterprises rush to secure their AI deployments",
@@ -97,7 +196,15 @@
       "summary": "Security companies are scrambling to build products that can monitor not just agents but also the tools and add-ons they use.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/hiddenlayer.jpg?resize=1200,900"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/hiddenlayer.jpg?resize=1200,900",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "PSA: Amazon’s shopping AI can now tell you if that message is a scam",
@@ -106,7 +213,17 @@
       "summary": "Amazon is adding a scam-detection feature to Alexa for Shopping that can verify whether suspicious emails, texts, and other messages actually came from the retailer.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/alexa-shopping-ai-hero-lm.jpg?resize=1200,675"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/alexa-shopping-ai-hero-lm.jpg?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Amazon"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Adobe acquires Indian market intelligence startup Rilo",
@@ -115,7 +232,17 @@
       "summary": "This is Adobe's second acquisition out of India after Rephrase.ai in 2023",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2024/09/GettyImages-2162453288.jpg?resize=1200,800"
+      "image": "https://techcrunch.com/wp-content/uploads/2024/09/GettyImages-2162453288.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "India"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "OpenAI faces 30 more lawsuits tied to Tumbler Ridge shooting",
@@ -124,7 +251,19 @@
       "summary": "Edelson PC is filing 30 new lawsuits against OpenAI over the Tumbler Ridge shooting, escalating claims to aiding and abetting and naming Chris Lehane, though evidence remains unconfirmed.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/07/tim-cook-sam-altman-GettyImages-2233062347.jpg?w=1024"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/07/tim-cook-sam-altman-GettyImages-2233062347.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": -1,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI regulation"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "AfterQuery reportedly becomes Y Combinator’s fastest-ever unicorn, now valued at $3.2B",
@@ -133,7 +272,15 @@
       "summary": "AI model-training startup AfterQuery has reportedly raised a round that valued it at $3.2 billion, just five months after announcing its $30 million Series A at a $300 million valuation in April.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2023/10/GettyImages-1569337822.jpg?resize=1200,800"
+      "image": "https://techcrunch.com/wp-content/uploads/2023/10/GettyImages-1569337822.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "OpenAI’s Astra model is on the way — and very good at breaking into computer systems",
@@ -142,7 +289,19 @@
       "summary": "OpenAI previewed the precautions it is taking as it prepares to release Astra, its newest, cyber-critical LLM.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/05/openai-logo-code-background.jpg?resize=1200,798"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/05/openai-logo-code-background.jpg?resize=1200,798",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [
+          "Large language models"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Google’s Android update tackles motion sickness, accessibility, and more",
@@ -151,7 +310,18 @@
       "summary": "While some of the features see Google playing catch-up to Apple, which already offers similar features for iPhone users, others specifically leverage Gemini to provide various improvements.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/MotionAssist-Google.png?w=1200"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/MotionAssist-Google.png?w=1200",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Google",
+          "Apple"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Anthropic’s new Fable release is cheaper, less restrictive",
@@ -160,7 +330,17 @@
       "summary": "Fable 5.1 includes changes meant to reduce token cost and false-positive restrictions from the model's safeguards.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/04/GettyImages-2269811684.jpg?w=1024"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/04/GettyImages-2269811684.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Google’s answer to Canva is an AI tool where you prompt instead of design",
@@ -169,7 +349,17 @@
       "summary": "With Google Pics, Google is pushing deeper into the creative software market dominated by Canva and Adobe, but with a distinctly AI-first approach.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/google-pics.webp?resize=1200,675"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/google-pics.webp?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "ChatGPT Health adds Epic integration for clinicians to import patient data",
@@ -178,7 +368,17 @@
       "summary": "OpenAI said that the integration provides read-only access to health records for clinicians.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2025/02/GettyImages-2195918462.jpg?w=1024"
+      "image": "https://techcrunch.com/wp-content/uploads/2025/02/GettyImages-2195918462.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 1,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Sequoia-incubated Empirik launches with $21M to predict outages before they happen",
@@ -187,7 +387,15 @@
       "summary": "The startup wants to do for IT infrastructure what Cursor did for software engineering.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2024/08/GettyImages-1273058761.jpg?resize=1200,844"
+      "image": "https://techcrunch.com/wp-content/uploads/2024/08/GettyImages-1273058761.jpg?resize=1200,844",
+      "aiAnalysis": {
+        "impactLevel": "Medium",
+        "sentimentScore": 1,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "ChatGPT Ads passes $1B run rate in 200 days",
@@ -195,7 +403,18 @@
       "pubDate": "Tue, 01 Sep 2026 16:05:27 +0000",
       "summary": "ChatGPT Ads has hit $1 billion in annualised revenue run rate in under 200 days, and OpenAI is expanding self-service ads to new regions. Tens of thousands of advertisers now use the platform and...",
       "category": "World News",
-      "avatar": "char-hooded-head.png"
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/openai-chatgpt-ads-digital-marketing-advertising-artificial-intelligence-chat-web-search.jpg",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Amazon Alexa can now alert you when something new might tempt you to shop",
@@ -204,7 +423,17 @@
       "summary": "Amazon is adding a new Alexa-powered feature called “Update Me When” that can send personalized alerts about product launches, tours, books, shows, and other events that could trigger a purchase.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/update-me-when.jpeg?resize=1200,675"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/update-me-when.jpeg?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Medium",
+        "sentimentScore": 1,
+        "companies": [
+          "Amazon"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "AIR raises $50M to help companies vet the skills and add-ons AI agents use",
@@ -213,7 +442,17 @@
       "summary": "AIR's platform can discover agents running at a company, continuously vets any skills and add-ons they use, and blocks any unwanted behavior.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/Yair-Saban-and-Niv-Hoffman.-Credit-Netanel-Tobias.jpeg?resize=1200,798"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/Yair-Saban-and-Niv-Hoffman.-Credit-Netanel-Tobias.jpeg?resize=1200,798",
+      "aiAnalysis": {
+        "impactLevel": "Medium",
+        "sentimentScore": 1,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Agentic AI"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Fambot introduces an ‘AI chief of staff’ for families",
@@ -222,7 +461,15 @@
       "summary": "Fambot is building an AI “chief of staff” to help families manage the emails, calendars, school updates, sports schedules, and other logistics of raising kids.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/David-and-Kids-Fambot.png?resize=1200,801"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/David-and-Kids-Fambot.png?resize=1200,801",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Why MCP servers are becoming AI’s newest attack surface",
@@ -230,7 +477,16 @@
       "pubDate": "Tue, 01 Sep 2026 07:37:26 +0000",
       "summary": "As AI adoption gathers pace, so does the evolution of the infrastructure that supports it. New standards and connectors keep appearing, and the ones that catch on spread through the ecosystem within...",
       "category": "World News",
-      "avatar": "char-hooded-head.png"
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/scott-rodgerson-PSpf_XgOM5w-unsplash-scaled.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Apple shares ‘shocking evidence’ against former employee accused of stealing company data for OpenAI",
@@ -239,7 +495,18 @@
       "summary": "Apple says it has evidence that a former employee destroyed evidence of data theft after learning he was under investigation.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/04/GettyImages-2255009714.jpg?resize=1200,800"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/04/GettyImages-2255009714.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI",
+          "Apple"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "The Pentagon now has its own version of ChatGPT and Grok",
@@ -248,7 +515,20 @@
       "summary": "Versions of OpenAI's ChatGPT and SpaceXAI's Grok will join Google's Gemini on the Pentagon's central portal for AI tools.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2263890424.jpg?w=1024"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2263890424.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI",
+          "Google",
+          "xAI",
+          "SpaceX"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Instagram puts new limits on undisclosed AI profiles",
@@ -257,7 +537,15 @@
       "summary": "As frustration over AI influencers has been growing, Instagram is limiting the reach of undisclosed AI profiles.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/Instagram-label-.png?w=1200"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/Instagram-label-.png?w=1200",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Harvard Law dropout raises $6M for Blue Voice to build a ‘Harvey for police officers’",
@@ -266,7 +554,15 @@
       "summary": "Blue Voice is trained on department-specific laws, local ordinances, protocols, and guidelines that general-purpose AI tools can't access on the public internet.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/BlueVoice_Founders.png?resize=1200,600"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/BlueVoice_Founders.png?resize=1200,600",
+      "aiAnalysis": {
+        "impactLevel": "Medium",
+        "sentimentScore": 1,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Clipto uses AI to search terabytes of video and is now valued at $250M",
@@ -275,7 +571,15 @@
       "summary": "The three-year-old startup says it reached $15 million in ARR and profitability before raising its latest $15 million round.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/05/ai-agents-GettyImages-2229880232.jpg?resize=1200,675"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/05/ai-agents-GettyImages-2229880232.jpg?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Medium",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Nvidia’s $3.5B MediaTek bet reveals its plan for tackling Big Tech’s AI chip buildout",
@@ -284,7 +588,19 @@
       "summary": "Nvidia invests $3.5 billion into Taiwanese chipmaker MediaTek. The deal shows how Nvidia plans to stay essential to AI infrastructure as Big Tech begins to build its own AI chips.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2025/03/GettyImages-2205761844.jpg?resize=1200,846"
+      "image": "https://techcrunch.com/wp-content/uploads/2025/03/GettyImages-2205761844.jpg?resize=1200,846",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [
+          "Nvidia"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI chips"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Meeting note-taker Circleback adds a free tier to attract more customers",
@@ -293,7 +609,15 @@
       "summary": "Circleback is also introducing new pricing plans starting from $14 per month.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/Screenshot-2026-08-31-at-11.18.37-AM.jpeg?resize=1200,735"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/Screenshot-2026-08-31-at-11.18.37-AM.jpeg?resize=1200,735",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "The US is building barriers around drones and robots, but China has scale to get around them",
@@ -302,7 +626,20 @@
       "summary": "The U.S. is shutting out more foreign-made drones and robots. China’s scale means the global competition may simply move elsewhere.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2018/03/gettyimages-507054668.jpg?resize=1200,801"
+      "image": "https://techcrunch.com/wp-content/uploads/2018/03/gettyimages-507054668.jpg?resize=1200,801",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "United States",
+          "China"
+        ],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Musk’s faster path to more gas turbines comes with pollution problem",
@@ -311,7 +648,17 @@
       "summary": "Elon Musk says a secretive new SpaceX foundry will let him cast his own turbine blades and get gas power online 18 months faster than anyone else — but it's a bet on a fuel source that's already...",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/Elon-Musk.jpg?w=1024"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/Elon-Musk.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "SpaceX"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Caterpillar is bringing to AI deployment what it learned from automating mining",
@@ -320,7 +667,15 @@
       "summary": "Caterpillar has spent decades putting autonomous machines to work at remote mining sites. It's now bringing that experience to AI deployment.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2023/01/caterpillar-lidar-booth.jpg?resize=1200,800"
+      "image": "https://techcrunch.com/wp-content/uploads/2023/01/caterpillar-lidar-booth.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Sony Music, Warner sue Anthropic, alleging a ‘brazen campaign’ of intellectual property theft",
@@ -329,7 +684,19 @@
       "summary": "This latest lawsuit is particularly broad and homes in on accusations of illegal piracy.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/03/Dario-Amodei-Anthropic-1.jpg?w=1024"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/03/Dario-Amodei-Anthropic-1.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": -1,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI regulation"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "“We’re not doing 30 bets a year”: Vijay Pande on betting small after running $4 billion at a16z",
@@ -338,7 +705,17 @@
       "summary": "Vijay Pande — who left a16z's roughly $4 billion biotech practice last year to start the much smaller, AI-native VZVC — talks about why biology is finally shifting from a \"discovery\" science to an...",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/Vijay-Pande.png?resize=1200,800"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/Vijay-Pande.png?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [
+          "a16z"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Nvidia’s AI advantage is moving beyond the GPU",
@@ -347,7 +724,20 @@
       "summary": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/jense-nvidi-chip-GettyImages-2266485392.jpg?resize=1200,800"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/jense-nvidi-chip-GettyImages-2266485392.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Nvidia"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI chips",
+          "AI infrastructure"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Neocloud Lambda secures $1B in debt to buy more chips",
@@ -356,7 +746,21 @@
       "summary": "Neocloud Lambda has raised $1B in private debt to buy Nvidia AI chips and lease them to Microsoft. It's the latest in a string of loans, underscoring the high cost of the AI boom.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/06/Chip-chips-dollar-signs-money.png?resize=1200,960"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/06/Chip-chips-dollar-signs-money.png?resize=1200,960",
+      "aiAnalysis": {
+        "impactLevel": "Medium",
+        "sentimentScore": 0,
+        "companies": [
+          "Microsoft",
+          "Nvidia",
+          "Lambda"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI chips"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "An Anthropic researcher just gave us a peek at self-improving AI",
@@ -365,7 +769,19 @@
       "summary": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2287646148.jpg?resize=1200,901"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2287646148.jpg?resize=1200,901",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI safety"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Open-weight AI companies are the Valley’s hottest acquisition targets",
@@ -374,7 +790,17 @@
       "summary": "There's a lot of capital pouring into the business of giving models away.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/07/GettyImages-1849294862.jpg?w=1024"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/07/GettyImages-1849294862.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Open-weight models"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Anthropic gets its first court win over the Pentagon’s supply-chain risk label",
@@ -383,7 +809,19 @@
       "summary": "A federal judge ruled the Trump administration illegally labeled Anthropic a supply-chain risk, handing the AI company a victory as its second Pentagon lawsuit continues in Washington.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2278736523.jpeg?resize=1200,798"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2278736523.jpeg?resize=1200,798",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": -2,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI regulation"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Meta executive leaves for OpenAI as the social media giant faces growing scrutiny in India",
@@ -392,7 +830,21 @@
       "summary": "Sandhya Devanathan will oversee some OpenAI operations across Southeast Asia and Australia in her new role.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/06/Meta-image.jpg?w=1024"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/06/Meta-image.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": -1,
+        "companies": [
+          "OpenAI",
+          "Meta"
+        ],
+        "countries": [
+          "India",
+          "Australia"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Anthropic and OpenAI are joining the AI stage at TechCrunch Disrupt 2026",
@@ -401,7 +853,19 @@
       "summary": "At TechCrunch Disrupt 2026, the AI Stage is back to dig into the single hottest topic in the community for the past few years, presented by Google for Startups.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/07/techcrunch-disrupt-2026-ai-stage.jpg?w=1200"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/07/techcrunch-disrupt-2026-ai-stage.jpg?w=1200",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI",
+          "Anthropic",
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Barret Zoph, the Thinking Machines co-founder ousted before joining OpenAI, is now at Google",
@@ -410,7 +874,18 @@
       "summary": "Zoph, who co-founded Thinking Machines Lab alongside Mira Murati and also served as the startup's CTO, led a brief stint at OpenAI and is now at Google.",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/06/google-logo.jpg?resize=1200,800"
+      "image": "https://techcrunch.com/wp-content/uploads/2026/06/google-logo.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI",
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Enterprise AI's real risk isn't autonomous agents. It's the complexity between them.",
@@ -419,7 +894,15 @@
       "summary": "Presented by Gravitee Agent complexity is the insidious shadow lurking inside enterprises right now that needs a light shone on it. That’s because enterprises don't deploy a single agent and watch it...",
       "category": "Business",
       "avatar": "char-woman-head.png",
-      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/5ScHW6mZ2rQr3EvsxrwooK/43df8725b6e12cd4bcf550bb7b3b1cb4/Gravitee_hero.jpg?w=300&q=30"
+      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/5ScHW6mZ2rQr3EvsxrwooK/43df8725b6e12cd4bcf550bb7b3b1cb4/Gravitee_hero.jpg?w=300&q=30",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": -1,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "When agents act on their own, governance has to live in the data layer",
@@ -428,7 +911,17 @@
       "summary": "Presented by EDB As enterprises give AI agents more autonomy — the ability to plan, decide, and act across systems without a human approving each step — a hard question moves to the center of every...",
       "category": "Business",
       "avatar": "char-woman-head.png",
-      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/9VRh8KJhBqcFviSV8ClXc/feea8ec8fe76ffa0bc5cdb3dd95e1492/EDB_hero.jpeg?w=300&q=30"
+      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/9VRh8KJhBqcFviSV8ClXc/feea8ec8fe76ffa0bc5cdb3dd95e1492/EDB_hero.jpeg?w=300&q=30",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Agentic AI"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "A quarter of Nvidia’s business next year comes from labs it is financing",
@@ -436,7 +929,20 @@
       "pubDate": "Thu, 27 Aug 2026 10:00:00 +0000",
       "summary": "Nvidia has put nearly US$50 billion into the AI labs that buy its chips, and has lined up commitments for more than $500 billion Colette Kress, the company’s chief financial officer, told analysts on...",
       "category": "World News",
-      "avatar": "char-hooded-head.png"
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/voyager-exterior-sign-2-scaled.jpg",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [
+          "Nvidia"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI chips"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Orchestration is the new challenge for CX in the age of AI agents",
@@ -445,7 +951,18 @@
       "summary": "Presented by Tata Communications Enterprises are deploying AI agents, voice AI, and automation across messaging, voice, and digital channels faster than the architecture meant to support it. Most of...",
       "category": "Business",
       "avatar": "char-woman-head.png",
-      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/1RK5pjHAxWRLsDy5iAC3Iy/4f9c39b5925645c365440e487ffe2157/Tata_hero.jpg?w=300&q=30"
+      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/1RK5pjHAxWRLsDy5iAC3Iy/4f9c39b5925645c365440e487ffe2157/Tata_hero.jpg?w=300&q=30",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Agentic AI",
+          "Voice AI"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Gatik raises $200M to scale AI-powered autonomous freight",
@@ -453,7 +970,22 @@
       "pubDate": "Wed, 26 Aug 2026 10:00:00 +0000",
       "summary": "Autonomous trucking company Gatik has raised $200 million in Series D funding to expand its driverless freight operations across North America. The round was led by Qatar Investment Authority and...",
       "category": "World News",
-      "avatar": "char-hooded-head.png"
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/Gatik-raises-200M-to-scale-AI-powered-autonomous-freight-scaled-e1787721024660.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Medium",
+        "sentimentScore": 1,
+        "companies": [
+          "Gatik"
+        ],
+        "countries": [
+          "Qatar"
+        ],
+        "technologies": [
+          "Autonomous vehicles"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "NVIDIA Jetson Orin Nano 2 brings physical AI to drones and robots",
@@ -461,7 +993,20 @@
       "pubDate": "Wed, 26 Aug 2026 09:08:11 +0000",
       "summary": "NVIDIA has unveiled the Jetson Orin Nano 2, an edge robotics computer aimed at bringing physical AI to drones, robots, and vision systems. The company is positioning the new board as an entry-level...",
       "category": "World News",
-      "avatar": "char-hooded-head.png"
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/nvidia-jetson-orin-nano-2-physical-ai-edge-computing-robotics-artificial-intelligence.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Nvidia"
+        ],
+        "countries": [],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "MIT AI forecasts extreme weather without historical data",
@@ -469,7 +1014,16 @@
       "pubDate": "Tue, 25 Aug 2026 15:46:06 +0000",
       "summary": "MIT engineers have built an AI tool that forecasts extreme weather without training on historical disaster data. Kai Chang, a mechanical engineering graduate student, and Professor Themis Sapsis...",
       "category": "World News",
-      "avatar": "char-hooded-head.png"
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/mit-ai-extreme-weather-forecasts-predictive-modelling-machine-learning-risk-assessment-forecasting-flood-prediction.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "XPENG IRON humanoid robot draws record physical AI funding",
@@ -477,7 +1031,22 @@
       "pubDate": "Mon, 24 Aug 2026 15:53:53 +0000",
       "summary": "XPENG’s physical AI unit has secured over $900 million at a $6.3 billion valuation to scale its IRON humanoid robot platform. The Chinese electric vehicle maker announced the funding round for its...",
       "category": "World News",
-      "avatar": "char-hooded-head.png"
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/xpeng-iron-humanoid-robot-physical-ai-model-artificial-intelligence-china-platform-scaled.jpeg",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 1,
+        "companies": [
+          "XPENG"
+        ],
+        "countries": [
+          "China"
+        ],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "How AI coding tools are contributing to the popularity of JavaScript",
@@ -485,7 +1054,16 @@
       "pubDate": "Fri, 21 Aug 2026 08:41:29 +0000",
       "summary": "In August 2025, TypeScript became the most used language on GitHub. This was the largest shift in GitHub’s language rankings in the last ten years and it occurred during the period of most...",
       "category": "World News",
-      "avatar": "char-hooded-head.png"
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/chris-ried-ieic5Tq8YMk-unsplash-scaled.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Amazon’s Prime Air autonomous drones to reach 500 US cities",
@@ -493,7 +1071,20 @@
       "pubDate": "Thu, 20 Aug 2026 14:05:18 +0000",
       "summary": "Amazon plans to expand its Prime Air drone delivery service to nearly 500 cities and towns across the US by the end of 2026. That build-out amounts to six times the number of locations Prime Air...",
       "category": "World News",
-      "avatar": "char-hooded-head.png"
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/amazon-prime-air-drone-delivery-us-cities-expansion-autonomous-physical-edge-ai-logistics.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Amazon"
+        ],
+        "countries": [],
+        "technologies": [
+          "Autonomous vehicles"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Stripe agrees to buy OpenRouter as AI model routing expands",
@@ -502,7 +1093,17 @@
       "summary": "Stripe has agreed to acquire OpenRouter, an AI model-routing platform that gives developers access to hundreds of models through a single interface. The deal adds model selection and routing to...",
       "category": "World News",
       "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/Stripe-agrees-to-buy-OpenRouter-as-AI-model-routing-expands-scaled-e1787195901752.jpg"
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/Stripe-agrees-to-buy-OpenRouter-as-AI-model-routing-expands-scaled-e1787195901752.jpg",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 1,
+        "companies": [
+          "Stripe"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Agentic AI in government just hit the hard part: deciding what a machine may decide",
@@ -511,7 +1112,19 @@
       "summary": "The United Arab Emirates (UAE) has been early in adopting artificial intelligence for 9 years. It published a national AI strategy in October 2017 and, days later, created a ministerial post to run...",
       "category": "World News",
       "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/p1x04htn1ka1ardpn-scaled.jpeg"
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/p1x04htn1ka1ardpn-scaled.jpeg",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "United Arab Emirates"
+        ],
+        "technologies": [
+          "Agentic AI"
+        ],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "A third of ChatGPT ads appear in irrelevant conversations",
@@ -520,7 +1133,15 @@
       "summary": "Advertising inside ChatGPT arrived with a promise that the assistant already knows what the user wants. So far, that hasn’t entirely been the case. Searchable, the AI visibility platform, analysed...",
       "category": "World News",
       "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/levart_photographer-drwpcjkvxuU-unsplash-scaled.jpg"
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/levart_photographer-drwpcjkvxuU-unsplash-scaled.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "VentureBeat names Rob Strechay as its first Lead Analyst, expanding its enterprise AI research push",
@@ -529,7 +1150,15 @@
       "summary": "Rob Strechay, until recently managing director and principal analyst at theCUBE Research, has joined VentureBeat as our first Lead Analyst and a founding analyst of VentureBeat Research. His arrival...",
       "category": "Business",
       "avatar": "char-woman-head.png",
-      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/14iDGoOPdfaOw0DODBNL9w/7f4d8c6b70797d9bf23a623cbfa3fea3/6ca16f96-3171-4f7e-8c89-f466a3901415.png?w=300&q=30"
+      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/14iDGoOPdfaOw0DODBNL9w/7f4d8c6b70797d9bf23a623cbfa3fea3/6ca16f96-3171-4f7e-8c89-f466a3901415.png?w=300&q=30",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     }
   ]
 }
