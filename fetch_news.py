@@ -24,6 +24,7 @@ Security notes:
 """
 
 import json
+import os
 import re
 import ssl
 import time
@@ -252,6 +253,141 @@ NEGATIVE_WORDS = [
 HIGH_IMPACT_WORDS = ["sues", "lawsuit", "banned", "billion", "acquisition", "acquire", "shuts down", "regulat"]
 MEDIUM_IMPACT_WORDS = ["raises", "funding", "partners", "launches", "expands", "million", "secures"]
 
+SOURCE_NAMES = {
+    "techcrunch.com": "TechCrunch",
+    "venturebeat.com": "VentureBeat",
+    "www.artificialintelligence-news.com": "AI News",
+}
+
+
+def source_name(link):
+    host = urlparse(link).hostname or ""
+    return SOURCE_NAMES.get(host, host)
+
+
+def pub_day(item):
+    ts = sort_key(item)
+    if not ts:
+        return None
+    return time.strftime("%Y-%m-%d", time.gmtime(ts))
+
+
+# ---------------------------------------------------------------------------
+# Cross-source story clustering.
+#
+# Two articles are treated as the same underlying event only if they share
+# a tagged company AND their titles are substantially similar (word-overlap
+# based) on the same day. Company overlap alone is far too weak a signal --
+# e.g. two unrelated OpenAI stories from the same day would otherwise get
+# merged, which would misrepresent one as "coverage of" the other. Requiring
+# both keeps this to genuine same-event duplicates (e.g. two outlets
+# reporting the same acquisition), computed entirely from data already on
+# each item (no LLM, no network calls).
+# ---------------------------------------------------------------------------
+
+TITLE_STOPWORDS = {
+    "the", "a", "an", "is", "are", "was", "were", "in", "on", "of", "for",
+    "to", "and", "or", "its", "this", "that", "with", "at", "by", "as",
+    "new", "first", "its", "will", "has", "have", "just", "after", "over",
+}
+TITLE_SIMILARITY_THRESHOLD = 0.25
+
+
+def _title_words(title):
+    words = re.findall(r"[a-z0-9]+", (title or "").lower())
+    return {w for w in words if w not in TITLE_STOPWORDS and len(w) > 2}
+
+
+def _title_similarity(a, b):
+    wa, wb = _title_words(a), _title_words(b)
+    if not wa or not wb:
+        return 0.0
+    return len(wa & wb) / len(wa | wb)
+
+
+def cluster_stories(items):
+    n = len(items)
+    parent = list(range(n))
+
+    def find(x):
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    def union(a, b):
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[ra] = rb
+
+    days = [pub_day(it) for it in items]
+    companies = [frozenset((it.get("aiAnalysis") or {}).get("companies", [])) for it in items]
+
+    for i in range(n):
+        if not companies[i] or not days[i]:
+            continue
+        for j in range(i + 1, n):
+            if days[j] != days[i] or not companies[j]:
+                continue
+            if not (companies[i] & companies[j]):
+                continue
+            if _title_similarity(items[i]["title"], items[j]["title"]) < TITLE_SIMILARITY_THRESHOLD:
+                continue
+            union(i, j)
+
+    groups = {}
+    for i in range(n):
+        groups.setdefault(find(i), []).append(i)
+
+    clustered_away = set()
+    for idxs in groups.values():
+        if len(idxs) < 2:
+            continue
+        # prefer a primary that already has real (non-heuristic) analysis,
+        # then the one with the richest summary
+        idxs.sort(
+            key=lambda i: (
+                0 if (items[i].get("aiAnalysis") or {}).get("engine") == "heuristic" else 1,
+                len(items[i].get("summary", "")),
+            ),
+            reverse=True,
+        )
+        primary_i, other_is = idxs[0], idxs[1:]
+        items[primary_i]["relatedSources"] = [
+            {"title": items[k]["title"], "link": items[k]["link"], "source": source_name(items[k]["link"])}
+            for k in other_is
+        ]
+        clustered_away.update(other_is)
+
+    return [it for i, it in enumerate(items) if i not in clustered_away]
+
+
+# ---------------------------------------------------------------------------
+# Time Machine: a dated daily snapshot, kept forever (unlike news.json,
+# which is capped and rolls off older items). This is what lets the
+# frontend show "what AI news looked like on <date>" for any day going
+# forward from when this was added.
+# ---------------------------------------------------------------------------
+
+ARCHIVE_DIR = "archive"
+SNAPSHOT_ITEMS = 20
+
+
+def write_daily_snapshot(all_items):
+    os.makedirs(ARCHIVE_DIR, exist_ok=True)
+    today = time.strftime("%Y-%m-%d", time.gmtime())
+
+    snapshot = {"date": today, "items": all_items[:SNAPSHOT_ITEMS]}
+    with open(os.path.join(ARCHIVE_DIR, f"{today}.json"), "w", encoding="utf-8") as f:
+        json.dump(snapshot, f, ensure_ascii=False, indent=2)
+
+    dates = sorted(
+        (fn[:-5] for fn in os.listdir(ARCHIVE_DIR) if fn.endswith(".json") and fn != "index.json"),
+        reverse=True,
+    )
+    with open(os.path.join(ARCHIVE_DIR, "index.json"), "w", encoding="utf-8") as f:
+        json.dump({"dates": dates}, f, ensure_ascii=False, indent=2)
+
 
 def _match_any(patterns, text):
     return any(re.search(p, text, re.IGNORECASE) for p in patterns)
@@ -337,6 +473,7 @@ def main():
 
     all_items.sort(key=sort_key, reverse=True)
     all_items = all_items[:ARCHIVE_MAX]
+    all_items = cluster_stories(all_items)
 
     output = {
         "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
@@ -345,6 +482,8 @@ def main():
 
     with open("news.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
+
+    write_daily_snapshot(all_items)
 
     print(f"wrote {len(all_items)} items to news.json ({len(new_items)} fetched this run)")
 

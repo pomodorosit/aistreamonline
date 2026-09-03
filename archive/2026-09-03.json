@@ -1,0 +1,394 @@
+{
+  "date": "2026-09-03",
+  "items": [
+    {
+      "title": "NVIDIA to acquire Hugging Face for $12.93B",
+      "link": "https://www.artificialintelligence-news.com/news/nvidia-to-acquire-hugging-face-for-12-93b/",
+      "pubDate": "Thu, 03 Sep 2026 15:50:31 +0000",
+      "summary": "NVIDIA has agreed to acquire Hugging Face for $12.93 billion to scale the open-source model repository’s platform and infrastructure. The transaction targets platform growth and infrastructure...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/nvidia-acquire-hugging-face-open-source-ai-model-repository-platform-infrastructure.jpg",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 1,
+        "companies": [
+          "Nvidia",
+          "Hugging Face"
+        ],
+        "countries": [],
+        "technologies": [
+          "Open-weight models"
+        ],
+        "engine": "heuristic"
+      },
+      "relatedSources": [
+        {
+          "title": "Nvidia confirms it will buy Hugging Face for $12.9 billion",
+          "link": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/",
+          "source": "TechCrunch"
+        }
+      ]
+    },
+    {
+      "title": "Google’s latest AI weather model gives you no excuse to forget your umbrella",
+      "link": "https://techcrunch.com/2026/09/03/googles-latest-ai-weather-model-gives-you-no-excuse-to-forget-your-umbrella/",
+      "pubDate": "Thu, 03 Sep 2026 15:00:00 +0000",
+      "summary": "WeatherNext 3 is the latest wave of a sea change in meteorology brought out by deep learning techniques. Google says it will start feeding into weather information users see in search, Google Maps,...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/2-Figure-How-WeatherNext-3-works.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "The Builders Stage brings practical strategies for scaling startups to TechCrunch Disrupt 2026",
+      "link": "https://techcrunch.com/2026/09/02/the-builders-stage-brings-practical-strategies-for-scaling-startups-to-techcrunch-disrupt-2026/",
+      "pubDate": "Wed, 02 Sep 2026 23:01:00 +0000",
+      "summary": "The Builders Stage is returning to TechCrunch Disrupt, bringing together founders, startup operators, and investors for practical conversations on what it takes to build and scale.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/07/Builders-Stage_ArticleHeader_tc26_V2.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Palo Alto Networks paid $500M for Thrive-backed Console, sources say",
+      "link": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/",
+      "pubDate": "Wed, 02 Sep 2026 22:44:56 +0000",
+      "summary": "The acquisition also leaves Sequoia-backed Serval as the de facto startup leader in AI IT service automation, industry watchers believe.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2025/07/GettyImages-2215666246.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "TechCrunch Disrupt 2026’s new Real World AI Stage features Nvidia, robots, and extinct animals",
+      "link": "https://techcrunch.com/2026/09/02/techcrunch-disrupt-2026s-new-real-world-ai-stage-features-nvidia-robots-and-extinct-animals/",
+      "pubDate": "Wed, 02 Sep 2026 22:24:09 +0000",
+      "summary": "On our new Real World AI stage, we’ll be focusing on the intersection between the digital and physical, and all the ways we’ll continue to see a blending of the two.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/Real-World-AI-Promo.png?w=1200",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Nvidia"
+        ],
+        "countries": [],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "OpenAI’s new reasoning technique alarms AI safety experts",
+      "link": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/",
+      "pubDate": "Wed, 02 Sep 2026 20:19:14 +0000",
+      "summary": "OpenAI’s new Astra model will use “recurrent depth,” a technique that allows the model to operate outside of the sequential thinking that characterizes most reasoning models.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/07/OpenAI-logo-in-Seoul.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI safety"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Pangram’s Max Spero on why AI detection is harder than ‘Real or Fake’",
+      "link": "https://techcrunch.com/video/pangrams-max-spero-on-why-ai-detection-is-harder-than-real-or-fake/",
+      "pubDate": "Wed, 02 Sep 2026 17:18:13 +0000",
+      "summary": "The internet has a trust problem, and it’s not just because social media feeds are filling up with AI slop. AI-generated text and images are now making their way into job applications, product...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/07/Pangram-founders.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "We’re ‘dangerously close’ to dead internet theory, says Pangram’s CEO",
+      "link": "https://techcrunch.com/podcast/were-dangerously-close-to-dead-internet-theory-says-pangrams-ceo/",
+      "pubDate": "Wed, 02 Sep 2026 17:09:57 +0000",
+      "summary": "The internet has a trust problem, and it’s not just because social media feeds are filling up with AI slop. AI-generated text and images are now making their way into job applications, product...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/Max-Headshot.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "US government sides with OpenAI on issue of training LLMs on copyrighted material",
+      "link": "https://techcrunch.com/2026/09/02/u-s-government-sides-with-openai-on-issue-of-training-llms-on-copyrighted-material/",
+      "pubDate": "Wed, 02 Sep 2026 17:09:06 +0000",
+      "summary": "\"The United States has a strong interest in continuing to develop a robust and competitive artificial intelligence industry that sets the standard for the practice and procedure of AI use globally,\"...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2263890424.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [
+          "United States"
+        ],
+        "technologies": [
+          "AI regulation"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Wonderful more than doubles its valuation to $5B in under 6 months",
+      "link": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+      "pubDate": "Wed, 02 Sep 2026 16:04:10 +0000",
+      "summary": "Wonderful said it will use its $550 million Series C funding to develop products faster, expand its FDE teams, and meet demand for its products.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2018/02/tc-backlight-e1689786273147.png?w=1200",
+      "aiAnalysis": {
+        "impactLevel": "Medium",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "India’s richest man now wants to turn aging computers into AI-ready PCs",
+      "link": "https://techcrunch.com/2026/09/02/indias-richest-man-now-wants-to-turn-aging-computers-into-ai-ready-pcs/",
+      "pubDate": "Wed, 02 Sep 2026 16:01:48 +0000",
+      "summary": "Jio is betting it can turn an aging computer into an AI-ready PC for as little as about $11 for two months.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/jiopc.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "India"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Motional and MIT AI explains self-driving car decisions",
+      "link": "https://www.artificialintelligence-news.com/news/motional-and-mit-ai-explains-self-driving-car-decisions/",
+      "pubDate": "Wed, 02 Sep 2026 15:25:12 +0000",
+      "summary": "Motional and MIT researchers have built a system that lets self-driving cars explain their decisions in real-time, tackling the black-box problem in autonomous vehicle AI. The work, published in...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/motional-mit-ai-self-driving-car-autonomous-vehicle-decisions-explainable-artificial-intelligence.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Autonomous vehicles"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "HiddenLayer nabs $100M as enterprises rush to secure their AI deployments",
+      "link": "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/",
+      "pubDate": "Wed, 02 Sep 2026 15:01:23 +0000",
+      "summary": "Security companies are scrambling to build products that can monitor not just agents but also the tools and add-ons they use.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/hiddenlayer.jpg?resize=1200,900",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "PSA: Amazon’s shopping AI can now tell you if that message is a scam",
+      "link": "https://techcrunch.com/2026/09/02/psa-amazons-shopping-ai-can-now-tell-you-if-that-message-is-a-scam/",
+      "pubDate": "Wed, 02 Sep 2026 14:56:34 +0000",
+      "summary": "Amazon is adding a scam-detection feature to Alexa for Shopping that can verify whether suspicious emails, texts, and other messages actually came from the retailer.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/alexa-shopping-ai-hero-lm.jpg?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Amazon"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Adobe acquires Indian market intelligence startup Rilo",
+      "link": "https://techcrunch.com/2026/09/02/adobe-acquires-indian-market-intelligence-startup-rilo/",
+      "pubDate": "Wed, 02 Sep 2026 14:03:57 +0000",
+      "summary": "This is Adobe's second acquisition out of India after Rephrase.ai in 2023",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2024/09/GettyImages-2162453288.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "India"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "OpenAI faces 30 more lawsuits tied to Tumbler Ridge shooting",
+      "link": "https://techcrunch.com/2026/09/02/openai-faces-30-more-lawsuits-tied-to-tumbler-ridge-shooting/",
+      "pubDate": "Wed, 02 Sep 2026 12:09:42 +0000",
+      "summary": "Edelson PC is filing 30 new lawsuits against OpenAI over the Tumbler Ridge shooting, escalating claims to aiding and abetting and naming Chris Lehane, though evidence remains unconfirmed.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/07/tim-cook-sam-altman-GettyImages-2233062347.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": -1,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI regulation"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "AfterQuery reportedly becomes Y Combinator’s fastest-ever unicorn, now valued at $3.2B",
+      "link": "https://techcrunch.com/2026/09/01/afterquery-reportedly-becomes-y-combinators-fastest-ever-unicorn-now-valued-at-3-2b/",
+      "pubDate": "Tue, 01 Sep 2026 22:08:24 +0000",
+      "summary": "AI model-training startup AfterQuery has reportedly raised a round that valued it at $3.2 billion, just five months after announcing its $30 million Series A at a $300 million valuation in April.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2023/10/GettyImages-1569337822.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "OpenAI’s Astra model is on the way — and very good at breaking into computer systems",
+      "link": "https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/",
+      "pubDate": "Tue, 01 Sep 2026 21:06:24 +0000",
+      "summary": "OpenAI previewed the precautions it is taking as it prepares to release Astra, its newest, cyber-critical LLM.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/05/openai-logo-code-background.jpg?resize=1200,798",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [
+          "Large language models"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Google’s Android update tackles motion sickness, accessibility, and more",
+      "link": "https://techcrunch.com/2026/09/01/googles-android-update-tackles-motion-sickness-accessibility-and-more/",
+      "pubDate": "Tue, 01 Sep 2026 20:53:05 +0000",
+      "summary": "While some of the features see Google playing catch-up to Apple, which already offers similar features for iPhone users, others specifically leverage Gemini to provide various improvements.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/MotionAssist-Google.png?w=1200",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Google",
+          "Apple"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Anthropic’s new Fable release is cheaper, less restrictive",
+      "link": "https://techcrunch.com/2026/09/01/anthropics-new-fable-release-is-cheaper-less-restrictive/",
+      "pubDate": "Tue, 01 Sep 2026 19:39:22 +0000",
+      "summary": "Fable 5.1 includes changes meant to reduce token cost and false-positive restrictions from the model's safeguards.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/04/GettyImages-2269811684.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    }
+  ]
+}

@@ -108,7 +108,10 @@ img { max-width: 100%; display: block; }
 
 .main-nav {
   display: flex;
-  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 28px;
+  row-gap: 8px;
 }
 
 .main-nav a {
@@ -118,7 +121,13 @@ img { max-width: 100%; display: block; }
   color: var(--ink-soft);
   padding-bottom: 4px;
   border-bottom: 1px solid transparent;
+  white-space: nowrap;
   transition: border-color .2s, color .2s;
+}
+
+@media (max-width: 1240px) {
+  .main-nav { gap: 18px; }
+  .main-nav a { font-size: 11px; letter-spacing: 1.3px; }
 }
 
 .main-nav a:hover {
@@ -240,6 +249,15 @@ img { max-width: 100%; display: block; }
 
 .featured-hero .hero-cta {
   justify-content: flex-start;
+}
+
+.hero-related-sources {
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.hero-related-sources:empty {
+  display: none;
 }
 
 @media (max-width: 640px) {
@@ -463,6 +481,71 @@ img { max-width: 100%; display: block; }
 }
 
 .news-section { background: var(--bg); }
+
+.topic-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.topic-filters-hint {
+  color: var(--ink-faint);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+
+.topic-chip {
+  background: transparent;
+  color: var(--ink-soft);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 12px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: border-color .2s, background .2s, color .2s;
+}
+
+.topic-chip:hover { border-color: var(--gold-dim); }
+
+.topic-chip.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--bg);
+  font-weight: 600;
+}
+
+.topic-empty {
+  color: var(--ink-faint);
+  font-size: 14px;
+  grid-column: 1 / -1;
+}
+
+.related-sources {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.related-sources-label {
+  color: var(--ink-faint);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.related-sources a {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--gold-dim);
+}
 
 .news-grid {
   display: grid;
@@ -1175,6 +1258,79 @@ img { max-width: 100%; display: block; }
 
 .drilldown-list a { color: var(--ink); }
 .drilldown-list a:hover { color: var(--gold); }
+
+/* ---------- Ask the World ---------- */
+
+.ask-world-section { background: var(--bg); text-align: center; }
+
+.ask-world-form {
+  display: flex;
+  gap: 12px;
+  max-width: 560px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ask-world-form input[type="text"] {
+  flex: 1;
+  min-width: 240px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: var(--bg-alt);
+  color: var(--ink);
+  font-size: 14px;
+  font-family: var(--font-body);
+}
+
+.ask-world-form input[type="text"]::placeholder { color: var(--ink-faint); }
+
+.ask-world-results {
+  max-width: 720px;
+  margin: 40px auto 0;
+  text-align: left;
+}
+
+.ask-world-results .archive-row:first-child { padding-top: 0; }
+
+/* ---------- Time Machine ---------- */
+
+.time-machine-section { background: var(--bg-alt); text-align: center; }
+
+.time-machine-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.time-machine-controls label {
+  color: var(--ink-faint);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.time-machine-controls select {
+  background: var(--bg);
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: var(--font-body);
+}
+
+.time-machine-results {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+  color: var(--ink-faint);
+}
+
+.time-machine-results .archive-row:first-child { padding-top: 0; }
 
 /* ---------- top AI platforms ---------- */
 

@@ -133,6 +133,32 @@ function buildWhyItMatters(analysis) {
   return box;
 }
 
+function buildRelatedSources(relatedSources) {
+  if (!Array.isArray(relatedSources) || relatedSources.length === 0) return null;
+  const box = document.createElement('div');
+  box.className = 'related-sources';
+
+  const label = document.createElement('span');
+  label.className = 'related-sources-label';
+  label.textContent = 'Also covered by';
+  box.appendChild(label);
+
+  relatedSources.forEach((rs) => {
+    const link = document.createElement('a');
+    link.textContent = rs.source || 'Source';
+    if (isSafeHttpUrl(rs.link)) {
+      link.href = rs.link;
+      link.rel = 'noopener noreferrer nofollow';
+      link.target = '_blank';
+    } else {
+      link.href = '#';
+    }
+    box.appendChild(link);
+  });
+
+  return box;
+}
+
 function buildNewsCard(item, isFeatured) {
   const card = document.createElement('article');
   card.className = 'news-card' + (isFeatured ? ' featured' : '');
@@ -187,6 +213,9 @@ function buildNewsCard(item, isFeatured) {
   const whyItMatters = buildWhyItMatters(item.aiAnalysis);
   if (whyItMatters) body.appendChild(whyItMatters);
 
+  const relatedSources = buildRelatedSources(item.relatedSources);
+  if (relatedSources) body.appendChild(relatedSources);
+
   const meta = document.createElement('div');
   meta.className = 'news-meta';
 
@@ -216,6 +245,7 @@ function populateFeaturedHero(item) {
   const title = document.getElementById('featured-hero-title');
   const sub = document.getElementById('featured-hero-sub');
   const link = document.getElementById('featured-hero-link');
+  const relatedContainer = document.getElementById('featured-hero-related');
   if (!bg || !tag || !title || !sub || !link) return;
 
   if (item.image && isSafeHttpUrl(item.image)) {
@@ -229,6 +259,12 @@ function populateFeaturedHero(item) {
     link.href = item.link;
     link.rel = 'noopener noreferrer nofollow';
     link.target = '_blank';
+  }
+
+  if (relatedContainer) {
+    relatedContainer.innerHTML = '';
+    const relatedSources = buildRelatedSources(item.relatedSources);
+    if (relatedSources) relatedContainer.appendChild(relatedSources);
   }
 }
 
@@ -337,21 +373,216 @@ function initLiveNews() {
       if (items.length === 0) return; // keep static fallback cards
 
       populateFeaturedHero(items[0]);
+      const heroLink = items[0].link;
+      const pool = items.filter((it) => it.link !== heroLink);
 
-      const rest = items.slice(1, 7);
-      if (rest.length > 0) {
+      function renderPool(filtered) {
         grid.innerHTML = '';
-        rest.forEach((item) => {
-          grid.appendChild(buildNewsCard(item, false));
-        });
+        const gridItems = filtered.slice(0, 6);
+        if (gridItems.length === 0) {
+          const empty = document.createElement('p');
+          empty.className = 'topic-empty';
+          empty.textContent = 'No stories match your followed topics right now.';
+          grid.appendChild(empty);
+        } else {
+          gridItems.forEach((item) => grid.appendChild(buildNewsCard(item, false)));
+        }
+        initNewsArchive(filtered.slice(6));
       }
 
-      initNewsArchive(items.slice(7));
+      renderPool(pool);
+      initTopicFilters(items, (followed) => {
+        if (followed.size === 0) {
+          renderPool(pool);
+          return;
+        }
+        renderPool(
+          pool.filter((it) => {
+            const techs = (it.aiAnalysis && it.aiAnalysis.technologies) || [];
+            return techs.some((t) => followed.has(t));
+          })
+        );
+      });
+
       initVerdict(items);
       initLeadershipDrilldown(items);
+      initAskTheWorld(items);
     })
     .catch(() => {
       // network/parse failure: silently keep the static placeholder cards
+    });
+
+  initTimeMachine();
+}
+
+const TOPIC_STORAGE_KEY = 'aistream_followed_topics';
+const KNOWN_TOPICS = [
+  'Large language models', 'Generative AI', 'Agentic AI', 'Robotics',
+  'Autonomous vehicles', 'AI chips', 'AI infrastructure', 'Computer vision',
+  'Voice AI', 'AI safety', 'Open-weight models', 'AI regulation',
+];
+
+function loadFollowedTopics() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem(TOPIC_STORAGE_KEY)) || []);
+  } catch (e) {
+    return new Set();
+  }
+}
+
+function saveFollowedTopics(followed) {
+  try {
+    localStorage.setItem(TOPIC_STORAGE_KEY, JSON.stringify([...followed]));
+  } catch (e) { /* ignore */ }
+}
+
+function initTopicFilters(newsItems, onChange) {
+  const container = document.getElementById('topic-filters');
+  if (!container) return;
+
+  const present = new Set();
+  newsItems.forEach((it) => {
+    ((it.aiAnalysis && it.aiAnalysis.technologies) || []).forEach((t) => present.add(t));
+  });
+  const topics = KNOWN_TOPICS.filter((t) => present.has(t));
+  if (topics.length === 0) return;
+
+  const followed = loadFollowedTopics();
+
+  const hint = document.createElement('span');
+  hint.className = 'topic-filters-hint';
+  hint.textContent = 'Follow a topic:';
+  container.appendChild(hint);
+
+  topics.forEach((topic) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'topic-chip' + (followed.has(topic) ? ' active' : '');
+    btn.textContent = topic;
+    btn.addEventListener('click', () => {
+      if (followed.has(topic)) {
+        followed.delete(topic);
+      } else {
+        followed.add(topic);
+      }
+      saveFollowedTopics(followed);
+      btn.classList.toggle('active');
+      onChange(followed);
+    });
+    container.appendChild(btn);
+  });
+
+  if (followed.size > 0) onChange(followed);
+}
+
+function tokenizeSearch(text) {
+  return (text || '').toLowerCase().match(/[a-z0-9']+/g) || [];
+}
+
+const SEARCH_STOPWORDS = new Set([
+  'the', 'a', 'an', 'is', 'are', 'was', 'were', 'in', 'on', 'of', 'for',
+  'to', 'and', 'or', 'what', 'how', 'why', 'about', 'with', 'this', 'that',
+]);
+
+function scoreItemForSearch(item, queryTokens) {
+  const haystack = tokenizeSearch(
+    [
+      item.title,
+      item.summary,
+      item.category,
+      ...((item.aiAnalysis && item.aiAnalysis.companies) || []),
+      ...((item.aiAnalysis && item.aiAnalysis.countries) || []),
+      ...((item.aiAnalysis && item.aiAnalysis.technologies) || []),
+    ].join(' ')
+  );
+  const haySet = new Set(haystack);
+  let score = 0;
+  queryTokens.forEach((t) => {
+    if (haySet.has(t)) score++;
+  });
+  return score;
+}
+
+function initAskTheWorld(newsItems) {
+  const form = document.getElementById('ask-world-form');
+  const input = document.getElementById('ask-world-input');
+  const results = document.getElementById('ask-world-results');
+  if (!form || !input || !results) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const query = input.value.trim();
+    results.innerHTML = '';
+    if (!query) return;
+
+    const tokens = tokenizeSearch(query).filter((t) => !SEARCH_STOPWORDS.has(t) && t.length > 1);
+    const scored = newsItems
+      .map((item) => ({ item, score: scoreItemForSearch(item, tokens) }))
+      .filter((s) => s.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 8);
+
+    if (scored.length === 0) {
+      const empty = document.createElement('p');
+      empty.className = 'topic-empty';
+      empty.textContent = 'No stories matched. Try a company, country, or technology name.';
+      results.appendChild(empty);
+      return;
+    }
+
+    scored.forEach(({ item }) => results.appendChild(buildArchiveRow(item)));
+  });
+}
+
+function initTimeMachine() {
+  const select = document.getElementById('time-machine-select');
+  const panel = document.getElementById('time-machine-results');
+  if (!select || !panel) return;
+
+  function loadSnapshot(date) {
+    panel.innerHTML = '';
+    fetch(`archive/${date}.json`, { cache: 'no-store' })
+      .then((res) => {
+        if (!res.ok) throw new Error('snapshot not available');
+        return res.json();
+      })
+      .then((data) => {
+        const items = Array.isArray(data.items) ? data.items : [];
+        panel.innerHTML = '';
+        if (items.length === 0) {
+          panel.textContent = 'No stories recorded for that date.';
+          return;
+        }
+        items.forEach((item) => panel.appendChild(buildArchiveRow(item)));
+      })
+      .catch(() => {
+        panel.textContent = 'Could not load that date.';
+      });
+  }
+
+  fetch('archive/index.json', { cache: 'no-store' })
+    .then((res) => {
+      if (!res.ok) throw new Error('archive index not available');
+      return res.json();
+    })
+    .then((data) => {
+      const dates = Array.isArray(data.dates) ? data.dates : [];
+      if (dates.length === 0) {
+        panel.textContent = 'No historical snapshots yet — check back after a few days.';
+        return;
+      }
+      select.innerHTML = '';
+      dates.forEach((d) => {
+        const opt = document.createElement('option');
+        opt.value = d;
+        opt.textContent = d;
+        select.appendChild(opt);
+      });
+      select.addEventListener('change', () => loadSnapshot(select.value));
+      loadSnapshot(dates[0]);
+    })
+    .catch(() => {
+      panel.textContent = 'Historical data unavailable right now.';
     });
 }
 

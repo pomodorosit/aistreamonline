@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=23">
+<link rel="stylesheet" href="style.css?v=26">
 
 <!-- Google Analytics 4 is loaded only after cookie consent -- see initAnalyticsConsent() in script.js.
      Replace G-XXXXXXXXXX in script.js with your real Measurement ID from analytics.google.com -->
@@ -57,6 +57,8 @@
     </a>
     <nav class="main-nav">
       <a href="#news">News</a>
+      <a href="#ask-world">Ask the World</a>
+      <a href="#time-machine">Time Machine</a>
       <a href="#platforms">Platforms</a>
       <a href="#streams">Streams</a>
       <a href="#about">About</a>
@@ -77,6 +79,7 @@
       <span class="news-tag hero-tag" id="featured-hero-tag">AI News</span>
       <h1 class="hero-title" id="featured-hero-title">Everything that matters in AI, in one place</h1>
       <p class="hero-sub" id="featured-hero-sub">Live coverage from TechCrunch, VentureBeat and AI News — refreshed automatically throughout the day.</p>
+      <div class="related-sources hero-related-sources" id="featured-hero-related"></div>
       <div class="hero-cta">
         <a href="#news" class="btn btn-gold" id="featured-hero-link">Read Full Story</a>
         <a href="#news" class="btn btn-outline">More News</a>
@@ -90,6 +93,8 @@
         <h2>Important AI News</h2>
         <p class="section-sub">Live from TechCrunch, VentureBeat &amp; AI News</p>
       </div>
+
+      <div class="topic-filters" id="topic-filters"></div>
 
       <div class="news-grid" id="news-grid">
 
@@ -164,6 +169,34 @@
       </ol>
       <p class="section-sub leadership-hint">Click a country for its recent AI stories</p>
       <div class="leadership-drilldown" id="leadership-drilldown"></div>
+    </div>
+  </section>
+
+  <section id="ask-world" class="section ask-world-section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Ask the World</h2>
+        <p class="section-sub">Search everything we've tracked — smart keyword matching today, full AI-powered answers coming soon</p>
+      </div>
+      <form class="ask-world-form" id="ask-world-form">
+        <input type="text" id="ask-world-input" placeholder="Try “Nvidia chips” or “AI regulation Europe”" aria-label="Search AI news">
+        <button type="submit" class="btn btn-gold">Search</button>
+      </form>
+      <div class="ask-world-results" id="ask-world-results"></div>
+    </div>
+  </section>
+
+  <section id="time-machine" class="section time-machine-section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>AI Time Machine</h2>
+        <p class="section-sub">See what the AI world looked like on any tracked day</p>
+      </div>
+      <div class="time-machine-controls">
+        <label for="time-machine-select">Jump to date:</label>
+        <select id="time-machine-select"></select>
+      </div>
+      <div class="time-machine-results" id="time-machine-results"></div>
     </div>
   </section>
 
@@ -354,6 +387,6 @@
   </div>
 </div>
 
-<script src="script.js?v=16"></script>
+<script src="script.js?v=18"></script>
 </body>
 </html>

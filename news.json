@@ -1,6 +1,54 @@
 {
-  "generatedAt": "2026-09-03T10:25:08Z",
+  "generatedAt": "2026-09-03T16:02:00Z",
   "items": [
+    {
+      "title": "NVIDIA to acquire Hugging Face for $12.93B",
+      "link": "https://www.artificialintelligence-news.com/news/nvidia-to-acquire-hugging-face-for-12-93b/",
+      "pubDate": "Thu, 03 Sep 2026 15:50:31 +0000",
+      "summary": "NVIDIA has agreed to acquire Hugging Face for $12.93 billion to scale the open-source model repository’s platform and infrastructure. The transaction targets platform growth and infrastructure...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/nvidia-acquire-hugging-face-open-source-ai-model-repository-platform-infrastructure.jpg",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 1,
+        "companies": [
+          "Nvidia",
+          "Hugging Face"
+        ],
+        "countries": [],
+        "technologies": [
+          "Open-weight models"
+        ],
+        "engine": "heuristic"
+      },
+      "relatedSources": [
+        {
+          "title": "Nvidia confirms it will buy Hugging Face for $12.9 billion",
+          "link": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/",
+          "source": "TechCrunch"
+        }
+      ]
+    },
+    {
+      "title": "Google’s latest AI weather model gives you no excuse to forget your umbrella",
+      "link": "https://techcrunch.com/2026/09/03/googles-latest-ai-weather-model-gives-you-no-excuse-to-forget-your-umbrella/",
+      "pubDate": "Thu, 03 Sep 2026 15:00:00 +0000",
+      "summary": "WeatherNext 3 is the latest wave of a sea change in meteorology brought out by deep learning techniques. Google says it will start feeding into weather information users see in search, Google Maps,...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/2-Figure-How-WeatherNext-3-works.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
     {
       "title": "The Builders Stage brings practical strategies for scaling startups to TechCrunch Disrupt 2026",
       "link": "https://techcrunch.com/2026/09/02/the-builders-stage-brings-practical-strategies-for-scaling-startups-to-techcrunch-disrupt-2026/",
@@ -1100,61 +1148,6 @@
         "companies": [
           "Stripe"
         ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Agentic AI in government just hit the hard part: deciding what a machine may decide",
-      "link": "https://www.artificialintelligence-news.com/news/agentic-ai-in-government-uae-classification/",
-      "pubDate": "Thu, 20 Aug 2026 09:00:00 +0000",
-      "summary": "The United Arab Emirates (UAE) has been early in adopting artificial intelligence for 9 years. It published a national AI strategy in October 2017 and, days later, created a ministerial post to run...",
-      "category": "World News",
-      "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/p1x04htn1ka1ardpn-scaled.jpeg",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [
-          "United Arab Emirates"
-        ],
-        "technologies": [
-          "Agentic AI"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "A third of ChatGPT ads appear in irrelevant conversations",
-      "link": "https://www.artificialintelligence-news.com/news/a-third-of-chatgpt-ads-appear-in-irrelevant-conversations/",
-      "pubDate": "Thu, 20 Aug 2026 08:07:40 +0000",
-      "summary": "Advertising inside ChatGPT arrived with a promise that the assistant already knows what the user wants. So far, that hasn’t entirely been the case. Searchable, the AI visibility platform, analysed...",
-      "category": "World News",
-      "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/levart_photographer-drwpcjkvxuU-unsplash-scaled.jpg",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "VentureBeat names Rob Strechay as its first Lead Analyst, expanding its enterprise AI research push",
-      "link": "https://venturebeat.com/ai/venturebeat-names-rob-strechay-as-its-first-lead-analyst-expanding-its-enterprise-ai-research-push",
-      "pubDate": "Wed, 19 Aug 2026 14:18:12 GMT",
-      "summary": "Rob Strechay, until recently managing director and principal analyst at theCUBE Research, has joined VentureBeat as our first Lead Analyst and a founding analyst of VentureBeat Research. His arrival...",
-      "category": "Business",
-      "avatar": "char-woman-head.png",
-      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/14iDGoOPdfaOw0DODBNL9w/7f4d8c6b70797d9bf23a623cbfa3fea3/6ca16f96-3171-4f7e-8c89-f466a3901415.png?w=300&q=30",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [],
         "countries": [],
         "technologies": [],
         "engine": "heuristic"
