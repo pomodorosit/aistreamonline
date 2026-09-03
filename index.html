@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=27">
+<link rel="stylesheet" href="style.css?v=28">
 
 <!-- Google Analytics 4 is loaded only after cookie consent -- see initAnalyticsConsent() in script.js.
      Replace G-XXXXXXXXXX in script.js with your real Measurement ID from analytics.google.com -->
@@ -140,18 +140,14 @@
     <div class="wrap">
       <div class="section-head">
         <h2>Good News or Bad News?</h2>
-        <p class="section-sub">Vote on today's stories — the crowd decides where each one lands</p>
+        <p class="section-sub">Rate today's stories — see how the AI and the crowd see each one</p>
       </div>
 
-      <div class="verdict-grid">
-        <div class="verdict-column verdict-good">
-          <h3 class="verdict-col-title">Good News</h3>
-          <div class="verdict-list" id="good-list"></div>
-        </div>
-        <div class="verdict-column verdict-bad">
-          <h3 class="verdict-col-title">Bad News</h3>
-          <div class="verdict-list" id="bad-list"></div>
-        </div>
+      <div class="verdict-widget">
+        <div class="verdict-progress" id="verdict-progress"></div>
+        <div class="verdict-stage" id="verdict-stage"></div>
+        <div class="verdict-summary" id="verdict-summary"></div>
+        <button type="button" class="btn btn-outline verdict-skip" id="verdict-skip">Skip →</button>
       </div>
     </div>
   </section>
@@ -323,6 +319,6 @@
   </div>
 </div>
 
-<script src="script.js?v=19"></script>
+<script src="script.js?v=21"></script>
 </body>
 </html>

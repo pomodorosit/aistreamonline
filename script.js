@@ -783,25 +783,13 @@ function buildTickerItem(quote) {
   return item;
 }
 
-const VERDICT_STORAGE_KEY = 'aistream_verdict_votes';
+const VERDICT_MY_VOTES_KEY = 'aistream_my_votes';
 const VERDICT_MAX_ITEMS = 10;
+const VERDICT_ADVANCE_DELAY_MS = 700;
 
-function loadVerdictVotes() {
-  try {
-    return JSON.parse(localStorage.getItem(VERDICT_STORAGE_KEY)) || {};
-  } catch (e) {
-    return {};
-  }
-}
-
-function saveVerdictVotes(votes) {
-  try {
-    localStorage.setItem(VERDICT_STORAGE_KEY, JSON.stringify(votes));
-  } catch (e) { /* ignore */ }
-}
-
-// stable short id for a real article, so votes survive across page loads
-// without needing a backend -- same link always hashes to the same id
+// stable short id for a real article, used both as the localStorage key for
+// "did I already vote on this" and as the shared vote-counter key on the
+// server -- same link always hashes to the same id
 function hashId(str) {
   let h = 0;
   for (let i = 0; i < str.length; i++) {
@@ -818,58 +806,118 @@ function aiSentimentScore(analysis) {
   return Math.max(-2, Math.min(2, good - bad));
 }
 
+function aiLeanLabel(score) {
+  if (score > 0) return 'AI leans Good';
+  if (score < 0) return 'AI leans Bad';
+  return 'AI reads this as neutral';
+}
+
+function loadMyVerdictVotes() {
+  try {
+    return JSON.parse(localStorage.getItem(VERDICT_MY_VOTES_KEY)) || {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveMyVerdictVotes(votes) {
+  try {
+    localStorage.setItem(VERDICT_MY_VOTES_KEY, JSON.stringify(votes));
+  } catch (e) { /* ignore */ }
+}
+
 function initVerdict(newsItems) {
-  const goodList = document.getElementById('good-list');
-  const badList = document.getElementById('bad-list');
-  if (!goodList || !badList) return;
+  const stage = document.getElementById('verdict-stage');
+  const summary = document.getElementById('verdict-summary');
+  const progress = document.getElementById('verdict-progress');
+  const skipBtn = document.getElementById('verdict-skip');
+  if (!stage || !summary || !progress || !skipBtn) return;
 
-  const verdictItems = (newsItems || [])
-    .filter((it) => it.aiAnalysis && aiSentimentScore(it.aiAnalysis) !== 0)
+  const queue = (newsItems || [])
+    .filter((it) => it.aiAnalysis)
     .slice(0, VERDICT_MAX_ITEMS)
-    .map((it) => ({
-      id: hashId(it.link),
-      category: it.category || 'News',
-      headline: it.title,
-      link: it.link,
-      aiScore: aiSentimentScore(it.aiAnalysis),
-    }));
+    .map((it) => ({ id: hashId(it.link), item: it, aiScore: aiSentimentScore(it.aiAnalysis) }));
 
-  if (verdictItems.length === 0) return; // keep empty columns rather than showing fake data
+  if (queue.length === 0) return; // nothing to show rather than fake data
 
-  const votes = loadVerdictVotes();
-  let lastMovedId = null;
+  const myVotes = loadMyVerdictVotes();
+  let index = 0;
+  let serverAvailable = true; // flips permanently false on first failed call this session
 
-  function currentScore(item) {
-    return item.aiScore + (votes[item.id] || 0);
+  async function fetchCounts(id) {
+    if (!serverAvailable) return null;
+    try {
+      const res = await fetch('/api/vote?id=' + encodeURIComponent(id), { cache: 'no-store' });
+      if (!res.ok) {
+        serverAvailable = false;
+        return null;
+      }
+      return await res.json();
+    } catch (e) {
+      serverAvailable = false;
+      return null;
+    }
   }
 
-  function render() {
-    const scored = verdictItems.map((item) => ({ item, score: currentScore(item) }));
-    const good = scored.filter((s) => s.score >= 0).sort((a, b) => b.score - a.score);
-    const bad = scored.filter((s) => s.score < 0).sort((a, b) => a.score - b.score);
-
-    goodList.innerHTML = '';
-    badList.innerHTML = '';
-
-    good.forEach(({ item, score }) => goodList.appendChild(renderCard(item, score)));
-    bad.forEach(({ item, score }) => badList.appendChild(renderCard(item, score)));
+  async function postVote(id, direction) {
+    if (!serverAvailable) return null;
+    try {
+      const res = await fetch('/api/vote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, direction }),
+      });
+      if (!res.ok) {
+        serverAvailable = false;
+        return null;
+      }
+      return await res.json();
+    } catch (e) {
+      serverAvailable = false;
+      return null;
+    }
   }
 
-  function renderCard(item, score) {
+  function renderSummary(counts, aiScore) {
+    summary.innerHTML = '';
+
+    const aiSpan = document.createElement('span');
+    aiSpan.className = 'verdict-ai-lean';
+    aiSpan.textContent = aiLeanLabel(aiScore);
+    summary.appendChild(aiSpan);
+
+    const communitySpan = document.createElement('span');
+    communitySpan.className = 'verdict-community';
+    if (counts) {
+      const total = counts.good + counts.bad;
+      if (total > 0) {
+        const pct = Math.round((counts.good / total) * 100);
+        communitySpan.textContent = `Community: ${pct}% Good (${total} vote${total === 1 ? '' : 's'})`;
+      } else {
+        communitySpan.textContent = 'Community: no votes yet — be the first';
+      }
+    } else {
+      communitySpan.textContent = 'Community voting unavailable right now';
+    }
+    summary.appendChild(communitySpan);
+  }
+
+  async function renderCard() {
+    const { id, item, aiScore } = queue[index];
+    progress.textContent = (index + 1) + ' / ' + queue.length;
+
+    stage.innerHTML = '';
     const card = document.createElement('article');
     card.className = 'verdict-card';
-    if (item.id === lastMovedId) {
-      card.classList.add('just-moved');
-    }
 
     const tag = document.createElement('span');
     tag.className = 'verdict-tag';
-    tag.textContent = item.category;
+    tag.textContent = item.category || 'News';
     card.appendChild(tag);
 
     const h4 = document.createElement('h4');
     const link = document.createElement('a');
-    link.textContent = item.headline;
+    link.textContent = item.title || '';
     if (isSafeHttpUrl(item.link)) {
       link.href = item.link;
       link.rel = 'noopener noreferrer nofollow';
@@ -880,55 +928,70 @@ function initVerdict(newsItems) {
     h4.appendChild(link);
     card.appendChild(h4);
 
-    const aiRow = document.createElement('div');
-    aiRow.className = 'verdict-ai-score';
-    aiRow.textContent = 'AI says: ' + (item.aiScore > 0 ? '+' : '') + item.aiScore;
-    card.appendChild(aiRow);
+    const myVote = myVotes[id];
+    if (myVote) {
+      const already = document.createElement('p');
+      already.className = 'verdict-already-voted';
+      already.textContent = 'You voted: ' + (myVote === 'good' ? 'Good' : 'Bad');
+      card.appendChild(already);
+    }
 
     const vote = document.createElement('div');
     vote.className = 'verdict-vote';
     vote.innerHTML = `
         <div class="vote-option">
           <span class="vote-label vote-label-good">Good</span>
-          <button class="vote-round vote-up" data-id="${item.id}" aria-label="Vote good news">
+          <button class="vote-round vote-up" aria-label="Vote good news" ${myVote ? 'disabled' : ''}>
             <img src="vote-good.png" alt="">
           </button>
         </div>
-        <span class="vote-score">${score > 0 ? '+' : ''}${score}</span>
         <div class="vote-option">
           <span class="vote-label vote-label-bad">Bad</span>
-          <button class="vote-round vote-down" data-id="${item.id}" aria-label="Vote bad news">
+          <button class="vote-round vote-down" aria-label="Vote bad news" ${myVote ? 'disabled' : ''}>
             <img src="vote-bad.png" alt="">
           </button>
         </div>
     `;
+    vote.querySelector('.vote-up').addEventListener('click', () => handleVote(id, 'good'));
+    vote.querySelector('.vote-down').addEventListener('click', () => handleVote(id, 'bad'));
     card.appendChild(vote);
 
-    return card;
+    stage.appendChild(card);
+
+    renderSummary(null, aiScore);
+    const counts = await fetchCounts(id);
+    // only apply if still showing the same card (user may have skipped ahead already)
+    if (queue[index].id === id) renderSummary(counts, aiScore);
   }
 
-  function handleVote(id, delta) {
-    const item = verdictItems.find((i) => i.id === id);
-    if (!item) return;
-    const wasGood = currentScore(item) >= 0;
-    votes[id] = (votes[id] || 0) + delta;
-    saveVerdictVotes(votes);
-    const isGood = currentScore(item) >= 0;
-    lastMovedId = wasGood !== isGood ? id : null;
-    render();
-    if (lastMovedId) {
-      setTimeout(() => { lastMovedId = null; }, 500);
+  async function handleVote(id, direction) {
+    myVotes[id] = direction;
+    saveMyVerdictVotes(myVotes);
+
+    // lock the buttons and show "you voted" immediately -- don't wait for
+    // the network call or the next render, otherwise a second click inside
+    // the advance delay would submit a duplicate vote
+    stage.querySelectorAll('.vote-round').forEach((btn) => { btn.disabled = true; });
+    if (!stage.querySelector('.verdict-already-voted')) {
+      const already = document.createElement('p');
+      already.className = 'verdict-already-voted';
+      already.textContent = 'You voted: ' + (direction === 'good' ? 'Good' : 'Bad');
+      stage.querySelector('.verdict-card').insertBefore(already, stage.querySelector('.verdict-vote'));
     }
+
+    const aiScore = queue[index].aiScore;
+    renderSummary(null, aiScore); // clear stale counts while the vote is in flight
+    const counts = await postVote(id, direction);
+    if (queue[index].id === id) renderSummary(counts, aiScore);
+
+    setTimeout(advance, VERDICT_ADVANCE_DELAY_MS);
   }
 
-  document.querySelectorAll('.verdict-list').forEach((list) => {
-    list.addEventListener('click', (e) => {
-      const btn = e.target.closest('.vote-round');
-      if (!btn) return;
-      const delta = btn.classList.contains('vote-up') ? 1 : -1;
-      handleVote(btn.dataset.id, delta);
-    });
-  });
+  function advance() {
+    index = (index + 1) % queue.length;
+    renderCard();
+  }
 
-  render();
+  skipBtn.addEventListener('click', advance);
+  renderCard();
 }
