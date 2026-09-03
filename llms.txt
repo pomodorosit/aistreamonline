@@ -1,0 +1,36 @@
+# AI Stream Online
+
+> A live-updating hub for AI industry news and market data. Aggregates TechCrunch, VentureBeat, and AI News; tags every story with an impact level and entities (companies/countries/technologies); merges multi-outlet coverage of the same event into one story. Refreshed automatically every few hours.
+
+## Current top stories
+
+- [Ollie is betting its focus on privacy can help it win the AI assistant race](https://techcrunch.com/2026/09/03/ollie-is-betting-privacy-can-win-the-ai-assistant-race/) — The family-focused AI assistant wants access to the details of your everyday life, but says it won’t use that data to train AI models or share it with others.
+- [OneRail uses Nvidia AI for real-time last-mile delivery optimisation](https://www.artificialintelligence-news.com/news/ai-last-mile-delivery-optimisation/) — OneRail has launched an AI-powered delivery platform that uses Nvidia technology to help retailers, wholesalers, and distributors decide how individual orders should be delivered. Called OmniSTAR,...
+- [NVIDIA to acquire Hugging Face for $12.93B](https://www.artificialintelligence-news.com/news/nvidia-to-acquire-hugging-face-for-12-93b/) — NVIDIA has agreed to acquire Hugging Face for $12.93 billion to scale the open-source model repository’s platform and infrastructure. The transaction targets platform growth and infrastructure...
+- [Google’s latest AI weather model gives you no excuse to forget your umbrella](https://techcrunch.com/2026/09/03/googles-latest-ai-weather-model-gives-you-no-excuse-to-forget-your-umbrella/) — WeatherNext 3 is the latest wave of a sea change in meteorology brought out by deep learning techniques. Google says it will start feeding into weather information users see in search, Google Maps,...
+- [The Builders Stage brings practical strategies for scaling startups to TechCrunch Disrupt 2026](https://techcrunch.com/2026/09/02/the-builders-stage-brings-practical-strategies-for-scaling-startups-to-techcrunch-disrupt-2026/) — The Builders Stage is returning to TechCrunch Disrupt, bringing together founders, startup operators, and investors for practical conversations on what it takes to build and scale.
+- [Palo Alto Networks paid $500M for Thrive-backed Console, sources say](https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/) — The acquisition also leaves Sequoia-backed Serval as the de facto startup leader in AI IT service automation, industry watchers believe.
+- [TechCrunch Disrupt 2026’s new Real World AI Stage features Nvidia, robots, and extinct animals](https://techcrunch.com/2026/09/02/techcrunch-disrupt-2026s-new-real-world-ai-stage-features-nvidia-robots-and-extinct-animals/) — On our new Real World AI stage, we’ll be focusing on the intersection between the digital and physical, and all the ways we’ll continue to see a blending of the two.
+- [OpenAI’s new reasoning technique alarms AI safety experts](https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/) — OpenAI’s new Astra model will use “recurrent depth,” a technique that allows the model to operate outside of the sequential thinking that characterizes most reasoning models.
+- [Pangram’s Max Spero on why AI detection is harder than ‘Real or Fake’](https://techcrunch.com/video/pangrams-max-spero-on-why-ai-detection-is-harder-than-real-or-fake/) — The internet has a trust problem, and it’s not just because social media feeds are filling up with AI slop. AI-generated text and images are now making their way into job applications, product...
+- [We’re ‘dangerously close’ to dead internet theory, says Pangram’s CEO](https://techcrunch.com/podcast/were-dangerously-close-to-dead-internet-theory-says-pangrams-ceo/) — The internet has a trust problem, and it’s not just because social media feeds are filling up with AI slop. AI-generated text and images are now making their way into job applications, product...
+- [US government sides with OpenAI on issue of training LLMs on copyrighted material](https://techcrunch.com/2026/09/02/u-s-government-sides-with-openai-on-issue-of-training-llms-on-copyrighted-material/) — "The United States has a strong interest in continuing to develop a robust and competitive artificial intelligence industry that sets the standard for the practice and procedure of AI use globally,"...
+- [Wonderful more than doubles its valuation to $5B in under 6 months](https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/) — Wonderful said it will use its $550 million Series C funding to develop products faster, expand its FDE teams, and meet demand for its products.
+- [India’s richest man now wants to turn aging computers into AI-ready PCs](https://techcrunch.com/2026/09/02/indias-richest-man-now-wants-to-turn-aging-computers-into-ai-ready-pcs/) — Jio is betting it can turn an aging computer into an AI-ready PC for as little as about $11 for two months.
+- [Motional and MIT AI explains self-driving car decisions](https://www.artificialintelligence-news.com/news/motional-and-mit-ai-explains-self-driving-car-decisions/) — Motional and MIT researchers have built a system that lets self-driving cars explain their decisions in real-time, tackling the black-box problem in autonomous vehicle AI. The work, published in...
+- [HiddenLayer nabs $100M as enterprises rush to secure their AI deployments](https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/) — Security companies are scrambling to build products that can monitor not just agents but also the tools and add-ons they use.
+
+## Sections
+
+- News feed: https://aistreamonline.com/#news
+- Global AI Leadership (per-capita country ranking): https://aistreamonline.com/#leadership
+- Ask the World (search across tracked stories): https://aistreamonline.com/#ask-world
+- AI Time Machine (historical daily snapshots): https://aistreamonline.com/#time-machine
+- Top 10 AI Platforms: https://aistreamonline.com/#platforms
+- Streams (videos, podcasts, creators): https://aistreamonline.com/#streams
+
+## Machine-readable data
+
+- Full current article list (JSON): https://aistreamonline.com/news.json
+- Daily historical snapshots index: https://aistreamonline.com/archive/index.json
+- AI stock ticker quotes (JSON): https://aistreamonline.com/stocks.json

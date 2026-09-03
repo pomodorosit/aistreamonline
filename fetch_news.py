@@ -34,6 +34,8 @@ from email.utils import mktime_tz, parsedate_tz
 from html import unescape
 from urllib.parse import urlparse
 
+from render_html import bake_html, generate_llms_txt
+
 try:
     import certifi
     SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
@@ -484,6 +486,8 @@ def main():
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     write_daily_snapshot(all_items)
+    bake_html(all_items)
+    generate_llms_txt(all_items)
 
     print(f"wrote {len(all_items)} items to news.json ({len(new_items)} fetched this run)")
 
