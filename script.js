@@ -17,9 +17,80 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initLiveNews();
   initStockTicker();
+  initFeaturedVideos();
   initAnalyticsConsent();
   initNewsletterForm();
 });
+
+const YOUTUBE_ID_RE = /^[\w-]{11}$/;
+
+function formatViewCount(n) {
+  n = Number(n) || 0;
+  if (n >= 1_000_000) return (n / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M views';
+  if (n >= 1_000) return (n / 1_000).toFixed(1).replace(/\.0$/, '') + 'K views';
+  return n + ' views';
+}
+
+function buildStreamCard(video) {
+  if (!YOUTUBE_ID_RE.test(video.videoId || '')) return null;
+
+  const card = document.createElement('div');
+  card.className = 'stream-card';
+
+  const videoWrap = document.createElement('div');
+  videoWrap.className = 'stream-video';
+  const iframe = document.createElement('iframe');
+  iframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(video.videoId);
+  iframe.title = video.title || '';
+  iframe.loading = 'lazy';
+  iframe.allowFullscreen = true;
+  videoWrap.appendChild(iframe);
+  card.appendChild(videoWrap);
+
+  const info = document.createElement('div');
+  info.className = 'stream-info';
+  const h3 = document.createElement('h3');
+  h3.textContent = video.title || '';
+  info.appendChild(h3);
+  const p = document.createElement('p');
+  p.textContent = video.channelTitle || '';
+  info.appendChild(p);
+  if (typeof video.viewCount === 'number') {
+    const views = document.createElement('span');
+    views.className = 'stream-views';
+    views.textContent = formatViewCount(video.viewCount);
+    info.appendChild(views);
+  }
+  card.appendChild(info);
+
+  return card;
+}
+
+function initFeaturedVideos() {
+  const grid = document.getElementById('streams-grid');
+  const sub = document.getElementById('streams-sub');
+  if (!grid) return;
+
+  fetch('videos.json', { cache: 'no-store' })
+    .then((res) => {
+      if (!res.ok) throw new Error('videos.json not available');
+      return res.json();
+    })
+    .then((data) => {
+      const videos = Array.isArray(data.videos) ? data.videos : [];
+      if (videos.length === 0) return; // keep static fallback cards
+
+      const cards = videos.map(buildStreamCard).filter(Boolean);
+      if (cards.length === 0) return;
+
+      grid.innerHTML = '';
+      cards.forEach((card) => grid.appendChild(card));
+      if (sub) sub.textContent = "Automatically updated — today's most-watched AI videos";
+    })
+    .catch(() => {
+      // network/parse failure, or no key configured yet: keep the static picks
+    });
+}
 
 function initNewsletterForm() {
   const form = document.getElementById('newsletter-form');

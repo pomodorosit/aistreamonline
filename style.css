@@ -838,6 +838,15 @@ img { max-width: 100%; display: block; }
 .stream-info h3 { font-size: 17px; margin-bottom: 5px; text-transform: none; letter-spacing: 0; }
 .stream-info p { color: var(--ink-faint); font-size: 13px; margin: 0; font-weight: 300; }
 
+.stream-views {
+  display: block;
+  margin-top: 6px;
+  color: var(--gold-dim);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 /* ---------- top AI voices & podcasts ---------- */
 
 .voices-head {
