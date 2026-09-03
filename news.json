@@ -1,6 +1,71 @@
 {
-  "generatedAt": "2026-09-03T16:03:07Z",
+  "generatedAt": "2026-09-03T16:11:19Z",
   "items": [
+    {
+      "title": "Ollie is betting its focus on privacy can help it win the AI assistant race",
+      "link": "https://techcrunch.com/2026/09/03/ollie-is-betting-privacy-can-win-the-ai-assistant-race/",
+      "pubDate": "Thu, 03 Sep 2026 16:09:01 +0000",
+      "summary": "The family-focused AI assistant wants access to the details of your everyday life, but says it won’t use that data to train AI models or share it with others.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/Ollie_Hero.png?resize=1200,847",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "OneRail uses Nvidia AI for real-time last-mile delivery optimisation",
+      "link": "https://www.artificialintelligence-news.com/news/ai-last-mile-delivery-optimisation/",
+      "pubDate": "Thu, 03 Sep 2026 16:07:18 +0000",
+      "summary": "OneRail has launched an AI-powered delivery platform that uses Nvidia technology to help retailers, wholesalers, and distributors decide how individual orders should be delivered. Called OmniSTAR,...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/OneRail-uses-Nvidia-AI-for-real-time-last-mile-delivery-optimisation-scaled-e1788451412147.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Nvidia"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "NVIDIA to acquire Hugging Face for $12.93B",
+      "link": "https://www.artificialintelligence-news.com/news/nvidia-to-acquire-hugging-face-for-12-93b/",
+      "pubDate": "Thu, 03 Sep 2026 15:50:31 +0000",
+      "summary": "NVIDIA has agreed to acquire Hugging Face for $12.93 billion to scale the open-source model repository’s platform and infrastructure. The transaction targets platform growth and infrastructure...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/nvidia-acquire-hugging-face-open-source-ai-model-repository-platform-infrastructure.jpg",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 1,
+        "companies": [
+          "Nvidia",
+          "Hugging Face"
+        ],
+        "countries": [],
+        "technologies": [
+          "Open-weight models"
+        ],
+        "engine": "heuristic"
+      },
+      "relatedSources": [
+        {
+          "title": "Nvidia confirms it will buy Hugging Face for $12.9 billion",
+          "link": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/",
+          "source": "TechCrunch"
+        }
+      ]
+    },
     {
       "title": "Google’s latest AI weather model gives you no excuse to forget your umbrella",
       "link": "https://techcrunch.com/2026/09/03/googles-latest-ai-weather-model-gives-you-no-excuse-to-forget-your-umbrella/",
@@ -14,26 +79,6 @@
         "sentimentScore": 0,
         "companies": [
           "Google"
-        ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Nvidia confirms it will buy Hugging Face for $12.9 billion",
-      "link": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/",
-      "pubDate": "Thu, 03 Sep 2026 12:42:45 +0000",
-      "summary": "Nvidia said Hugging Face hosts over 3 million models and is used by over 18 million developers.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/hf-nvidia-partner_hf-nvidia-partner-press-1920x1080-2.jpeg?resize=1200,675",
-      "aiAnalysis": {
-        "impactLevel": "High",
-        "sentimentScore": 0,
-        "companies": [
-          "Nvidia",
-          "Hugging Face"
         ],
         "countries": [],
         "technologies": [],
@@ -1101,67 +1146,6 @@
         "companies": [],
         "countries": [],
         "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Amazon’s Prime Air autonomous drones to reach 500 US cities",
-      "link": "https://www.artificialintelligence-news.com/news/amazons-prime-air-autonomous-drones-to-reach-500-us-cities/",
-      "pubDate": "Thu, 20 Aug 2026 14:05:18 +0000",
-      "summary": "Amazon plans to expand its Prime Air drone delivery service to nearly 500 cities and towns across the US by the end of 2026. That build-out amounts to six times the number of locations Prime Air...",
-      "category": "World News",
-      "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/amazon-prime-air-drone-delivery-us-cities-expansion-autonomous-physical-edge-ai-logistics.jpg",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [
-          "Amazon"
-        ],
-        "countries": [],
-        "technologies": [
-          "Autonomous vehicles"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Stripe agrees to buy OpenRouter as AI model routing expands",
-      "link": "https://www.artificialintelligence-news.com/news/stripe-openrouter-acquisition-ai-model-routing/",
-      "pubDate": "Thu, 20 Aug 2026 10:00:00 +0000",
-      "summary": "Stripe has agreed to acquire OpenRouter, an AI model-routing platform that gives developers access to hundreds of models through a single interface. The deal adds model selection and routing to...",
-      "category": "World News",
-      "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/Stripe-agrees-to-buy-OpenRouter-as-AI-model-routing-expands-scaled-e1787195901752.jpg",
-      "aiAnalysis": {
-        "impactLevel": "High",
-        "sentimentScore": 1,
-        "companies": [
-          "Stripe"
-        ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Agentic AI in government just hit the hard part: deciding what a machine may decide",
-      "link": "https://www.artificialintelligence-news.com/news/agentic-ai-in-government-uae-classification/",
-      "pubDate": "Thu, 20 Aug 2026 09:00:00 +0000",
-      "summary": "The United Arab Emirates (UAE) has been early in adopting artificial intelligence for 9 years. It published a national AI strategy in October 2017 and, days later, created a ministerial post to run...",
-      "category": "World News",
-      "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/p1x04htn1ka1ardpn-scaled.jpeg",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [
-          "United Arab Emirates"
-        ],
-        "technologies": [
-          "Agentic AI"
-        ],
         "engine": "heuristic"
       }
     }
