@@ -2,6 +2,25 @@
   "date": "2026-09-04",
   "items": [
     {
+      "title": "The sameness problem behind those unappetizing AI-generated menus",
+      "link": "https://techcrunch.com/2026/09/03/the-sameness-problem-behind-those-unappetizing-ai-generated-menus/",
+      "pubDate": "Fri, 04 Sep 2026 04:21:03 +0000",
+      "summary": "While restaurant owners might look to generative AI as a shortcut to sprucing up their menu, customers can viscerally sense that something is wrong with the food.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/Cheeseburger-stack.png?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Generative AI"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "Crusoe reportedly raises $3B at a $30B valuation",
       "link": "https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/",
       "pubDate": "Fri, 04 Sep 2026 00:48:42 +0000",
@@ -361,23 +380,6 @@
         "technologies": [
           "Autonomous vehicles"
         ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "HiddenLayer nabs $100M as enterprises rush to secure their AI deployments",
-      "link": "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/",
-      "pubDate": "Wed, 02 Sep 2026 15:01:23 +0000",
-      "summary": "Security companies are scrambling to build products that can monitor not just agents but also the tools and add-ons they use.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/hiddenlayer.jpg?resize=1200,900",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [],
         "engine": "heuristic"
       }
     }

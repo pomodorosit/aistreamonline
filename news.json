@@ -1,6 +1,25 @@
 {
-  "generatedAt": "2026-09-04T03:37:50Z",
+  "generatedAt": "2026-09-04T10:52:57Z",
   "items": [
+    {
+      "title": "The sameness problem behind those unappetizing AI-generated menus",
+      "link": "https://techcrunch.com/2026/09/03/the-sameness-problem-behind-those-unappetizing-ai-generated-menus/",
+      "pubDate": "Fri, 04 Sep 2026 04:21:03 +0000",
+      "summary": "While restaurant owners might look to generative AI as a shortcut to sprucing up their menu, customers can viscerally sense that something is wrong with the food.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/Cheeseburger-stack.png?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Generative AI"
+        ],
+        "engine": "heuristic"
+      }
+    },
     {
       "title": "Crusoe reportedly raises $3B at a $30B valuation",
       "link": "https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/",
@@ -1115,26 +1134,6 @@
         "countries": [],
         "technologies": [
           "AI chips"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Orchestration is the new challenge for CX in the age of AI agents",
-      "link": "https://venturebeat.com/orchestration/orchestration-is-the-new-challenge-for-cx-in-the-age-of-ai-agents",
-      "pubDate": "Wed, 26 Aug 2026 14:30:00 GMT",
-      "summary": "Presented by Tata Communications Enterprises are deploying AI agents, voice AI, and automation across messaging, voice, and digital channels faster than the architecture meant to support it. Most of...",
-      "category": "Business",
-      "avatar": "char-woman-head.png",
-      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/1RK5pjHAxWRLsDy5iAC3Iy/4f9c39b5925645c365440e487ffe2157/Tata_hero.jpg?w=300&q=30",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [
-          "Agentic AI",
-          "Voice AI"
         ],
         "engine": "heuristic"
       }
