@@ -1,6 +1,25 @@
 {
-  "generatedAt": "2026-09-03T23:04:25Z",
+  "generatedAt": "2026-09-04T03:37:50Z",
   "items": [
+    {
+      "title": "Crusoe reportedly raises $3B at a $30B valuation",
+      "link": "https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/",
+      "pubDate": "Fri, 04 Sep 2026 00:48:42 +0000",
+      "summary": "The round came together after the data center developer reportedly secured a $13 billion contract with Jane Street.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2245923419.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 1,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "AI infrastructure"
+        ],
+        "engine": "heuristic"
+      }
+    },
     {
       "title": "Accel reportedly in talks to lead $1B round for Thinking Machines at $40B valuation",
       "link": "https://techcrunch.com/2026/09/03/accel-reportedly-in-talks-to-lead-1b-round-for-thinking-machines-at-40b-valuation/",
@@ -1116,29 +1135,6 @@
         "technologies": [
           "Agentic AI",
           "Voice AI"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Gatik raises $200M to scale AI-powered autonomous freight",
-      "link": "https://www.artificialintelligence-news.com/news/gatik-200m-ai-autonomous-freight/",
-      "pubDate": "Wed, 26 Aug 2026 10:00:00 +0000",
-      "summary": "Autonomous trucking company Gatik has raised $200 million in Series D funding to expand its driverless freight operations across North America. The round was led by Qatar Investment Authority and...",
-      "category": "World News",
-      "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/Gatik-raises-200M-to-scale-AI-powered-autonomous-freight-scaled-e1787721024660.jpg",
-      "aiAnalysis": {
-        "impactLevel": "Medium",
-        "sentimentScore": 1,
-        "companies": [
-          "Gatik"
-        ],
-        "countries": [
-          "Qatar"
-        ],
-        "technologies": [
-          "Autonomous vehicles"
         ],
         "engine": "heuristic"
       }
