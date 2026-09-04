@@ -1,6 +1,78 @@
 {
-  "generatedAt": "2026-09-04T10:52:57Z",
+  "generatedAt": "2026-09-04T15:59:24Z",
   "items": [
+    {
+      "title": "Google’s Gemini Spark can now manage your Google Photos library",
+      "link": "https://techcrunch.com/2026/09/04/googles-gemini-spark-can-now-manage-your-google-photos-library/",
+      "pubDate": "Fri, 04 Sep 2026 14:47:11 +0000",
+      "summary": "Gemini Spark can edit and curate photo albums, create shared collections, turn photos into calendar events, and handle other Google Photos tasks for AI Pro and Ultra subscribers.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/06/gemini-app-GettyImages-2276204472-1.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Less than 24 hours to apply for your TechCrunch Disrupt 2026 Side Event",
+      "link": "https://techcrunch.com/2026/09/04/less-than-24-hours-to-apply-for-your-techcrunch-disrupt-2026-side-event/",
+      "pubDate": "Fri, 04 Sep 2026 14:00:00 +0000",
+      "summary": "Less than 24 hours left to apply to host a Side Event during TechCrunch Disrupt 2026 and make your mark in the Silicon Valley scene. Apply before the application closes tonight at midnight PT.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2023/06/After-Hours-_-group.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "M&T Bank expands enterprise AI after years of technology overhaul",
+      "link": "https://www.artificialintelligence-news.com/news/mt-bank-enterprise-ai-15000-employees/",
+      "pubDate": "Fri, 04 Sep 2026 10:00:00 +0000",
+      "summary": "M&T Bank has deployed AI copilots to more than 15,000 employees as the US regional bank applies AI to internal operations, customer service, software development, and risk management. The bank uses...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/MT-Bank-expands-enterprise-AI-after-years-of-technology-overhaul-scaled-e1788507690256.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Medium",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "50.5% of Americans Say AI Romance Can Count as Cheating",
+      "link": "https://www.artificialintelligence-news.com/news/50-5-of-americans-say-ai-romance-can-count-as-cheating/",
+      "pubDate": "Fri, 04 Sep 2026 08:25:12 +0000",
+      "summary": "Just over half of American adults, 50.5%, say a partner’s romantic or sexual relationship with an AI can count as cheating. The figure comes from an AI romance survey of 2,150 U.S. adults, run by AI...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/ai-romance-cheating-survey-2026.png",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "United States"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
     {
       "title": "The sameness problem behind those unappetizing AI-generated menus",
       "link": "https://techcrunch.com/2026/09/03/the-sameness-problem-behind-those-unappetizing-ai-generated-menus/",
@@ -1078,63 +1150,6 @@
         ],
         "countries": [],
         "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Enterprise AI's real risk isn't autonomous agents. It's the complexity between them.",
-      "link": "https://venturebeat.com/ai/enterprise-ais-real-risk-isnt-autonomous-agents-its-the-complexity-between-them",
-      "pubDate": "Thu, 27 Aug 2026 14:01:00 GMT",
-      "summary": "Presented by Gravitee Agent complexity is the insidious shadow lurking inside enterprises right now that needs a light shone on it. That’s because enterprises don't deploy a single agent and watch it...",
-      "category": "Business",
-      "avatar": "char-woman-head.png",
-      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/5ScHW6mZ2rQr3EvsxrwooK/43df8725b6e12cd4bcf550bb7b3b1cb4/Gravitee_hero.jpg?w=300&q=30",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": -1,
-        "companies": [],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "When agents act on their own, governance has to live in the data layer",
-      "link": "https://venturebeat.com/security/when-agents-act-on-their-own-governance-has-to-live-in-the-data-layer",
-      "pubDate": "Thu, 27 Aug 2026 12:01:00 GMT",
-      "summary": "Presented by EDB As enterprises give AI agents more autonomy — the ability to plan, decide, and act across systems without a human approving each step — a hard question moves to the center of every...",
-      "category": "Business",
-      "avatar": "char-woman-head.png",
-      "image": "https://images.ctfassets.net/jdtwqhzvc2n1/9VRh8KJhBqcFviSV8ClXc/feea8ec8fe76ffa0bc5cdb3dd95e1492/EDB_hero.jpeg?w=300&q=30",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [
-          "Agentic AI"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "A quarter of Nvidia’s business next year comes from labs it is financing",
-      "link": "https://www.artificialintelligence-news.com/news/nvidia-circular-financing-ai-labs/",
-      "pubDate": "Thu, 27 Aug 2026 10:00:00 +0000",
-      "summary": "Nvidia has put nearly US$50 billion into the AI labs that buy its chips, and has lined up commitments for more than $500 billion Colette Kress, the company’s chief financial officer, told analysts on...",
-      "category": "World News",
-      "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/08/voyager-exterior-sign-2-scaled.jpg",
-      "aiAnalysis": {
-        "impactLevel": "High",
-        "sentimentScore": 0,
-        "companies": [
-          "Nvidia"
-        ],
-        "countries": [],
-        "technologies": [
-          "AI chips"
-        ],
         "engine": "heuristic"
       }
     }

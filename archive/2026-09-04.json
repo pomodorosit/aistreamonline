@@ -2,6 +2,78 @@
   "date": "2026-09-04",
   "items": [
     {
+      "title": "Google’s Gemini Spark can now manage your Google Photos library",
+      "link": "https://techcrunch.com/2026/09/04/googles-gemini-spark-can-now-manage-your-google-photos-library/",
+      "pubDate": "Fri, 04 Sep 2026 14:47:11 +0000",
+      "summary": "Gemini Spark can edit and curate photo albums, create shared collections, turn photos into calendar events, and handle other Google Photos tasks for AI Pro and Ultra subscribers.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/06/gemini-app-GettyImages-2276204472-1.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Less than 24 hours to apply for your TechCrunch Disrupt 2026 Side Event",
+      "link": "https://techcrunch.com/2026/09/04/less-than-24-hours-to-apply-for-your-techcrunch-disrupt-2026-side-event/",
+      "pubDate": "Fri, 04 Sep 2026 14:00:00 +0000",
+      "summary": "Less than 24 hours left to apply to host a Side Event during TechCrunch Disrupt 2026 and make your mark in the Silicon Valley scene. Apply before the application closes tonight at midnight PT.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2023/06/After-Hours-_-group.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "M&T Bank expands enterprise AI after years of technology overhaul",
+      "link": "https://www.artificialintelligence-news.com/news/mt-bank-enterprise-ai-15000-employees/",
+      "pubDate": "Fri, 04 Sep 2026 10:00:00 +0000",
+      "summary": "M&T Bank has deployed AI copilots to more than 15,000 employees as the US regional bank applies AI to internal operations, customer service, software development, and risk management. The bank uses...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/MT-Bank-expands-enterprise-AI-after-years-of-technology-overhaul-scaled-e1788507690256.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Medium",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "50.5% of Americans Say AI Romance Can Count as Cheating",
+      "link": "https://www.artificialintelligence-news.com/news/50-5-of-americans-say-ai-romance-can-count-as-cheating/",
+      "pubDate": "Fri, 04 Sep 2026 08:25:12 +0000",
+      "summary": "Just over half of American adults, 50.5%, say a partner’s romantic or sexual relationship with an AI can count as cheating. The figure comes from an AI romance survey of 2,150 U.S. adults, run by AI...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/ai-romance-cheating-survey-2026.png",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "United States"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "The sameness problem behind those unappetizing AI-generated menus",
       "link": "https://techcrunch.com/2026/09/03/the-sameness-problem-behind-those-unappetizing-ai-generated-menus/",
       "pubDate": "Fri, 04 Sep 2026 04:21:03 +0000",
@@ -302,84 +374,6 @@
         "companies": [],
         "countries": [],
         "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "US government sides with OpenAI on issue of training LLMs on copyrighted material",
-      "link": "https://techcrunch.com/2026/09/02/u-s-government-sides-with-openai-on-issue-of-training-llms-on-copyrighted-material/",
-      "pubDate": "Wed, 02 Sep 2026 17:09:06 +0000",
-      "summary": "\"The United States has a strong interest in continuing to develop a robust and competitive artificial intelligence industry that sets the standard for the practice and procedure of AI use globally,\"...",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2263890424.jpg?w=1024",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [
-          "OpenAI"
-        ],
-        "countries": [
-          "United States"
-        ],
-        "technologies": [
-          "AI regulation"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Wonderful more than doubles its valuation to $5B in under 6 months",
-      "link": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
-      "pubDate": "Wed, 02 Sep 2026 16:04:10 +0000",
-      "summary": "Wonderful said it will use its $550 million Series C funding to develop products faster, expand its FDE teams, and meet demand for its products.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2018/02/tc-backlight-e1689786273147.png?w=1200",
-      "aiAnalysis": {
-        "impactLevel": "Medium",
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "India’s richest man now wants to turn aging computers into AI-ready PCs",
-      "link": "https://techcrunch.com/2026/09/02/indias-richest-man-now-wants-to-turn-aging-computers-into-ai-ready-pcs/",
-      "pubDate": "Wed, 02 Sep 2026 16:01:48 +0000",
-      "summary": "Jio is betting it can turn an aging computer into an AI-ready PC for as little as about $11 for two months.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/jiopc.jpg?resize=1200,800",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [
-          "India"
-        ],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Motional and MIT AI explains self-driving car decisions",
-      "link": "https://www.artificialintelligence-news.com/news/motional-and-mit-ai-explains-self-driving-car-decisions/",
-      "pubDate": "Wed, 02 Sep 2026 15:25:12 +0000",
-      "summary": "Motional and MIT researchers have built a system that lets self-driving cars explain their decisions in real-time, tackling the black-box problem in autonomous vehicle AI. The work, published in...",
-      "category": "World News",
-      "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/motional-mit-ai-self-driving-car-autonomous-vehicle-decisions-explainable-artificial-intelligence.jpg",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [
-          "Autonomous vehicles"
-        ],
         "engine": "heuristic"
       }
     }
