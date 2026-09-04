@@ -1,6 +1,25 @@
 {
-  "generatedAt": "2026-09-04T20:29:38Z",
+  "generatedAt": "2026-09-04T22:52:23Z",
   "items": [
+    {
+      "title": "AI compute provider Nscale is looking for $3.5B in pre-IPO financing",
+      "link": "https://techcrunch.com/2026/09/04/ai-compute-provider-nscale-is-looking-for-3-5b-in-pre-ipo-financing/",
+      "pubDate": "Fri, 04 Sep 2026 21:12:11 +0000",
+      "summary": "Nscale, which recently struck a $45 billion deal with Anthropic, is in talks to raise additional funds in anticipation of an upcoming IPO.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/07/GettyImages-2266843677.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
     {
       "title": "What will Apple’s John Ternus era look like?",
       "link": "https://techcrunch.com/video/what-will-apples-john-ternus-era-look-like/",
@@ -1109,27 +1128,6 @@
         "countries": [],
         "technologies": [
           "Open-weight models"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Anthropic gets its first court win over the Pentagon’s supply-chain risk label",
-      "link": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
-      "pubDate": "Fri, 28 Aug 2026 12:46:12 +0000",
-      "summary": "A federal judge ruled the Trump administration illegally labeled Anthropic a supply-chain risk, handing the AI company a victory as its second Pentagon lawsuit continues in Washington.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2278736523.jpeg?resize=1200,798",
-      "aiAnalysis": {
-        "impactLevel": "High",
-        "sentimentScore": -2,
-        "companies": [
-          "Anthropic"
-        ],
-        "countries": [],
-        "technologies": [
-          "AI regulation"
         ],
         "engine": "heuristic"
       }
