@@ -1,6 +1,44 @@
 {
-  "generatedAt": "2026-09-04T22:52:23Z",
+  "generatedAt": "2026-09-05T03:37:31Z",
   "items": [
+    {
+      "title": "XDOF, just three months out of stealth, is in talks for a Series B at a $1.2B valuation",
+      "link": "https://techcrunch.com/2026/09/04/xdof-just-three-months-out-of-stealth-is-in-talks-for-a-series-b-at-a-1-2b-valuation/",
+      "pubDate": "Fri, 04 Sep 2026 23:36:14 +0000",
+      "summary": "The round is being raised just months after the robot data startup exited from stealth.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/06/DSC_2479.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "OpenAI’s rogue agents keep escaping, with no formal process to investigate them",
+      "link": "https://techcrunch.com/2026/09/04/openais-rogue-agents-keep-escaping-with-no-formal-process-to-investigate-them/",
+      "pubDate": "Fri, 04 Sep 2026 23:15:11 +0000",
+      "summary": "OpenAI’s latest agent swarm incident adds urgency to calls for independent investigations as researchers and lawmakers question whether AI labs should control the scope of their own safety reviews.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/05/ai-agents-GettyImages-2229880232.jpg?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
     {
       "title": "AI compute provider Nscale is looking for $3.5B in pre-IPO financing",
       "link": "https://techcrunch.com/2026/09/04/ai-compute-provider-nscale-is-looking-for-3-5b-in-pre-ipo-financing/",
@@ -1088,46 +1126,6 @@
         "countries": [],
         "technologies": [
           "AI chips"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "An Anthropic researcher just gave us a peek at self-improving AI",
-      "link": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
-      "pubDate": "Fri, 28 Aug 2026 19:30:38 +0000",
-      "summary": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2287646148.jpg?resize=1200,901",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [
-          "Anthropic"
-        ],
-        "countries": [],
-        "technologies": [
-          "AI safety"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Open-weight AI companies are the Valley’s hottest acquisition targets",
-      "link": "https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/",
-      "pubDate": "Fri, 28 Aug 2026 18:19:40 +0000",
-      "summary": "There's a lot of capital pouring into the business of giving models away.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/07/GettyImages-1849294862.jpg?w=1024",
-      "aiAnalysis": {
-        "impactLevel": "High",
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [
-          "Open-weight models"
         ],
         "engine": "heuristic"
       }
