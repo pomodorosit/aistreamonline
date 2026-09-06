@@ -1,6 +1,25 @@
 {
-  "generatedAt": "2026-09-06T20:10:20Z",
+  "generatedAt": "2026-09-06T22:47:21Z",
   "items": [
+    {
+      "title": "Authors push back as publishers and agents make claims on Anthropic settlement",
+      "link": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+      "pubDate": "Sun, 06 Sep 2026 20:47:37 +0000",
+      "summary": "Authors say publishers seem to be claiming more than their fair share of settlement payments.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2024/12/49688202642_09fd5ccc38_k.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
     {
       "title": "Travis Kalanick’s Atoms might be getting into the robotaxi business",
       "link": "https://techcrunch.com/2026/09/06/travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-business/",

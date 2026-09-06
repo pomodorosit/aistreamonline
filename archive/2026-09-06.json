@@ -2,6 +2,25 @@
   "date": "2026-09-06",
   "items": [
     {
+      "title": "Authors push back as publishers and agents make claims on Anthropic settlement",
+      "link": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+      "pubDate": "Sun, 06 Sep 2026 20:47:37 +0000",
+      "summary": "Authors say publishers seem to be claiming more than their fair share of settlement payments.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2024/12/49688202642_09fd5ccc38_k.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "Travis Kalanick’s Atoms might be getting into the robotaxi business",
       "link": "https://techcrunch.com/2026/09/06/travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-business/",
       "pubDate": "Sun, 06 Sep 2026 16:45:00 +0000",
@@ -361,23 +380,6 @@
         "companies": [
           "OpenAI"
         ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Ollie is betting its focus on privacy can help it win the AI assistant race",
-      "link": "https://techcrunch.com/2026/09/03/ollie-is-betting-privacy-can-win-the-ai-assistant-race/",
-      "pubDate": "Thu, 03 Sep 2026 16:09:01 +0000",
-      "summary": "The family-focused AI assistant wants access to the details of your everyday life, but says it won’t use that data to train AI models or share it with others.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/Ollie_Hero.png?resize=1200,847",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [],
         "countries": [],
         "technologies": [],
         "engine": "heuristic"
