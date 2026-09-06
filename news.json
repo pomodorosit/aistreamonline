@@ -1,6 +1,25 @@
 {
-  "generatedAt": "2026-09-06T15:09:48Z",
+  "generatedAt": "2026-09-06T20:10:20Z",
   "items": [
+    {
+      "title": "Travis Kalanick’s Atoms might be getting into the robotaxi business",
+      "link": "https://techcrunch.com/2026/09/06/travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-business/",
+      "pubDate": "Sun, 06 Sep 2026 16:45:00 +0000",
+      "summary": "The Uber founder has said that Atoms will allow him to complete \"unfinished business.\"",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/travis-kalanick-fii.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
+    },
     {
       "title": "Seattle Times and Newsday are the latest publications to sue OpenAI and Microsoft",
       "link": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
@@ -1104,27 +1123,6 @@
         "companies": [],
         "countries": [],
         "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Sony Music, Warner sue Anthropic, alleging a ‘brazen campaign’ of intellectual property theft",
-      "link": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
-      "pubDate": "Sat, 29 Aug 2026 18:41:59 +0000",
-      "summary": "This latest lawsuit is particularly broad and homes in on accusations of illegal piracy.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/03/Dario-Amodei-Anthropic-1.jpg?w=1024",
-      "aiAnalysis": {
-        "impactLevel": "High",
-        "sentimentScore": -1,
-        "companies": [
-          "Anthropic"
-        ],
-        "countries": [],
-        "technologies": [
-          "AI regulation"
-        ],
         "engine": "heuristic"
       }
     }

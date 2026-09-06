@@ -2,6 +2,25 @@
   "date": "2026-09-06",
   "items": [
     {
+      "title": "Travis Kalanick’s Atoms might be getting into the robotaxi business",
+      "link": "https://techcrunch.com/2026/09/06/travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-business/",
+      "pubDate": "Sun, 06 Sep 2026 16:45:00 +0000",
+      "summary": "The Uber founder has said that Atoms will allow him to complete \"unfinished business.\"",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/travis-kalanick-fii.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "Seattle Times and Newsday are the latest publications to sue OpenAI and Microsoft",
       "link": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
       "pubDate": "Sat, 05 Sep 2026 22:49:55 +0000",
@@ -359,25 +378,6 @@
         "impactLevel": "Low",
         "sentimentScore": 0,
         "companies": [],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "OneRail uses Nvidia AI for real-time last-mile delivery optimisation",
-      "link": "https://www.artificialintelligence-news.com/news/ai-last-mile-delivery-optimisation/",
-      "pubDate": "Thu, 03 Sep 2026 16:07:18 +0000",
-      "summary": "OneRail has launched an AI-powered delivery platform that uses Nvidia technology to help retailers, wholesalers, and distributors decide how individual orders should be delivered. Called OmniSTAR,...",
-      "category": "World News",
-      "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/OneRail-uses-Nvidia-AI-for-real-time-last-mile-delivery-optimisation-scaled-e1788451412147.jpg",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [
-          "Nvidia"
-        ],
         "countries": [],
         "technologies": [],
         "engine": "heuristic"
