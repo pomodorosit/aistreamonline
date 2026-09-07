@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=28">
+<link rel="stylesheet" href="style.css?v=29">
 
 <!-- Google Analytics 4 is loaded only after cookie consent -- see initAnalyticsConsent() in script.js.
      Replace G-XXXXXXXXXX in script.js with your real Measurement ID from analytics.google.com -->
@@ -105,6 +105,21 @@
       </ol>
       <p class="section-sub leadership-hint">Click a country for its recent AI stories</p>
       <div class="leadership-drilldown" id="leadership-drilldown"></div>
+
+      <div class="ai-pulse" id="ai-pulse">
+        <p class="ai-pulse-label">Live open-source AI activity — from GitHub</p>
+        <div class="ai-pulse-stats">
+          <div class="ai-pulse-stat">
+            <span class="ai-pulse-number" id="ai-pulse-stars">0</span>
+            <span class="ai-pulse-stat-label">Stars across tracked AI projects</span>
+          </div>
+          <div class="ai-pulse-stat">
+            <span class="ai-pulse-number" id="ai-pulse-issues">0</span>
+            <span class="ai-pulse-stat-label">Open issues right now</span>
+          </div>
+        </div>
+        <p class="ai-pulse-delta" id="ai-pulse-delta"></p>
+      </div>
     </div>
   </section>
 
@@ -319,6 +334,6 @@
   </div>
 </div>
 
-<script src="script.js?v=21"></script>
+<script src="script.js?v=22"></script>
 </body>
 </html>

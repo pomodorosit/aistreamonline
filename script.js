@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLiveNews();
   initStockTicker();
   initFeaturedVideos();
+  initAiPulse();
   initAnalyticsConsent();
   initNewsletterForm();
 });
@@ -781,6 +782,51 @@ function buildTickerItem(quote) {
   item.appendChild(changeSpan);
 
   return item;
+}
+
+function animateNumber(el, from, to, duration) {
+  if (from === to) {
+    el.textContent = to.toLocaleString('en-US');
+    return;
+  }
+  const start = performance.now();
+  function tick(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3); // ease-out
+    const value = Math.round(from + (to - from) * eased);
+    el.textContent = value.toLocaleString('en-US');
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+function initAiPulse() {
+  const starsEl = document.getElementById('ai-pulse-stars');
+  const issuesEl = document.getElementById('ai-pulse-issues');
+  const deltaEl = document.getElementById('ai-pulse-delta');
+  const pulse = document.getElementById('ai-pulse');
+  if (!starsEl || !issuesEl || !deltaEl || !pulse) return;
+
+  fetch('github_pulse.json', { cache: 'no-store' })
+    .then((res) => {
+      if (!res.ok) throw new Error('github_pulse.json not available');
+      return res.json();
+    })
+    .then((data) => {
+      const stars = Number(data.totalStars) || 0;
+      const issues = Number(data.totalOpenIssues) || 0;
+      const delta = Number(data.starsDeltaSinceLastRun) || 0;
+
+      animateNumber(starsEl, 0, stars, 1400);
+      animateNumber(issuesEl, 0, issues, 1400);
+      if (delta > 0) {
+        deltaEl.textContent = '+' + delta.toLocaleString('en-US') + ' stars since the last refresh';
+      }
+    })
+    .catch(() => {
+      // no data yet (first cron run hasn't happened): hide rather than show zeros
+      pulse.style.display = 'none';
+    });
 }
 
 const VERDICT_MY_VOTES_KEY = 'aistream_my_votes';

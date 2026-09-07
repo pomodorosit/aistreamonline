@@ -32,20 +32,25 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python fetch_videos.py
 
+      - name: Fetch live GitHub AI activity pulse
+        run: python fetch_github_pulse.py
+
       - name: Commit and push if content changed
         run: |
           git config user.name "aistreamonline-bot"
           git config user.email "actions@users.noreply.github.com"
 
           git add news.json stocks.json archive/
-          if [ -f videos.json ]; then
-            git add videos.json
-          fi
+          for f in videos.json github_pulse.json; do
+            if [ -f "$f" ]; then
+              git add "$f"
+            fi
+          done
 
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
           fi
 
-          git commit -m "Auto-refresh news, stock quotes, and trending videos"
+          git commit -m "Auto-refresh news, stock quotes, trending videos, and AI activity pulse"
           git push
