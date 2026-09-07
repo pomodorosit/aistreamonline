@@ -747,6 +747,21 @@ function initLeadershipDrilldown(newsItems) {
     }
 
     panel.classList.add('visible');
+    if (typeof anime === 'function') {
+      anime({
+        targets: panel,
+        opacity: [0, 1],
+        translateY: [-8, 0],
+        duration: 350,
+        easing: 'easeOutQuad',
+      });
+      // safety net: guarantee the panel ends up fully visible even if
+      // anime's rAF-driven loop never gets to tick (see animateNumber)
+      setTimeout(() => {
+        panel.style.opacity = '';
+        panel.style.transform = '';
+      }, 400);
+    }
   }
 
   list.querySelectorAll('li').forEach((li) => {
@@ -839,6 +854,27 @@ function animateNumber(el, from, to, duration) {
     el.textContent = to.toLocaleString('en-US');
     return;
   }
+
+  // prefer anime.js for a nicer easing curve; fall back to a plain
+  // requestAnimationFrame tween if it failed to load (CDN down, blocked, offline)
+  if (typeof anime === 'function') {
+    const counter = { value: from };
+    anime({
+      targets: counter,
+      value: to,
+      duration,
+      easing: 'easeOutExpo',
+      round: 1,
+      update: () => { el.textContent = Math.round(counter.value).toLocaleString('en-US'); },
+    });
+    // safety net: anime's internal loop runs on requestAnimationFrame, which
+    // some backgrounded/throttled tabs never tick -- without this, the
+    // number would stay stuck at its starting value forever. A plain timer
+    // guarantees the real, correct value lands regardless.
+    setTimeout(() => { el.textContent = to.toLocaleString('en-US'); }, duration + 150);
+    return;
+  }
+
   const start = performance.now();
   function tick(now) {
     const progress = Math.min((now - start) / duration, 1);
