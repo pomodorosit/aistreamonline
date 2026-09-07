@@ -479,6 +479,7 @@ function initLiveNews() {
       initVerdict(items);
       initLeadershipDrilldown(items);
       initAskTheWorld(items);
+      initReturnBanner(items);
     })
     .catch(() => {
       // network/parse failure: silently keep the static placeholder cards
@@ -656,6 +657,39 @@ function initTimeMachine() {
     .catch(() => {
       panel.textContent = 'Historical data unavailable right now.';
     });
+}
+
+const LAST_VISIT_KEY = 'aistream_last_visit';
+
+function initReturnBanner(newsItems) {
+  const banner = document.getElementById('return-banner');
+  if (!banner) return;
+
+  const now = Date.now();
+  let previousVisit = null;
+  try {
+    const stored = localStorage.getItem(LAST_VISIT_KEY);
+    if (stored) previousVisit = parseInt(stored, 10);
+  } catch (e) { /* ignore */ }
+
+  if (previousVisit && !isNaN(previousVisit)) {
+    const newCount = newsItems.filter((it) => {
+      const t = new Date(it.pubDate).getTime();
+      return !isNaN(t) && t > previousVisit;
+    }).length;
+
+    if (newCount > 0) {
+      const when = new Date(previousVisit).toLocaleString('en-US', {
+        month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit',
+      });
+      banner.textContent = `${newCount} new AI ${newCount === 1 ? 'story' : 'stories'} since your last visit (${when})`;
+      banner.hidden = false;
+    }
+  }
+
+  try {
+    localStorage.setItem(LAST_VISIT_KEY, String(now));
+  } catch (e) { /* ignore */ }
 }
 
 function initLeadershipDrilldown(newsItems) {

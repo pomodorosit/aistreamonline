@@ -328,6 +328,19 @@ img { max-width: 100%; display: block; }
 .section-head-light h2 { color: var(--ink); }
 .section-sub-light { color: var(--ink-faint); }
 
+/* ---------- return visit banner ---------- */
+
+.return-banner {
+  background: linear-gradient(90deg, rgba(230, 206, 142, 0.14), rgba(230, 206, 142, 0.04));
+  border-bottom: 1px solid var(--line-strong);
+  text-align: center;
+  padding: 14px 20px;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
 /* ---------- news ---------- */
 
 /* ---------- good news / bad news (single rotating card) ---------- */
