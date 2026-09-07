@@ -705,6 +705,14 @@ function initLeadershipDrilldown(newsItems) {
     );
   }
 
+  function companiesForCountry(country) {
+    const companies = new Set();
+    articlesForCountry(country).forEach((it) => {
+      (it.aiAnalysis.companies || []).forEach((c) => companies.add(c));
+    });
+    return companies;
+  }
+
   function renderPanel(country, matches) {
     panel.innerHTML = '';
 
@@ -745,6 +753,14 @@ function initLeadershipDrilldown(newsItems) {
     const countrySpan = li.querySelector('.rank-country');
     if (!countrySpan) return;
     const country = countrySpan.textContent.trim();
+
+    const companyCount = companiesForCountry(country).size;
+    if (companyCount > 0) {
+      const countSpan = document.createElement('span');
+      countSpan.className = 'rank-company-count';
+      countSpan.textContent = companyCount + (companyCount === 1 ? ' company' : ' companies');
+      li.appendChild(countSpan);
+    }
 
     li.classList.add('clickable');
     li.setAttribute('role', 'button');

@@ -1204,6 +1204,15 @@ img { max-width: 100%; display: block; }
   white-space: nowrap;
 }
 
+.rank-company-count {
+  color: var(--ink-faint);
+  font-size: 11px;
+  white-space: nowrap;
+  border-left: 1px solid var(--line-strong);
+  padding-left: 9px;
+  margin-left: 2px;
+}
+
 .leadership-rank-list li.clickable {
   cursor: pointer;
   transition: border-color .2s, background .2s;
