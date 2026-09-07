@@ -417,41 +417,35 @@ function initNewsArchive(items) {
 
   container.innerHTML = '';
   const groups = groupByDay(items);
-  const hiddenElements = [];
+  const dayElements = [];
 
-  groups.forEach((group, index) => {
+  groups.forEach((group) => {
     const heading = document.createElement('h3');
     heading.className = 'archive-day-heading';
     heading.textContent = group.label;
+    heading.hidden = true;
 
     const list = document.createElement('div');
     list.className = 'archive-day-list';
     group.items.forEach((item) => {
       list.appendChild(buildArchiveRow(item));
     });
+    list.hidden = true;
 
-    if (index > 0) {
-      heading.hidden = true;
-      list.hidden = true;
-      hiddenElements.push(heading, list);
-    }
-
+    dayElements.push(heading, list);
     container.appendChild(heading);
     container.appendChild(list);
   });
 
-  if (hiddenElements.length > 0) {
-    const remainingDays = groups.length - 1;
-    const toggle = document.createElement('button');
-    toggle.type = 'button';
-    toggle.className = 'archive-show-more';
-    toggle.textContent = `Show ${remainingDays} earlier day${remainingDays === 1 ? '' : 's'} ▾`;
-    toggle.addEventListener('click', () => {
-      hiddenElements.forEach((el) => { el.hidden = false; });
-      toggle.remove();
-    });
-    container.insertBefore(toggle, hiddenElements[0]);
-  }
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'archive-show-more';
+  toggle.textContent = `Show full archive — ${items.length} stories over ${groups.length} day${groups.length === 1 ? '' : 's'} ▾`;
+  toggle.addEventListener('click', () => {
+    dayElements.forEach((el) => { el.hidden = false; });
+    toggle.remove();
+  });
+  container.insertBefore(toggle, dayElements[0]);
 }
 
 function initLiveNews() {
