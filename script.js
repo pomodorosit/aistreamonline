@@ -800,12 +800,29 @@ function animateNumber(el, from, to, duration) {
   requestAnimationFrame(tick);
 }
 
+// ticks the displayed number up every second at a rate measured for real
+// from the last two cron snapshots -- never a fabricated increment. Only
+// starts once the initial count-up animation has settled.
+function startLiveRateTicker(el, liveTag, baseValue, perSecond) {
+  if (!(perSecond > 0)) return;
+  liveTag.hidden = false;
+
+  let accumulated = 0;
+  setInterval(() => {
+    accumulated += perSecond;
+    el.textContent = Math.round(baseValue + accumulated).toLocaleString('en-US');
+  }, 1000);
+}
+
 function initAiPulse() {
   const starsEl = document.getElementById('ai-pulse-stars');
   const issuesEl = document.getElementById('ai-pulse-issues');
   const deltaEl = document.getElementById('ai-pulse-delta');
+  const liveTag = document.getElementById('ai-pulse-live-tag');
   const pulse = document.getElementById('ai-pulse');
-  if (!starsEl || !issuesEl || !deltaEl || !pulse) return;
+  if (!starsEl || !issuesEl || !deltaEl || !liveTag || !pulse) return;
+
+  const ANIMATION_MS = 1400;
 
   fetch('github_pulse.json', { cache: 'no-store' })
     .then((res) => {
@@ -816,12 +833,15 @@ function initAiPulse() {
       const stars = Number(data.totalStars) || 0;
       const issues = Number(data.totalOpenIssues) || 0;
       const delta = Number(data.starsDeltaSinceLastRun) || 0;
+      const perSecond = Number(data.starsPerSecondEstimate) || 0;
 
-      animateNumber(starsEl, 0, stars, 1400);
-      animateNumber(issuesEl, 0, issues, 1400);
+      animateNumber(starsEl, 0, stars, ANIMATION_MS);
+      animateNumber(issuesEl, 0, issues, ANIMATION_MS);
       if (delta > 0) {
         deltaEl.textContent = '+' + delta.toLocaleString('en-US') + ' stars since the last refresh';
       }
+
+      setTimeout(() => startLiveRateTicker(starsEl, liveTag, stars, perSecond), ANIMATION_MS + 50);
     })
     .catch(() => {
       // no data yet (first cron run hasn't happened): hide rather than show zeros

@@ -1301,6 +1301,34 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.3px;
 }
 
+.ai-pulse-live-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--jade);
+}
+
+.ai-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--jade);
+  animation: ai-pulse-blink 1.4s ease-in-out infinite;
+}
+
+@keyframes ai-pulse-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-pulse-dot { animation: none; }
+}
+
 .ai-pulse-delta {
   margin: 20px 0 0;
   font-size: 12px;

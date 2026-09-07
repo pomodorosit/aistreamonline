@@ -15,6 +15,7 @@ Uses only the unauthenticated repo-info endpoint (one cheap GET per repo)
 search rate limits or miss activity past a page cap.
 """
 
+import calendar
 import json
 import ssl
 import time
@@ -85,10 +86,12 @@ def main():
         return
 
     previous_stars = None
+    previous_generated_at = None
     try:
         with open(OUTPUT_PATH, "r", encoding="utf-8") as f:
             previous = json.load(f)
             previous_stars = previous.get("totalStars")
+            previous_generated_at = previous.get("generatedAt")
     except (FileNotFoundError, json.JSONDecodeError):
         pass
 
@@ -98,12 +101,27 @@ def main():
     if stars_delta < 0:
         stars_delta = 0
 
+    # a real, measured stars-per-second rate, derived only from the actual
+    # elapsed time between two real snapshots -- never fabricated. Requires
+    # at least 30 minutes between runs so a rare back-to-back manual replay
+    # can't produce an absurd, inflated rate from a tiny denominator.
+    stars_per_second = 0.0
+    if stars_delta > 0 and previous_generated_at:
+        try:
+            prev_ts = calendar.timegm(time.strptime(previous_generated_at, "%Y-%m-%dT%H:%M:%SZ"))
+            elapsed_seconds = time.time() - prev_ts
+            if elapsed_seconds >= 1800:
+                stars_per_second = stars_delta / elapsed_seconds
+        except ValueError:
+            pass
+
     output = {
         "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "reposTracked": tracked,
         "totalStars": total_stars,
         "totalOpenIssues": total_open_issues,
         "starsDeltaSinceLastRun": stars_delta,
+        "starsPerSecondEstimate": round(stars_per_second, 6),
     }
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
