@@ -416,19 +416,42 @@ function initNewsArchive(items) {
   if (!container || items.length === 0) return;
 
   container.innerHTML = '';
-  groupByDay(items).forEach((group) => {
+  const groups = groupByDay(items);
+  const hiddenElements = [];
+
+  groups.forEach((group, index) => {
     const heading = document.createElement('h3');
     heading.className = 'archive-day-heading';
     heading.textContent = group.label;
-    container.appendChild(heading);
 
     const list = document.createElement('div');
     list.className = 'archive-day-list';
     group.items.forEach((item) => {
       list.appendChild(buildArchiveRow(item));
     });
+
+    if (index > 0) {
+      heading.hidden = true;
+      list.hidden = true;
+      hiddenElements.push(heading, list);
+    }
+
+    container.appendChild(heading);
     container.appendChild(list);
   });
+
+  if (hiddenElements.length > 0) {
+    const remainingDays = groups.length - 1;
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'archive-show-more';
+    toggle.textContent = `Show ${remainingDays} earlier day${remainingDays === 1 ? '' : 's'} ▾`;
+    toggle.addEventListener('click', () => {
+      hiddenElements.forEach((el) => { el.hidden = false; });
+      toggle.remove();
+    });
+    container.insertBefore(toggle, hiddenElements[0]);
+  }
 }
 
 function initLiveNews() {

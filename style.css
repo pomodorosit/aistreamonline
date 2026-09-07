@@ -578,6 +578,27 @@ img { max-width: 100%; display: block; }
   margin-top: 0;
 }
 
+.archive-show-more {
+  display: block;
+  margin: 8px auto 0;
+  padding: 12px 30px;
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+}
+
+.archive-show-more:hover {
+  border-color: var(--gold);
+  background: rgba(230, 206, 142, 0.08);
+}
+
 .archive-day-list {
   display: flex;
   flex-direction: column;
