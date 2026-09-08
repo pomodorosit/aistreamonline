@@ -863,6 +863,31 @@ function initLeadershipDrilldown(newsItems) {
     }
   }
 
+  const markers = [...document.querySelectorAll('.map-marker')];
+
+  function setActive(country) {
+    list.querySelectorAll('li').forEach((li) => {
+      const span = li.querySelector('.rank-country');
+      li.classList.toggle('active', !!span && span.textContent.trim() === country);
+    });
+    markers.forEach((m) => m.classList.toggle('active', m.dataset.country === country));
+  }
+
+  function clearActive() {
+    list.querySelectorAll('li').forEach((li) => li.classList.remove('active'));
+    markers.forEach((m) => m.classList.remove('active'));
+  }
+
+  function activate(country, wasActive) {
+    if (wasActive) {
+      clearActive();
+      panel.classList.remove('visible');
+      return;
+    }
+    setActive(country);
+    renderPanel(country, articlesForCountry(country));
+  }
+
   list.querySelectorAll('li').forEach((li) => {
     const countrySpan = li.querySelector('.rank-country');
     if (!countrySpan) return;
@@ -880,24 +905,19 @@ function initLeadershipDrilldown(newsItems) {
     li.setAttribute('role', 'button');
     li.setAttribute('tabindex', '0');
 
-    const activate = () => {
-      const alreadyActive = li.classList.contains('active');
-      list.querySelectorAll('li').forEach((other) => other.classList.remove('active'));
-      if (alreadyActive) {
-        panel.classList.remove('visible');
-        return;
-      }
-      li.classList.add('active');
-      renderPanel(country, articlesForCountry(country));
-    };
-
-    li.addEventListener('click', activate);
+    li.addEventListener('click', () => activate(country, li.classList.contains('active')));
     li.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        activate();
+        activate(country, li.classList.contains('active'));
       }
     });
+  });
+
+  markers.forEach((marker) => {
+    const country = marker.dataset.country;
+    if (!country) return;
+    marker.addEventListener('click', () => activate(country, marker.classList.contains('active')));
   });
 }
 

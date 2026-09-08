@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=36">
+<link rel="stylesheet" href="style.css?v=37">
 
 <!-- Google Analytics 4 is loaded only after cookie consent -- see initAnalyticsConsent() in script.js.
      Replace G-XXXXXXXXXX in script.js with your real Measurement ID from analytics.google.com -->
@@ -96,7 +96,15 @@
         <h2>Global AI Leadership</h2>
         <p class="section-sub">AI activity per capita — updated periodically</p>
       </div>
-      <img class="leadership-map-img" src="world-leaders-map.png" alt="World map ranking six countries by AI activity relative to population">
+      <div class="leadership-map-wrap">
+        <img class="leadership-map-img" src="world-leaders-map.jpg" alt="World map highlighting six countries ranked by AI activity relative to population">
+        <button type="button" class="map-marker" style="left:59.67%; top:28.67%; animation-delay:0s" data-country="Israel" aria-label="Israel — rank 1">1</button>
+        <button type="button" class="map-marker" style="left:78.83%; top:49.10%; animation-delay:.3s" data-country="Singapore" aria-label="Singapore — rank 2">2</button>
+        <button type="button" class="map-marker" style="left:23.61%; top:24.00%; animation-delay:.6s" data-country="United States" aria-label="United States — rank 3">3</button>
+        <button type="button" class="map-marker" style="left:85.28%; top:25.00%; animation-delay:.9s" data-country="South Korea" aria-label="South Korea — rank 4">4</button>
+        <button type="button" class="map-marker" style="left:49.97%; top:15.67%; animation-delay:1.2s" data-country="United Kingdom" aria-label="United Kingdom — rank 5">5</button>
+        <button type="button" class="map-marker" style="left:80.00%; top:30.00%; animation-delay:1.5s" data-country="China" aria-label="China — rank 6">6</button>
+      </div>
       <ol class="leadership-rank-list">
         <li><span class="rank-badge">1</span><span class="rank-flag">🇮🇱</span><span class="rank-country">Israel</span></li>
         <li><span class="rank-badge">2</span><span class="rank-flag">🇸🇬</span><span class="rank-country">Singapore</span></li>
@@ -338,6 +346,6 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
-<script src="script.js?v=32"></script>
+<script src="script.js?v=33"></script>
 </body>
 </html>
