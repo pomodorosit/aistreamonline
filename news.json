@@ -1,6 +1,28 @@
 {
-  "generatedAt": "2026-09-08T10:53:01Z",
+  "generatedAt": "2026-09-08T16:16:57Z",
   "items": [
+    {
+      "title": "Mistral raises €3B as sovereign AI becomes big business",
+      "link": "https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/",
+      "pubDate": "Tue, 08 Sep 2026 14:17:48 +0000",
+      "summary": "The French AI lab has raised €3 billion at a €21 billion valuation in a Series D round led by Samsung, Scaleup Europe and PSG Equity.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/03/GettyImages-2264771189.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 1,
+        "companies": [
+          "Mistral AI",
+          "Samsung"
+        ],
+        "countries": [
+          "France"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
     {
       "title": "Coca-Cola uses AI to improve retailer ordering in Malaysia",
       "link": "https://www.artificialintelligence-news.com/news/coca-cola-ai-retailer-ordering-malaysia/",
@@ -1115,23 +1137,6 @@
       "aiAnalysis": {
         "impactLevel": "Medium",
         "sentimentScore": 1,
-        "companies": [],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Clipto uses AI to search terabytes of video and is now valued at $250M",
-      "link": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/",
-      "pubDate": "Mon, 31 Aug 2026 16:00:00 +0000",
-      "summary": "The three-year-old startup says it reached $15 million in ARR and profitability before raising its latest $15 million round.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/05/ai-agents-GettyImages-2229880232.jpg?resize=1200,675",
-      "aiAnalysis": {
-        "impactLevel": "Medium",
-        "sentimentScore": 0,
         "companies": [],
         "countries": [],
         "technologies": [],

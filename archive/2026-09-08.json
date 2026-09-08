@@ -2,6 +2,28 @@
   "date": "2026-09-08",
   "items": [
     {
+      "title": "Mistral raises €3B as sovereign AI becomes big business",
+      "link": "https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/",
+      "pubDate": "Tue, 08 Sep 2026 14:17:48 +0000",
+      "summary": "The French AI lab has raised €3 billion at a €21 billion valuation in a Series D round led by Samsung, Scaleup Europe and PSG Equity.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/03/GettyImages-2264771189.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 1,
+        "companies": [
+          "Mistral AI",
+          "Samsung"
+        ],
+        "countries": [
+          "France"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "Coca-Cola uses AI to improve retailer ordering in Malaysia",
       "link": "https://www.artificialintelligence-news.com/news/coca-cola-ai-retailer-ordering-malaysia/",
       "pubDate": "Tue, 08 Sep 2026 10:00:00 +0000",
@@ -361,25 +383,6 @@
           "United States"
         ],
         "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "The sameness problem behind those unappetizing AI-generated menus",
-      "link": "https://techcrunch.com/2026/09/03/the-sameness-problem-behind-those-unappetizing-ai-generated-menus/",
-      "pubDate": "Fri, 04 Sep 2026 04:21:03 +0000",
-      "summary": "While restaurant owners might look to generative AI as a shortcut to sprucing up their menu, customers can viscerally sense that something is wrong with the food.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/Cheeseburger-stack.png?resize=1200,800",
-      "aiAnalysis": {
-        "impactLevel": "Low",
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [
-          "Generative AI"
-        ],
         "engine": "heuristic"
       }
     }
