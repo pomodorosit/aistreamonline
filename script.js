@@ -51,6 +51,12 @@ function buildStreamCard(video) {
 
   const info = document.createElement('div');
   info.className = 'stream-info';
+  if (video.topic) {
+    const topic = document.createElement('span');
+    topic.className = 'stream-topic';
+    topic.textContent = video.topic;
+    info.appendChild(topic);
+  }
   const h3 = document.createElement('h3');
   h3.textContent = video.title || '';
   info.appendChild(h3);
@@ -87,7 +93,7 @@ function initFeaturedVideos() {
 
       grid.innerHTML = '';
       cards.forEach((card) => grid.appendChild(card));
-      if (sub) sub.textContent = "Automatically updated — today's most-watched AI videos";
+      if (sub) sub.textContent = "Automatically updated — top video from each AI topic";
     })
     .catch(() => {
       // network/parse failure, or no key configured yet: keep the static picks
