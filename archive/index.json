@@ -10,26 +10,32 @@
   "entries": [
     {
       "date": "2026-09-08",
+      "count": 8,
       "topHeadline": "OpenAI fought dirty on career-making math problem, says NYU mathematician"
     },
     {
       "date": "2026-09-07",
+      "count": 2,
       "topHeadline": "Opaque recurrence, and other AI terms that you should probably know"
     },
     {
       "date": "2026-09-06",
+      "count": 2,
       "topHeadline": "Authors push back as publishers and agents make claims on Anthropic settlement"
     },
     {
       "date": "2026-09-05",
+      "count": 2,
       "topHeadline": "Hikers rescued after using Google Gemini for planning"
     },
     {
       "date": "2026-09-04",
+      "count": 9,
       "topHeadline": "AI compute provider Nscale is looking for $3.5B in pre-IPO financing"
     },
     {
       "date": "2026-09-03",
+      "count": 8,
       "topHeadline": "Accel reportedly in talks to lead $1B round for Thinking Machines at $40B valuation"
     }
   ]

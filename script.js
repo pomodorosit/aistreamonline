@@ -731,9 +731,25 @@ function initTimeMachine() {
         panel.innerHTML = '';
         if (items.length === 0) {
           panel.textContent = 'No stories recorded for that date.';
-          return;
+        } else {
+          items.forEach((item) => panel.appendChild(buildArchiveRow(item)));
         }
-        items.forEach((item) => panel.appendChild(buildArchiveRow(item)));
+
+        if (typeof anime === 'function') {
+          anime({
+            targets: panel,
+            opacity: [0, 1],
+            translateY: [16, 0],
+            duration: 380,
+            easing: 'easeOutQuad',
+          });
+          // safety net: see animateNumber -- guarantee the panel is fully
+          // visible even if anime's rAF loop never gets to tick
+          setTimeout(() => {
+            panel.style.opacity = '';
+            panel.style.transform = '';
+          }, 430);
+        }
       })
       .catch(() => {
         panel.textContent = 'Could not load that date.';
@@ -777,10 +793,10 @@ function initTimeMachine() {
         cell.classList.add('has-data');
         cell.setAttribute('role', 'button');
         cell.setAttribute('tabindex', '0');
-        if (entry.topHeadline) {
+        if (entry.count > 0) {
           const preview = document.createElement('span');
           preview.className = 'calendar-day-preview';
-          preview.textContent = entry.topHeadline;
+          preview.textContent = entry.count === 1 ? '1 story' : `${entry.count} stories`;
           cell.appendChild(preview);
         }
         cell.addEventListener('click', () => selectDate(dateStr));

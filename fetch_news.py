@@ -379,7 +379,13 @@ def write_daily_snapshot(all_items):
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
     today = time.strftime("%Y-%m-%d", time.gmtime())
 
-    snapshot = {"date": today, "items": all_items[:SNAPSHOT_ITEMS]}
+    # only articles actually published *on this day* -- all_items is
+    # sorted by recency but not date-filtered, so without this a day's
+    # snapshot could include yesterday's leftover stories padding out the
+    # top-20 cut
+    todays_items = [it for it in all_items if pub_day(it) == today]
+
+    snapshot = {"date": today, "items": todays_items[:SNAPSHOT_ITEMS]}
     with open(os.path.join(ARCHIVE_DIR, f"{today}.json"), "w", encoding="utf-8") as f:
         json.dump(snapshot, f, ensure_ascii=False, indent=2)
 
@@ -388,20 +394,22 @@ def write_daily_snapshot(all_items):
         reverse=True,
     )
 
-    # lightweight per-date index with a top-headline preview, so the
+    # lightweight per-date index (article count + top headline), so the
     # frontend calendar can show a hint of each day's news without
     # fetching every single day's full snapshot just to render a preview
     entries = []
     for d in dates:
+        count = 0
         top_headline = None
         try:
             with open(os.path.join(ARCHIVE_DIR, f"{d}.json"), "r", encoding="utf-8") as f:
                 day_items = json.load(f).get("items") or []
+            count = len(day_items)
             if day_items:
                 top_headline = day_items[0].get("title")
         except (FileNotFoundError, json.JSONDecodeError):
             pass
-        entries.append({"date": d, "topHeadline": top_headline})
+        entries.append({"date": d, "count": count, "topHeadline": top_headline})
 
     with open(os.path.join(ARCHIVE_DIR, "index.json"), "w", encoding="utf-8") as f:
         json.dump({"dates": dates, "entries": entries}, f, ensure_ascii=False, indent=2)

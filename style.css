@@ -1603,15 +1603,14 @@ img { max-width: 100%; display: block; }
 
 .calendar-day-preview {
   display: none;
-  font-size: 7px;
-  line-height: 1.25;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
   color: var(--ink-faint);
-  margin-top: 2px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
 }
 
 .calendar-day.has-data {
@@ -1622,7 +1621,7 @@ img { max-width: 100%; display: block; }
 }
 
 .calendar-day.has-data .calendar-day-number { color: var(--gold); }
-.calendar-day.has-data .calendar-day-preview { display: -webkit-box; color: var(--ink-soft); }
+.calendar-day.has-data .calendar-day-preview { display: flex; color: var(--gold-dim); }
 
 .calendar-day.has-data:hover,
 .calendar-day.has-data:focus-visible {
