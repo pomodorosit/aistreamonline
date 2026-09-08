@@ -35,13 +35,16 @@ jobs:
       - name: Fetch live GitHub AI activity pulse
         run: python fetch_github_pulse.py
 
+      - name: Fetch latest podcast episodes
+        run: python fetch_podcasts.py
+
       - name: Commit and push if content changed
         run: |
           git config user.name "aistreamonline-bot"
           git config user.email "actions@users.noreply.github.com"
 
           git add news.json stocks.json archive/
-          for f in videos.json github_pulse.json; do
+          for f in videos.json github_pulse.json podcasts.json; do
             if [ -f "$f" ]; then
               git add "$f"
             fi
@@ -52,5 +55,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Auto-refresh news, stock quotes, trending videos, and AI activity pulse"
+          git commit -m "Auto-refresh news, stock quotes, trending videos, AI pulse, and podcasts"
           git push

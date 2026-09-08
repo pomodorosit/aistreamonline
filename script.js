@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLiveNews();
   initStockTicker();
   initFeaturedVideos();
+  initPodcasts();
   initAiPulse();
   initAnalyticsConsent();
   initNewsletterForm();
@@ -90,6 +91,70 @@ function initFeaturedVideos() {
     })
     .catch(() => {
       // network/parse failure, or no key configured yet: keep the static picks
+    });
+}
+
+function buildPodcastRow(ep) {
+  if (!isSafeHttpUrl(ep.link)) return null;
+
+  const row = document.createElement('a');
+  row.className = 'podcast-row';
+  row.href = ep.link;
+  row.rel = 'noopener noreferrer nofollow';
+  row.target = '_blank';
+
+  const play = document.createElement('span');
+  play.className = 'podcast-play';
+  play.textContent = '▶';
+  row.appendChild(play);
+
+  const info = document.createElement('span');
+  info.className = 'podcast-info';
+
+  const name = document.createElement('span');
+  name.className = 'podcast-name';
+  name.textContent = ep.name || '';
+  info.appendChild(name);
+
+  const host = document.createElement('span');
+  host.className = 'podcast-host';
+  host.textContent = ep.host || '';
+  info.appendChild(host);
+
+  if (ep.episodeTitle) {
+    const episode = document.createElement('span');
+    episode.className = 'podcast-episode';
+    episode.textContent = ep.episodeTitle;
+    info.appendChild(episode);
+  }
+
+  row.appendChild(info);
+  return row;
+}
+
+function initPodcasts() {
+  const list = document.getElementById('podcast-list');
+  const sub = document.getElementById('podcasts-sub');
+  if (!list) return;
+
+  fetch('podcasts.json', { cache: 'no-store' })
+    .then((res) => {
+      if (!res.ok) throw new Error('podcasts.json not available');
+      return res.json();
+    })
+    .then((data) => {
+      const episodes = Array.isArray(data.episodes) ? data.episodes : [];
+      if (episodes.length === 0) return; // keep static fallback rows
+
+      const rows = episodes.map(buildPodcastRow).filter(Boolean);
+      if (rows.length === 0) return;
+
+      list.innerHTML = '';
+      rows.forEach((row) => list.appendChild(row));
+      if (sub) sub.textContent = 'Automatically updated — latest episode from each show';
+    })
+    .catch(() => {
+      // network/parse failure: keep the static fallback rows
     });
 }
 
