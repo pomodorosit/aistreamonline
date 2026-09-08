@@ -2,6 +2,27 @@
   "date": "2026-09-08",
   "items": [
     {
+      "title": "Meta debuts its Muse AI agent. Will consumers trust it?",
+      "link": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/",
+      "pubDate": "Tue, 08 Sep 2026 19:00:00 +0000",
+      "summary": "Meta's new personal AI agent Muse wants access to users' email, calendars, payments, health services, and more — making the company's biggest consumer AI bet yet a major test of whether people still...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/Muse-Neswsroom-Banner.jpg?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": "Low",
+        "sentimentScore": 0,
+        "companies": [
+          "Meta"
+        ],
+        "countries": [],
+        "technologies": [
+          "Agentic AI"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "OpenAI fought dirty on career-making math problem, says NYU mathematician",
       "link": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/",
       "pubDate": "Tue, 08 Sep 2026 17:32:15 +0000",
