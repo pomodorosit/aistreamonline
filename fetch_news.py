@@ -387,8 +387,24 @@ def write_daily_snapshot(all_items):
         (fn[:-5] for fn in os.listdir(ARCHIVE_DIR) if fn.endswith(".json") and fn != "index.json"),
         reverse=True,
     )
+
+    # lightweight per-date index with a top-headline preview, so the
+    # frontend calendar can show a hint of each day's news without
+    # fetching every single day's full snapshot just to render a preview
+    entries = []
+    for d in dates:
+        top_headline = None
+        try:
+            with open(os.path.join(ARCHIVE_DIR, f"{d}.json"), "r", encoding="utf-8") as f:
+                day_items = json.load(f).get("items") or []
+            if day_items:
+                top_headline = day_items[0].get("title")
+        except (FileNotFoundError, json.JSONDecodeError):
+            pass
+        entries.append({"date": d, "topHeadline": top_headline})
+
     with open(os.path.join(ARCHIVE_DIR, "index.json"), "w", encoding="utf-8") as f:
-        json.dump({"dates": dates}, f, ensure_ascii=False, indent=2)
+        json.dump({"dates": dates, "entries": entries}, f, ensure_ascii=False, indent=2)
 
 
 def _match_any(patterns, text):

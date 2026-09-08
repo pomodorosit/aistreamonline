@@ -708,13 +708,20 @@ function initAskTheWorld(newsItems) {
 }
 
 function initTimeMachine() {
-  const select = document.getElementById('time-machine-select');
+  const grid = document.getElementById('calendar-grid');
+  const monthLabel = document.getElementById('calendar-month-label');
+  const prevBtn = document.getElementById('calendar-prev');
+  const nextBtn = document.getElementById('calendar-next');
   const panel = document.getElementById('time-machine-results');
-  if (!select || !panel) return;
+  if (!grid || !monthLabel || !prevBtn || !nextBtn || !panel) return;
 
-  function loadSnapshot(date) {
+  let entryByDate = {};
+  let currentMonth = null;
+  let selectedDate = null;
+
+  function loadSnapshot(dateStr) {
     panel.innerHTML = '';
-    fetch(`archive/${date}.json`, { cache: 'no-store' })
+    fetch(`archive/${dateStr}.json`, { cache: 'no-store' })
       .then((res) => {
         if (!res.ok) throw new Error('snapshot not available');
         return res.json();
@@ -733,26 +740,100 @@ function initTimeMachine() {
       });
   }
 
+  function selectDate(dateStr) {
+    selectedDate = dateStr;
+    renderCalendar();
+    loadSnapshot(dateStr);
+  }
+
+  function renderCalendar() {
+    const year = currentMonth.getFullYear();
+    const month = currentMonth.getMonth();
+    monthLabel.textContent = currentMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+    const startWeekday = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    grid.innerHTML = '';
+
+    for (let i = 0; i < startWeekday; i++) {
+      const empty = document.createElement('div');
+      empty.className = 'calendar-day calendar-day-empty';
+      grid.appendChild(empty);
+    }
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+      const cell = document.createElement('div');
+      cell.className = 'calendar-day';
+
+      const num = document.createElement('span');
+      num.className = 'calendar-day-number';
+      num.textContent = String(day);
+      cell.appendChild(num);
+
+      const entry = entryByDate[dateStr];
+      if (entry) {
+        cell.classList.add('has-data');
+        cell.setAttribute('role', 'button');
+        cell.setAttribute('tabindex', '0');
+        if (entry.topHeadline) {
+          const preview = document.createElement('span');
+          preview.className = 'calendar-day-preview';
+          preview.textContent = entry.topHeadline;
+          cell.appendChild(preview);
+        }
+        cell.addEventListener('click', () => selectDate(dateStr));
+        cell.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            selectDate(dateStr);
+          }
+        });
+      }
+
+      if (dateStr === selectedDate) cell.classList.add('selected');
+      grid.appendChild(cell);
+    }
+
+    const now = new Date();
+    nextBtn.disabled = year === now.getFullYear() && month === now.getMonth();
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentMonth = new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1, 1);
+    renderCalendar();
+  });
+  nextBtn.addEventListener('click', () => {
+    if (nextBtn.disabled) return;
+    currentMonth = new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 1);
+    renderCalendar();
+  });
+
   fetch('archive/index.json', { cache: 'no-store' })
     .then((res) => {
       if (!res.ok) throw new Error('archive index not available');
       return res.json();
     })
     .then((data) => {
-      const dates = Array.isArray(data.dates) ? data.dates : [];
-      if (dates.length === 0) {
+      const entries = Array.isArray(data.entries)
+        ? data.entries
+        : (Array.isArray(data.dates) ? data.dates.map((d) => ({ date: d, topHeadline: null })) : []);
+      if (entries.length === 0) {
         panel.textContent = 'No historical snapshots yet — check back after a few days.';
         return;
       }
-      select.innerHTML = '';
-      dates.forEach((d) => {
-        const opt = document.createElement('option');
-        opt.value = d;
-        opt.textContent = d;
-        select.appendChild(opt);
-      });
-      select.addEventListener('change', () => loadSnapshot(select.value));
-      loadSnapshot(dates[0]);
+
+      entryByDate = {};
+      entries.forEach((e) => { entryByDate[e.date] = e; });
+
+      const mostRecent = entries[0].date;
+      const [y, m] = mostRecent.split('-').map(Number);
+      currentMonth = new Date(y, m - 1, 1);
+      selectedDate = mostRecent;
+
+      renderCalendar();
+      loadSnapshot(mostRecent);
     })
     .catch(() => {
       panel.textContent = 'Historical data unavailable right now.';
