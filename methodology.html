@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology — AI Stream Online</title>
+<meta name="description" content="How AI Stream Online sources, tags, and ranks AI news, companies, and countries — including known limitations of every dataset we use.">
+<link rel="canonical" href="https://aistreamonline.com/methodology">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=41">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="index.html">
+      <img class="mascot" src="logo-mascot.png" alt="AI Stream Online mascot">
+      <span class="logo-text">
+        <span class="logo-en">AI STREAM ONLINE</span>
+        <span class="logo-he">Everything AI — In One Place</span>
+      </span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="section legal-page">
+    <div class="wrap legal-content">
+      <h1>Methodology</h1>
+      <p class="legal-updated">Last updated: September 2026</p>
+
+      <p>AI Stream Online is built entirely on automated pipelines and openly available data. This page explains exactly how every number and story on the site is produced, where it comes from, and — just as important — what it does <em>not</em> capture. We'd rather tell you a metric is incomplete than let it look more authoritative than it is.</p>
+
+      <h2>1. News aggregation</h2>
+      <p>Articles are pulled from three public RSS feeds — TechCrunch's AI category, VentureBeat's AI category, and AI News — on an automated schedule that runs every 3 hours. Each run merges newly fetched articles into a rolling archive (capped at 60 current items), deduplicated by article URL. We link to and credit the original source for every story; we never republish full article text.</p>
+
+      <h2>2. Story clustering</h2>
+      <p>When two articles from different feeds share at least one tagged company <em>and</em> have substantially similar titles (word-overlap based) on the same day, they're merged into a single story with an "Also covered by" credit to the other outlet(s), instead of appearing as unrelated duplicates. Company overlap alone is intentionally not enough to trigger a merge — it produced false matches (e.g. two unrelated OpenAI stories) when tested with a looser rule.</p>
+
+      <h2>3. Per-article intelligence tagging</h2>
+      <p>Every article is automatically tagged with an impact level (Low/Medium/High), a sentiment score, and mentioned companies, countries, and technologies. This is done with a keyword/pattern-based heuristic engine — not a large language model — and is marked internally as such (<code>engine: "heuristic"</code>) so a future LLM-based pass could identify and upgrade these entries without reprocessing everything. Country tagging in particular only fires when an article's text explicitly names a country, which is a real limitation: many articles mention a company (e.g. "OpenAI") without ever naming its country in the text, so per-country news coverage is sparser than per-company coverage.</p>
+
+      <h2>4. AI companies tracked by country</h2>
+      <p>Company counts shown per country come from <a href="https://query.wikidata.org/" target="_blank" rel="noopener noreferrer">Wikidata's public SPARQL endpoint</a> — a free, live, structured, community-edited database. The query counts distinct entities tagged with industry = "artificial intelligence" (Wikidata item Q11660), grouped by headquarters country (property P17).</p>
+      <p><strong>Known limitation, stated plainly:</strong> Wikidata is edited by volunteers, so coverage is uneven and skews toward companies that English-speaking contributors happened to document. It is not a census. As one concrete example, China's real AI industry is vastly larger than the handful of companies currently tagged this way on Wikidata. We label this metric "AI companies tracked on Wikidata," never "total AI companies," for exactly this reason. We evaluated several alternatives before settling on Wikidata — GitHub's organization search by location, a dedicated Wikidata "AI company" class, conference exhibitor lists, Y Combinator's directory, and paid B2B data platforms — and none had a free, structured, reliable path to this data. Refreshed automatically every 3 hours.</p>
+
+      <h2>5. Global AI Leadership map</h2>
+      <p>The six-country per-capita ranking on the homepage map (Israel, Singapore, United States, South Korea, United Kingdom, China) is an editorial selection reflecting widely-cited AI activity relative to population, not a single computed formula. We're stating this directly rather than implying it's an automated score: it currently updates periodically by hand, not live. The country drill-down panel (which stories are shown when you click a country) <em>is</em> computed live from real per-article country tags, per the limitation noted in section 3.</p>
+
+      <h2>6. Live AI activity pulse</h2>
+      <p>The GitHub activity numbers (stars, open issues) are fetched from GitHub's official public API for 12 widely-used open-source AI projects (transformers, llama.cpp, langchain, vllm, and others). The "live" ticking number between refreshes is a real measured rate — the actual star growth observed between the last two automated snapshots, divided by the real elapsed time — not a simulated or arbitrary animation. It only appears once we have two real data points to measure a rate from, and is labeled "live estimate."</p>
+
+      <h2>7. Videos and podcasts</h2>
+      <p>Featured videos are selected via the YouTube Data API: we search eight distinct AI sub-topics (large language models, agentic AI, robotics, AI chips, AI safety, and others) and take the top result from each by view count, so one viral topic can't crowd out the rest. Podcast episodes are pulled directly from each show's own public RSS feed — no API key involved, since every podcast host publishes one.</p>
+
+      <h2>8. Good/Bad News verdict</h2>
+      <p>Each story's "AI says" lean comes from the same heuristic sentiment score described in section 3. The community score is a real, separately tracked vote count — not a simulated number — stored per browser locally until a shared backend is connected, after which it becomes a genuine cross-visitor count.</p>
+
+      <h2>9. Update frequency</h2>
+      <p>News, stock quotes, videos, GitHub activity, podcasts, and AI company counts all refresh automatically every 3 hours via a scheduled job. The Global AI Leadership ranking order and the Top AI Platforms / Top AI Voices lists are editorial and updated periodically by hand, not on a fixed schedule.</p>
+
+      <h2>10. What we deliberately don't do</h2>
+      <p>We don't fabricate metrics to fill a gap. Where we don't have a reliable free data source — for example, a genuine live count of "how many people use AI worldwide," or a comprehensive count of AI companies from trademark or social-media data — we say so and leave the metric out, rather than presenting an invented number as fact.</p>
+
+      <h2>11. Questions or corrections</h2>
+      <p>If you spot a data error or have a source suggestion, contact us at <a href="mailto:contact@aistreamonline.com">contact@aistreamonline.com</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="footer-logo">AI STREAM ONLINE</span>
+    <p>&copy; 2026 aistreamonline.com — All rights reserved</p>
+    <nav class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="methodology.html">Methodology</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

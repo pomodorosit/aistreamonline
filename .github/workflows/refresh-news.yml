@@ -41,12 +41,15 @@ jobs:
       - name: Fetch AI companies by country
         run: python fetch_ai_companies.py
 
+      - name: Generate country intelligence pages
+        run: python generate_country_pages.py
+
       - name: Commit and push if content changed
         run: |
           git config user.name "aistreamonline-bot"
           git config user.email "actions@users.noreply.github.com"
 
-          git add news.json stocks.json archive/
+          git add news.json stocks.json archive/ country/
           for f in videos.json github_pulse.json podcasts.json ai_companies_by_country.json; do
             if [ -f "$f" ]; then
               git add "$f"
