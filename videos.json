@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-08T20:53:41Z",
+  "generatedAt": "2026-09-08T23:15:14Z",
   "videos": [
     {
       "videoId": "iKLljlEzHZM",
       "title": "New Complete AI/ML Course | AI Engineering & Data Science | Prime 3.0 Batch 🚀",
       "channelTitle": "Apna College",
       "publishedAt": "2026-09-03T14:34:27Z",
-      "viewCount": 638625,
-      "likeCount": 5569,
+      "viewCount": 643029,
+      "likeCount": 5573,
       "topic": "Large language models"
     },
     {
@@ -20,12 +20,12 @@
       "topic": "Generative AI"
     },
     {
-      "videoId": "HzGOWq5UyjY",
-      "title": "How AI Agents Actually Work (Every Piece Explained & Built)",
-      "channelTitle": "Tech With Tim",
-      "publishedAt": "2026-09-03T14:00:11Z",
-      "viewCount": 78943,
-      "likeCount": 1200,
+      "videoId": "gyArDlsWHQM",
+      "title": "GPT-6 Astra IS AGI - Greatest AI Model Ever (Fully Tested)",
+      "channelTitle": "WorldofAI",
+      "publishedAt": "2026-09-03T21:56:37Z",
+      "viewCount": 108487,
+      "likeCount": 1239,
       "topic": "Agentic AI"
     },
     {
@@ -33,8 +33,8 @@
       "title": "Elon Predicts ONE BILLION Humanoid Robot AI TAKEOVER",
       "channelTitle": "Breaking Points",
       "publishedAt": "2026-09-02T19:00:34Z",
-      "viewCount": 248754,
-      "likeCount": 3411,
+      "viewCount": 249368,
+      "likeCount": 3418,
       "topic": "Robotics"
     },
     {
@@ -42,8 +42,8 @@
       "title": "Inside the AI Hardware Engine – Full Semiconductor Supply Chain Course",
       "channelTitle": "freeCodeCamp.org",
       "publishedAt": "2026-09-03T13:38:43Z",
-      "viewCount": 142606,
-      "likeCount": 1637,
+      "viewCount": 143914,
+      "likeCount": 1645,
       "topic": "AI chips"
     },
     {
@@ -51,8 +51,8 @@
       "title": "OpenAI's new warning",
       "channelTitle": "CNBC Television",
       "publishedAt": "2026-09-08T15:46:10Z",
-      "viewCount": 20279,
-      "likeCount": 403,
+      "viewCount": 54718,
+      "likeCount": 531,
       "topic": "AI safety"
     }
   ]
