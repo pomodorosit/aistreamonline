@@ -437,13 +437,24 @@ function initNewsArchive(items) {
     container.appendChild(list);
   });
 
+  const showText = `Show full archive — ${items.length} stories over ${groups.length} day${groups.length === 1 ? '' : 's'} ▾`;
+  const hideText = 'Hide archive ▴';
+
   const toggle = document.createElement('button');
   toggle.type = 'button';
   toggle.className = 'archive-show-more';
-  toggle.textContent = `Show full archive — ${items.length} stories over ${groups.length} day${groups.length === 1 ? '' : 's'} ▾`;
+  toggle.textContent = showText;
+
+  let expanded = false;
   toggle.addEventListener('click', () => {
-    dayElements.forEach((el) => { el.hidden = false; });
-    toggle.remove();
+    expanded = !expanded;
+    dayElements.forEach((el) => { el.hidden = !expanded; });
+    toggle.textContent = expanded ? hideText : showText;
+    if (!expanded) {
+      // collapsing can yank away content the user had scrolled deep into --
+      // bring them back to the toggle instead of leaving them stranded
+      toggle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
   container.insertBefore(toggle, dayElements[0]);
 }
