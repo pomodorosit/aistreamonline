@@ -1329,6 +1329,13 @@ img { max-width: 100%; display: block; }
   margin-bottom: 0;
 }
 
+.leadership-source {
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
 .leadership-drilldown {
   display: none;
   max-width: 560px;

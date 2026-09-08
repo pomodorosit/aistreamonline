@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFeaturedVideos();
   initPodcasts();
   initAiPulse();
+  initAiCompaniesByCountry();
   initAnalyticsConsent();
   initNewsletterForm();
 });
@@ -791,6 +792,47 @@ function initReturnBanner(newsItems) {
   } catch (e) { /* ignore */ }
 }
 
+function initAiCompaniesByCountry() {
+  const list = document.querySelector('.leadership-rank-list');
+  const sourceLabel = document.getElementById('leadership-source');
+  if (!list) return;
+
+  fetch('ai_companies_by_country.json', { cache: 'no-store' })
+    .then((res) => {
+      if (!res.ok) throw new Error('ai_companies_by_country.json not available');
+      return res.json();
+    })
+    .then((data) => {
+      const counts = data.countries || {};
+
+      list.querySelectorAll('li').forEach((li) => {
+        const countrySpan = li.querySelector('.rank-country');
+        if (!countrySpan) return;
+        const country = countrySpan.textContent.trim();
+        const count = counts[country];
+        if (!(count > 0)) return;
+
+        const countSpan = document.createElement('span');
+        countSpan.className = 'rank-company-count';
+        const numberSpan = document.createElement('span');
+        numberSpan.textContent = '0';
+        countSpan.appendChild(numberSpan);
+        countSpan.appendChild(document.createTextNode(count === 1 ? ' company' : ' companies'));
+        li.appendChild(countSpan);
+
+        animateNumber(numberSpan, 0, count, 1200);
+      });
+
+      if (sourceLabel) {
+        sourceLabel.textContent = 'AI companies tracked on Wikidata — coverage varies by country, not a full census';
+        sourceLabel.hidden = false;
+      }
+    })
+    .catch(() => {
+      // no data yet or fetch failed: leave the list without company counts
+    });
+}
+
 function initLeadershipDrilldown(newsItems) {
   const list = document.querySelector('.leadership-rank-list');
   const panel = document.getElementById('leadership-drilldown');
@@ -802,14 +844,6 @@ function initLeadershipDrilldown(newsItems) {
     return items.filter(
       (it) => it.aiAnalysis && Array.isArray(it.aiAnalysis.countries) && it.aiAnalysis.countries.includes(country)
     );
-  }
-
-  function companiesForCountry(country) {
-    const companies = new Set();
-    articlesForCountry(country).forEach((it) => {
-      (it.aiAnalysis.companies || []).forEach((c) => companies.add(c));
-    });
-    return companies;
   }
 
   function renderPanel(country, matches) {
@@ -892,14 +926,6 @@ function initLeadershipDrilldown(newsItems) {
     const countrySpan = li.querySelector('.rank-country');
     if (!countrySpan) return;
     const country = countrySpan.textContent.trim();
-
-    const companyCount = companiesForCountry(country).size;
-    if (companyCount > 0) {
-      const countSpan = document.createElement('span');
-      countSpan.className = 'rank-company-count';
-      countSpan.textContent = companyCount + (companyCount === 1 ? ' company' : ' companies');
-      li.appendChild(countSpan);
-    }
 
     li.classList.add('clickable');
     li.setAttribute('role', 'button');
