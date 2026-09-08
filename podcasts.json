@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T16:38:36Z",
+  "generatedAt": "2026-09-08T17:43:28Z",
   "episodes": [
     {
       "name": "No Priors",
@@ -9,25 +9,11 @@
       "pubDate": "Thu, 03 Sep 2026 10:00:00 -0000"
     },
     {
-      "name": "Dwarkesh Podcast",
-      "host": "Dwarkesh Patel",
-      "episodeTitle": "Ajeya Cotra – Inside the OpenAI agent swarm that hacked Hugging Face",
-      "link": "https://www.dwarkesh.com/p/ajeya-cotra",
-      "pubDate": "Tue, 01 Sep 2026 15:41:06 GMT"
-    },
-    {
       "name": "Lex Fridman Podcast",
       "host": "Lex Fridman",
       "episodeTitle": "#501 – DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding & Linux",
       "link": "https://lexfridman.com/dhh-2/?utm_source=rss&utm_medium=rss&utm_campaign=dhh-2",
       "pubDate": "Wed, 26 Aug 2026 21:47:04 +0000"
-    },
-    {
-      "name": "Latent Space",
-      "host": "swyx & Alessio",
-      "episodeTitle": "🔬“We have foundation models for language, not for physics” — Anima Anandkumar, Bren Professor of Computing",
-      "link": "https://www.latent.space/p/anima",
-      "pubDate": "Wed, 26 Aug 2026 15:15:00 GMT"
     }
   ]
 }
