@@ -16,12 +16,17 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/israel</loc>
+    <loc>https://aistreamonline.com/country/germany</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/singapore</loc>
+    <loc>https://aistreamonline.com/country/belgium</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/israel</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -31,7 +36,67 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/country/ukraine</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/switzerland</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/portugal</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/austria</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/australia</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/mexico</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/italy</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/france</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/country/south-korea</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/india</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/canada</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/spain</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/netherlands</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -41,7 +106,117 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/country/russia</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/south-africa</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/turkey</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/taiwan</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/united-arab-emirates</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/malaysia</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/estonia</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/czech-republic</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/brazil</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/lithuania</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/cyprus</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/sweden</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/japan</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/poland</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/singapore</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/slovakia</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/chile</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/saudi-arabia</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/country/china</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/romania</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/indonesia</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/new-zealand</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/argentina</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -52,6 +227,51 @@
   </url>
   <url>
     <loc>https://aistreamonline.com/company/10web</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/2039-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/705ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/8t20-capital</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/9ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/a-leecon-gmbh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/aaaibiz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/aai-labs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/actioneer</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/adios</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -106,7 +326,47 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/ai-engine</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ai-founders</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/ai-genesis</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ai-guild</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ai-guild-blue</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ai-innovisory</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ai-makers</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ai-pirates</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ai-refounder</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -116,7 +376,52 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/ai-techno-center-gmbh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/ai-tutors</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ai-wave</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ai-centech</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/aidapt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/aide</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/aiiaco</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/aimoove</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ainora</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ainteg-gmbh</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -126,12 +431,37 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/aiomics</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/aiscienda</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/aisdr-inc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/aisight</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/aiverse</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/aizualabs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/akvant-technologies</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -161,12 +491,42 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/almascale</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/alpha-ai-service</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/alt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/altair-engineering</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/altaniche</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/alva-labs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/amplience</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/anteos-health</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -186,6 +546,26 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/apexai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/appen</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/araya-inc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/aristek-systems</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/arkham-intelligence</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
@@ -196,7 +576,22 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/artiliance</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/ascendion</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ask-this-guy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/askeve</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -261,7 +656,17 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/auralex</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/auraone</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/aurvy</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -296,6 +701,21 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/babelscape</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/banamind</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/barb-ua</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/bastion-intelligence</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
@@ -326,7 +746,27 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/beyonder-ag</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/bhashavox</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/big-house-enterprise</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/biteme-digital</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/bixso</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -336,7 +776,22 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/blaksyd</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/blane-canada</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/blankline</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/blcks-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -352,6 +807,16 @@
   </url>
   <url>
     <loc>https://aistreamonline.com/company/bluedot</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/bluenexus</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/bluepython</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -381,7 +846,32 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/brandforge-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/brandup-factory-gmbh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/brandyze</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/breme</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/briefdots-pty-ltd</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/cai-technology</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -406,7 +896,17 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/caprilytics</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/cdimension</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/cenia</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -426,6 +926,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/chaitanya-digital-solutions</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/chasing-next</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
@@ -436,7 +941,27 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/chime-labs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/choate-catalysts</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/chung-tair-ltd</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/churchwiseai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/circus-se</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -446,12 +971,32 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/civic-coding</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/clearcogs</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/clinovus-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/cmultimedia</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/co3-one</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/coalignment</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -501,7 +1046,22 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/conversation-design-institute</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/cortexum</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/cortexvia</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/covet</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -521,7 +1081,22 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/cultivator-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/cyberlink</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/cycorp</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/dainamics</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -532,6 +1107,16 @@
   </url>
   <url>
     <loc>https://aistreamonline.com/company/dapto</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/darkolab</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/dataiku</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -551,12 +1136,67 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/deduce-data-solutions</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/deepseek</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/deepsim-intelligence-technology-inc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/deepsolve</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/delegaloai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/dellight-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/demi-technologies</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/descript</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/design-com</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/devoteam-group</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/dezotech</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/die-ai-boutique</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/digisurface</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -571,12 +1211,47 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/digitalix-hub</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/dimantika</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/discentra</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://aistreamonline.com/company/discovery-loop</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/disruptivne</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/docsy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/domani-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/doozy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/draft-goal</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -596,6 +1271,21 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/dynamisch-inc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/d-cisionia</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/easiraai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/echo-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
@@ -606,12 +1296,52 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/edgebound-labs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/edron-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/edukidai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/eevi</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/eigen-networks</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ekfrazo-technologies</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/ekua</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/electe</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/element-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/elevate-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -631,12 +1361,37 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/emphos-group</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/empirica-technologies</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/empiriolabs-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://aistreamonline.com/company/endeavor-intelligence</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/enki-technologies-s-l</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/enliteai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ententra</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -651,7 +1406,37 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/eoai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/epithre</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/eques</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/erode-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/espresso-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/etinsy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/euthopia</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -671,12 +1456,42 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/evous</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/expandiq</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/extend</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/exuverse</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/faculty</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/fd-edu</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/feld-ai-gmbh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/fentech</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -691,7 +1506,17 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/company/firebird-ai</loc>
+    <loc>https://aistreamonline.com/company/fiperly</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/flairbit</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/flappie-technologies</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -701,7 +1526,52 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/floe</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/flowiahub</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/fluxco-technologies</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/fogalqrn</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/fonema</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/forethought-technologies</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/formify</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/fozzels</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/free-mind-consultancy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/freeday</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -716,7 +1586,27 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/fumex-ag</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/fusionpact-technologies</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/fusionsync-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/futureframe</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/futuremarketingai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -731,12 +1621,22 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/ganexity</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/gathr-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://aistreamonline.com/company/gauntlet-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/gavion</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -752,6 +1652,16 @@
   </url>
   <url>
     <loc>https://aistreamonline.com/company/geoffrey-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/geozation-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/german-research-center-for-artificial-intelligence</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -801,6 +1711,16 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/groovy-web</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/group-42</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/growthfactor</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
@@ -811,12 +1731,27 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/h-company</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/happyspace</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/harry</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/hartz-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/haut-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -831,12 +1766,32 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/hdgelabs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/health-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/heey-gmbh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/hello-patient</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/helm-nagel-gmbh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/hermann-consult-co-gmbh</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -847,6 +1802,21 @@
   </url>
   <url>
     <loc>https://aistreamonline.com/company/hive</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/homodeus-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/honecraft</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/hookiq</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -866,12 +1836,87 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/hq-logic</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/humain</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/hummingde-consultancy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/hygnal</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/hypergiant-industries</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/iacademia</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/iapro</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ice-space-studios</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ideaproof</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ideaspace</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/identifiable</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ijonis</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/imatrics</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/immerss</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/inboxia</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/inc4</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/indapoint-technologies</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -886,6 +1931,16 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/infobay-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/infor-srl-b-corp</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/inhouse</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
@@ -896,12 +1951,37 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/inovita</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/insiders-technologies-germany</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/insightfulai-solutions</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/instacars</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/institute-for-future-intelligence</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/inteligencialy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/intellecta-solutions</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -912,6 +1992,16 @@
   </url>
   <url>
     <loc>https://aistreamonline.com/company/intellistudio</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/interintra</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/interstitial-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -931,7 +2021,22 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/isai-llc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/isara-labs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/itechsmart-inc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/iterait</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -946,7 +2051,22 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/jelpi</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/johnny-tran-consulting</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/jonson</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/jr-academy</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -956,12 +2076,37 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/kaiki-gmbh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/kaizar</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/kbie</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/kepler</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/kero-digital-solutions-s-rl</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/keum-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/kinet-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -972,6 +2117,21 @@
   </url>
   <url>
     <loc>https://aistreamonline.com/company/kineticai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/kittl</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/klartext-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/klayer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -996,7 +2156,17 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/kokoro</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/konecto</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/korix</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1016,6 +2186,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/kumai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/kwalia</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
@@ -1026,12 +2201,32 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/labterna</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/landseed-pbc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/largitdata</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/latticeflow</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/lea-technologies</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/leap-motion</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1051,12 +2246,42 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/lemon</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/lemonstone-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/les-intelligences-connect-es</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/les-pr-curseurs-lab</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/lidd-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/light-lord</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://aistreamonline.com/company/lightbloom-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/lighton</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1076,7 +2301,52 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/logic</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/logos-fortuna</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/logyloop</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/looops</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/louwietec</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/lovable</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/lovelaice</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/loyjoy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/lumari</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/lune-technologies</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1092,6 +2362,46 @@
   </url>
   <url>
     <loc>https://aistreamonline.com/company/macroscope</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/magnence</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/magnitude-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/magnut-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/maijin</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/maisa-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/maluuba</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/mantiqi</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/marea-lab</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1116,12 +2426,32 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/mdsi</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/meadow-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/meedai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/melanized-limited</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/messagency</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/metaloss-intelligence</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1136,6 +2466,26 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/miia-innovation</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/mindbridge</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/mindmorph-labs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/mindstix-software-labs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/minerva-bi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
@@ -1146,12 +2496,22 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/mitarbyte</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/mitosis-labs</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://aistreamonline.com/company/modelmole</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/modelos-inteligencia-artificial</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1171,6 +2531,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/morvion</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/moschip-technologies-limited</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
@@ -1181,7 +2546,22 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/mozar</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/multimodal</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/muteki-group</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/mvst</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1191,12 +2571,37 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/myaiva</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/nanosemantics-lab</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/nao-labs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/narrative-sports</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/natalia</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/naver-labs-corp</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/naver-labs-europe</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1221,7 +2626,17 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/neova</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/nervana-systems</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/netsujo-inc</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1231,7 +2646,22 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/neuralia-labs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/neuroflash</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/neurovatic</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/newsqora</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1241,7 +2671,42 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/nexoya</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/nextfactor-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/nextframe-ai-studio</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/nextpayments</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/nextstart-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/nexum-intelligence</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/nimara-ventures</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/nimitai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1261,12 +2726,77 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/nodiris</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/novadata-solutions</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/novanexys</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/novax-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/noviopus-career-ai-social-network</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/novoads</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/noys</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/nozomio-labs</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/nyayaveda-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/obdurare</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/objectifcr-a</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/oes-pulse</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ofo-collective</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/omneky</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/onexgen-technology</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1296,6 +2826,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/ops-singularity</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/optimly</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
@@ -1316,7 +2851,47 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/orizn-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/osapher</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/ozric-ai-limited</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/pailot</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/pallix</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/pangaea-digital-labs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/pangeanic</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/parlexa</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/parnidia</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1341,7 +2916,17 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/perspix-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/petabite</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/pharos-production</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1351,7 +2936,42 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/pictoria-inc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/pilex-b-v</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/pivot-partners</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/pixai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/pixelik</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/playos-inc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/pleias</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/pnyx-2-0</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1361,7 +2981,17 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/polarise</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/practis</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/pragmoai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1371,12 +3001,37 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/preferred-networks</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/prestyj</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/primux-digital</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/prior-labs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/prisma-labs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/project-aina</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/promptmetrics</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1396,27 +3051,12 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/company/q131188217</loc>
+    <loc>https://aistreamonline.com/company/putti</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/company/q138772310</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/company/q140320889</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/company/q140323467</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/company/q140398238</loc>
+    <loc>https://aistreamonline.com/company/quantiface-gmbh</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1426,12 +3066,32 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/qubitech</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/qunetra</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/ragnetiq</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/raic-labs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/rankfor-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/ravatar</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1446,7 +3106,17 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/rebillion</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/red-hawk-technologies</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/reflekt-lab</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1461,12 +3131,42 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/relay</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/relo-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/replenit</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/reso</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/respeecher</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/revenue-stream-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/revenue-streams-llc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/revlence</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1481,7 +3181,17 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/rkecom-services</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/roadbotics</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/roal</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1506,12 +3216,22 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/s7em-ai-powered-solutions-for-industries</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/sagu-labs-technologies</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://aistreamonline.com/company/salesforce-marketing-cloud</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/salnus</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1526,7 +3246,32 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/sancantia</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/sapiens-sint-ticos</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/sapient-technology-group</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/sapio-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/sar-co-ltd</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/sarvat-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1536,7 +3281,17 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/saudi-company-for-artificial-intelligence</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/schoolai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/schwarz-digits</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1546,12 +3301,27 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/score-agency</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/scorecard-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/search-bridge</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/searchable</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/security-quotient</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1581,12 +3351,32 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/setix</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/sevra-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/shelfforce-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/shogo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://aistreamonline.com/company/shooflyai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/sigli</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1606,12 +3396,32 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/sinaptic-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/smart-ai-solutions</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/smart-country-convention</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/smart-ct-solutions</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://aistreamonline.com/company/smartfocus-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/solidscale</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1626,7 +3436,17 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/sourcebae</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/spacexai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/spare-parts-3d</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1666,6 +3486,21 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/stedia</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/stlar</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/stratalytic</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/strongsuit</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
@@ -1691,6 +3526,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/surogate</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/swift-beat</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
@@ -1706,12 +3546,37 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/swiss-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/syka-ventures-ug</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/syniaps</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/synorb</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://aistreamonline.com/company/synthfy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/t3a</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/taiwan-ai-labs</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1726,7 +3591,27 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/tantrshell</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/tec-dynamics-ltd</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/techwolf</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/teckel-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/teia-studio</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1747,6 +3632,16 @@
   </url>
   <url>
     <loc>https://aistreamonline.com/company/tenet-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/text</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/textero</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1791,7 +3686,17 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/thea-care</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/therml</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/thinkerwave-aitech</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1802,6 +3707,11 @@
   </url>
   <url>
     <loc>https://aistreamonline.com/company/throdl-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/thuyonx</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1817,6 +3727,11 @@
   </url>
   <url>
     <loc>https://aistreamonline.com/company/titan-pipelines</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/tokonomics</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1841,6 +3756,16 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/transfo-labs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/tree-ia</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/tricky-wombat</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
@@ -1851,7 +3776,22 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/trollwall-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/true-aim-ag</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/trulience</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/trustgent</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1866,7 +3806,57 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/tum-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/tuxweb</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/twin</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/type-mad1son-foundry</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/typewise</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/uffo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/unblocked</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/uncanny-minds-gmbh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/united-robotics-group</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/univers</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/unow</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1896,12 +3886,47 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/vaarhaft</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/van-k-studio</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/varela-insights</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/varka</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/varops</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/vastblue-innovations</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/velzyx-ai-inc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/verbose-techlabs-llp</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/versos-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1916,12 +3941,42 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/vidby</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/videostrong-technology-co-ltd</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/vidsentry</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/vira</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/virtualtek</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/viz-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/voiceb-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/voiceflow</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1936,12 +3991,37 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/vorel</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/voss-neural-research</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/voxworks</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/voyage-health-inc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/wasd-studio</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/watizi</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/wavect-gmbh</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1956,7 +4036,22 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/webask</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/webcorelab</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/webuild-tech</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/weiss-wisory-plt</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1976,7 +4071,27 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/whitecyber</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/wmie</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/wonder-dynamics</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/wordlift</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/workabl-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -1991,7 +4106,17 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/wysor</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/xamun-technologies-limited</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/xelia</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -2001,7 +4126,17 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/xinity-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/xorventa</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/yesper</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -2016,7 +4151,27 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/company/zainlee-technologies</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/zaiq</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/company/zamin-now</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/zenit-ki-gmbh</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/zenpai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -2027,6 +4182,21 @@
   </url>
   <url>
     <loc>https://aistreamonline.com/company/zolidar</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/zorix</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/zucol-services-private-limited</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/company/esk-asociace-um-l-inteligence</loc>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>

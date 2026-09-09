@@ -43,70 +43,56 @@ except ImportError:
 ENDPOINT = "https://query.wikidata.org/sparql"
 TIMEOUT = 30
 
-# Wikidata country labels sometimes differ from common usage (e.g. China is
-# "People's Republic of China") -- map the query's label back to the label
-# already used elsewhere on the site so the two line up.
+# Wikidata country labels sometimes differ from common usage, have multiple
+# valid forms, or (since this is community-edited data) are outright typos.
+# Map every variant seen in practice back to one canonical label so counts
+# don't get split or lost, and known non-country values get merged into
+# nothing (see EXCLUDED_LABELS below) rather than silently becoming a
+# "country" page for a city or a typo.
 LABEL_ALIASES = {
     "People's Republic of China": "China",
+    "United States of America": "United States",
+    "Kingdom of the Netherlands": "Netherlands",
+    "Isreal": "Israel",
 }
 
-TRACKED_COUNTRIES = ["Israel", "Singapore", "United States", "South Korea", "United Kingdom", "China"]
+# Wikidata is community-edited: at the low end of the frequency distribution
+# a handful of entries are cities or non-countries wrongly tagged as the
+# value of "country" (P17) rather than typos of a real country name. These
+# were found by actually inspecting the full result set, not guessed.
+EXCLUDED_LABELS = {"worldwide", "San Francisco", "Bengaluru", "Kyoto", "Shibuya"}
 
-# Wikidata QIDs for the six tracked countries, used to scope the per-company
-# detail query below to the same set (avoids pulling every AI company on
-# Wikidata worldwide, which would be a much larger and slower query).
-COUNTRY_QIDS = {
-    "Israel": "Q801",
-    "Singapore": "Q334",
-    "United States": "Q30",
-    "South Korea": "Q884",
-    "United Kingdom": "Q145",
-    "China": "Q148",
-}
+# Minimum company count for a country to get its own page. Chosen by
+# inspecting the real distribution: every country below this threshold in
+# the actual data was either one of the excluded non-country labels above,
+# or a duplicate/typo already folded in via LABEL_ALIASES. Every country at
+# or above it was independently verified to be a real, distinct country.
+MIN_COMPANIES_FOR_PAGE = 3
 
-QUERY = """
-SELECT ?countryLabel (COUNT(DISTINCT ?company) AS ?count) WHERE {
-  ?company wdt:P452 wd:Q11660 .
-  ?company wdt:P17 ?country .
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-} GROUP BY ?countryLabel
-"""
-
+# One query fetches everything: no VALUES/country restriction (the total
+# industry=AI company set on Wikidata is small enough, ~900 rows, to just
+# pull in full) and no separate aggregate query, so the per-country counts
+# and the per-company detail list are always derived from the exact same
+# filtered dataset instead of two queries that could silently drift apart.
 COMPANY_DETAIL_QUERY = """
-SELECT ?company ?companyLabel ?countryLabel ?inception ?website ?description WHERE {{
+SELECT ?company ?companyLabel ?countryLabel ?inception ?website ?description WHERE {
   ?company wdt:P452 wd:Q11660 .
   ?company wdt:P17 ?country .
-  VALUES ?country {{ {country_values} }}
-  OPTIONAL {{ ?company wdt:P571 ?inception. }}
-  OPTIONAL {{ ?company wdt:P856 ?website. }}
-  OPTIONAL {{
+  OPTIONAL { ?company wdt:P571 ?inception. }
+  OPTIONAL { ?company wdt:P856 ?website. }
+  OPTIONAL {
     ?company schema:description ?description .
     FILTER(lang(?description) = "en")
-  }}
-  SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
-}}
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
 """
 
+QID_LABEL_RE = re.compile(r"^Q\d+$")
 
-def fetch_counts():
-    url = f"{ENDPOINT}?{urllib.parse.urlencode({'query': QUERY})}"
-    req = urllib.request.Request(
-        url,
-        headers={
-            "Accept": "application/sparql-results+json",
-            "User-Agent": "AIStreamOnlineFetcher/1.0 (https://aistreamonline.com)",
-        },
-    )
-    with urllib.request.urlopen(req, timeout=TIMEOUT, context=SSL_CONTEXT) as resp:
-        data = json.load(resp)
 
-    counts = {}
-    for row in data.get("results", {}).get("bindings", []):
-        label = row["countryLabel"]["value"]
-        label = LABEL_ALIASES.get(label, label)
-        count = int(row["count"]["value"])
-        counts[label] = counts.get(label, 0) + count
-    return counts
+def country_slug(name):
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
 
 
 def slugify(name, qid):
@@ -115,9 +101,7 @@ def slugify(name, qid):
 
 
 def fetch_company_details():
-    country_values = " ".join(f"wd:{qid}" for qid in COUNTRY_QIDS.values())
-    query = COMPANY_DETAIL_QUERY.format(country_values=country_values)
-    url = f"{ENDPOINT}?{urllib.parse.urlencode({'query': query})}"
+    url = f"{ENDPOINT}?{urllib.parse.urlencode({'query': COMPANY_DETAIL_QUERY})}"
     req = urllib.request.Request(
         url,
         headers={
@@ -133,9 +117,15 @@ def fetch_company_details():
     for row in data.get("results", {}).get("bindings", []):
         qid = row["company"]["value"].rsplit("/", 1)[-1]
         name = row["companyLabel"]["value"]
-        country = LABEL_ALIASES.get(row["countryLabel"]["value"], row["countryLabel"]["value"])
-        if country not in TRACKED_COUNTRIES:
+        if QID_LABEL_RE.match(name):
+            # No English label on Wikidata for this entity -- the label
+            # service fell back to the raw QID, which isn't useful to show
+            # a visitor and shouldn't count toward "N companies tracked".
             continue
+        raw_country = row["countryLabel"]["value"]
+        if raw_country in EXCLUDED_LABELS:
+            continue
+        country = LABEL_ALIASES.get(raw_country, raw_country)
 
         if qid not in companies:
             base_slug = slugify(name, qid)
@@ -167,46 +157,40 @@ def fetch_company_details():
 
 def main():
     try:
-        counts = fetch_counts()
+        all_companies = fetch_company_details()
     except (urllib.error.URLError, urllib.error.HTTPError, ValueError, KeyError) as e:
-        print(f"warning: Wikidata query failed: {e} -- leaving ai_companies_by_country.json untouched")
+        print(f"warning: Wikidata query failed: {e} -- leaving ai_companies*.json untouched")
         return
 
-    if not counts:
-        print("warning: no results from Wikidata -- leaving ai_companies_by_country.json untouched")
+    if not all_companies:
+        print("warning: no results from Wikidata -- leaving ai_companies*.json untouched")
         return
 
-    result = {country: counts.get(country, 0) for country in TRACKED_COUNTRIES}
+    counts = {}
+    for c in all_companies:
+        counts[c["country"]] = counts.get(c["country"], 0) + 1
 
-    output = {
-        "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "source": "Wikidata (companies tagged industry: artificial intelligence)",
-        "countries": result,
-    }
-    with open("ai_companies_by_country.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
-
-    print("wrote ai_companies_by_country.json:", result)
-
-    try:
-        companies = fetch_company_details()
-    except (urllib.error.URLError, urllib.error.HTTPError, ValueError, KeyError) as e:
-        print(f"warning: Wikidata company-detail query failed: {e} -- leaving ai_companies.json untouched")
-        return
-
-    if not companies:
-        print("warning: no company details from Wikidata -- leaving ai_companies.json untouched")
-        return
-
+    qualifying = {country for country, n in counts.items() if n >= MIN_COMPANIES_FOR_PAGE}
+    result = {c: n for c, n in counts.items() if c in qualifying}
+    companies = [c for c in all_companies if c["country"] in qualifying]
     companies.sort(key=lambda c: c["name"].lower())
-    detail_output = {
-        "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "source": "Wikidata (companies tagged industry: artificial intelligence)",
-        "companies": companies,
-    }
-    with open("ai_companies.json", "w", encoding="utf-8") as f:
-        json.dump(detail_output, f, ensure_ascii=False, indent=2)
 
+    generated_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+    with open("ai_companies_by_country.json", "w", encoding="utf-8") as f:
+        json.dump({
+            "generatedAt": generated_at,
+            "source": "Wikidata (companies tagged industry: artificial intelligence)",
+            "countries": result,
+        }, f, ensure_ascii=False, indent=2)
+    print(f"wrote ai_companies_by_country.json: {len(result)} qualifying countries, {sum(result.values())} companies")
+
+    with open("ai_companies.json", "w", encoding="utf-8") as f:
+        json.dump({
+            "generatedAt": generated_at,
+            "source": "Wikidata (companies tagged industry: artificial intelligence)",
+            "companies": companies,
+        }, f, ensure_ascii=False, indent=2)
     print(f"wrote ai_companies.json: {len(companies)} companies")
 
 

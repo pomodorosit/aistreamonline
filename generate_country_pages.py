@@ -11,17 +11,35 @@ site's own "don't fabricate, don't pad SEO with empty shells" rule.
 
 import html
 import json
+import re
 import time
 from urllib.parse import urlparse
 
-COUNTRIES = [
-    {"name": "Israel", "slug": "israel", "flag": "🇮🇱"},
-    {"name": "Singapore", "slug": "singapore", "flag": "🇸🇬"},
-    {"name": "United States", "slug": "united-states", "flag": "🇺🇸"},
-    {"name": "South Korea", "slug": "south-korea", "flag": "🇰🇷"},
-    {"name": "United Kingdom", "slug": "united-kingdom", "flag": "🇬🇧"},
-    {"name": "China", "slug": "china", "flag": "🇨🇳"},
-]
+# Which countries get a page is fully data-driven (any country at or above
+# MIN_COMPANIES_FOR_PAGE in ai_companies_by_country.json, set by
+# fetch_ai_companies.py) -- this is just the flag emoji for each country
+# that has actually qualified so far. A country with real data but missing
+# from this map falls back to a neutral globe rather than crashing.
+FLAG_MAP = {
+    "United States": "🇺🇸", "United Kingdom": "🇬🇧", "Germany": "🇩🇪",
+    "France": "🇫🇷", "India": "🇮🇳", "Canada": "🇨🇦", "Spain": "🇪🇸",
+    "Australia": "🇦🇺", "Switzerland": "🇨🇭", "Netherlands": "🇳🇱",
+    "Singapore": "🇸🇬", "Austria": "🇦🇹", "Italy": "🇮🇹",
+    "United Arab Emirates": "🇦🇪", "South Korea": "🇰🇷", "Israel": "🇮🇱",
+    "Mexico": "🇲🇽", "Japan": "🇯🇵", "Sweden": "🇸🇪", "Czech Republic": "🇨🇿",
+    "Brazil": "🇧🇷", "Belgium": "🇧🇪", "Poland": "🇵🇱", "South Africa": "🇿🇦",
+    "Turkey": "🇹🇷", "China": "🇨🇳", "Ukraine": "🇺🇦", "Lithuania": "🇱🇹",
+    "Portugal": "🇵🇹", "Malaysia": "🇲🇾", "Taiwan": "🇹🇼", "Indonesia": "🇮🇩",
+    "Saudi Arabia": "🇸🇦", "Romania": "🇷🇴", "Norway": "🇳🇴",
+    "Slovakia": "🇸🇰", "Finland": "🇫🇮", "Denmark": "🇩🇰", "Chile": "🇨🇱",
+    "Cyprus": "🇨🇾", "Egypt": "🇪🇬", "Estonia": "🇪🇪", "Ireland": "🇮🇪",
+    "New Zealand": "🇳🇿", "Russia": "🇷🇺", "Argentina": "🇦🇷",
+}
+
+
+def country_slug(name):
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+
 
 MAX_NEWS = 10
 
@@ -248,10 +266,9 @@ def render_company_row(country, count):
 
 def generate_companies_page(company_counts):
     ranked = []
-    for country in COUNTRIES:
-        count = company_counts.get(country["name"])
+    for name, count in company_counts.items():
         if isinstance(count, int) and count > 0:
-            ranked.append((country, count))
+            ranked.append(({"name": name, "slug": country_slug(name), "flag": FLAG_MAP.get(name, "🌐")}, count))
     if not ranked:
         print("skipping companies.html: no reliable company counts yet")
         return
@@ -266,10 +283,6 @@ def generate_companies_page(company_counts):
     with open("companies.html", "w", encoding="utf-8") as f:
         f.write(page)
     print(f"generated companies.html covering {len(ranked)} countries")
-
-
-COUNTRY_SLUGS = {c["name"]: c["slug"] for c in COUNTRIES}
-COUNTRY_FLAGS = {c["name"]: c["flag"] for c in COUNTRIES}
 
 
 def company_chip(company):
@@ -380,8 +393,8 @@ def generate_company_pages(companies):
             slug=c["slug"],
             qid=c["qid"],
             country=esc(c["country"]),
-            country_slug=COUNTRY_SLUGS.get(c["country"], ""),
-            country_flag=COUNTRY_FLAGS.get(c["country"], ""),
+            country_slug=country_slug(c["country"]),
+            country_flag=FLAG_MAP.get(c["country"], "🌐"),
             inception_suffix=esc(inception_suffix),
             description_html=description_html,
             website_html=website_html,
@@ -424,15 +437,14 @@ def main():
         generate_company_pages(companies)
 
     generated = []
-    for country in COUNTRIES:
-        count = company_counts.get(country["name"])
+    for name, count in company_counts.items():
         if not (isinstance(count, int) and count > 0):
-            print(f"skipping {country['name']}: no reliable company count yet")
             continue
+        slug = country_slug(name)
 
         matches = [
             it for it in news_items
-            if it.get("aiAnalysis") and country["name"] in (it["aiAnalysis"].get("countries") or [])
+            if it.get("aiAnalysis") and name in (it["aiAnalysis"].get("countries") or [])
         ][:MAX_NEWS]
 
         if matches:
@@ -440,23 +452,23 @@ def main():
         else:
             news_html = '<p class="drilldown-empty">Not enough reliable data — no recent stories tagged to this country yet.</p>'
 
-        country_companies = sorted(companies_by_country.get(country["name"], []), key=lambda c: c["name"].lower())
+        country_companies = sorted(companies_by_country.get(name, []), key=lambda c: c["name"].lower())
         if country_companies:
             companies_html = "".join(company_chip(c) for c in country_companies)
         else:
             companies_html = '<p class="drilldown-empty">No individual company records available yet.</p>'
 
         page = PAGE_TEMPLATE.format(
-            name=esc(country["name"]),
-            slug=country["slug"],
-            flag=country["flag"],
+            name=esc(name),
+            slug=slug,
+            flag=FLAG_MAP.get(name, "🌐"),
             company_count=count,
             news_html=news_html,
             companies_html=companies_html,
         )
-        with open(f"country/{country['slug']}.html", "w", encoding="utf-8") as f:
+        with open(f"country/{slug}.html", "w", encoding="utf-8") as f:
             f.write(page)
-        generated.append(country["slug"])
+        generated.append(slug)
 
     print(f"generated {len(generated)} country pages: {', '.join(generated)}")
     generate_companies_page(company_counts)
