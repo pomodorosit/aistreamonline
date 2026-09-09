@@ -1021,6 +1021,74 @@ function countrySlugify(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 }
 
+// ISO 3166-1 alpha-2 codes, matching the path/group ids in world-map.svg
+// (a public-domain map, see methodology.html) -- used only to color regions
+// by real tracked-company counts, never to imply the shapes themselves are
+// anything but a visual index into the same data shown in the chip list.
+const COUNTRY_ISO_CODES = {
+  'United States': 'us', 'United Kingdom': 'gb', 'Germany': 'de', 'France': 'fr',
+  'India': 'in', 'Canada': 'ca', 'Spain': 'es', 'Australia': 'au', 'Switzerland': 'ch',
+  'Netherlands': 'nl', 'Singapore': 'sg', 'Austria': 'at', 'Italy': 'it',
+  'United Arab Emirates': 'ae', 'South Korea': 'kr', 'Israel': 'il', 'Mexico': 'mx',
+  'Japan': 'jp', 'Sweden': 'se', 'Czech Republic': 'cz', 'Brazil': 'br', 'Belgium': 'be',
+  'Poland': 'pl', 'South Africa': 'za', 'Turkey': 'tr', 'China': 'cn', 'Ukraine': 'ua',
+  'Lithuania': 'lt', 'Portugal': 'pt', 'Malaysia': 'my', 'Taiwan': 'tw', 'Indonesia': 'id',
+  'Saudi Arabia': 'sa', 'Romania': 'ro', 'Norway': 'no', 'Slovakia': 'sk', 'Finland': 'fi',
+  'Denmark': 'dk', 'Chile': 'cl', 'Cyprus': 'cy', 'Egypt': 'eg', 'Estonia': 'ee',
+  'Ireland': 'ie', 'New Zealand': 'nz', 'Russia': 'ru', 'Argentina': 'ar',
+};
+
+function initWorldMap(counts) {
+  const wrap = document.getElementById('world-map-wrap');
+  const legend = document.getElementById('world-map-legend');
+  if (!wrap) return;
+
+  const entries = Object.entries(counts).filter(([name]) => COUNTRY_ISO_CODES[name]);
+  if (entries.length === 0) return;
+
+  const maxCount = Math.max(...entries.map(([, n]) => n));
+  const minLog = Math.log(1);
+  const maxLog = Math.log(maxCount + 1);
+
+  fetch('world-map.svg', { cache: 'force-cache' })
+    .then((res) => {
+      if (!res.ok) throw new Error('world-map.svg not available');
+      return res.text();
+    })
+    .then((svgText) => {
+      wrap.innerHTML = svgText;
+      const svg = wrap.querySelector('svg');
+      if (!svg) return;
+      svg.setAttribute('role', 'img');
+      svg.setAttribute('aria-label', 'World map shaded by number of AI companies tracked per country — exact figures are listed as text below this map');
+
+      entries.forEach(([name, count]) => {
+        const code = COUNTRY_ISO_CODES[name];
+        const el = svg.getElementById(code);
+        if (!el) return;
+        // log scale: a handful of countries (the US) have far more tracked
+        // companies than the rest, so a linear scale would render nearly
+        // everything else as the same flattest color
+        const t = (Math.log(count + 1) - minLog) / (maxLog - minLog || 1);
+        const lightness = 22 + t * 45; // 22% (dim) to 67% (bright gold)
+        el.style.fill = `hsl(42, 55%, ${lightness}%)`;
+        el.style.cursor = 'pointer';
+        const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+        title.textContent = `${name}: ${count} ${count === 1 ? 'company' : 'companies'} tracked`;
+        el.appendChild(title);
+        el.addEventListener('click', () => {
+          window.location.href = 'country/' + countrySlugify(name) + '.html';
+        });
+      });
+
+      if (legend) legend.hidden = false;
+    })
+    .catch(() => {
+      // leave the container empty -- the chip list below still has the
+      // same data, this is a supplementary visualization only
+    });
+}
+
 function initCountryExplore() {
   const grid = document.getElementById('country-explore-grid');
   if (!grid) return;
@@ -1038,6 +1106,8 @@ function initCountryExplore() {
         grid.innerHTML = '<p class="drilldown-empty">Country data unavailable right now.</p>';
         return;
       }
+
+      initWorldMap(counts);
 
       grid.innerHTML = '';
       entries.forEach(([country, count]) => {

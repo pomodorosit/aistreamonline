@@ -171,6 +171,20 @@ img { max-width: 100%; display: block; }
 
 /* ---------- hero ---------- */
 
+.site-intro {
+  padding: 18px 0;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-intro-line {
+  margin: 0;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 300;
+}
+
 .hero {
   position: relative;
   background: var(--bg);
@@ -342,6 +356,58 @@ img { max-width: 100%; display: block; }
   font-size: clamp(28px, 4vw, 38px);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.globe-spin {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 32% 28%, #2f7fc9 0%, #1b4f8f 40%, #0d2848 75%, #061426 100%);
+  box-shadow:
+    0 0 26px rgba(230, 206, 142, 0.4),
+    0 0 8px rgba(46, 163, 217, 0.5),
+    inset -8px -8px 16px rgba(0, 0, 0, 0.6),
+    inset 5px 5px 12px rgba(255, 255, 255, 0.15);
+}
+
+.globe-spin::before {
+  content: '';
+  position: absolute;
+  inset: -15%;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 10%,
+    rgba(230, 206, 142, 0.55) 11.5%,
+    rgba(246, 231, 190, 0.75) 12.5%,
+    rgba(230, 206, 142, 0.55) 13.5%,
+    transparent 15%
+  );
+  background-size: 220% 100%;
+  animation: globe-rotate 5s linear infinite;
+  mix-blend-mode: screen;
+  border-radius: 50%;
+}
+
+.globe-spin::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 70% 74%, rgba(0, 0, 0, 0.5), transparent 55%);
+}
+
+@keyframes globe-rotate {
+  from { background-position: 0 0; }
+  to { background-position: -220% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .globe-spin::before { animation: none; }
 }
 
 .section-sub {
@@ -1766,25 +1832,17 @@ img { max-width: 100%; display: block; }
 
 .platforms-list li {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  gap: 16px;
+  gap: 6px 16px;
   padding: 14px 0;
   border-bottom: 1px solid var(--line);
-}
-
-.platform-rank {
-  font-family: var(--font-display);
-  color: var(--gold-dim);
-  font-size: 20px;
-  flex-shrink: 0;
-  width: 32px;
 }
 
 .platform-name {
   color: var(--ink);
   font-weight: 600;
   font-size: 16px;
-  flex: 1;
   text-decoration: none;
 }
 
@@ -1796,6 +1854,14 @@ img { max-width: 100%; display: block; }
 .platform-maker {
   color: var(--ink-faint);
   font-size: 13px;
+}
+
+.platform-usecase {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 300;
 }
 
 .affiliate-disclosure {
@@ -2048,6 +2114,36 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
   gap: 8px;
   margin: 0 0 32px;
+}
+
+.world-map-wrap {
+  max-width: 780px;
+  margin: 0 auto 8px;
+}
+
+.world-map-wrap svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.world-map-wrap :is(.landxx, .antxx, .noxx) {
+  fill: #2a2350;
+  stroke: var(--bg);
+  stroke-width: 0.5;
+}
+
+.world-map-wrap #ocean,
+.world-map-wrap .coastxx {
+  fill: transparent;
+  stroke: none;
+}
+
+.world-map-legend {
+  text-align: center;
+  color: var(--ink-faint);
+  font-size: 12px;
+  margin: 0 0 28px;
 }
 
 .country-explore-grid {

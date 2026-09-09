@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=51">
+<link rel="stylesheet" href="style.css?v=54">
 
 <!-- Google Analytics 4 is loaded only after cookie consent -- see initAnalyticsConsent() in script.js.
      Replace G-XXXXXXXXXX in script.js with your real Measurement ID from analytics.google.com -->
@@ -60,7 +60,7 @@
       <a href="#news">News</a>
       <a href="#countries">Countries</a>
       <a href="companies.html">Companies</a>
-      <a href="#ask-world">Ask the World</a>
+      <a href="#ask-world">Search</a>
       <a href="#time-machine">Time Machine</a>
       <a href="#platforms">Platforms</a>
       <a href="#streams">Streams</a>
@@ -73,6 +73,12 @@
 </header>
 
 <main id="top" tabindex="-1">
+
+  <div class="site-intro">
+    <div class="wrap">
+      <p class="site-intro-line">Understand what's happening in AI, why it matters, where it's happening, and how readers feel about it — all sourced and labeled honestly.</p>
+    </div>
+  </div>
 
   <section class="hero featured-hero" id="featured-hero"><!--SSR:HERO:START--><img class="featured-hero-bg" id="featured-hero-bg" alt="" src="https://techcrunch.com/wp-content/uploads/2024/12/GettyImages-2021258442.jpg?resize=1200,800" style="display:block"><div class="featured-hero-scrim"></div><div class="wrap hero-inner"><p class="hero-eyebrow">Top Story</p><span class="news-tag hero-tag" id="featured-hero-tag">Technology</span><h1 class="hero-title" id="featured-hero-title">Superintelligence is coming. Should we let it?</h1><p class="hero-sub" id="featured-hero-sub">AI companies have been talking about superintelligent AI like it’s inevitable, but recent safety incidents like OpenAI’s Hugging Face breach are demonstrating the potential dangers of deploying AI...</p><div class="related-sources hero-related-sources" id="featured-hero-related"></div><div class="hero-cta"><a class="btn btn-gold" id="featured-hero-link" href="https://techcrunch.com/video/superintelligence-is-coming-should-we-let-it/" rel="noopener noreferrer nofollow" target="_blank">Read Full Story</a><a href="#news" class="btn btn-outline">More News</a></div></div><!--SSR:HERO:END--></section>
 
@@ -99,9 +105,13 @@
   <section id="countries" class="section leadership-section">
     <div class="wrap">
       <div class="section-head">
+        <span class="globe-spin" aria-hidden="true"></span>
         <h2>Explore AI by Country</h2>
         <p class="section-sub">AI companies tracked on Wikidata, by country — not a ranking of AI leadership</p>
       </div>
+      <div class="world-map-wrap" id="world-map-wrap"></div>
+      <p class="world-map-legend" id="world-map-legend" hidden>Darker → lighter gold = fewer → more AI companies tracked on Wikidata. Gray = no reliable data.</p>
+
       <div class="country-explore-grid" id="country-explore-grid">
         <p class="drilldown-empty">Loading country data…</p>
       </div>
@@ -132,8 +142,8 @@
   <section id="ask-world" class="section ask-world-section">
     <div class="wrap">
       <div class="section-head">
-        <h2>Ask the World</h2>
-        <p class="section-sub">Search across every story, company, and country we've tracked</p>
+        <h2>Search</h2>
+        <p class="section-sub">Find stories, companies, and countries we've tracked — keyword matching, not an AI-generated answer</p>
       </div>
       <form class="ask-world-form" id="ask-world-form">
         <input type="text" id="ask-world-input" placeholder="Try “Nvidia chips” or “AI regulation Europe”" aria-label="Search AI news">
@@ -185,21 +195,21 @@
   <section id="platforms" class="section platforms-section">
     <div class="wrap">
       <div class="section-head">
-        <h2>Top 10 AI Platforms</h2>
-        <p class="section-sub">The tools defining this generation of AI — editorial ranking, updated periodically</p>
+        <h2>Selected AI Tools</h2>
+        <p class="section-sub">A curated, unranked list — not a ranking, updated periodically</p>
       </div>
 
       <ol class="platforms-list">
-        <li><span class="platform-rank">01</span><a class="platform-name" href="https://chatgpt.com" target="_blank" rel="noopener noreferrer nofollow">ChatGPT</a><span class="platform-maker">OpenAI</span></li>
-        <li><span class="platform-rank">02</span><a class="platform-name" href="https://claude.ai" target="_blank" rel="noopener noreferrer nofollow">Claude</a><span class="platform-maker">Anthropic</span></li>
-        <li><span class="platform-rank">03</span><a class="platform-name" href="https://gemini.google.com" target="_blank" rel="noopener noreferrer nofollow">Gemini</a><span class="platform-maker">Google DeepMind</span></li>
-        <li><span class="platform-rank">04</span><a class="platform-name" href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer nofollow">Copilot</a><span class="platform-maker">Microsoft</span></li>
-        <li><span class="platform-rank">05</span><a class="platform-name" href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer nofollow">Perplexity</a><span class="platform-maker">Perplexity AI</span></li>
-        <li><span class="platform-rank">06</span><a class="platform-name" href="https://www.meta.ai" target="_blank" rel="noopener noreferrer nofollow">Meta AI</a><span class="platform-maker">Meta</span></li>
-        <li><span class="platform-rank">07</span><a class="platform-name" href="https://grok.com" target="_blank" rel="noopener noreferrer nofollow">Grok</a><span class="platform-maker">xAI</span></li>
-        <li><span class="platform-rank">08</span><a class="platform-name" href="https://www.midjourney.com" target="_blank" rel="noopener noreferrer nofollow">Midjourney</a><span class="platform-maker">Midjourney, Inc.</span></li>
-        <li><span class="platform-rank">09</span><a class="platform-name" href="https://www.deepseek.com" target="_blank" rel="noopener noreferrer nofollow">DeepSeek</a><span class="platform-maker">DeepSeek</span></li>
-        <li><span class="platform-rank">10</span><a class="platform-name" href="https://mistral.ai/news/le-chat" target="_blank" rel="noopener noreferrer nofollow">Le Chat</a><span class="platform-maker">Mistral AI</span></li>
+        <li><a class="platform-name" href="https://chatgpt.com" target="_blank" rel="noopener noreferrer nofollow">ChatGPT</a><span class="platform-maker">OpenAI</span><p class="platform-usecase">General-purpose chat, writing, and research assistant</p></li>
+        <li><a class="platform-name" href="https://claude.ai" target="_blank" rel="noopener noreferrer nofollow">Claude</a><span class="platform-maker">Anthropic</span><p class="platform-usecase">Long-document analysis, coding, and careful writing</p></li>
+        <li><a class="platform-name" href="https://gemini.google.com" target="_blank" rel="noopener noreferrer nofollow">Gemini</a><span class="platform-maker">Google DeepMind</span><p class="platform-usecase">Search-integrated assistant across Google's apps</p></li>
+        <li><a class="platform-name" href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer nofollow">Copilot</a><span class="platform-maker">Microsoft</span><p class="platform-usecase">Assistant built into Windows and Microsoft 365</p></li>
+        <li><a class="platform-name" href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer nofollow">Perplexity</a><span class="platform-maker">Perplexity AI</span><p class="platform-usecase">Search-first Q&amp;A with cited sources</p></li>
+        <li><a class="platform-name" href="https://www.meta.ai" target="_blank" rel="noopener noreferrer nofollow">Meta AI</a><span class="platform-maker">Meta</span><p class="platform-usecase">Built into WhatsApp, Instagram, and Facebook</p></li>
+        <li><a class="platform-name" href="https://grok.com" target="_blank" rel="noopener noreferrer nofollow">Grok</a><span class="platform-maker">xAI</span><p class="platform-usecase">Assistant integrated into X (Twitter)</p></li>
+        <li><a class="platform-name" href="https://www.midjourney.com" target="_blank" rel="noopener noreferrer nofollow">Midjourney</a><span class="platform-maker">Midjourney, Inc.</span><p class="platform-usecase">AI image generation from text prompts</p></li>
+        <li><a class="platform-name" href="https://www.deepseek.com" target="_blank" rel="noopener noreferrer nofollow">DeepSeek</a><span class="platform-maker">DeepSeek</span><p class="platform-usecase">Open-weight reasoning models, free to self-host</p></li>
+        <li><a class="platform-name" href="https://mistral.ai/news/le-chat" target="_blank" rel="noopener noreferrer nofollow">Le Chat</a><span class="platform-maker">Mistral AI</span><p class="platform-usecase">European-built assistant with an open-weight lineage</p></li>
       </ol>
       <p class="affiliate-disclosure">Some links on this site may be affiliate links — see our <a href="privacy.html">Privacy Policy</a>.</p>
     </div>
