@@ -892,7 +892,12 @@ function initReturnBanner(newsItems) {
 function initAiCompaniesByCountry() {
   const list = document.querySelector('.leadership-rank-list');
   const sourceLabel = document.getElementById('leadership-source');
+  const sub = document.getElementById('leadership-mode-sub');
+  const companiesBtn = document.getElementById('mode-btn-companies');
+  const editorialBtn = document.querySelector('.mode-btn[data-mode="editorial"]');
   if (!list) return;
+
+  const editorialOrder = [...list.querySelectorAll('li')];
 
   fetch('ai_companies_by_country.json', { cache: 'no-store' })
     .then((res) => {
@@ -902,7 +907,7 @@ function initAiCompaniesByCountry() {
     .then((data) => {
       const counts = data.countries || {};
 
-      list.querySelectorAll('li').forEach((li) => {
+      editorialOrder.forEach((li) => {
         const countrySpan = li.querySelector('.rank-country');
         if (!countrySpan) return;
         const country = countrySpan.textContent.trim();
@@ -924,6 +929,36 @@ function initAiCompaniesByCountry() {
         sourceLabel.textContent = 'AI companies tracked on Wikidata — coverage varies by country, not a full census';
         sourceLabel.hidden = false;
       }
+
+      const withCounts = editorialOrder.filter((li) => {
+        const country = li.querySelector('.rank-country').textContent.trim();
+        return counts[country] > 0;
+      });
+      if (!companiesBtn || withCounts.length < 2) return;
+
+      const companiesOrder = [...withCounts].sort((a, b) => {
+        const ca = counts[a.querySelector('.rank-country').textContent.trim()];
+        const cb = counts[b.querySelector('.rank-country').textContent.trim()];
+        return cb - ca;
+      });
+
+      function renderOrder(order, mode) {
+        order.forEach((li, i) => {
+          li.querySelector('.rank-badge').textContent = String(i + 1);
+          list.appendChild(li);
+        });
+        editorialBtn.classList.toggle('active', mode === 'editorial');
+        companiesBtn.classList.toggle('active', mode === 'companies');
+        if (sub) {
+          sub.textContent = mode === 'editorial'
+            ? 'AI activity per capita — editorial ranking, updated periodically'
+            : 'Sorted by AI companies tracked on Wikidata — live, but not a full census';
+        }
+      }
+
+      companiesBtn.disabled = false;
+      companiesBtn.addEventListener('click', () => renderOrder(companiesOrder, 'companies'));
+      editorialBtn.addEventListener('click', () => renderOrder(editorialOrder, 'editorial'));
     })
     .catch(() => {
       // no data yet or fetch failed: leave the list without company counts
