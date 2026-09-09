@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T17:04:59Z",
+  "generatedAt": "2026-09-09T20:41:33Z",
   "source": "Wikidata (companies tagged industry: artificial intelligence)",
   "companies": [
     {
@@ -1351,6 +1351,15 @@
       "inception": "2012",
       "website": "https://circuscompany.com",
       "description": "South Korean digital technology, content, edtech and AI company"
+    },
+    {
+      "qid": "Q140078947",
+      "name": "CitableHub",
+      "slug": "citablehub",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://citablehub.com",
+      "description": "AI discoverability and structured profile platform"
     },
     {
       "qid": "Q136406518",
