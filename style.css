@@ -1727,6 +1727,11 @@ img { max-width: 100%; display: block; }
 
 .time-machine-results .archive-row:first-child { padding-top: 0; }
 
+.time-machine-share {
+  display: block;
+  margin: 0 0 20px;
+}
+
 /* ---------- top AI platforms ---------- */
 
 .platforms-section { background: var(--bg-alt); }

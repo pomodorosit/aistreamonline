@@ -777,6 +777,12 @@ function initTimeMachine() {
 
   function loadSnapshot(dateStr) {
     panel.innerHTML = '';
+
+    const url = new URL(location.href);
+    url.searchParams.set('date', dateStr);
+    url.hash = 'time-machine';
+    history.replaceState(null, '', url);
+
     fetch(`archive/${dateStr}.json`, { cache: 'no-store' })
       .then((res) => {
         if (!res.ok) throw new Error('snapshot not available');
@@ -785,8 +791,19 @@ function initTimeMachine() {
       .then((data) => {
         const items = Array.isArray(data.items) ? data.items : [];
         panel.innerHTML = '';
+
+        const shareBtn = document.createElement('button');
+        shareBtn.type = 'button';
+        shareBtn.className = 'btn btn-outline share-btn time-machine-share';
+        shareBtn.textContent = 'Share this day';
+        shareBtn.dataset.shareUrl = url.toString();
+        shareBtn.dataset.shareTitle = `AI news from ${dateStr} — AI Stream Online`;
+        panel.appendChild(shareBtn);
+
         if (items.length === 0) {
-          panel.textContent = 'No stories recorded for that date.';
+          const empty = document.createElement('p');
+          empty.textContent = 'No stories recorded for that date.';
+          panel.appendChild(empty);
         } else {
           items.forEach((item) => panel.appendChild(buildArchiveRow(item)));
         }
@@ -900,12 +917,15 @@ function initTimeMachine() {
       entries.forEach((e) => { entryByDate[e.date] = e; });
 
       const mostRecent = entries[0].date;
-      const [y, m] = mostRecent.split('-').map(Number);
+      const requestedDate = new URLSearchParams(location.search).get('date');
+      const initialDate = requestedDate && /^\d{4}-\d{2}-\d{2}$/.test(requestedDate) ? requestedDate : mostRecent;
+
+      const [y, m] = initialDate.split('-').map(Number);
       currentMonth = new Date(y, m - 1, 1);
-      selectedDate = mostRecent;
+      selectedDate = initialDate;
 
       renderCalendar();
-      loadSnapshot(mostRecent);
+      loadSnapshot(initialDate);
     })
     .catch(() => {
       panel.textContent = 'Historical data unavailable right now.';
