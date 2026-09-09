@@ -1229,7 +1229,13 @@ img { max-width: 100%; display: block; }
   .news-card.featured { grid-column: span 2; }
 }
 
-@media (max-width: 640px) {
+/* nav switches to the hamburger menu well before 640px: with 8 items
+   (News/Countries/Companies/Search/Time Machine/Platforms/Streams/About)
+   the flex-wrap row runs out of space earlier than a phone-only
+   breakpoint would suggest, leaving a lone item stranded on its own
+   wrapped line instead of a clean single row -- so this is split out
+   from the 640px block below rather than sharing its threshold. */
+@media (max-width: 1024px) {
   .header-inner { position: relative; }
   .main-nav {
     display: none;
@@ -1248,6 +1254,9 @@ img { max-width: 100%; display: block; }
     border-bottom: 1px solid var(--line);
   }
   .nav-toggle { display: flex; }
+}
+
+@media (max-width: 640px) {
   .news-grid, .streams-grid { grid-template-columns: 1fr; }
   .news-card.featured { grid-column: span 1; }
   .footer-inner { flex-direction: column; text-align: center; }
