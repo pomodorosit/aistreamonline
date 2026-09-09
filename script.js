@@ -706,20 +706,28 @@ const SEARCH_STOPWORDS = new Set([
 ]);
 
 function scoreItemForSearch(item, queryTokens) {
-  const haystack = tokenizeSearch(
+  const entityTokens = tokenizeSearch(
     [
-      item.title,
-      item.summary,
       item.category,
       ...((item.aiAnalysis && item.aiAnalysis.companies) || []),
       ...((item.aiAnalysis && item.aiAnalysis.countries) || []),
       ...((item.aiAnalysis && item.aiAnalysis.technologies) || []),
     ].join(' ')
   );
-  const haySet = new Set(haystack);
+  const textTokens = tokenizeSearch([item.title, item.summary].join(' '));
+
+  function tokenScore(t, haystack, exactWeight, partialWeight) {
+    if (haystack.includes(t)) return exactWeight;
+    if (t.length >= 4 && haystack.some((h) => h.length >= 4 && (h.startsWith(t) || t.startsWith(h)))) {
+      return partialWeight;
+    }
+    return 0;
+  }
+
   let score = 0;
   queryTokens.forEach((t) => {
-    if (haySet.has(t)) score++;
+    score += tokenScore(t, entityTokens, 3, 1.5);
+    score += tokenScore(t, textTokens, 1, 0.3);
   });
   return score;
 }
