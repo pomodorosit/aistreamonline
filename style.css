@@ -1063,6 +1063,52 @@ img { max-width: 100%; display: block; }
   margin-top: 2px;
 }
 
+.reading-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reading-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 20px;
+  transition: border-color .2s;
+}
+
+.reading-card:hover {
+  border-color: var(--gold-dim);
+}
+
+.reading-cover {
+  width: 40px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.reading-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.reading-title {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.reading-author {
+  color: var(--ink-faint);
+  font-size: 12px;
+}
+
 @media (max-width: 900px) {
   .voices-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -1480,6 +1526,7 @@ img { max-width: 100%; display: block; }
 /* ---------- live AI pulse (GitHub activity) ---------- */
 
 .ai-pulse {
+  text-align: center;
   margin-top: 48px;
   padding-top: 40px;
   border-top: 1px solid var(--line);
@@ -1551,7 +1598,7 @@ img { max-width: 100%; display: block; }
 .ai-pulse-delta {
   margin: 20px 0 0;
   font-size: 12px;
-  color: var(--jade);
+  color: var(--gold);
   min-height: 16px;
 }
 
