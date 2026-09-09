@@ -354,6 +354,18 @@ img { max-width: 100%; display: block; }
   color: var(--ink-faint);
 }
 
+.today-in-ai {
+  max-width: 640px;
+  margin: 28px auto 0;
+  padding: 14px 22px;
+  text-align: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 600;
+}
+
 /* ---------- return visit banner ---------- */
 
 .return-banner {

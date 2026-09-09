@@ -578,6 +578,43 @@ function renderDataFreshness(generatedAt) {
   el.hidden = false;
 }
 
+function pubDayUTC(pubDate) {
+  const d = new Date(pubDate);
+  if (isNaN(d.getTime())) return null;
+  return d.toISOString().slice(0, 10);
+}
+
+function renderTodayInAi(items) {
+  const el = document.getElementById('today-in-ai');
+  if (!el) return;
+
+  const todayStr = new Date().toISOString().slice(0, 10);
+  const todays = items.filter((it) => pubDayUTC(it.pubDate) === todayStr);
+  if (todays.length === 0) return;
+
+  const impactCounts = { High: 0, Medium: 0, Low: 0 };
+  const countryCounts = {};
+  todays.forEach((it) => {
+    const level = it.aiAnalysis && it.aiAnalysis.impactLevel;
+    if (impactCounts[level] !== undefined) impactCounts[level]++;
+    ((it.aiAnalysis && it.aiAnalysis.countries) || []).forEach((c) => {
+      countryCounts[c] = (countryCounts[c] || 0) + 1;
+    });
+  });
+
+  const parts = [`${todays.length} ${todays.length === 1 ? 'story' : 'stories'} tracked today`];
+  if (impactCounts.High > 0) {
+    parts.push(`${impactCounts.High} high-impact`);
+  }
+  const topCountry = Object.entries(countryCounts).sort((a, b) => b[1] - a[1])[0];
+  if (topCountry) {
+    parts.push(`most-mentioned country: ${topCountry[0]}`);
+  }
+
+  el.textContent = 'Today in AI: ' + parts.join(' · ');
+  el.hidden = false;
+}
+
 function initLiveNews() {
   const grid = document.getElementById('news-grid');
   if (!grid) return;
@@ -592,6 +629,7 @@ function initLiveNews() {
       if (items.length === 0) return; // keep static fallback cards
 
       renderDataFreshness(data.generatedAt);
+      renderTodayInAi(items);
       populateFeaturedHero(items[0]);
       const heroLink = items[0].link;
       const pool = items.filter((it) => it.link !== heroLink);
