@@ -10,7 +10,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2024/12/GettyImages-2021258442.jpg?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "OpenAI",
@@ -30,7 +30,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/55324827324_597f58ba10_k.jpg?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "OpenAI",
@@ -50,7 +50,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/instinct-email.jpeg?w=1200",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -69,7 +69,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2063425288.jpg?resize=1200,818",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": -1,
         "companies": [
           "Anthropic"
@@ -88,7 +88,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/shipt-ai.png?resize=1200,602",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -105,7 +105,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/Screenshot-2026-09-09-at-7.03.40-AM.png?w=458",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -158,7 +158,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/Besxar-Team.jpg?resize=1200,900",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "SpaceX"
@@ -213,7 +213,7 @@
       "category": "World News",
       "avatar": "char-hooded-head.png",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Mistral AI",
@@ -235,7 +235,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2278736523.jpeg?resize=1200,798",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Anthropic"
@@ -254,7 +254,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/08/Scott-Wu-of-Cognition.jpg?w=1024",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "SpaceX"
@@ -273,7 +273,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/Muse-Neswsroom-Banner.jpg?resize=1200,675",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Meta"
@@ -332,7 +332,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/02/google-chrome-GettyImages-2151457378.jpg?w=1024",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Google"
@@ -392,7 +392,7 @@
       "avatar": "char-hooded-head.png",
       "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/Coca-Cola-uses-AI-to-improve-retailer-ordering-in-Malaysia-scaled-e1788839929431.jpg",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -409,7 +409,7 @@
       "avatar": "char-hooded-head.png",
       "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/Screenshot-2026-09-07-at-10.59.24-AM.png",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Google"
@@ -428,7 +428,7 @@
       "avatar": "char-hooded-head.png",
       "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/raimond-klavins-n-7HTOiJPso-unsplash-scaled.jpg",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Google"
@@ -447,7 +447,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/07/Chain-of-thought-picture.png?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -464,7 +464,7 @@
       "avatar": "char-hooded-head.png",
       "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/mg-ship-ai-route-optimisation-logistics-supply-chain-artificial-intelligence-freight-transport-predictive-analytics.jpg",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -481,7 +481,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2024/12/49688202642_09fd5ccc38_k.jpg?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Anthropic"
@@ -500,7 +500,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/08/travis-kalanick-fii.jpg?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -519,7 +519,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2023/03/artifact-newspaper-icon.jpg?resize=1200,645",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "OpenAI",
@@ -539,7 +539,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2017/11/gettyimages-677147499.jpg?resize=1200,600",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Google"
@@ -558,7 +558,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/07/OpenAI-logo-in-Seoul.jpg?w=1024",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "OpenAI"
@@ -581,7 +581,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/06/DSC_2479.jpg?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -600,7 +600,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/05/ai-agents-GettyImages-2229880232.jpg?resize=1200,675",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "OpenAI"
@@ -638,7 +638,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2287301688.jpg?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Apple"
@@ -664,7 +664,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/Screenshot-2026-09-04-at-8.49.39-AM-e1788537064907.png?w=839",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": -1,
         "companies": [
           "OpenAI"
@@ -683,7 +683,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/06/gemini-app-GettyImages-2276204472-1.jpg?w=1024",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Google"
@@ -702,7 +702,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2023/06/After-Hours-_-group.png?resize=1200,675",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -736,7 +736,7 @@
       "avatar": "char-hooded-head.png",
       "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/ai-romance-cheating-survey-2026.png",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [
@@ -755,7 +755,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/Cheeseburger-stack.png?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -810,7 +810,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2024/09/vpn-privacy-cybersecurity-red-bright.jpg?resize=1200,831",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -827,7 +827,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2173579488.jpg?resize=1200,799",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Meta"
@@ -865,7 +865,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/Ollie_Hero.png?resize=1200,847",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -882,7 +882,7 @@
       "avatar": "char-hooded-head.png",
       "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/OneRail-uses-Nvidia-AI-for-real-time-last-mile-delivery-optimisation-scaled-e1788451412147.jpg",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Nvidia"
@@ -930,7 +930,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/2-Figure-How-WeatherNext-3-works.png?resize=1200,675",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Google"
@@ -949,7 +949,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/07/Builders-Stage_ArticleHeader_tc26_V2.png?resize=1200,675",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -983,7 +983,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/08/Real-World-AI-Promo.png?w=1200",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Nvidia"
@@ -1004,7 +1004,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/07/OpenAI-logo-in-Seoul.jpg?w=1024",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "OpenAI"
@@ -1025,7 +1025,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/07/Pangram-founders.png?resize=1200,675",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -1042,7 +1042,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/Max-Headshot.png?resize=1200,675",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -1059,7 +1059,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2263890424.jpg?w=1024",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "OpenAI"
@@ -1099,7 +1099,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/jiopc.jpg?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [
@@ -1118,7 +1118,7 @@
       "avatar": "char-hooded-head.png",
       "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/motional-mit-ai-self-driving-car-autonomous-vehicle-decisions-explainable-artificial-intelligence.jpg",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -1137,7 +1137,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/hiddenlayer.jpg?resize=1200,900",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],

@@ -81,7 +81,7 @@ def render_entity_tags(analysis, max_tags=4):
     if not entities:
         return ""
     tags = "".join(f'<span class="entity-tag">{esc(e)}</span>' for e in entities)
-    return f'<div class="entity-tags"><span class="entity-tags-label">Who it affects</span>{tags}</div>'
+    return f'<div class="entity-tags"><span class="entity-tags-label">Related companies & topics</span>{tags}</div>'
 
 
 def render_related_sources(related):

@@ -10,7 +10,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2024/12/GettyImages-2021258442.jpg?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "OpenAI",
@@ -30,7 +30,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/55324827324_597f58ba10_k.jpg?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "OpenAI",
@@ -50,7 +50,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/instinct-email.jpeg?w=1200",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -69,7 +69,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2063425288.jpg?resize=1200,818",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": -1,
         "companies": [
           "Anthropic"
@@ -88,7 +88,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/shipt-ai.png?resize=1200,602",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -105,7 +105,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/Screenshot-2026-09-09-at-7.03.40-AM.png?w=458",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -158,7 +158,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/Besxar-Team.jpg?resize=1200,900",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "SpaceX"
@@ -213,7 +213,7 @@
       "category": "World News",
       "avatar": "char-hooded-head.png",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Mistral AI",

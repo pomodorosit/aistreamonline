@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=49">
+<link rel="stylesheet" href="style.css?v=50">
 </head>
 <body>
 
@@ -50,7 +50,9 @@
       <p>When two articles from different feeds share at least one tagged company <em>and</em> have substantially similar titles (word-overlap based) on the same day, they're merged into a single story with an "Also covered by" credit to the other outlet(s), instead of appearing as unrelated duplicates. Company overlap alone is intentionally not enough to trigger a merge — it produced false matches (e.g. two unrelated OpenAI stories) when tested with a looser rule.</p>
 
       <h2>3. Per-article intelligence tagging</h2>
-      <p>Every article is automatically tagged with an impact level (Low/Medium/High), a sentiment score, and mentioned companies, countries, and technologies. This is done with a keyword/pattern-based heuristic engine — not a large language model — and is marked internally as such (<code>engine: "heuristic"</code>) so a future LLM-based pass could identify and upgrade these entries without reprocessing everything. Country tagging in particular only fires when an article's text explicitly names a country, which is a real limitation: many articles mention a company (e.g. "OpenAI") without ever naming its country in the text, so per-country news coverage is sparser than per-company coverage.</p>
+      <p>Every article is automatically tagged with an impact level, an automated sentiment score, and mentioned companies, countries, and technologies (labeled "Related companies &amp; topics" on each card — they're extracted name matches, not an analysis of who is actually affected). This is done with a keyword/pattern-based heuristic engine — not a large language model — and is marked internally as such (<code>engine: "heuristic"</code>) so a future LLM-based pass could identify and upgrade these entries without reprocessing everything. Country tagging in particular only fires when an article's text explicitly names a country, which is a real limitation: many articles mention a company (e.g. "OpenAI") without ever naming its country in the text, so per-country news coverage is sparser than per-company coverage. A story about a company is not necessarily about the country that company is headquartered in.</p>
+      <p><strong>Impact level:</strong> High and Medium are assigned only when specific keyword signals are found (e.g. "lawsuit," "acquisition" for High; "raises," "launches" for Medium). When neither matches, the article shows no impact badge at all — this is a "Not assessed" state, not an assessed "Low." We changed this after finding the heuristic had been defaulting unmatched articles to "Low," which falsely implied a judgment had been made about stories the keyword list simply had no signal for.</p>
+      <p><strong>Automated sentiment</strong> (Positive/Negative/Neutral) is a keyword count, not a factual verdict or a prediction of real-world impact — it says the engine spotted more positive- or negative-coded words in the text, nothing more.</p>
 
       <h2>4. AI companies tracked by country</h2>
       <p>Company counts shown per country come from <a href="https://query.wikidata.org/" target="_blank" rel="noopener noreferrer">Wikidata's public SPARQL endpoint</a> — a free, live, structured, community-edited database. The query counts distinct entities tagged with industry = "artificial intelligence" (Wikidata item Q11660), grouped by headquarters country (property P17).</p>
@@ -66,8 +68,9 @@
       <h2>7. Videos and podcasts</h2>
       <p>Featured videos are selected via the YouTube Data API: we search eight distinct AI sub-topics (large language models, agentic AI, robotics, AI chips, AI safety, and others) and take the top result from each by view count, so one viral topic can't crowd out the rest. Podcast episodes are pulled directly from each show's own public RSS feed — no API key involved, since every podcast host publishes one.</p>
 
-      <h2>8. Good/Bad News verdict</h2>
-      <p>Each story's "AI says" lean comes from the same heuristic sentiment score described in section 3. The community score is a real, separately tracked vote count — not a simulated number — stored per browser locally until a shared backend is connected, after which it becomes a genuine cross-visitor count.</p>
+      <h2>8. Reader poll ("How Will This Affect People?")</h2>
+      <p>Each story shows two independent things, kept visually separate: an automated sentiment read (see section 3) and a reader poll asking "How will this affect people?" with Positive / Negative / Uncertain as answers.</p>
+      <p>The poll is backed by a real shared counter (Vercel KV) with basic per-IP rate limiting and input validation on the server. When that backend isn't attached, the widget shows "Your reaction: [your answer]" instead of a fabricated or purely-local "community" figure — your own answer is never presented as if it represents other readers. <strong>Honest limitation:</strong> duplicate-vote prevention is per-browser (via local storage) only — nothing stops the same person from answering again in a different browser or after clearing site data. This is a lightweight reaction poll, not a scientifically controlled survey.</p>
 
       <h2>9. Update frequency</h2>
       <p>News, stock quotes, videos, GitHub activity, podcasts, and AI company counts all refresh automatically every 3 hours via a scheduled job. The Global AI Leadership ranking order and the Top AI Platforms / Top AI Voices lists are editorial and updated periodically by hand, not on a fixed schedule.</p>

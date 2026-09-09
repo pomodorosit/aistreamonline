@@ -1,7 +1,8 @@
-// Serverless function backing real, shared Good/Bad vote counts across all
-// visitors for the Verdict widget (script.js: initVerdict). Uses Vercel KV
-// (Upstash Redis under the hood) via its plain REST API -- no npm
-// dependency needed, since Node 18+ on Vercel has fetch() built in.
+// Serverless function backing real, shared reader-response counts across
+// all visitors for the Verdict widget (script.js: initVerdict) -- "How will
+// this affect people?" with Positive / Negative / Uncertain answers. Uses
+// Vercel KV (Upstash Redis under the hood) via its plain REST API -- no
+// npm dependency needed, since Node 18+ on Vercel has fetch() built in.
 //
 // Setup (one-time, free): in the Vercel dashboard, open this project ->
 // Storage -> Create Database -> KV. Vercel automatically injects
@@ -10,13 +11,17 @@
 //
 // Until that's done, KV_REST_API_URL/TOKEN are unset and this endpoint
 // responds 503; the frontend treats that as "no shared backend yet" and
-// falls back to showing only the AI's own lean, with no fake vote count.
+// falls back to showing only the visitor's own answer, labeled "Your
+// reaction" -- never implying it represents other readers.
 //
 // A crude per-IP rate limit (30 requests/minute) guards against trivial
 // spam scripts inflating counts -- not bulletproof, but proportionate for
-// a lightweight news-reaction widget with no user accounts.
+// a lightweight news-reaction widget with no user accounts. Nothing here
+// prevents one person voting again from a different browser/IP; this is
+// disclosed in the methodology rather than claimed as solved.
 
 const ID_RE = /^[a-z0-9]{1,64}$/i;
+const DIRECTIONS = ["positive", "negative", "uncertain"];
 const RATE_LIMIT_MAX = 30;
 const RATE_LIMIT_WINDOW_SECONDS = 60;
 
@@ -37,11 +42,10 @@ async function kv(...command) {
 }
 
 async function getCounts(id) {
-  const [good, bad] = await Promise.all([
-    kv("HGET", `vote:${id}`, "good"),
-    kv("HGET", `vote:${id}`, "bad"),
-  ]);
-  return { good: Number(good) || 0, bad: Number(bad) || 0 };
+  const values = await Promise.all(DIRECTIONS.map((d) => kv("HGET", `vote:${id}`, d)));
+  const counts = {};
+  DIRECTIONS.forEach((d, i) => { counts[d] = Number(values[i]) || 0; });
+  return counts;
 }
 
 async function checkRateLimit(ip) {
@@ -77,7 +81,7 @@ module.exports = async (req, res) => {
       const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
       const id = String(body.id || "");
       const direction = body.direction;
-      if (!ID_RE.test(id) || (direction !== "good" && direction !== "bad")) {
+      if (!ID_RE.test(id) || !DIRECTIONS.includes(direction)) {
         res.status(400).json({ error: "bad_request" });
         return;
       }

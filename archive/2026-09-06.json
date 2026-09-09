@@ -10,7 +10,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2024/12/49688202642_09fd5ccc38_k.jpg?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Anthropic"
@@ -29,7 +29,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/08/travis-kalanick-fii.jpg?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],

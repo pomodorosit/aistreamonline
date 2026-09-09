@@ -292,7 +292,7 @@ function buildEntityTags(analysis, maxTags) {
   box.className = 'entity-tags';
   const label = document.createElement('span');
   label.className = 'entity-tags-label';
-  label.textContent = 'Who it affects';
+  label.textContent = 'Related companies & topics';
   box.appendChild(label);
   entities.slice(0, maxTags).forEach((name) => {
     const tag = document.createElement('span');
@@ -1367,10 +1367,10 @@ function aiSentimentScore(analysis) {
   return Math.max(-2, Math.min(2, good - bad));
 }
 
-function aiLeanLabel(score) {
-  if (score > 0) return 'AI leans Good';
-  if (score < 0) return 'AI leans Bad';
-  return 'AI reads this as neutral';
+function automatedSentimentLabel(score) {
+  if (score > 0) return 'Automated sentiment: Positive';
+  if (score < 0) return 'Automated sentiment: Negative';
+  return 'Automated sentiment: Neutral';
 }
 
 function loadMyVerdictVotes() {
@@ -1386,6 +1386,9 @@ function saveMyVerdictVotes(votes) {
     localStorage.setItem(VERDICT_MY_VOTES_KEY, JSON.stringify(votes));
   } catch (e) { /* ignore */ }
 }
+
+const VOTE_DIRECTIONS = ['positive', 'negative', 'uncertain'];
+const VOTE_LABELS = { positive: 'Positive', negative: 'Negative', uncertain: 'Uncertain' };
 
 function initVerdict(newsItems) {
   const stage = document.getElementById('verdict-stage');
@@ -1439,26 +1442,32 @@ function initVerdict(newsItems) {
     }
   }
 
-  function renderSummary(counts, aiScore) {
+  function renderSummary(counts, aiScore, myVote) {
     summary.innerHTML = '';
 
     const aiSpan = document.createElement('span');
     aiSpan.className = 'verdict-ai-lean';
-    aiSpan.textContent = aiLeanLabel(aiScore);
+    aiSpan.textContent = automatedSentimentLabel(aiScore);
     summary.appendChild(aiSpan);
 
     const communitySpan = document.createElement('span');
     communitySpan.className = 'verdict-community';
     if (counts) {
-      const total = counts.good + counts.bad;
+      const total = VOTE_DIRECTIONS.reduce((sum, d) => sum + (counts[d] || 0), 0);
       if (total > 0) {
-        const pct = Math.round((counts.good / total) * 100);
-        communitySpan.textContent = `Community: ${pct}% Good (${total} vote${total === 1 ? '' : 's'})`;
+        const parts = VOTE_DIRECTIONS
+          .map((d) => `${Math.round(((counts[d] || 0) / total) * 100)}% ${VOTE_LABELS[d]}`)
+          .join(' · ');
+        communitySpan.textContent = `Reader responses (${total}): ${parts}`;
       } else {
-        communitySpan.textContent = 'Community: no votes yet — be the first';
+        communitySpan.textContent = 'No reader responses yet — be the first';
       }
+    } else if (myVote) {
+      // no shared backend available, but we can still honestly reflect the
+      // visitor's own choice -- never implying it represents other readers
+      communitySpan.textContent = `Your reaction: ${VOTE_LABELS[myVote]}`;
     } else {
-      communitySpan.textContent = 'Community voting unavailable right now';
+      communitySpan.textContent = 'Reader responses unavailable right now';
     }
     summary.appendChild(communitySpan);
   }
@@ -1493,57 +1502,52 @@ function initVerdict(newsItems) {
     if (myVote) {
       const already = document.createElement('p');
       already.className = 'verdict-already-voted';
-      already.textContent = 'You voted: ' + (myVote === 'good' ? 'Good' : 'Bad');
+      already.textContent = 'You answered: ' + VOTE_LABELS[myVote];
       card.appendChild(already);
     }
 
     const vote = document.createElement('div');
     vote.className = 'verdict-vote';
-    vote.innerHTML = `
-        <div class="vote-option">
-          <span class="vote-label vote-label-good">Good</span>
-          <button class="vote-round vote-up" aria-label="Vote good news" ${myVote ? 'disabled' : ''}>
-            <img src="vote-good.png" alt="">
-          </button>
-        </div>
-        <div class="vote-option">
-          <span class="vote-label vote-label-bad">Bad</span>
-          <button class="vote-round vote-down" aria-label="Vote bad news" ${myVote ? 'disabled' : ''}>
-            <img src="vote-bad.png" alt="">
-          </button>
-        </div>
-    `;
-    vote.querySelector('.vote-up').addEventListener('click', () => handleVote(id, 'good'));
-    vote.querySelector('.vote-down').addEventListener('click', () => handleVote(id, 'bad'));
+    VOTE_DIRECTIONS.forEach((direction) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `vote-btn vote-btn-${direction}` + (myVote === direction ? ' chosen' : '');
+      btn.textContent = VOTE_LABELS[direction];
+      btn.setAttribute('aria-label', 'Answer: ' + VOTE_LABELS[direction]);
+      if (myVote) btn.disabled = true;
+      btn.addEventListener('click', () => handleVote(id, direction));
+      vote.appendChild(btn);
+    });
     card.appendChild(vote);
 
     stage.appendChild(card);
 
-    renderSummary(null, aiScore);
+    renderSummary(null, aiScore, myVote);
     const counts = await fetchCounts(id);
     // only apply if still showing the same card (user may have skipped ahead already)
-    if (queue[index].id === id) renderSummary(counts, aiScore);
+    if (queue[index].id === id) renderSummary(counts, aiScore, myVote);
   }
 
   async function handleVote(id, direction) {
     myVotes[id] = direction;
     saveMyVerdictVotes(myVotes);
 
-    // lock the buttons and show "you voted" immediately -- don't wait for
+    // lock the buttons and show "you answered" immediately -- don't wait for
     // the network call or the next render, otherwise a second click inside
     // the advance delay would submit a duplicate vote
-    stage.querySelectorAll('.vote-round').forEach((btn) => { btn.disabled = true; });
+    stage.querySelectorAll('.vote-btn').forEach((btn) => { btn.disabled = true; });
+    stage.querySelector(`.vote-btn-${direction}`).classList.add('chosen');
     if (!stage.querySelector('.verdict-already-voted')) {
       const already = document.createElement('p');
       already.className = 'verdict-already-voted';
-      already.textContent = 'You voted: ' + (direction === 'good' ? 'Good' : 'Bad');
+      already.textContent = 'You answered: ' + VOTE_LABELS[direction];
       stage.querySelector('.verdict-card').insertBefore(already, stage.querySelector('.verdict-vote'));
     }
 
     const aiScore = queue[index].aiScore;
-    renderSummary(null, aiScore); // clear stale counts while the vote is in flight
+    renderSummary(null, aiScore, direction); // clear stale counts while the vote is in flight
     const counts = await postVote(id, direction);
-    if (queue[index].id === id) renderSummary(counts, aiScore);
+    if (queue[index].id === id) renderSummary(counts, aiScore, direction);
 
     setTimeout(advance, VERDICT_ADVANCE_DELAY_MS);
   }

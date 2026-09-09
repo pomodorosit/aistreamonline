@@ -10,7 +10,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2017/11/gettyimages-677147499.jpg?resize=1200,600",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Google"
@@ -29,7 +29,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/07/OpenAI-logo-in-Seoul.jpg?w=1024",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "OpenAI"

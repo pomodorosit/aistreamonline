@@ -432,7 +432,11 @@ def analyze_item(item):
     elif any(w in lower for w in MEDIUM_IMPACT_WORDS):
         impact_level = "Medium"
     else:
-        impact_level = "Low"
+        # No keyword signal either way. Defaulting to "Low" here would
+        # falsely imply we assessed the story and judged it minor -- we
+        # simply have no positive signal, so leave it unassessed rather
+        # than guess (see methodology).
+        impact_level = None
 
     pos = sum(1 for w in POSITIVE_WORDS if w in lower)
     neg = sum(1 for w in NEGATIVE_WORDS if w in lower)

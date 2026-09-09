@@ -10,7 +10,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2278736523.jpeg?resize=1200,798",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Anthropic"
@@ -29,7 +29,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/08/Scott-Wu-of-Cognition.jpg?w=1024",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "SpaceX"
@@ -48,7 +48,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/Muse-Neswsroom-Banner.jpg?resize=1200,675",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Meta"
@@ -107,7 +107,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/02/google-chrome-GettyImages-2151457378.jpg?w=1024",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Google"
@@ -167,7 +167,7 @@
       "avatar": "char-hooded-head.png",
       "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/Coca-Cola-uses-AI-to-improve-retailer-ordering-in-Malaysia-scaled-e1788839929431.jpg",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -184,7 +184,7 @@
       "avatar": "char-hooded-head.png",
       "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/Screenshot-2026-09-07-at-10.59.24-AM.png",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Google"
@@ -203,7 +203,7 @@
       "avatar": "char-hooded-head.png",
       "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/raimond-klavins-n-7HTOiJPso-unsplash-scaled.jpg",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Google"

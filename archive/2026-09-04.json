@@ -29,7 +29,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2287301688.jpg?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Apple"
@@ -55,7 +55,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/Screenshot-2026-09-04-at-8.49.39-AM-e1788537064907.png?w=839",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": -1,
         "companies": [
           "OpenAI"
@@ -74,7 +74,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/06/gemini-app-GettyImages-2276204472-1.jpg?w=1024",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
           "Google"
@@ -93,7 +93,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2023/06/After-Hours-_-group.png?resize=1200,675",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -127,7 +127,7 @@
       "avatar": "char-hooded-head.png",
       "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/ai-romance-cheating-survey-2026.png",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [
@@ -146,7 +146,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/Cheeseburger-stack.png?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],

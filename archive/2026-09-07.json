@@ -10,7 +10,7 @@
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/07/Chain-of-thought-picture.png?resize=1200,800",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -27,7 +27,7 @@
       "avatar": "char-hooded-head.png",
       "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/mg-ship-ai-route-optimisation-logistics-supply-chain-artificial-intelligence-freight-transport-predictive-analytics.jpg",
       "aiAnalysis": {
-        "impactLevel": "Low",
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
