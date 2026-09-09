@@ -1363,13 +1363,17 @@ function saveMyVerdictVotes(votes) {
 
 const VOTE_DIRECTIONS = ['positive', 'negative', 'uncertain'];
 const VOTE_LABELS = { positive: 'Positive', negative: 'Negative', uncertain: 'Uncertain' };
+const VOTE_ICONS = {
+  positive: 'char-dog-head.png',
+  negative: 'char-woman-head.png',
+  uncertain: 'char-hooded-head.png',
+};
 
 function initVerdict(newsItems) {
   const stage = document.getElementById('verdict-stage');
-  const summary = document.getElementById('verdict-summary');
   const progress = document.getElementById('verdict-progress');
   const skipBtn = document.getElementById('verdict-skip');
-  if (!stage || !summary || !progress || !skipBtn) return;
+  if (!stage || !progress || !skipBtn) return;
 
   const queue = (newsItems || [])
     .filter((it) => it.aiAnalysis)
@@ -1417,6 +1421,10 @@ function initVerdict(newsItems) {
   }
 
   function renderSummary(counts, aiScore, myVote) {
+    // re-queried each call, not captured once at init -- the element is
+    // recreated fresh inside the card on every renderCard()
+    const summary = document.getElementById('verdict-summary');
+    if (!summary) return;
     summary.innerHTML = '';
 
     const aiSpan = document.createElement('span');
@@ -1480,13 +1488,26 @@ function initVerdict(newsItems) {
       card.appendChild(already);
     }
 
+    // real vote tally goes above the buttons, not below, so readers see
+    // where things stand before (or right after) answering
+    const summaryEl = document.createElement('div');
+    summaryEl.className = 'verdict-summary';
+    summaryEl.id = 'verdict-summary';
+    card.appendChild(summaryEl);
+
     const vote = document.createElement('div');
     vote.className = 'verdict-vote';
     VOTE_DIRECTIONS.forEach((direction) => {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = `vote-btn vote-btn-${direction}` + (myVote === direction ? ' chosen' : '');
-      btn.textContent = VOTE_LABELS[direction];
+      const icon = document.createElement('img');
+      icon.className = 'vote-btn-icon';
+      icon.setAttribute('aria-hidden', 'true');
+      icon.alt = '';
+      icon.src = VOTE_ICONS[direction];
+      btn.appendChild(icon);
+      btn.appendChild(document.createTextNode(VOTE_LABELS[direction]));
       btn.setAttribute('aria-label', 'Answer: ' + VOTE_LABELS[direction]);
       if (myVote) btn.disabled = true;
       btn.addEventListener('click', () => handleVote(id, direction));
