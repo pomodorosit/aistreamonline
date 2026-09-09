@@ -283,6 +283,15 @@ img { max-width: 100%; display: block; }
     min-height: 460px;
     padding-top: 120px;
   }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-cta .btn {
+    text-align: center;
+  }
 }
 
 .btn {
@@ -532,11 +541,13 @@ img { max-width: 100%; display: block; }
 }
 
 .topic-filters-hint {
+  display: block;
+  width: 100%;
   color: var(--ink-faint);
   font-size: 12px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  margin-right: 4px;
+  margin: 0 0 4px;
 }
 
 .topic-chip {
