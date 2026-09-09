@@ -1,0 +1,3579 @@
+{
+  "generatedAt": "2026-09-09T13:55:37Z",
+  "source": "Wikidata (companies tagged industry: artificial intelligence)",
+  "companies": [
+    {
+      "qid": "Q141176548",
+      "name": "&above",
+      "slug": "above",
+      "country": "United Kingdom",
+      "inception": "2018",
+      "website": "https://www.andabove.com/",
+      "description": "Design-led AI product studio"
+    },
+    {
+      "qid": "Q134007166",
+      "name": "10Web",
+      "slug": "10web",
+      "country": "United States",
+      "inception": "2017",
+      "website": "https://10web.io/",
+      "description": null
+    },
+    {
+      "qid": "Q11463",
+      "name": "Adobe",
+      "slug": "adobe",
+      "country": "United States",
+      "inception": "1982",
+      "website": "https://www.adobe.com/",
+      "description": "American multinational computer software company"
+    },
+    {
+      "qid": "Q138639152",
+      "name": "Advisor Labs",
+      "slug": "advisor-labs",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://www.advisorlabs.com",
+      "description": "American AI consulting and technology firm based in South Jordan, Utah"
+    },
+    {
+      "qid": "Q139899597",
+      "name": "affinsys ai limited",
+      "slug": "affinsys-ai-limited",
+      "country": "Singapore",
+      "inception": "2019",
+      "website": "https://www.bankbuddy.ai/",
+      "description": "AI product company based in Dubai, Singapore and Bangalore with 4 products bankbuddy.ai telcobuddy.ai insurebuddy.ai amigox.ai"
+    },
+    {
+      "qid": "Q140392995",
+      "name": "Agentic Fabriq",
+      "slug": "agentic-fabriq",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://www.agenticfabriq.com/",
+      "description": "AI security and identity platform for managing AI agents"
+    },
+    {
+      "qid": "Q140800501",
+      "name": "Agentic Index",
+      "slug": "agentic-index",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://agenticindex.io",
+      "description": "independent research directory and comparison index for agentic AI vendors"
+    },
+    {
+      "qid": "Q139846340",
+      "name": "AgenticAssure",
+      "slug": "agenticassure",
+      "country": "Singapore",
+      "inception": "2024",
+      "website": "https://agenticassure.ai",
+      "description": "Enterprise AI governance and continuous assurance platform for EU AI Act, NIST AI RMF, MAS MindForge, and 12 regulatory frameworks"
+    },
+    {
+      "qid": "Q137175740",
+      "name": "AI Acquisition",
+      "slug": "ai-acquisition",
+      "country": "United Kingdom",
+      "inception": null,
+      "website": "https://www.aiacquisition.com/",
+      "description": "UK-based artificial intelligence and business automation company"
+    },
+    {
+      "qid": "Q139680549",
+      "name": "AI Aware",
+      "slug": "ai-aware",
+      "country": "United Kingdom",
+      "inception": "2023",
+      "website": "https://aiaware.io",
+      "description": "UK AI detection software company"
+    },
+    {
+      "qid": "Q138636826",
+      "name": "AI BUDDY",
+      "slug": "ai-buddy",
+      "country": "Israel",
+      "inception": "2024",
+      "website": "https://aibuddy.co.il",
+      "description": "Israeli AI company providing autonomous AI employees for businesses"
+    },
+    {
+      "qid": "Q137224999",
+      "name": "AI Consultant Insights",
+      "slug": "ai-consultant-insights",
+      "country": "United Kingdom",
+      "inception": "2025",
+      "website": "https://aiconsultantinsights.com/",
+      "description": "AI consulting and reporting platform providing feasibility and implementation analysis for businesses in 72 languages across 188 countries."
+    },
+    {
+      "qid": "Q138637123",
+      "name": "AI Genesis",
+      "slug": "ai-genesis",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://ai-genesis.ai",
+      "description": "American artificial intelligence company specializing in autonomous AI agents for customer service"
+    },
+    {
+      "qid": "Q138774693",
+      "name": "AI SQL Tuner LLC",
+      "slug": "ai-sql-tuner-llc",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://aisqltuner.com",
+      "description": "American software company developing AI-powered SQL Server performance optimization and database tuning tools for database administrators and developers."
+    },
+    {
+      "qid": "Q140271109",
+      "name": "AI Tutors",
+      "slug": "ai-tutors",
+      "country": "United Kingdom",
+      "inception": "2026",
+      "website": "https://aitutors.me",
+      "description": "AI-powered tutoring SaaS for UK secondary-school students"
+    },
+    {
+      "qid": "Q131991091",
+      "name": "AIO (aiowear.com)",
+      "slug": "aio-aiowear-com",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://aiowear.com/",
+      "description": "Generative artificial intelligence company for fashion"
+    },
+    {
+      "qid": "Q137176743",
+      "name": "AiSDR Inc.",
+      "slug": "aisdr-inc",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://aisdr.com/",
+      "description": "San Francisco–based SaaS startup offering an AI sales agent for deeply researched & high-converting automated omni-channel outreach that feels human."
+    },
+    {
+      "qid": "Q138529433",
+      "name": "AIVERSE",
+      "slug": "aiverse",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://tryaiverse.com",
+      "description": "AI discovery platform for AI tools, news and trends"
+    },
+    {
+      "qid": "Q141207350",
+      "name": "Alias Virtual Technologies",
+      "slug": "alias-virtual-technologies",
+      "country": "Singapore",
+      "inception": "2024",
+      "website": "https://alias.cm/",
+      "description": "software company in Singapore"
+    },
+    {
+      "qid": "Q138313361",
+      "name": "Alice",
+      "slug": "alice",
+      "country": "Israel",
+      "inception": "2018",
+      "website": "https://alice.io",
+      "description": "israeli-American cybersecurity firm"
+    },
+    {
+      "qid": "Q140734594",
+      "name": "Alison.ai",
+      "slug": "alison-ai",
+      "country": "Israel",
+      "inception": "2022",
+      "website": "https://alison.ai",
+      "description": "creative intelligence platform for analyzing and predicting advertising creative performance"
+    },
+    {
+      "qid": "Q141187430",
+      "name": "Alive Labs",
+      "slug": "alive-labs",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://www.alivelabs.io",
+      "description": "American AI software product company"
+    },
+    {
+      "qid": "Q130948825",
+      "name": "Alloy",
+      "slug": "alloy",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://alloy.app",
+      "description": "AI prototyping tool for product managers"
+    },
+    {
+      "qid": "Q434017",
+      "name": "Altair Engineering",
+      "slug": "altair-engineering",
+      "country": "United States",
+      "inception": "1985",
+      "website": "https://www.altair.com/",
+      "description": "American Multinational Company"
+    },
+    {
+      "qid": "Q140391482",
+      "name": "Amplience",
+      "slug": "amplience",
+      "country": "United Kingdom",
+      "inception": "2008",
+      "website": "https://amplience.com",
+      "description": "British headless content management system and digital asset management platform for enterprise retail"
+    },
+    {
+      "qid": "Q116758847",
+      "name": "Anthropic",
+      "slug": "anthropic",
+      "country": "United States",
+      "inception": "2021",
+      "website": "https://www.anthropic.com/",
+      "description": "American artificial intelligence corporation"
+    },
+    {
+      "qid": "Q135683783",
+      "name": "Anysphere, Inc.",
+      "slug": "anysphere-inc",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://anysphere.inc/",
+      "description": "American artificial intelligence software company known for the AI-native code editor, Cursor"
+    },
+    {
+      "qid": "Q140085162",
+      "name": "Aperion",
+      "slug": "aperion",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://aperion.ai",
+      "description": "American software company developing runtime governance for enterprise AI"
+    },
+    {
+      "qid": "Q125895281",
+      "name": "Arkham Intelligence",
+      "slug": "arkham-intelligence",
+      "country": "United States",
+      "inception": "2020",
+      "website": "https://intel.arkm.com",
+      "description": "American public data company"
+    },
+    {
+      "qid": "Q140320976",
+      "name": "Arthea",
+      "slug": "arthea",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://arthea.ai",
+      "description": "AI marketing software company"
+    },
+    {
+      "qid": "Q140287813",
+      "name": "Ascendion",
+      "slug": "ascendion",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://ascendion.com/",
+      "description": "American software engineering and artificial intelligence services company"
+    },
+    {
+      "qid": "Q141183030",
+      "name": "askOdin",
+      "slug": "askodin",
+      "country": "Singapore",
+      "inception": "2025",
+      "website": "https://askodin.app",
+      "description": "Singapore-based financial software company"
+    },
+    {
+      "qid": "Q141107390",
+      "name": "Assembly",
+      "slug": "assembly",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://aiassemblylines.com",
+      "description": "American consulting firm specializing in AI strategy, transformation, and implementation services, headquartered in Dover, Delaware"
+    },
+    {
+      "qid": "Q140356445",
+      "name": "Assistable",
+      "slug": "assistable",
+      "country": "United States",
+      "inception": null,
+      "website": "https://www.assistable.ai/",
+      "description": "American conversational AI software company"
+    },
+    {
+      "qid": "Q2739680",
+      "name": "Association for the Advancement of Artificial Intelligence",
+      "slug": "association-for-the-advancement-of-artificial-intelligence",
+      "country": "United States",
+      "inception": "1979",
+      "website": "https://www.aaai.org/",
+      "description": "international scientific society"
+    },
+    {
+      "qid": "Q135418354",
+      "name": "Astronomer",
+      "slug": "astronomer",
+      "country": "United States",
+      "inception": "2015",
+      "website": "https://www.astronomer.io/",
+      "description": "American data operations technology company"
+    },
+    {
+      "qid": "Q137792087",
+      "name": "Atlan",
+      "slug": "atlan",
+      "country": "United States",
+      "inception": "2019",
+      "website": "https://atlan.com/",
+      "description": "Enterprise data and AI governance software company"
+    },
+    {
+      "qid": "Q140288973",
+      "name": "Atlas Merlin",
+      "slug": "atlas-merlin",
+      "country": "United Kingdom",
+      "inception": "2026",
+      "website": "https://atlasmerlin.com",
+      "description": "British industrial AI company"
+    },
+    {
+      "qid": "Q140738961",
+      "name": "Atomic Apps AI",
+      "slug": "atomic-apps-ai",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://www.atomicapps.ai",
+      "description": "American software company"
+    },
+    {
+      "qid": "Q140050482",
+      "name": "Attainable AI",
+      "slug": "attainable-ai",
+      "country": "United States",
+      "inception": "2021",
+      "website": "https://attainable.ai",
+      "description": "American AI advisory practice founded by Chris Huber Reitz"
+    },
+    {
+      "qid": "Q140554529",
+      "name": "Audience Genomics",
+      "slug": "audience-genomics",
+      "country": "United States",
+      "inception": "2019",
+      "website": "https://letaggiedoit.com/",
+      "description": "American artificial intelligence company specializing in content intelligence and marketing technology; maker of Aggie"
+    },
+    {
+      "qid": "Q135992303",
+      "name": "Auditve Inc",
+      "slug": "auditve-inc",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://auditve.com",
+      "description": "American artificial intelligence company focused on decision intelligence models, incorporated in Delaware in 2025"
+    },
+    {
+      "qid": "Q96313095",
+      "name": "Augustus Intelligence",
+      "slug": "augustus-intelligence",
+      "country": "United States",
+      "inception": "2018",
+      "website": "https://www.augustusai.com/",
+      "description": null
+    },
+    {
+      "qid": "Q140935081",
+      "name": "AuraOne",
+      "slug": "auraone",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://auraone.ai",
+      "description": "American artificial intelligence company"
+    },
+    {
+      "qid": "Q138580828",
+      "name": "Austin AI Hub",
+      "slug": "austin-ai-hub",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://austinaihub.com",
+      "description": "An innovation ecosystem and community hub focused on artificial intelligence development and education in Austin, Texas."
+    },
+    {
+      "qid": "Q138950528",
+      "name": "AutoPilotPR",
+      "slug": "autopilotpr",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://autopilotpr.com",
+      "description": "Puerto Rican company that builds Smart Websites: custom Next.js sites with AI agent systems for marketing automation"
+    },
+    {
+      "qid": "Q140823135",
+      "name": "Avanon",
+      "slug": "avanon",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://avanon.ai",
+      "description": "American applied AI company"
+    },
+    {
+      "qid": "Q135041597",
+      "name": "Aviso AI",
+      "slug": "aviso-ai",
+      "country": "United States",
+      "inception": "2012",
+      "website": "https://www.aviso.com/",
+      "description": "American Artificial Intelligence software company for B2B revenue intelligence"
+    },
+    {
+      "qid": "Q140317485",
+      "name": "Ayoob AI",
+      "slug": "ayoob-ai",
+      "country": "United Kingdom",
+      "inception": "2024",
+      "website": "https://ayoob.ai",
+      "description": "AI software company based in Newcastle upon Tyne, England"
+    },
+    {
+      "qid": "Q139499931",
+      "name": "B:Side Advisors",
+      "slug": "b-side-advisors",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://www.bsideadvisors.com",
+      "description": "AI implementation consultancy for U.S. small and mid-sized businesses; subsidiary of B:Side Capital, based in Denver and Phoenix"
+    },
+    {
+      "qid": "Q140484451",
+      "name": "Bastion Intelligence",
+      "slug": "bastion-intelligence",
+      "country": "United States",
+      "inception": "2018",
+      "website": "https://bastionintelligence.com",
+      "description": "American healthcare artificial intelligence company based in Dallas, Texas"
+    },
+    {
+      "qid": "Q140087734",
+      "name": "beadedcloud",
+      "slug": "beadedcloud",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://beadedcloud.com",
+      "description": "Alaska-based environmental intelligence software company"
+    },
+    {
+      "qid": "Q138886616",
+      "name": "Behavioral Signals",
+      "slug": "behavioral-signals",
+      "country": "United States",
+      "inception": null,
+      "website": "https://www.behavioralsignals.com",
+      "description": "American AI company specializing in voice intelligence and emotion AI"
+    },
+    {
+      "qid": "Q136652759",
+      "name": "BellX",
+      "slug": "bellx",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://bellx.com",
+      "description": "American infrastructure & technology company"
+    },
+    {
+      "qid": "Q137342269",
+      "name": "Beroqk",
+      "slug": "beroqk",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://beroqk.com",
+      "description": "American technology company"
+    },
+    {
+      "qid": "Q139731908",
+      "name": "BestAI Israel",
+      "slug": "bestai-israel",
+      "country": "Israel",
+      "inception": null,
+      "website": "https://www.bestai.co.il",
+      "description": "Hebrew-language AI tools directory and editorial review site for Israeli operators"
+    },
+    {
+      "qid": "Q139918459",
+      "name": "Big House Enterprise",
+      "slug": "big-house-enterprise",
+      "country": "United States",
+      "inception": null,
+      "website": "https://bighouseenterprise.com/about/",
+      "description": "entity engineering organization"
+    },
+    {
+      "qid": "Q139679340",
+      "name": "Black Pixel AI Inc",
+      "slug": "black-pixel-ai-inc",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://www.everstory.pro/",
+      "description": "American AI software company developing photo album editor and personalized memory cards"
+    },
+    {
+      "qid": "Q141287672",
+      "name": "Blane Canada",
+      "slug": "blane-canada",
+      "country": "United States",
+      "inception": "1984",
+      "website": "https://blanecanada.com",
+      "description": "American Consulting firm in Wheaton, Illinois, developer of the Synchronist business retention software"
+    },
+    {
+      "qid": "Q141048865",
+      "name": "Blomega",
+      "slug": "blomega",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://blomegalab.com",
+      "description": "robotics data-capture company that turns human hand skill into robot training data"
+    },
+    {
+      "qid": "Q138340999",
+      "name": "Blue J",
+      "slug": "blue-j",
+      "country": "United States",
+      "inception": null,
+      "website": "https://www.bluej.com",
+      "description": "Canadian artificial intelligence technology company for tax, legal and accounting"
+    },
+    {
+      "qid": "Q139671503",
+      "name": "Bluedot",
+      "slug": "bluedot",
+      "country": "United Kingdom",
+      "inception": "2021",
+      "website": "https://www.bluedothq.com/",
+      "description": "AI meeting assistant software company"
+    },
+    {
+      "qid": "Q140204465",
+      "name": "Bodega One",
+      "slug": "bodega-one",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://www.bodegaone.ai",
+      "description": "American developer-tools software company"
+    },
+    {
+      "qid": "Q30315155",
+      "name": "Body Labs",
+      "slug": "body-labs",
+      "country": "United States",
+      "inception": "2013",
+      "website": null,
+      "description": "software company acquired by Amazon"
+    },
+    {
+      "qid": "Q139558301",
+      "name": "Boldstart Ventures",
+      "slug": "boldstart-ventures",
+      "country": "United States",
+      "inception": "2010",
+      "website": null,
+      "description": "American venture capital firm focused on AI and enterprise technology"
+    },
+    {
+      "qid": "Q139023553",
+      "name": "Bondgate IT",
+      "slug": "bondgate-it",
+      "country": "United Kingdom",
+      "inception": "1998",
+      "website": "https://www.bondgate.co.uk/",
+      "description": "Managed IT services and cybersecurity provider based in the United Kingdom"
+    },
+    {
+      "qid": "Q139675690",
+      "name": "Brainchild",
+      "slug": "brainchild",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://drewcbrucker.com",
+      "description": "AI creative consultancy founded by Drew Brucker"
+    },
+    {
+      "qid": "Q140640312",
+      "name": "Breme",
+      "slug": "breme",
+      "country": "United States",
+      "inception": null,
+      "website": "https://breme.ai",
+      "description": "AI video production software company"
+    },
+    {
+      "qid": "Q140170213",
+      "name": "Call Setter AI",
+      "slug": "call-setter-ai",
+      "country": "United States",
+      "inception": null,
+      "website": "https://callsetter.ai",
+      "description": "AI voice agent service that calls inbound leads, qualifies them, and books appointments for businesses"
+    },
+    {
+      "qid": "Q140198915",
+      "name": "CallQuants",
+      "slug": "callquants",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://callquants.us",
+      "description": "AI voice agent and conversation intelligence platform"
+    },
+    {
+      "qid": "Q96374297",
+      "name": "Callsign",
+      "slug": "callsign",
+      "country": "United Kingdom",
+      "inception": "2012",
+      "website": null,
+      "description": "biometrics company"
+    },
+    {
+      "qid": "Q141292073",
+      "name": "Canticle Research",
+      "slug": "canticle-research",
+      "country": "United States",
+      "inception": null,
+      "website": "https://canticle.cc",
+      "description": "independent AI research and security laboratory based in Nashville, Tennessee"
+    },
+    {
+      "qid": "Q134883747",
+      "name": "CDimension",
+      "slug": "cdimension",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://cdimension.com/",
+      "description": "CDimension is powering AI with Atomically-Thin 3D ICs"
+    },
+    {
+      "qid": "Q66604886",
+      "name": "Cerebras",
+      "slug": "cerebras",
+      "country": "United States",
+      "inception": "2016",
+      "website": "https://www.cerebras.ai/",
+      "description": "business"
+    },
+    {
+      "qid": "Q111387693",
+      "name": "Cerence Inc.",
+      "slug": "cerence-inc",
+      "country": "United States",
+      "inception": "2019",
+      "website": "https://www.cerence.com/",
+      "description": "American multinational software company that develops artificial intelligence assistant technology primarily for automobiles"
+    },
+    {
+      "qid": "Q131362989",
+      "name": "CHAI",
+      "slug": "chai",
+      "country": "United States",
+      "inception": null,
+      "website": "https://chai-research.com",
+      "description": "American artificial intelligence corporation"
+    },
+    {
+      "qid": "Q139969782",
+      "name": "Chasing Next",
+      "slug": "chasing-next",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://chasingnext.com",
+      "description": "AI training platform"
+    },
+    {
+      "qid": "Q138808518",
+      "name": "Chelsea AI Ventures",
+      "slug": "chelsea-ai-ventures",
+      "country": "United Kingdom",
+      "inception": null,
+      "website": "https://www.chelseaai.co.uk",
+      "description": "AI and data science consultancy based in the United Kingdom"
+    },
+    {
+      "qid": "Q140045111",
+      "name": "Choate Catalysts",
+      "slug": "choate-catalysts",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://choatecatalysts.com",
+      "description": "Boston-based AI advisory firm"
+    },
+    {
+      "qid": "Q140544659",
+      "name": "circuscompany",
+      "slug": "circuscompany",
+      "country": "South Korea",
+      "inception": "2012",
+      "website": "https://circuscompany.com",
+      "description": "South Korean digital technology, content, edtech and AI company"
+    },
+    {
+      "qid": "Q140314113",
+      "name": "ClearCOGS",
+      "slug": "clearcogs",
+      "country": "United States",
+      "inception": "2021",
+      "website": "https://www.clearcogs.com",
+      "description": "American restaurant technology company"
+    },
+    {
+      "qid": "Q139385762",
+      "name": "CO3 ONE",
+      "slug": "co3-one",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://www.co3.one/",
+      "description": "American artificial intelligence safety company"
+    },
+    {
+      "qid": "Q140045848",
+      "name": "Code and Trust",
+      "slug": "code-and-trust",
+      "country": "United States",
+      "inception": "2018",
+      "website": "https://www.codeandtrust.com/",
+      "description": "American custom software development and AI implementation company"
+    },
+    {
+      "qid": "Q135181505",
+      "name": "CodeRabbit",
+      "slug": "coderabbit",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://www.coderabbit.ai",
+      "description": "AI tool for generating and reviewing code"
+    },
+    {
+      "qid": "Q139041820",
+      "name": "Cognitive Videos",
+      "slug": "cognitive-videos",
+      "country": "United Kingdom",
+      "inception": "2023",
+      "website": "https://cognitivevideos.com",
+      "description": "British artificial intelligence video generation company"
+    },
+    {
+      "qid": "Q138499182",
+      "name": "Comet",
+      "slug": "comet",
+      "country": "United States",
+      "inception": "2017",
+      "website": "https://www.comet.com/site/",
+      "description": "American AI observability & machine learning software company"
+    },
+    {
+      "qid": "Q140361592",
+      "name": "Complaix",
+      "slug": "complaix",
+      "country": "United Kingdom",
+      "inception": "2026",
+      "website": "https://www.complaix.io",
+      "description": "Operational AI Governance platform, United Kingdom"
+    },
+    {
+      "qid": "Q141144080",
+      "name": "CONE RED",
+      "slug": "cone-red",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://cone.red",
+      "description": "AI engineering company based in Barcelona, Spain"
+    },
+    {
+      "qid": "Q135900651",
+      "name": "Conquer AI",
+      "slug": "conquer-ai",
+      "country": "United Kingdom",
+      "inception": "2023",
+      "website": "https://www.conquer.ai/",
+      "description": "British AI software engineering company"
+    },
+    {
+      "qid": "Q140250259",
+      "name": "Consilience, Inc.",
+      "slug": "consilience-inc",
+      "country": "United States",
+      "inception": null,
+      "website": "https://consilience.ai",
+      "description": "American artificial intelligence technology company"
+    },
+    {
+      "qid": "Q140370310",
+      "name": "ControlRooms.ai",
+      "slug": "controlrooms-ai",
+      "country": "United States",
+      "inception": "2021",
+      "website": "https://www.controlrooms.ai/",
+      "description": "American Industrial AI software company"
+    },
+    {
+      "qid": "Q140589423",
+      "name": "Cortexum",
+      "slug": "cortexum",
+      "country": "Singapore",
+      "inception": "2026",
+      "website": "https://cortexum.ai",
+      "description": "Singaporean applied artificial intelligence studio"
+    },
+    {
+      "qid": "Q139898856",
+      "name": "CPA Guide",
+      "slug": "cpa-guide",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://cpa.guide/",
+      "description": "American AI automation platform for CPA and accounting firms"
+    },
+    {
+      "qid": "Q137625544",
+      "name": "Creative Content Crafts",
+      "slug": "creative-content-crafts",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://cccrafts.ai",
+      "description": "AI-native LinkedIn lead generation agency and platform"
+    },
+    {
+      "qid": "Q141170778",
+      "name": "CUBIG",
+      "slug": "cubig",
+      "country": "South Korea",
+      "inception": "2021",
+      "website": "https://cubig.ai",
+      "description": "enterprise AI data infrastructure company based in South Korea"
+    },
+    {
+      "qid": "Q132142883",
+      "name": "Cycorp",
+      "slug": "cycorp",
+      "country": "United States",
+      "inception": "1994",
+      "website": "https://cyc.com",
+      "description": "AI company"
+    },
+    {
+      "qid": "Q140144506",
+      "name": "Dallas AI Company",
+      "slug": "dallas-ai-company",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://dallasaicompany.com",
+      "description": "American artificial intelligence services agency based in Dallas, Texas"
+    },
+    {
+      "qid": "Q141224970",
+      "name": "Dapto",
+      "slug": "dapto",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://dapto.ai",
+      "description": "artificial intelligence software company based in Fishers, Indiana"
+    },
+    {
+      "qid": "Q141104987",
+      "name": "Datify",
+      "slug": "datify",
+      "country": "United Kingdom",
+      "inception": "2026",
+      "website": "https://www.datifyhq.com",
+      "description": "AI operations company"
+    },
+    {
+      "qid": "Q141164022",
+      "name": "Daybreak",
+      "slug": "daybreak",
+      "country": "United States",
+      "inception": "2016",
+      "website": "https://www.daybreak.ai/",
+      "description": "American enterprise artificial intelligence company"
+    },
+    {
+      "qid": "Q139971264",
+      "name": "deBCor Engineering",
+      "slug": "debcor-engineering",
+      "country": "United States",
+      "inception": "1997",
+      "website": "https://www.debcor.com",
+      "description": "American SAP Consulting and Enterprise AI Firm"
+    },
+    {
+      "qid": "Q131577453",
+      "name": "DeepSeek",
+      "slug": "deepseek",
+      "country": "China",
+      "inception": "2023",
+      "website": "https://deepseek.com",
+      "description": "Chinese artificial intelligence company"
+    },
+    {
+      "qid": "Q132134653",
+      "name": "Descript",
+      "slug": "descript",
+      "country": "United States",
+      "inception": "2017",
+      "website": "https://www.descript.com/",
+      "description": "AI-powered video and audio editing software company"
+    },
+    {
+      "qid": "Q138566518",
+      "name": "Digital Human Corporation",
+      "slug": "digital-human-corporation",
+      "country": "South Korea",
+      "inception": "2025",
+      "website": "https://digitalhumancorp.com",
+      "description": "South Korean AI wellness company building KAi, a persistent memory AI companion"
+    },
+    {
+      "qid": "Q138774140",
+      "name": "Digital Wave Technology",
+      "slug": "digital-wave-technology",
+      "country": "United States",
+      "inception": null,
+      "website": "https://www.digitalwavetechnology.com",
+      "description": "American enterprise software company"
+    },
+    {
+      "qid": "Q140386668",
+      "name": "Discentra",
+      "slug": "discentra",
+      "country": "United Kingdom",
+      "inception": "2024",
+      "website": "https://discentra.ai",
+      "description": "British software company developing AI voice-coaching technology for trading firms"
+    },
+    {
+      "qid": "Q140907035",
+      "name": "Discovery Loop",
+      "slug": "discovery-loop",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://www.discoveryloop.com/",
+      "description": "US based startup"
+    },
+    {
+      "qid": "Q117445496",
+      "name": "DRESSX",
+      "slug": "dressx",
+      "country": "United States",
+      "inception": "2020",
+      "website": "https://dressx.com/",
+      "description": "AI software company for fashion e-commerce"
+    },
+    {
+      "qid": "Q139970652",
+      "name": "Dronehub",
+      "slug": "dronehub",
+      "country": "United States",
+      "inception": "2015",
+      "website": "https://dronehub.ai",
+      "description": "Polish-American autonomous drone infrastructure company"
+    },
+    {
+      "qid": "Q140263899",
+      "name": "Dwelly",
+      "slug": "dwelly",
+      "country": "United Kingdom",
+      "inception": "2023",
+      "website": "https://www.dwelly.group/",
+      "description": "UK property management company operating an AI-native lettings agency platform"
+    },
+    {
+      "qid": "Q140795265",
+      "name": "Echo AI",
+      "slug": "echo-ai",
+      "country": "United Kingdom",
+      "inception": "2026",
+      "website": "https://echoai.so",
+      "description": "AI agent software platform"
+    },
+    {
+      "qid": "Q140356046",
+      "name": "economAIcs Group",
+      "slug": "economaics-group",
+      "country": "United Kingdom",
+      "inception": "2026",
+      "website": "https://economaicsgroup.com",
+      "description": "British software company developing AI tools for public transport procurement bidding"
+    },
+    {
+      "qid": "Q140067381",
+      "name": "EDRON AI",
+      "slug": "edron-ai",
+      "country": "United States",
+      "inception": null,
+      "website": "https://edronai.com/",
+      "description": "artificial intelligence consultancy based in Austin, Texas, United States"
+    },
+    {
+      "qid": "Q140399232",
+      "name": "Ekua",
+      "slug": "ekua",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://ekua.io",
+      "description": "AI agent company serving Latin American enterprises."
+    },
+    {
+      "qid": "Q138340960",
+      "name": "EliseAI",
+      "slug": "eliseai",
+      "country": "United States",
+      "inception": null,
+      "website": "https://www.eliseai.com",
+      "description": "American artificial intelligence company for real estate and healthcare"
+    },
+    {
+      "qid": "Q139827922",
+      "name": "Elite AI Advantage",
+      "slug": "elite-ai-advantage",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://eliteaiadvantage.com",
+      "description": "American AI Consulting Business"
+    },
+    {
+      "qid": "Q138358685",
+      "name": "Elomia Health",
+      "slug": "elomia-health",
+      "country": "United States",
+      "inception": "2019",
+      "website": "https://elomia.com/",
+      "description": "a mental health technology company"
+    },
+    {
+      "qid": "Q139980540",
+      "name": "EmpirioLabs AI",
+      "slug": "empiriolabs-ai",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://empiriolabs.ai",
+      "description": "artificial intelligence inference and integration company"
+    },
+    {
+      "qid": "Q138659852",
+      "name": "Endeavor Intelligence",
+      "slug": "endeavor-intelligence",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://endeavorintel.com",
+      "description": "AI strategy and advisory firm"
+    },
+    {
+      "qid": "Q138785649",
+      "name": "Entermind",
+      "slug": "entermind",
+      "country": "Singapore",
+      "inception": "2025",
+      "website": "https://entermind.com/",
+      "description": "Malaysia and Singapore-based AI and data consulting firm"
+    },
+    {
+      "qid": "Q94505592",
+      "name": "Enveda",
+      "slug": "enveda",
+      "country": "United States",
+      "inception": "2019",
+      "website": "https://www.enveda.com",
+      "description": "Biotechnology Company in Boulder (CO)"
+    },
+    {
+      "qid": "Q133843529",
+      "name": "Espresso AI",
+      "slug": "espresso-ai",
+      "country": "United States",
+      "inception": null,
+      "website": "https://espresso.ai/",
+      "description": "Artificial Intelligence company based in New York"
+    },
+    {
+      "qid": "Q140175847",
+      "name": "EVE NeuroSystems",
+      "slug": "eve-neurosystems",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://eveneurosystems.com",
+      "description": "American artificial intelligence company"
+    },
+    {
+      "qid": "Q137261622",
+      "name": "Everstone Systems",
+      "slug": "everstone-systems",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://everstonesystems.com/",
+      "description": "AI automation in heart of Austin, Texas USA by delivering innovative solutions that boost operational efficiency for businesses globally"
+    },
+    {
+      "qid": "Q137799249",
+      "name": "Evertune AI",
+      "slug": "evertune-ai",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://www.evertune.ai/",
+      "description": "American artificial intelligence marketing company"
+    },
+    {
+      "qid": "Q140588359",
+      "name": "Extend",
+      "slug": "extend",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://www.extend.ai",
+      "description": "American document processing software company"
+    },
+    {
+      "qid": "Q60776406",
+      "name": "Faculty",
+      "slug": "faculty",
+      "country": "United Kingdom",
+      "inception": "2014",
+      "website": "http://faculty.ai/",
+      "description": "British technology company based in London"
+    },
+    {
+      "qid": "Q139589019",
+      "name": "Ferentin",
+      "slug": "ferentin",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://www.ferentin.com/",
+      "description": "American enterprise AI security platform"
+    },
+    {
+      "qid": "Q117861376",
+      "name": "FinanceGPT",
+      "slug": "financegpt",
+      "country": "United Kingdom",
+      "inception": "2022",
+      "website": "https://financegptlabs.com",
+      "description": "generative artificial intelligence platform for financial services, analysis and research"
+    },
+    {
+      "qid": "Q141255559",
+      "name": "Firebird AI",
+      "slug": "firebird-ai",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://www.firebird.ai/",
+      "description": null
+    },
+    {
+      "qid": "Q121093221",
+      "name": "Flip CX",
+      "slug": "flip-cx",
+      "country": "United States",
+      "inception": "2015",
+      "website": "https://flipcx.com/",
+      "description": "software company"
+    },
+    {
+      "qid": "Q140561552",
+      "name": "Forethought Technologies",
+      "slug": "forethought-technologies",
+      "country": "United States",
+      "inception": "2017",
+      "website": "https://forethought.ai",
+      "description": "American artificial intelligence company in San Francisco, California."
+    },
+    {
+      "qid": "Q140274218",
+      "name": "Freestyle Consulting",
+      "slug": "freestyle-consulting",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://freestyleconsulting.com",
+      "description": "business systems and AI consulting firm based in the United States"
+    },
+    {
+      "qid": "Q138639365",
+      "name": "FUBYTE",
+      "slug": "fubyte",
+      "country": "United Kingdom",
+      "inception": null,
+      "website": "https://fubyte.com/?utm_source=wiki",
+      "description": "Technical Growth & Automation Partner for Startups, Scale-Ups & SMEs - Website: https://fubyte.com/"
+    },
+    {
+      "qid": "Q140353051",
+      "name": "Fusionpact Technologies",
+      "slug": "fusionpact-technologies",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://www.fusionpact.com/",
+      "description": "American enterprise AI consulting and software engineering company"
+    },
+    {
+      "qid": "Q111180211",
+      "name": "Fyusion",
+      "slug": "fyusion",
+      "country": "United States",
+      "inception": "2014",
+      "website": "https://fyusion.com/",
+      "description": "3D vision and machine learning company"
+    },
+    {
+      "qid": "Q139505766",
+      "name": "Galax Studios",
+      "slug": "galax-studios",
+      "country": "United States",
+      "inception": null,
+      "website": "https://galaxstudios.com",
+      "description": "American AI venture builder focused on proptech and govtech"
+    },
+    {
+      "qid": "Q140250281",
+      "name": "Gathr.ai",
+      "slug": "gathr-ai",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://www.gathr.ai",
+      "description": "streaming analytics company"
+    },
+    {
+      "qid": "Q140444885",
+      "name": "Gauntlet AI",
+      "slug": "gauntlet-ai",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://gauntletai.com",
+      "description": "American AI engineering training and talent company"
+    },
+    {
+      "qid": "Q137380835",
+      "name": "GC AI",
+      "slug": "gc-ai",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://gc.ai/",
+      "description": "Artificial intelligence platform for in-house legal teams."
+    },
+    {
+      "qid": "Q139575597",
+      "name": "GENESISX",
+      "slug": "genesisx",
+      "country": "United States",
+      "inception": "2021",
+      "website": "https://genesisx.com",
+      "description": "AI storytelling platform for CPG and retail brands"
+    },
+    {
+      "qid": "Q140356641",
+      "name": "Geoffrey AI",
+      "slug": "geoffrey-ai",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://meetgeoffrey.ai",
+      "description": "United States-based software company developing AI-powered inbox intelligence for property management operations."
+    },
+    {
+      "qid": "Q138942378",
+      "name": "GetReal Security",
+      "slug": "getreal-security",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://www.getrealsecurity.com",
+      "description": "American cybersecurity company specializing in deepfake detection and AI-generated content authentication"
+    },
+    {
+      "qid": "Q139895120",
+      "name": "GetWidget",
+      "slug": "getwidget",
+      "country": "United States",
+      "inception": "2017",
+      "website": "https://hireflutterdev.com/",
+      "description": "AI software development company and open-source Flutter UI Kit publisher, founded 2017, headquartered in Bengaluru"
+    },
+    {
+      "qid": "Q138858384",
+      "name": "GiaSpace",
+      "slug": "giaspace",
+      "country": "United States",
+      "inception": "2005",
+      "website": "https://giaspace.com",
+      "description": "American managed IT services provider based in Gainesville, Florida"
+    },
+    {
+      "qid": "Q140352679",
+      "name": "Glory Guard",
+      "slug": "glory-guard",
+      "country": "United States",
+      "inception": "2013",
+      "website": "https://gloryguard.com/",
+      "description": null
+    },
+    {
+      "qid": "Q30688088",
+      "name": "Google",
+      "slug": "google",
+      "country": "United States",
+      "inception": "2017",
+      "website": "http://ai.google",
+      "description": "Google division dedicated to artificial intelligence"
+    },
+    {
+      "qid": "Q15733006",
+      "name": "Google DeepMind",
+      "slug": "google-deepmind",
+      "country": "United Kingdom",
+      "inception": "2010",
+      "website": "https://deepmind.google/",
+      "description": "artificial intelligence company owned by Google"
+    },
+    {
+      "qid": "Q139907033",
+      "name": "GOSH AI",
+      "slug": "gosh-ai",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://www.mygosh.ai",
+      "description": "Artificial intelligence company specializing in AI Recommendation & Discovery Intelligence for brand discovery, authority, and recommendation analysis."
+    },
+    {
+      "qid": "Q136650405",
+      "name": "Grafton Sciences",
+      "slug": "grafton-sciences",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://www.graftonsciences.com",
+      "description": "American artificial intelligence and scientific research company based in Redwood City, California"
+    },
+    {
+      "qid": "Q140465189",
+      "name": "Great Wave AI",
+      "slug": "great-wave-ai",
+      "country": "United Kingdom",
+      "inception": "2021",
+      "website": "https://greatwave.ai/",
+      "description": "UK Sovereign GenAI Agent Orchestration Platform. Built for Police, Government & Enterprise"
+    },
+    {
+      "qid": "Q136996049",
+      "name": "GrowthFactor",
+      "slug": "growthfactor",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://www.growthfactor.ai",
+      "description": "American commercial real estate software company"
+    },
+    {
+      "qid": "Q140335055",
+      "name": "Guickly",
+      "slug": "guickly",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://guickly.com",
+      "description": "AI measurement layer for enterprises"
+    },
+    {
+      "qid": "Q139817632",
+      "name": "HappySpace",
+      "slug": "happyspace",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://happyspace.one",
+      "description": "American AI platform for small business marketing and operations"
+    },
+    {
+      "qid": "Q138034239",
+      "name": "Hartz AI",
+      "slug": "hartz-ai",
+      "country": "United Kingdom",
+      "inception": "1999",
+      "website": "https://www.hartzai.com/",
+      "description": "UK-based Cyber Essentials certified AI consultancy and training provider for small and medium-sized enterprises."
+    },
+    {
+      "qid": "Q138672956",
+      "name": "Hawkfry Group",
+      "slug": "hawkfry-group",
+      "country": "United Kingdom",
+      "inception": null,
+      "website": "https://hawkfry.com",
+      "description": "Applied AI and data engineering consultancy based in London"
+    },
+    {
+      "qid": "Q138824336",
+      "name": "HBB Nexus OS",
+      "slug": "hbb-nexus-os",
+      "country": "United Kingdom",
+      "inception": null,
+      "website": "https://hbbnexus.com",
+      "description": "AI-powered hospitality operating system"
+    },
+    {
+      "qid": "Q139414535",
+      "name": "Health AI",
+      "slug": "health-ai",
+      "country": "United States",
+      "inception": "2019",
+      "website": "https://healthai.com",
+      "description": "American health technology company developing AI governance tools and evidence-based ingredient safety databases"
+    },
+    {
+      "qid": "Q140323370",
+      "name": "Hello Patient",
+      "slug": "hello-patient",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://www.hellopatient.com",
+      "description": "healthcare artificial intelligence company"
+    },
+    {
+      "qid": "Q140178617",
+      "name": "HeyLoopy",
+      "slug": "heyloopy",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://heyloopy.com",
+      "description": "American AI company; workforce and team training and coaching platform"
+    },
+    {
+      "qid": "Q111732252",
+      "name": "Hive",
+      "slug": "hive",
+      "country": "United States",
+      "inception": null,
+      "website": "https://thehive.ai/",
+      "description": "American company"
+    },
+    {
+      "qid": "Q138824310",
+      "name": "Hospitality Brandbook",
+      "slug": "hospitality-brandbook",
+      "country": "United Kingdom",
+      "inception": null,
+      "website": "https://hospitalitybrandbook.com",
+      "description": "Global AI-driven hospitality infrastructure platform"
+    },
+    {
+      "qid": "Q138678698",
+      "name": "HOSST",
+      "slug": "hosst",
+      "country": "United Kingdom",
+      "inception": null,
+      "website": "https://hosst.com",
+      "description": "AI-powered health operating system and smart healthcare marketplace, United Kingdom"
+    },
+    {
+      "qid": "Q139907523",
+      "name": "HostBuddy",
+      "slug": "hostbuddy",
+      "country": "United States",
+      "inception": null,
+      "website": "https://hostbuddy.io",
+      "description": "Restaurant AI ordering system based in San Jose, California"
+    },
+    {
+      "qid": "Q65079396",
+      "name": "Hypergiant Industries",
+      "slug": "hypergiant-industries",
+      "country": "United States",
+      "inception": "2018",
+      "website": "https://www.hypergiant.com/",
+      "description": "Austin based technology company"
+    },
+    {
+      "qid": "Q139380833",
+      "name": "Immerss",
+      "slug": "immerss",
+      "country": "United States",
+      "inception": "2017",
+      "website": "https://immerss.live",
+      "description": "American AI sales platform for e-commerce brands"
+    },
+    {
+      "qid": "Q137960981",
+      "name": "Inferex Labs",
+      "slug": "inferex-labs",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://inferexlabs.com",
+      "description": "American AI implementation agency"
+    },
+    {
+      "qid": "Q113270365",
+      "name": "Inflection AI",
+      "slug": "inflection-ai",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://inflection.ai/",
+      "description": "Artificial intelligence company"
+    },
+    {
+      "qid": "Q136479085",
+      "name": "Inhouse",
+      "slug": "inhouse",
+      "country": "United States",
+      "inception": null,
+      "website": "https://www.inhouse.app/",
+      "description": "AI-based lawyer"
+    },
+    {
+      "qid": "Q140751180",
+      "name": "INNSPO",
+      "slug": "innspo",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://innspo.ai",
+      "description": "AI-powered integrative health platform"
+    },
+    {
+      "qid": "Q139800659",
+      "name": "InsightfulAI Solutions",
+      "slug": "insightfulai-solutions",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://insightfulaisolutions.com",
+      "description": "American AI consulting and automation company"
+    },
+    {
+      "qid": "Q140843711",
+      "name": "Institute for Future Intelligence",
+      "slug": "institute-for-future-intelligence",
+      "country": "United States",
+      "inception": "2020",
+      "website": "https://intofuture.org",
+      "description": "nonprofit organization in Natick, United States"
+    },
+    {
+      "qid": "Q139560240",
+      "name": "Intelligence Briefing",
+      "slug": "intelligence-briefing",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://www.intelligence-briefing.com",
+      "description": "American AI advisory firm founded by Andreas Welsch"
+    },
+    {
+      "qid": "Q139959944",
+      "name": "IntelliStudio",
+      "slug": "intellistudio",
+      "country": "Singapore",
+      "inception": "2024",
+      "website": "https://intellistudio.ai",
+      "description": "enterprise AI agent platform by Nexus Intelligence Advisory for voice, WhatsApp, and chat"
+    },
+    {
+      "qid": "Q140681607",
+      "name": "Invisible Hand Technologies",
+      "slug": "invisible-hand-technologies",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://invisiblehand.tech",
+      "description": "American software company for AI pricing and assortment optimization"
+    },
+    {
+      "qid": "Q140782505",
+      "name": "Iris",
+      "slug": "iris",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://chatwithiris.com",
+      "description": "non-clinical AI wellbeing companion delivered via text message"
+    },
+    {
+      "qid": "Q137293283",
+      "name": "Iru",
+      "slug": "iru",
+      "country": "United States",
+      "inception": "2018",
+      "website": "https://www.iru.com/",
+      "description": "American technology company based in Coral Gables, Florida"
+    },
+    {
+      "qid": "Q139119831",
+      "name": "iTechSmart Inc.",
+      "slug": "itechsmart-inc",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://www.getitechsmart.com",
+      "description": "American service-disabled veteran-owned autonomous IT operations software company"
+    },
+    {
+      "qid": "Q140504270",
+      "name": "Jaro",
+      "slug": "jaro",
+      "country": "Israel",
+      "inception": "2024",
+      "website": "https://jaro.co.il",
+      "description": "Israeli AI software company providing a call-center conversation analysis platform, call analyzing and a platform to manage call center."
+    },
+    {
+      "qid": "Q138341000",
+      "name": "Jeeva AI",
+      "slug": "jeeva-ai",
+      "country": "United States",
+      "inception": null,
+      "website": "https://www.jeeva.ai",
+      "description": "American artificial intelligence company"
+    },
+    {
+      "qid": "Q139731909",
+      "name": "Jonson",
+      "slug": "jonson",
+      "country": "United States",
+      "inception": null,
+      "website": "https://www.jonson.ai",
+      "description": "AI phone assistant for US senior care and childcare operators"
+    },
+    {
+      "qid": "Q130313544",
+      "name": "K Health",
+      "slug": "k-health",
+      "country": "United States",
+      "inception": "2016",
+      "website": "https://khealth.com/",
+      "description": "AI primary care company"
+    },
+    {
+      "qid": "Q139254909",
+      "name": "Kepler",
+      "slug": "kepler",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://kepler.ai",
+      "description": "Artificial intelligence company building verifiable AI"
+    },
+    {
+      "qid": "Q139882388",
+      "name": "Keum.ai",
+      "slug": "keum-ai",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://keum.ai/",
+      "description": "AI agent platform for sales and customer support"
+    },
+    {
+      "qid": "Q138634441",
+      "name": "Kinetic Solutions Group",
+      "slug": "kinetic-solutions-group",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://ksgai.com",
+      "description": "American artificial intelligence software company"
+    },
+    {
+      "qid": "Q135179417",
+      "name": "KineticAI",
+      "slug": "kineticai",
+      "country": "United States",
+      "inception": "2019",
+      "website": "https://www.kineticai.com",
+      "description": "Privately held American AI and automation research company headquartered in The Woodlands, Texas"
+    },
+    {
+      "qid": "Q140473402",
+      "name": "Kleva Tech, Inc.",
+      "slug": "kleva-tech-inc",
+      "country": "United States",
+      "inception": null,
+      "website": "https://www.kleva.co",
+      "description": "AI-powered debt collection platform"
+    },
+    {
+      "qid": "Q109438507",
+      "name": "KMS Technology",
+      "slug": "kms-technology",
+      "country": "United States",
+      "inception": "2009",
+      "website": "https://kms-technology.com/",
+      "description": "American software engineering company"
+    },
+    {
+      "qid": "Q133933023",
+      "name": "KNOWDYN",
+      "slug": "knowdyn",
+      "country": "United Kingdom",
+      "inception": null,
+      "website": "https://knowdyn.com/",
+      "description": "R&D and policy intelligence firm specialized in knowledge systems, AI, tokenomics, and research infrastructure"
+    },
+    {
+      "qid": "Q136759141",
+      "name": "Kodec AI",
+      "slug": "kodec-ai",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://kodec.ai",
+      "description": "Artificial intelligence company building infrastructure for the conversational web"
+    },
+    {
+      "qid": "Q139492510",
+      "name": "Konecto",
+      "slug": "konecto",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://konecto.ai",
+      "description": "American company providing AI agents and professional services for enterprise customer service, operations, and business process automation"
+    },
+    {
+      "qid": "Q140127945",
+      "name": "Krazimo",
+      "slug": "krazimo",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://krazimo.com/",
+      "description": "artificial intelligence engineering company"
+    },
+    {
+      "qid": "Q141251510",
+      "name": "Kreflux",
+      "slug": "kreflux",
+      "country": "United States",
+      "inception": null,
+      "website": "https://kreflux.com/",
+      "description": "American artificial intelligence company"
+    },
+    {
+      "qid": "Q135773240",
+      "name": "KudoAI",
+      "slug": "kudoai",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://kudoai.org",
+      "description": "American artificial intelligence software organization"
+    },
+    {
+      "qid": "Q134954687",
+      "name": "Kwalia",
+      "slug": "kwalia",
+      "country": "United Kingdom",
+      "inception": "2025",
+      "website": "https://kwalia.ai/",
+      "description": "AI entertainment company founded in 2025"
+    },
+    {
+      "qid": "Q63341746",
+      "name": "LabMinds",
+      "slug": "labminds",
+      "country": "United Kingdom",
+      "inception": "2009",
+      "website": "https://www.labminds.com/",
+      "description": "Global robotics corporation"
+    },
+    {
+      "qid": "Q139583606",
+      "name": "Landseed, PBC",
+      "slug": "landseed-pbc",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://landseed.earth",
+      "description": "American public-benefit corporation building measurement infrastructure for ecological markets"
+    },
+    {
+      "qid": "Q139695101",
+      "name": "LEA Technologies",
+      "slug": "lea-technologies",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://www.getlea.io",
+      "description": "AI-Powered document intelligence and workflow automation company for wealth management"
+    },
+    {
+      "qid": "Q130487251",
+      "name": "LearnSynergy Global Institute",
+      "slug": "learnsynergy-global-institute",
+      "country": "United States",
+      "inception": "2023",
+      "website": null,
+      "description": "American Research Instititution"
+    },
+    {
+      "qid": "Q138713078",
+      "name": "Leaveit2AI",
+      "slug": "leaveit2ai",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://leaveit2ai.com",
+      "description": "AI tool directory and comparison platform"
+    },
+    {
+      "qid": "Q140719953",
+      "name": "Legato",
+      "slug": "legato",
+      "country": "Israel",
+      "inception": "2025",
+      "website": "https://www.legato.ai/",
+      "description": "Israeli artificial intelligence software company"
+    },
+    {
+      "qid": "Q140357694",
+      "name": "Light Lord",
+      "slug": "light-lord",
+      "country": "United States",
+      "inception": "2009",
+      "website": "https://lightlord.com/",
+      "description": null
+    },
+    {
+      "qid": "Q141330125",
+      "name": "Lightbloom AI",
+      "slug": "lightbloom-ai",
+      "country": "Singapore",
+      "inception": "2024",
+      "website": "https://lightbloom.ai",
+      "description": "AI transformation company based in Singapore"
+    },
+    {
+      "qid": "Q116983978",
+      "name": "LILT",
+      "slug": "lilt",
+      "country": "United States",
+      "inception": "2015",
+      "website": "https://www.lilt.com",
+      "description": "American multinational company"
+    },
+    {
+      "qid": "Q139882718",
+      "name": "Link AI",
+      "slug": "link-ai",
+      "country": "Israel",
+      "inception": "2025",
+      "website": "https://linkaiil.com",
+      "description": "Israeli company developing AI agents for Hebrew-language voice and chat business automation"
+    },
+    {
+      "qid": "Q140619668",
+      "name": "Linkvsta",
+      "slug": "linkvsta",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://linkvsta.com",
+      "description": "AI-powered LinkedIn content generation platform"
+    },
+    {
+      "qid": "Q139239188",
+      "name": "Lumari",
+      "slug": "lumari",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://lumari.ai",
+      "description": "American AI procurement and supply chain software company"
+    },
+    {
+      "qid": "Q139679948",
+      "name": "LYFYE",
+      "slug": "lyfye",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://www.lyfye.com",
+      "description": "American technology and cybersecurity company"
+    },
+    {
+      "qid": "Q18356181",
+      "name": "Machine-to-Machine Intelligence (M2Mi) Corp",
+      "slug": "machine-to-machine-intelligence-m2mi-corp",
+      "country": "United States",
+      "inception": "2006",
+      "website": null,
+      "description": null
+    },
+    {
+      "qid": "Q140640104",
+      "name": "Macroscope",
+      "slug": "macroscope",
+      "country": "United States",
+      "inception": null,
+      "website": "https://macroscope.com",
+      "description": "American software company"
+    },
+    {
+      "qid": "Q140007941",
+      "name": "Masheev",
+      "slug": "masheev",
+      "country": "United Kingdom",
+      "inception": "2026",
+      "website": "https://masheev.com",
+      "description": "AI customer communications platform"
+    },
+    {
+      "qid": "Q139677852",
+      "name": "Maximem",
+      "slug": "maximem",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://maximem.ai/",
+      "description": "AI memory and context-management company"
+    },
+    {
+      "qid": "Q140278757",
+      "name": "MaxtDesign",
+      "slug": "maxtdesign",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://maxtdesign.com",
+      "description": "web development and AI studio based in Nampa, Idaho, United States"
+    },
+    {
+      "qid": "Q136774114",
+      "name": "MDalgorithms Inc.",
+      "slug": "mdalgorithms-inc",
+      "country": "United States",
+      "inception": null,
+      "website": "https://mdalgorithms.com",
+      "description": "AI-powered dermatology platform providing personalized treatments for acne, hair loss and anti aging skincare through machine learning analysis"
+    },
+    {
+      "qid": "Q141292915",
+      "name": "Meadow AI",
+      "slug": "meadow-ai",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://meadow.ai/",
+      "description": "American AI company helping physical retailers monitor operations"
+    },
+    {
+      "qid": "Q140176749",
+      "name": "Melanized Limited",
+      "slug": "melanized-limited",
+      "country": "United Kingdom",
+      "inception": "2023",
+      "website": "https://www.melanized.co.uk",
+      "description": "British deep-tech, automation and consultancy company"
+    },
+    {
+      "qid": "Q141366560",
+      "name": "Mewtant Inc.",
+      "slug": "mewtant-inc",
+      "country": "United States",
+      "inception": null,
+      "website": "https://mewtant.io",
+      "description": "American company that develops and operates the anime AI art generator PixAI"
+    },
+    {
+      "qid": "Q140190597",
+      "name": "Mickai",
+      "slug": "mickai",
+      "country": "United Kingdom",
+      "inception": "2025",
+      "website": "https://mickai.co.uk",
+      "description": "British sovereign artificial intelligence company, developer of the Mickai Sovereign Intelligence Operating System"
+    },
+    {
+      "qid": "Q140180128",
+      "name": "Minerva BI",
+      "slug": "minerva-bi",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://www.minerva.io",
+      "description": "American AI marketing technology company"
+    },
+    {
+      "qid": "Q140068793",
+      "name": "Mirage Metrics",
+      "slug": "mirage-metrics",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://miragemetrics.com",
+      "description": "AI agent deployment company for complex operations"
+    },
+    {
+      "qid": "Q141107013",
+      "name": "Mitosis Labs",
+      "slug": "mitosis-labs",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://mitosislabs.ai",
+      "description": "American software company building AI agent memory infrastructure"
+    },
+    {
+      "qid": "Q139596796",
+      "name": "ModelMole",
+      "slug": "modelmole",
+      "country": "United Kingdom",
+      "inception": "2023",
+      "website": "https://modelmole.com",
+      "description": "A UK biotech and AI company"
+    },
+    {
+      "qid": "Q141373924",
+      "name": "Modeo",
+      "slug": "modeo",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://modeo.io/",
+      "description": "enterprise agentic-AI consultancy in San Francisco, California"
+    },
+    {
+      "qid": "Q141224835",
+      "name": "Momntum Ai",
+      "slug": "momntum-ai",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://momntumai.com",
+      "description": "American artificial intelligence company"
+    },
+    {
+      "qid": "Q140621210",
+      "name": "MoreAI",
+      "slug": "moreai",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://more.ai/",
+      "description": "spatial intelligence AI company"
+    },
+    {
+      "qid": "Q139972566",
+      "name": "MosChip Technologies Limited",
+      "slug": "moschip-technologies-limited",
+      "country": "United States",
+      "inception": "1999",
+      "website": "https://moschip.com/",
+      "description": "Silicon Design and Product Engineering Services Company"
+    },
+    {
+      "qid": "Q117266352",
+      "name": "Motalen",
+      "slug": "motalen",
+      "country": "United States",
+      "inception": "2009",
+      "website": "https://www.motalen.com/",
+      "description": "American software company"
+    },
+    {
+      "qid": "Q140382416",
+      "name": "Multimodal",
+      "slug": "multimodal",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://multimodal.dev",
+      "description": "American agentic AI company"
+    },
+    {
+      "qid": "Q139655343",
+      "name": "My Plan Keeper",
+      "slug": "my-plan-keeper",
+      "country": "United States",
+      "inception": null,
+      "website": "https://myplankeeper.com",
+      "description": "American technology company building AI-powered retirement planning platform"
+    },
+    {
+      "qid": "Q139375486",
+      "name": "Narrative Sports",
+      "slug": "narrative-sports",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://narrative-sports.com",
+      "description": "AI-powered sports highlights platform backed by Y Combinator"
+    },
+    {
+      "qid": "Q123377594",
+      "name": "NAVER LABS Corp.",
+      "slug": "naver-labs-corp",
+      "country": "South Korea",
+      "inception": "2013",
+      "website": "https://www.naverlabs.com/",
+      "description": "Research lab in artificial intelligence in Seongnam, South Korea"
+    },
+    {
+      "qid": "Q138605564",
+      "name": "navNote",
+      "slug": "navnote",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://www.navnote.ai",
+      "description": "American software company specializing in Agentic AI for field operations and retail intelligence"
+    },
+    {
+      "qid": "Q139667562",
+      "name": "Navon",
+      "slug": "navon",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://usenavon.com",
+      "description": "American technology company developing AI-powered operational infrastructure"
+    },
+    {
+      "qid": "Q140753184",
+      "name": "Needl.ai",
+      "slug": "needl-ai",
+      "country": "United States",
+      "inception": "2019",
+      "website": "https://needl.ai/",
+      "description": "Enterprise AI platform for financial markets"
+    },
+    {
+      "qid": "Q139569680",
+      "name": "Neo Genesis",
+      "slug": "neo-genesis",
+      "country": "South Korea",
+      "inception": "2024",
+      "website": "https://neogenesis.app",
+      "description": "AI-native automation company running 11 live business units with a single autonomous AI system"
+    },
+    {
+      "qid": "Q23924629",
+      "name": "Nervana Systems",
+      "slug": "nervana-systems",
+      "country": "United States",
+      "inception": "2014",
+      "website": "http://nervanasys.com",
+      "description": "Artificial Intelligence company, next generation platform for machine learning"
+    },
+    {
+      "qid": "Q139634452",
+      "name": "Neural Bridge",
+      "slug": "neural-bridge",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://www.neuralbridge.ai",
+      "description": "American artificial intelligence laboratory"
+    },
+    {
+      "qid": "Q138858582",
+      "name": "Neurovatic",
+      "slug": "neurovatic",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://neurovatic.ai",
+      "description": "American technology company"
+    },
+    {
+      "qid": "Q139954206",
+      "name": "Nexco",
+      "slug": "nexco",
+      "country": "United Kingdom",
+      "inception": "2024",
+      "website": "https://www.nexco.ai",
+      "description": "British AI company providing intelligence agents for executive search firms"
+    },
+    {
+      "qid": "Q140197243",
+      "name": "NEXTPAYMENTS",
+      "slug": "nextpayments",
+      "country": "South Korea",
+      "inception": "2019",
+      "website": "https://www.nextpayments.co.kr/",
+      "description": "AI smart retail company"
+    },
+    {
+      "qid": "Q141225049",
+      "name": "NiraNexus Ltd",
+      "slug": "niranexus-ltd",
+      "country": "United Kingdom",
+      "inception": "2025",
+      "website": "https://niranexus.com",
+      "description": "Multi-model adversarial deliberation infrastructure"
+    },
+    {
+      "qid": "Q139377884",
+      "name": "NIRO Corp",
+      "slug": "niro-corp",
+      "country": "United States",
+      "inception": null,
+      "website": "https://smokemsg.com",
+      "description": "American aerospace technology company specializing in drone skywriting and autonomous drone docking systems"
+    },
+    {
+      "qid": "Q141178520",
+      "name": "Nivision",
+      "slug": "nivision",
+      "country": "Israel",
+      "inception": "2025",
+      "website": "https://nivision.ai",
+      "description": "AI conversation intelligence company"
+    },
+    {
+      "qid": "Q140528449",
+      "name": "Nozomio Labs",
+      "slug": "nozomio-labs",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://www.nozomio.com/",
+      "description": "American artificial intelligence company"
+    },
+    {
+      "qid": "Q130863072",
+      "name": "Omneky",
+      "slug": "omneky",
+      "country": "United States",
+      "inception": "2018",
+      "website": "https://www.omneky.com/",
+      "description": "American artificial intelligence company"
+    },
+    {
+      "qid": "Q141016950",
+      "name": "Onky",
+      "slug": "onky",
+      "country": "United Kingdom",
+      "inception": "2025",
+      "website": "https://onky.ai",
+      "description": "British enterprise AI assistant company"
+    },
+    {
+      "qid": "Q140329873",
+      "name": "Open Future Forum",
+      "slug": "open-future-forum",
+      "country": "United States",
+      "inception": "2019",
+      "website": "https://openfutureforum.com/",
+      "description": "Executive membership community in Silicon Valley."
+    },
+    {
+      "qid": "Q21708200",
+      "name": "OpenAI",
+      "slug": "openai",
+      "country": "United States",
+      "inception": "2015",
+      "website": "https://openai.com/",
+      "description": "American artificial intelligence research organization"
+    },
+    {
+      "qid": "Q116374474",
+      "name": "OpenAI OpCo",
+      "slug": "openai-opco",
+      "country": "United States",
+      "inception": "2018",
+      "website": "https://openai.com/",
+      "description": "artificial intelligence company, for-profit subsidiary of OpenAI Incorporated"
+    },
+    {
+      "qid": "Q139548926",
+      "name": "OpenOrigins",
+      "slug": "openorigins",
+      "country": "United States",
+      "inception": "2021",
+      "website": "https://www.openorigins.com",
+      "description": "Technology company providing digital content provenance and authentication infrastructure, founded in the UK and headquartered in San Francisco"
+    },
+    {
+      "qid": "Q141170505",
+      "name": "Optimly",
+      "slug": "optimly",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://optimly.ai",
+      "description": "American AI brand optimization company"
+    },
+    {
+      "qid": "Q138710228",
+      "name": "OpusClip",
+      "slug": "opusclip",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://opus.pro",
+      "description": "American AI-powered video editing and generation software company"
+    },
+    {
+      "qid": "Q140554599",
+      "name": "orbt",
+      "slug": "orbt",
+      "country": "South Korea",
+      "inception": "2025",
+      "website": "https://tryorbt.com",
+      "description": "South Korean AI consulting company"
+    },
+    {
+      "qid": "Q139975488",
+      "name": "Orcha",
+      "slug": "orcha",
+      "country": "United Kingdom",
+      "inception": "2025",
+      "website": "https://getorcha.com/",
+      "description": "German B2B SaaS company building AI agents for finance teams"
+    },
+    {
+      "qid": "Q140234989",
+      "name": "OZRIC AI Limited",
+      "slug": "ozric-ai-limited",
+      "country": "United Kingdom",
+      "inception": "2026",
+      "website": "https://ozric.ai",
+      "description": "British artificial intelligence company"
+    },
+    {
+      "qid": "Q140753563",
+      "name": "Peekai",
+      "slug": "peekai",
+      "country": "Singapore",
+      "inception": "2022",
+      "website": "https://peekai.us",
+      "description": "AI visibility monitoring platform"
+    },
+    {
+      "qid": "Q138636679",
+      "name": "Pelian",
+      "slug": "pelian",
+      "country": "United Kingdom",
+      "inception": "2023",
+      "website": "https://www.pelian.ai",
+      "description": "British artificial intelligence software company"
+    },
+    {
+      "qid": "Q124333951",
+      "name": "Perplexity AI",
+      "slug": "perplexity-ai",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://www.perplexity.ai/hub/",
+      "description": "American conversational search engine company"
+    },
+    {
+      "qid": "Q138658786",
+      "name": "Perso Dubbing",
+      "slug": "perso-dubbing",
+      "country": "South Korea",
+      "inception": "2024",
+      "website": "https://perso.ai/dubbing",
+      "description": "AI-powered automatic video dubbing and multilingual translation SaaS service developed by ESTsoft"
+    },
+    {
+      "qid": "Q139893807",
+      "name": "Petabite",
+      "slug": "petabite",
+      "country": "United Kingdom",
+      "inception": "2025",
+      "website": "https://petabite.com",
+      "description": "Technology company providing AI and data infrastructure for the energy sector"
+    },
+    {
+      "qid": "Q128218512",
+      "name": "Photomyne",
+      "slug": "photomyne",
+      "country": "Israel",
+      "inception": "2014",
+      "website": "https://photomyne.com/",
+      "description": "Israeli technology company"
+    },
+    {
+      "qid": "Q141244008",
+      "name": "Pixelik",
+      "slug": "pixelik",
+      "country": "United Kingdom",
+      "inception": "2026",
+      "website": "https://www.pixelik.com",
+      "description": "AI engineering studio in London, United Kingdom"
+    },
+    {
+      "qid": "Q139315065",
+      "name": "Pokee AI",
+      "slug": "pokee-ai",
+      "country": "United States",
+      "inception": null,
+      "website": "https://pokee.ai",
+      "description": "American artificial intelligence software company"
+    },
+    {
+      "qid": "Q141196340",
+      "name": "Practis",
+      "slug": "practis",
+      "country": "United States",
+      "inception": "2019",
+      "website": "https://www.practis.ai/",
+      "description": "American company that develops AI-based sales training software"
+    },
+    {
+      "qid": "Q139590473",
+      "name": "Precision Federal",
+      "slug": "precision-federal",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://precisionfederal.com",
+      "description": "federal AI and software firm specializing in SBIR R&D for U.S. government agencies"
+    },
+    {
+      "qid": "Q139892537",
+      "name": "Prestyj",
+      "slug": "prestyj",
+      "country": "United States",
+      "inception": null,
+      "website": "https://prestyj.com",
+      "description": "American Company developing AI agents for marketing and sales."
+    },
+    {
+      "qid": "Q115857726",
+      "name": "Prisma Labs",
+      "slug": "prisma-labs",
+      "country": "United States",
+      "inception": "2016",
+      "website": "https://prisma-ai.com/",
+      "description": "company that owns apps that generate images using artificial intelligence"
+    },
+    {
+      "qid": "Q139690506",
+      "name": "Protos AI",
+      "slug": "protos-ai",
+      "country": "Singapore",
+      "inception": null,
+      "website": "https://www.protoslabs.io/AI-ready",
+      "description": "Agentic AI platform for adversarial risk intelligence by Protos Labs, covering cyber threat, financial crime, and supply chain domains"
+    },
+    {
+      "qid": "Q139688965",
+      "name": "Protos Labs",
+      "slug": "protos-labs",
+      "country": "Singapore",
+      "inception": "2024",
+      "website": "https://www.protoslabs.io",
+      "description": "Singapore-based cybersecurity company providing AI-powered adversarial risk intelligence and investigation platform"
+    },
+    {
+      "qid": "Q139922157",
+      "name": "PulseAugur",
+      "slug": "pulseaugur",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://pulseaugur.com",
+      "description": "news aggregation website covering artificial intelligence"
+    },
+    {
+      "qid": "Q131188217",
+      "name": "Q131188217",
+      "slug": "q131188217",
+      "country": "South Korea",
+      "inception": null,
+      "website": "http://obzen.com/",
+      "description": null
+    },
+    {
+      "qid": "Q138772310",
+      "name": "Q138772310",
+      "slug": "q138772310",
+      "country": "Singapore",
+      "inception": null,
+      "website": "https://brixio.io/",
+      "description": "Cybersecurity company"
+    },
+    {
+      "qid": "Q140320889",
+      "name": "Q140320889",
+      "slug": "q140320889",
+      "country": "United States",
+      "inception": "2020",
+      "website": "https://ratherlabs.com",
+      "description": "blockchain, Web3 and AI software engineering company"
+    },
+    {
+      "qid": "Q140323467",
+      "name": "Q140323467",
+      "slug": "q140323467",
+      "country": "United States",
+      "inception": null,
+      "website": "https://www.arivonix.ai/",
+      "description": "Enterprise Agentic AI and Data Fabric platform"
+    },
+    {
+      "qid": "Q140398238",
+      "name": "Q140398238",
+      "slug": "q140398238",
+      "country": "China",
+      "inception": null,
+      "website": "https://www.matrixengine.site/",
+      "description": null
+    },
+    {
+      "qid": "Q140602708",
+      "name": "Quantum Precision",
+      "slug": "quantum-precision",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://quantumprecisiontech.com",
+      "description": "American AI integration consultancy in Rockland, Massachusetts"
+    },
+    {
+      "qid": "Q139406199",
+      "name": "QuNetra",
+      "slug": "qunetra",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://qunetra.ai",
+      "description": "AI-native Decision Infrastructure platform for regulated industries"
+    },
+    {
+      "qid": "Q118902834",
+      "name": "RAIC Labs",
+      "slug": "raic-labs",
+      "country": "United States",
+      "inception": "2019",
+      "website": "https://raiclabs.com",
+      "description": "American artificial intelligence company"
+    },
+    {
+      "qid": "Q139677389",
+      "name": "REAI Institute",
+      "slug": "reai-institute",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://reai.institute",
+      "description": "American AI certification and compliance platform for licensed real estate professionals"
+    },
+    {
+      "qid": "Q138969912",
+      "name": "Reality Defender",
+      "slug": "reality-defender",
+      "country": "United States",
+      "inception": "2021",
+      "website": "https://www.realitydefender.com",
+      "description": "American cybersecurity company specializing in deepfake and AI-generated media detection"
+    },
+    {
+      "qid": "Q139796391",
+      "name": "Red Hawk Technologies",
+      "slug": "red-hawk-technologies",
+      "country": "United States",
+      "inception": "2008",
+      "website": "https://www.redhawk-tech.com",
+      "description": "American custom software development and managed technology services company based in Wilder, Kentucky."
+    },
+    {
+      "qid": "Q140167607",
+      "name": "Regent",
+      "slug": "regent",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://heyregent.com",
+      "description": "AI social media agent for creators"
+    },
+    {
+      "qid": "Q138590035",
+      "name": "Rekor Systems",
+      "slug": "rekor-systems",
+      "country": "United States",
+      "inception": "2017",
+      "website": "https://rekor.ai",
+      "description": "American roadway intelligence and ALPR technology company"
+    },
+    {
+      "qid": "Q138994566",
+      "name": "Relo AI",
+      "slug": "relo-ai",
+      "country": "United Kingdom",
+      "inception": null,
+      "website": "https://www.reloai.net",
+      "description": "UK AI consultancy and SaaS platform specialising in AI automations and generative engine optimisation for the international relocation and removals industry"
+    },
+    {
+      "qid": "Q139559920",
+      "name": "Revenue Streams LLC",
+      "slug": "revenue-streams-llc",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://www.revenuestreams.ai",
+      "description": "American boutique strategic advisory firm based in Alexandria, Virginia"
+    },
+    {
+      "qid": "Q139862452",
+      "name": "Rezolve AI",
+      "slug": "rezolve-ai",
+      "country": "United Kingdom",
+      "inception": "2016",
+      "website": "https://www.rezolve.com",
+      "description": "public company headquartered in London"
+    },
+    {
+      "qid": "Q139831627",
+      "name": "RINKT",
+      "slug": "rinkt",
+      "country": "United Kingdom",
+      "inception": "2021",
+      "website": "https://www.rinkt.com",
+      "description": "UK-built RPA platform for production-first automation deployment, with implementation included"
+    },
+    {
+      "qid": "Q140177921",
+      "name": "RoadBotics",
+      "slug": "roadbotics",
+      "country": "United States",
+      "inception": "2016",
+      "website": null,
+      "description": "American AI startup for road and pavement assessment; spun out of Carnegie Mellon University; acquired by Michelin in 2022"
+    },
+    {
+      "qid": "Q136442566",
+      "name": "RoEx",
+      "slug": "roex",
+      "country": "United Kingdom",
+      "inception": "2022",
+      "website": "https://www.roexaudio.com",
+      "description": "British audio technology company based in London"
+    },
+    {
+      "qid": "Q39057026",
+      "name": "Rotimatic",
+      "slug": "rotimatic",
+      "country": "Singapore",
+      "inception": "2008",
+      "website": "https://rotimatic.com",
+      "description": "Robotics company"
+    },
+    {
+      "qid": "Q123367593",
+      "name": "Runway",
+      "slug": "runway",
+      "country": "United States",
+      "inception": "2018",
+      "website": "https://runwayml.com/",
+      "description": "American research company"
+    },
+    {
+      "qid": "Q139214157",
+      "name": "S77.AI",
+      "slug": "s77-ai",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://s77.ai",
+      "description": "AI creative lab and brand of SWELL Labs, LLC, New York"
+    },
+    {
+      "qid": "Q141222280",
+      "name": "Sagu Labs Technologies",
+      "slug": "sagu-labs-technologies",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://sagulabs.ai",
+      "description": "American artificial-intelligence software development and consulting company"
+    },
+    {
+      "qid": "Q5419210",
+      "name": "Salesforce Marketing Cloud",
+      "slug": "salesforce-marketing-cloud",
+      "country": "United States",
+      "inception": null,
+      "website": "https://www.salesforce.com/marketing/",
+      "description": "Cloud-based marketing and advertising tools developed by Salesforce"
+    },
+    {
+      "qid": "Q127693035",
+      "name": "SambaNova Systems",
+      "slug": "sambanova-systems",
+      "country": "United States",
+      "inception": "2017",
+      "website": "https://sambanova.ai",
+      "description": "American artificial intelligence hardware and software company"
+    },
+    {
+      "qid": "Q140391459",
+      "name": "Samta.ai",
+      "slug": "samta-ai",
+      "country": "Singapore",
+      "inception": "2022",
+      "website": "https://samta.ai",
+      "description": "Singapore-headquartered AI transformation and product engineering company"
+    },
+    {
+      "qid": "Q138773808",
+      "name": "Sapient Technology Group",
+      "slug": "sapient-technology-group",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://sapienttechnologygroup.com/",
+      "description": "American AI-native software company building production AI systems and multi-agent applications"
+    },
+    {
+      "qid": "Q1473820",
+      "name": "SAS Institute",
+      "slug": "sas-institute",
+      "country": "United States",
+      "inception": "1976",
+      "website": "http://www.sas.com/",
+      "description": "American analytics and artificial intelligence company"
+    },
+    {
+      "qid": "Q137831253",
+      "name": "SchoolAI",
+      "slug": "schoolai",
+      "country": "United States",
+      "inception": null,
+      "website": "https://schoolai.com/",
+      "description": "American education AI platform for classroom-based learning"
+    },
+    {
+      "qid": "Q138887265",
+      "name": "Scienza Health",
+      "slug": "scienza-health",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://scienzahealth.com",
+      "description": "Voice AI and speech biomarker health tech company developing conversational assessment systems with the GIA® AI Co-Clinician for cognitive, neurological, and behavioral screening"
+    },
+    {
+      "qid": "Q140793376",
+      "name": "Scorecard AI",
+      "slug": "scorecard-ai",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://www.scorecard.io",
+      "description": "American artificial intelligence company"
+    },
+    {
+      "qid": "Q140387895",
+      "name": "Searchable",
+      "slug": "searchable",
+      "country": "United Kingdom",
+      "inception": "2025",
+      "website": "https://www.searchable.com/",
+      "description": "Artificial intelligence software company specializing in Answer Engine Optimization (AEO)"
+    },
+    {
+      "qid": "Q140564743",
+      "name": "Sempra Systems",
+      "slug": "sempra-systems",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://semprasystems.com",
+      "description": "AI implementation firm installing custom AI agents for businesses"
+    },
+    {
+      "qid": "Q134469437",
+      "name": "Senro",
+      "slug": "senro",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://senro.ai/",
+      "description": "American artificial intelligence startup"
+    },
+    {
+      "qid": "Q55716258",
+      "name": "SenseTime",
+      "slug": "sensetime",
+      "country": "China",
+      "inception": "2014",
+      "website": "https://www.sensetime.jp",
+      "description": "Chinese AI company"
+    },
+    {
+      "qid": "Q7451107",
+      "name": "Sensory, Inc.",
+      "slug": "sensory-inc",
+      "country": "United States",
+      "inception": "1994",
+      "website": "https://www.sensory.com/",
+      "description": "voice technology manufacturer"
+    },
+    {
+      "qid": "Q140921141",
+      "name": "Sepanta",
+      "slug": "sepanta",
+      "country": "United Kingdom",
+      "inception": "2021",
+      "website": "https://sepanta.io",
+      "description": "British artificial intelligence company"
+    },
+    {
+      "qid": "Q140632419",
+      "name": "Shogo",
+      "slug": "shogo",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://shogo.ai",
+      "description": "American artificial intelligence company"
+    },
+    {
+      "qid": "Q140388304",
+      "name": "ShooflyAI",
+      "slug": "shooflyai",
+      "country": "United States",
+      "inception": null,
+      "website": "https://shooflyai.com/",
+      "description": "American artificial intelligence consultancy"
+    },
+    {
+      "qid": "Q140041701",
+      "name": "SignalWorks",
+      "slug": "signalworks",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://www.signalworks.live",
+      "description": "AI consulting and software development company in Los Angeles, California"
+    },
+    {
+      "qid": "Q139917346",
+      "name": "Signwl",
+      "slug": "signwl",
+      "country": "United States",
+      "inception": null,
+      "website": "https://signwl.com",
+      "description": "AI infrastructure market intelligence company"
+    },
+    {
+      "qid": "Q139618450",
+      "name": "SimplySolvd",
+      "slug": "simplysolvd",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://simplysolvd.com",
+      "description": "American practical-systems studio building AI automation for small businesses; also operates a private commercial real estate acquisitions group"
+    },
+    {
+      "qid": "Q87138310",
+      "name": "Smart CT Solutions",
+      "slug": "smart-ct-solutions",
+      "country": "United States",
+      "inception": null,
+      "website": "https://smartctsolutions.com/",
+      "description": "consulting company"
+    },
+    {
+      "qid": "Q140310280",
+      "name": "SmartFocus.ai",
+      "slug": "smartfocus-ai",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://smartfocus.ai",
+      "description": "AI-powered virtual focus group platform"
+    },
+    {
+      "qid": "Q117354367",
+      "name": "Soul Machines",
+      "slug": "soul-machines",
+      "country": "United States",
+      "inception": "2016",
+      "website": "https://www.soulmachines.com/",
+      "description": "AI company in San Francisco and New Zealand"
+    },
+    {
+      "qid": "Q139981209",
+      "name": "Soulcraft",
+      "slug": "soulcraft",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://soulcraftagency.com",
+      "description": "American AI-native marketing agency founded in 2026"
+    },
+    {
+      "qid": "Q120599684",
+      "name": "SpaceXAI",
+      "slug": "spacexai",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://x.ai",
+      "description": "American artificial intelligence and social media division of SpaceX"
+    },
+    {
+      "qid": "Q138899631",
+      "name": "Spark Hudson Intelligence",
+      "slug": "spark-hudson-intelligence",
+      "country": "United States",
+      "inception": null,
+      "website": "https://www.sparkhudson.com",
+      "description": "American strategic intelligence and artificial intelligence consulting company"
+    },
+    {
+      "qid": "Q137168457",
+      "name": "SpreeAI",
+      "slug": "spreeai",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://spreeai.com",
+      "description": "American fashion technology company"
+    },
+    {
+      "qid": "Q139552507",
+      "name": "Sprinklenet LLC",
+      "slug": "sprinklenet-llc",
+      "country": "United States",
+      "inception": "2014",
+      "website": "https://sprinklenet.com/",
+      "description": "American AI systems integrator, advisory firm, and government contractor founded in 2014"
+    },
+    {
+      "qid": "Q123592234",
+      "name": "Stability AI",
+      "slug": "stability-ai",
+      "country": "United Kingdom",
+      "inception": "2019",
+      "website": "https://www.stability.ai",
+      "description": "British multinational artificial intelligence company"
+    },
+    {
+      "qid": "Q133873020",
+      "name": "StageKeep",
+      "slug": "stagekeep",
+      "country": "United States",
+      "inception": null,
+      "website": "https://stagekeep.com/",
+      "description": "Computer software company specializing in AI-powered movement coaching"
+    },
+    {
+      "qid": "Q139565741",
+      "name": "Starise",
+      "slug": "starise",
+      "country": "China",
+      "inception": null,
+      "website": "https://www.starise.io",
+      "description": "Venture capital firm. Backs visionary founders building AI, clean energy, and fintech companies across Africa, Asia, and Latin America. Backed by Transsion."
+    },
+    {
+      "qid": "Q141102749",
+      "name": "STEAV",
+      "slug": "steav",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://www.steav.io",
+      "description": "American artificial intelligence infrastructure company"
+    },
+    {
+      "qid": "Q139677541",
+      "name": "StrongSuit",
+      "slug": "strongsuit",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://strongsuit.com",
+      "description": "Legal AI tool for US attorneys"
+    },
+    {
+      "qid": "Q140194598",
+      "name": "Stroubly",
+      "slug": "stroubly",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://stroubly.com/",
+      "description": "AI-powered hyperlocal news and community platform covering New York State."
+    },
+    {
+      "qid": "Q139622730",
+      "name": "Subworkit",
+      "slug": "subworkit",
+      "country": "United States",
+      "inception": null,
+      "website": "https://subworkit.com",
+      "description": "AI-powered peer-to-peer business networking platform connecting service providers and customers"
+    },
+    {
+      "qid": "Q141169484",
+      "name": "Suede Labs AI",
+      "slug": "suede-labs-ai",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://suedeai.ai/",
+      "description": "American AI software company founded in 2024 by Jason Colapietro"
+    },
+    {
+      "qid": "Q140841392",
+      "name": "SuilaAI",
+      "slug": "suilaai",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://suilaai.com/",
+      "description": "AI trust-scoring company"
+    },
+    {
+      "qid": "Q140360848",
+      "name": "Swift Beat",
+      "slug": "swift-beat",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://www.swiftbeat.com/",
+      "description": "American defense technology company"
+    },
+    {
+      "qid": "Q138806819",
+      "name": "Swiftleads AI",
+      "slug": "swiftleads-ai",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://swiftleadsai.com",
+      "description": "American artificial intelligence software company"
+    },
+    {
+      "qid": "Q141379774",
+      "name": "Swipejobs",
+      "slug": "swipejobs",
+      "country": "United States",
+      "inception": null,
+      "website": "https://www.swipejobs.com",
+      "description": "AI-driven job matching platform for talent and employers, operating in the United States, United Kingdom and Australia"
+    },
+    {
+      "qid": "Q140167615",
+      "name": "Synorb",
+      "slug": "synorb",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://hangingcontext.com/",
+      "description": "American technology company providing structured intelligence for AI agents"
+    },
+    {
+      "qid": "Q140006080",
+      "name": "Synthfy",
+      "slug": "synthfy",
+      "country": "United States",
+      "inception": null,
+      "website": "https://app.synthfy.us/",
+      "description": "AI receptionist platform for businesses"
+    },
+    {
+      "qid": "Q141254701",
+      "name": "TalkPix",
+      "slug": "talkpix",
+      "country": "United Kingdom",
+      "inception": "2026",
+      "website": "https://www.talkpix.ai/",
+      "description": "browser-based AI video and image creation application"
+    },
+    {
+      "qid": "Q139890134",
+      "name": "Tanqory",
+      "slug": "tanqory",
+      "country": "Singapore",
+      "inception": "2024",
+      "website": "https://www.tanqory.com",
+      "description": "AI-native commerce and business operations platform"
+    },
+    {
+      "qid": "Q139926901",
+      "name": "TEC DYNAMICS LTD",
+      "slug": "tec-dynamics-ltd",
+      "country": "United Kingdom",
+      "inception": "2015",
+      "website": "https://www.linkedin.com/company/tec-dynamics-ltd",
+      "description": "UK software development and AI solutions company"
+    },
+    {
+      "qid": "Q135970289",
+      "name": "Teleology AI",
+      "slug": "teleology-ai",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://teleology.ai",
+      "description": "Independent AI governance and audit consultancy for federal and enterprise clients"
+    },
+    {
+      "qid": "Q139504398",
+      "name": "Telos Labs",
+      "slug": "telos-labs",
+      "country": "United States",
+      "inception": "2017",
+      "website": "https://www.teloslabs.co/",
+      "description": "AI software development agency based in Berkeley, California"
+    },
+    {
+      "qid": "Q140734987",
+      "name": "Ten8",
+      "slug": "ten8",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://www.ten8.ai",
+      "description": "American software company developing an AI voice agent for freight brokers and 3PLs"
+    },
+    {
+      "qid": "Q139591734",
+      "name": "Tenet AI",
+      "slug": "tenet-ai",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://tenetai.dev",
+      "description": "AI decision audit and compliance platform for high-stakes production LLM agent systems"
+    },
+    {
+      "qid": "Q138719114",
+      "name": "Thalia Bloom",
+      "slug": "thalia-bloom",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://thaliabloom.com",
+      "description": "AI agent services company for solopreneurs"
+    },
+    {
+      "qid": "Q141015869",
+      "name": "The AI Brain Company",
+      "slug": "the-ai-brain-company",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://theaibraincompany.com",
+      "description": "American artificial intelligence research company"
+    },
+    {
+      "qid": "Q139715497",
+      "name": "The AI Lab Intelligence Unobscured",
+      "slug": "the-ai-lab-intelligence-unobscured",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://theailab.org",
+      "description": "American AI trust certification and content provenance company; creator of TIP Protocol"
+    },
+    {
+      "qid": "Q140044579",
+      "name": "The AR Dept",
+      "slug": "the-ar-dept",
+      "country": "United Kingdom",
+      "inception": "2020",
+      "website": "https://theardept.com",
+      "description": "British company providing managed artificial intelligence services, based in Manchester"
+    },
+    {
+      "qid": "Q137164202",
+      "name": "The Interaction Company of California",
+      "slug": "the-interaction-company-of-california",
+      "country": "United States",
+      "inception": null,
+      "website": "https://interaction.co",
+      "description": "Artificial intelligence company"
+    },
+    {
+      "qid": "Q124337287",
+      "name": "The Sawi Group",
+      "slug": "the-sawi-group",
+      "country": "United Kingdom",
+      "inception": "2023",
+      "website": "https://sawigroup.com",
+      "description": "Uk Cybersecurity Startup"
+    },
+    {
+      "qid": "Q125956263",
+      "name": "The Six AI",
+      "slug": "the-six-ai",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://thesix.ai/",
+      "description": "Generative AI"
+    },
+    {
+      "qid": "Q131843464",
+      "name": "The Stargate Project",
+      "slug": "the-stargate-project",
+      "country": "United States",
+      "inception": "2025",
+      "website": null,
+      "description": "American multinational AI infrastructure investment joint venture"
+    },
+    {
+      "qid": "Q139123250",
+      "name": "Therml",
+      "slug": "therml",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://therml.ai",
+      "description": "American AI hardware startup developing thermodynamic computing processors for machine learning"
+    },
+    {
+      "qid": "Q139402859",
+      "name": "ThoughtLinks Group LLC",
+      "slug": "thoughtlinks-group-llc",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://www.thoughtlinks.net",
+      "description": "United States AI strategic advisory firm"
+    },
+    {
+      "qid": "Q141105484",
+      "name": "Throdl AI",
+      "slug": "throdl-ai",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://throdl.ai",
+      "description": "Autonomous AI marketing platform"
+    },
+    {
+      "qid": "Q133079799",
+      "name": "Tidio",
+      "slug": "tidio",
+      "country": "United States",
+      "inception": "2013",
+      "website": "https://www.tidio.com/about/",
+      "description": "AI customer service software as a service company"
+    },
+    {
+      "qid": "Q137272143",
+      "name": "Time Study",
+      "slug": "time-study",
+      "country": "United States",
+      "inception": "2018",
+      "website": "https://timestudy.com",
+      "description": "U.S.-based software company specializing in workforce analytics and enterprise time intelligence."
+    },
+    {
+      "qid": "Q140967293",
+      "name": "Titan Pipelines",
+      "slug": "titan-pipelines",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://titanpipelines.com",
+      "description": "American AI automation agency for local trade businesses"
+    },
+    {
+      "qid": "Q137691522",
+      "name": "Toma Auto",
+      "slug": "toma-auto",
+      "country": "United States",
+      "inception": "2020",
+      "website": "https://www.toma.com/",
+      "description": "AI agents for automotive dealerships"
+    },
+    {
+      "qid": "Q139927991",
+      "name": "TorlyAI",
+      "slug": "torlyai",
+      "country": "United Kingdom",
+      "inception": "2026",
+      "website": "https://torly.ai",
+      "description": "AI-powered SaaS platform for UK Innovator Founder Visa and Schengen visa applications"
+    },
+    {
+      "qid": "Q138848803",
+      "name": "Toucan",
+      "slug": "toucan",
+      "country": "United States",
+      "inception": "2014",
+      "website": "https://www.toucantoco.com",
+      "description": "AI Embedded analytics platform for ISVs and SaaS companies"
+    },
+    {
+      "qid": "Q140363241",
+      "name": "Tragentics",
+      "slug": "tragentics",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://tragentics.com",
+      "description": "AI agent security platform that authenticates every agent, injects keys from an encrypted Credential Vault so agents never hold them, routes every call through a content-blind relay, and records a metadata-only audit trail"
+    },
+    {
+      "qid": "Q138798006",
+      "name": "Tricky Wombat",
+      "slug": "tricky-wombat",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://www.trickywombat.ai",
+      "description": "American enterprise AI search company"
+    },
+    {
+      "qid": "Q132705764",
+      "name": "Triorama AI",
+      "slug": "triorama-ai",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://triorama.ai/",
+      "description": "technology company"
+    },
+    {
+      "qid": "Q121088681",
+      "name": "Trulience",
+      "slug": "trulience",
+      "country": "United Kingdom",
+      "inception": "2019",
+      "website": "https://www.trulience.com/",
+      "description": "artificial intelligence company"
+    },
+    {
+      "qid": "Q139875363",
+      "name": "Truvisory",
+      "slug": "truvisory",
+      "country": "United States",
+      "inception": null,
+      "website": "https://truvisory.com",
+      "description": "American IT consulting company"
+    },
+    {
+      "qid": "Q140392486",
+      "name": "Truzer AI",
+      "slug": "truzer-ai",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://truzer.ai/",
+      "description": "Artificial Intelligence software platform"
+    },
+    {
+      "qid": "Q140259774",
+      "name": "type MAD1SON FOUNDRY",
+      "slug": "type-mad1son-foundry",
+      "country": "United States",
+      "inception": "2020",
+      "website": "https://mad1sonfoundry.com",
+      "description": "type AI marketing agency based in San Diego and New York, specializing in AEO, GEO, and AI citation optimization"
+    },
+    {
+      "qid": "Q140546149",
+      "name": "upfall Inc.",
+      "slug": "upfall-inc",
+      "country": "South Korea",
+      "inception": "2022",
+      "website": "https://upfall.co.kr",
+      "description": "South Korean artificial intelligence company"
+    },
+    {
+      "qid": "Q127983087",
+      "name": "Upstage",
+      "slug": "upstage",
+      "country": "South Korea",
+      "inception": "2020",
+      "website": "https://www.upstage.ai/",
+      "description": "South Korean artificial intelligence company"
+    },
+    {
+      "qid": "Q141174210",
+      "name": "Usermode",
+      "slug": "usermode",
+      "country": "United Kingdom",
+      "inception": "2022",
+      "website": "https://usermode.ai",
+      "description": "British AI operations software company"
+    },
+    {
+      "qid": "Q139385602",
+      "name": "Usmart Technologies",
+      "slug": "usmart-technologies",
+      "country": "United States",
+      "inception": "2018",
+      "website": "https://www.usmarttec.com",
+      "description": "American AI consulting company"
+    },
+    {
+      "qid": "Q131822807",
+      "name": "Utopai Studios",
+      "slug": "utopai-studios",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://www.utopaistudios.com/",
+      "description": "Utopai Studios is an original IP and cinematic production studio shaped by masters of industry."
+    },
+    {
+      "qid": "Q140196037",
+      "name": "VarOps",
+      "slug": "varops",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://varops.com",
+      "description": "Technology consultancy"
+    },
+    {
+      "qid": "Q139914030",
+      "name": "Velzyx AI Inc.",
+      "slug": "velzyx-ai-inc",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://velzyx.ai",
+      "description": "American AI engineering studio building custom AI infrastructure for service businesses"
+    },
+    {
+      "qid": "Q139547513",
+      "name": "Vexion Systems",
+      "slug": "vexion-systems",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://www.vexionsystems.ai",
+      "description": "American AI automation agency"
+    },
+    {
+      "qid": "Q15991488",
+      "name": "Vicarious",
+      "slug": "vicarious",
+      "country": "United States",
+      "inception": "2010",
+      "website": "http://vicarious.com/",
+      "description": "artificial intelligence company"
+    },
+    {
+      "qid": "Q141181465",
+      "name": "Videostrong Technology Co., Ltd.",
+      "slug": "videostrong-technology-co-ltd",
+      "country": "China",
+      "inception": "2011",
+      "website": "https://www.videostrong.com/",
+      "description": "Chinese AI companion robot hardware manufacturer and OEM/ODM provider"
+    },
+    {
+      "qid": "Q139819329",
+      "name": "Viz.ai",
+      "slug": "viz-ai",
+      "country": "United States",
+      "inception": "2016",
+      "website": "https://www.viz.ai/",
+      "description": "American healthcare technology company"
+    },
+    {
+      "qid": "Q141186737",
+      "name": "Voices of History",
+      "slug": "voices-of-history",
+      "country": "United States",
+      "inception": "2026",
+      "website": "https://voicesofhistory.co",
+      "description": "American artificial intelligence company"
+    },
+    {
+      "qid": "Q139893751",
+      "name": "Voka AI",
+      "slug": "voka-ai",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://vokaai.com",
+      "description": "Business AI solutions and automation software company"
+    },
+    {
+      "qid": "Q138610536",
+      "name": "Voss Neural Research",
+      "slug": "voss-neural-research",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://vossneuralresearch.com",
+      "description": "American artificial intelligence behavioral research and cybersecurity auditing company"
+    },
+    {
+      "qid": "Q140047548",
+      "name": "Voyage Health Inc",
+      "slug": "voyage-health-inc",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://www.thevoyage.ai",
+      "description": "American company developing AI software for pet health and veterinary medicine"
+    },
+    {
+      "qid": "Q125820744",
+      "name": "Wayve",
+      "slug": "wayve",
+      "country": "United Kingdom",
+      "inception": "2017",
+      "website": "https://wayve.ai/",
+      "description": "British autonomous driving technology startup"
+    },
+    {
+      "qid": "Q139936039",
+      "name": "Weav",
+      "slug": "weav",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://weav.com",
+      "description": "American artificial intelligence company providing AI customer support agents"
+    },
+    {
+      "qid": "Q140673689",
+      "name": "Webuild Tech",
+      "slug": "webuild-tech",
+      "country": "China",
+      "inception": "2017",
+      "website": "https://www.webuild.cn/",
+      "description": "Chinese technology company specializing in AI and IoT for industrial safety and building operations, based in Shenzhen"
+    },
+    {
+      "qid": "Q139026908",
+      "name": "WeLaunch",
+      "slug": "welaunch",
+      "country": "United States",
+      "inception": "2022",
+      "website": "https://welaunch.ai",
+      "description": "B2B AI agency and venture builder based in New York"
+    },
+    {
+      "qid": "Q139889867",
+      "name": "Wellspoken Labs",
+      "slug": "wellspoken-labs",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://www.wellspoken.me",
+      "description": "American AI technology company founded in 2025 by Liam Du and Felix Yu, developer of the Wellspoken speech coaching app"
+    },
+    {
+      "qid": "Q138779774",
+      "name": "White Space Solutions",
+      "slug": "white-space-solutions",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://www.whitespacesolutions.ai",
+      "description": "American AI automation company for real estate investors and business owners"
+    },
+    {
+      "qid": "Q124623883",
+      "name": "Wonder Dynamics",
+      "slug": "wonder-dynamics",
+      "country": "United States",
+      "inception": "2016",
+      "website": "https://wonderdynamics.com/",
+      "description": "American VFX company"
+    },
+    {
+      "qid": "Q139909555",
+      "name": "Workforce Wave",
+      "slug": "workforce-wave",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://www.workforcewave.com",
+      "description": "software company that develops AI voice agent and AI receptionist software"
+    },
+    {
+      "qid": "Q8035039",
+      "name": "Worknet",
+      "slug": "worknet",
+      "country": "United States",
+      "inception": "2021",
+      "website": "https://www.worknet.ai/",
+      "description": "software company developing customer-facing AI agents for sales, success, and support"
+    },
+    {
+      "qid": "Q139548642",
+      "name": "Xamun Technologies Limited",
+      "slug": "xamun-technologies-limited",
+      "country": "United Kingdom",
+      "inception": "2024",
+      "website": "https://www.xamun.ai",
+      "description": "British AI-native platform company combining business intelligence with AI-augmented software delivery for mid-market enterprises"
+    },
+    {
+      "qid": "Q138863112",
+      "name": "XEROTECH AI",
+      "slug": "xerotech-ai",
+      "country": "United Kingdom",
+      "inception": "2022",
+      "website": "https://xerotech.io",
+      "description": "British AI technology company"
+    },
+    {
+      "qid": "Q140443428",
+      "name": "Xorventa",
+      "slug": "xorventa",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://xorventa.ai/",
+      "description": "AI software company"
+    },
+    {
+      "qid": "Q140357572",
+      "name": "Your360 AI",
+      "slug": "your360-ai",
+      "country": "United States",
+      "inception": "2025",
+      "website": "https://your360.ai/",
+      "description": "American voice-AI feedback software company"
+    },
+    {
+      "qid": "Q139948803",
+      "name": "Yourcall",
+      "slug": "yourcall",
+      "country": "United States",
+      "inception": "2024",
+      "website": "https://yourcall.ai/",
+      "description": "French-American conversational AI company providing voice agents and chatbots"
+    },
+    {
+      "qid": "Q140698464",
+      "name": "zamin.now",
+      "slug": "zamin-now",
+      "country": "Israel",
+      "inception": "2026",
+      "website": "https://zamin.now/",
+      "description": "Israeli company developing AI voice-agent software for small businesses"
+    },
+    {
+      "qid": "Q139829328",
+      "name": "Zensite",
+      "slug": "zensite",
+      "country": "Singapore",
+      "inception": "2016",
+      "website": "https://zensite.co",
+      "description": "Singapore-based digital product and UX design agency"
+    },
+    {
+      "qid": "Q139485459",
+      "name": "Zolidar",
+      "slug": "zolidar",
+      "country": "United States",
+      "inception": "2023",
+      "website": "https://zolidar.com",
+      "description": "American software platform for employee ownership and business exits"
+    }
+  ]
+}

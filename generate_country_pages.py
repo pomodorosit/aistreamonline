@@ -90,7 +90,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css?v=47">
+<link rel="stylesheet" href="../style.css?v=48">
 </head>
 <body>
 
@@ -118,6 +118,9 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
         <span class="country-stat-label">AI companies tracked</span>
         <p class="country-stat-source">Source: Wikidata (companies tagged industry: artificial intelligence) — coverage varies by country, not a full census. See our <a href="../methodology.html">methodology</a>.</p>
       </div>
+
+      <h2>Notable AI companies in {name}</h2>
+      <div class="company-chip-list">{companies_html}</div>
 
       <h2>Recent AI news in {name}</h2>
       {news_html}
@@ -176,7 +179,7 @@ COMPANIES_PAGE_TEMPLATE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=47">
+<link rel="stylesheet" href="style.css?v=48">
 </head>
 <body>
 
@@ -265,6 +268,132 @@ def generate_companies_page(company_counts):
     print(f"generated companies.html covering {len(ranked)} countries")
 
 
+COUNTRY_SLUGS = {c["name"]: c["slug"] for c in COUNTRIES}
+COUNTRY_FLAGS = {c["name"]: c["flag"] for c in COUNTRIES}
+
+
+def company_chip(company):
+    return f'<a class="company-chip" href="../company/{company["slug"]}.html">{esc(company["name"])}</a>'
+
+
+COMPANY_PAGE_TEMPLATE = """<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{name} — AI Stream Online</title>
+<meta name="description" content="{name} is an AI company tracked in {country}{inception_suffix}. Source: Wikidata.">
+<link rel="canonical" href="https://aistreamonline.com/company/{slug}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{name} — AI Stream Online">
+<meta property="og:description" content="{name} is an AI company tracked in {country}{inception_suffix}.">
+<meta property="og:url" content="https://aistreamonline.com/company/{slug}">
+<meta property="og:image" content="https://aistreamonline.com/logo-mascot.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{name} — AI Stream Online">
+<meta name="twitter:description" content="{name} is an AI company tracked in {country}{inception_suffix}.">
+<meta name="twitter:image" content="https://aistreamonline.com/logo-mascot.png">
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{"@type": "ListItem", "position": 1, "name": "AI Stream Online", "item": "https://aistreamonline.com/"}},
+    {{"@type": "ListItem", "position": 2, "name": "AI Companies by Country", "item": "https://aistreamonline.com/companies"}},
+    {{"@type": "ListItem", "position": 3, "name": "{name}", "item": "https://aistreamonline.com/company/{slug}"}}
+  ]
+}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=48">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="../index.html">
+      <img class="mascot" src="../logo-mascot.png" alt="AI Stream Online mascot">
+      <span class="logo-text">
+        <span class="logo-en">AI STREAM ONLINE</span>
+        <span class="logo-he">The World of AI. Live.</span>
+      </span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="section legal-page">
+    <div class="wrap legal-content">
+      <h1>{name}</h1>
+      <p class="legal-updated">{country_flag} <a href="../country/{country_slug}.html">{country}</a>{inception_suffix}</p>
+      <button type="button" class="btn btn-outline share-btn" data-share-title="{name} — AI Stream Online" data-share-url="https://aistreamonline.com/company/{slug}">Share this page</button>
+
+      <div class="country-stat-block">
+        {description_html}
+        {website_html}
+        <p class="country-stat-source">Source: <a href="https://www.wikidata.org/wiki/{qid}" target="_blank" rel="noopener noreferrer">Wikidata ({qid})</a> — community-edited, may be incomplete or out of date. See our <a href="../methodology.html">methodology</a>.</p>
+      </div>
+
+      <p><a href="../company/{slug}.html">Permalink to this company</a> · <a href="../country/{country_slug}.html">More AI companies in {country}</a> · <a href="../companies.html">All tracked countries</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="footer-logo">AI STREAM ONLINE</span>
+    <p>&copy; 2026 aistreamonline.com — All rights reserved</p>
+    <nav class="footer-links">
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms of Use</a>
+      <a href="../methodology.html">Methodology</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../share.js"></script>
+</body>
+</html>
+"""
+
+
+def generate_company_pages(companies):
+    import os
+    os.makedirs("company", exist_ok=True)
+
+    generated = []
+    for c in companies:
+        inception_suffix = f", founded {c['inception']}" if c.get("inception") else ""
+        description_html = (
+            f'<p class="country-stat-source" style="font-style:normal;margin-top:0;">{esc(c["description"])}</p>'
+            if c.get("description") else ""
+        )
+        website_html = (
+            f'<p class="country-stat-source" style="font-style:normal;">'
+            f'<a href="{esc(c["website"])}" target="_blank" rel="noopener noreferrer nofollow">Official website →</a></p>'
+            if c.get("website") else ""
+        )
+        page = COMPANY_PAGE_TEMPLATE.format(
+            name=esc(c["name"]),
+            slug=c["slug"],
+            qid=c["qid"],
+            country=esc(c["country"]),
+            country_slug=COUNTRY_SLUGS.get(c["country"], ""),
+            country_flag=COUNTRY_FLAGS.get(c["country"], ""),
+            inception_suffix=esc(inception_suffix),
+            description_html=description_html,
+            website_html=website_html,
+        )
+        with open(f"company/{c['slug']}.html", "w", encoding="utf-8") as f:
+            f.write(page)
+        generated.append(c["slug"])
+
+    print(f"generated {len(generated)} company pages")
+    return generated
+
+
 def main():
     try:
         with open("news.json", "r", encoding="utf-8") as f:
@@ -278,8 +407,21 @@ def main():
     except (FileNotFoundError, json.JSONDecodeError):
         company_counts = {}
 
+    try:
+        with open("ai_companies.json", "r", encoding="utf-8") as f:
+            companies = json.load(f).get("companies", [])
+    except (FileNotFoundError, json.JSONDecodeError):
+        companies = []
+
+    companies_by_country = {}
+    for c in companies:
+        companies_by_country.setdefault(c["country"], []).append(c)
+
     import os
     os.makedirs("country", exist_ok=True)
+
+    if companies:
+        generate_company_pages(companies)
 
     generated = []
     for country in COUNTRIES:
@@ -298,12 +440,19 @@ def main():
         else:
             news_html = '<p class="drilldown-empty">Not enough reliable data — no recent stories tagged to this country yet.</p>'
 
+        country_companies = sorted(companies_by_country.get(country["name"], []), key=lambda c: c["name"].lower())
+        if country_companies:
+            companies_html = "".join(company_chip(c) for c in country_companies)
+        else:
+            companies_html = '<p class="drilldown-empty">No individual company records available yet.</p>'
+
         page = PAGE_TEMPLATE.format(
             name=esc(country["name"]),
             slug=country["slug"],
             flag=country["flag"],
             company_count=count,
             news_html=news_html,
+            companies_html=companies_html,
         )
         with open(f"country/{country['slug']}.html", "w", encoding="utf-8") as f:
             f.write(page)
@@ -311,6 +460,35 @@ def main():
 
     print(f"generated {len(generated)} country pages: {', '.join(generated)}")
     generate_companies_page(company_counts)
+    generate_sitemap(generated, [c["slug"] for c in companies])
+
+
+def generate_sitemap(country_slugs, company_slugs):
+    urls = [
+        ("https://aistreamonline.com/", "hourly", "1.0"),
+        ("https://aistreamonline.com/methodology", "monthly", "0.6"),
+        ("https://aistreamonline.com/companies", "daily", "0.6"),
+    ]
+    urls += [(f"https://aistreamonline.com/country/{s}", "daily", "0.5") for s in country_slugs]
+    urls += [(f"https://aistreamonline.com/company/{s}", "weekly", "0.3") for s in company_slugs]
+    urls += [
+        ("https://aistreamonline.com/privacy.html", "yearly", "0.2"),
+        ("https://aistreamonline.com/terms.html", "yearly", "0.2"),
+    ]
+
+    entries = "\n".join(
+        f"  <url>\n    <loc>{loc}</loc>\n    <changefreq>{freq}</changefreq>\n    <priority>{prio}</priority>\n  </url>"
+        for loc, freq, prio in urls
+    )
+    sitemap = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"{entries}\n"
+        "</urlset>\n"
+    )
+    with open("sitemap.xml", "w", encoding="utf-8") as f:
+        f.write(sitemap)
+    print(f"generated sitemap.xml with {len(urls)} URLs")
 
 
 if __name__ == "__main__":

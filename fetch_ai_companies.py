@@ -27,6 +27,7 @@ honestly ("AI companies tracked on Wikidata"), never as an absolute count.
 """
 
 import json
+import re
 import ssl
 import time
 import urllib.error
@@ -51,12 +52,39 @@ LABEL_ALIASES = {
 
 TRACKED_COUNTRIES = ["Israel", "Singapore", "United States", "South Korea", "United Kingdom", "China"]
 
+# Wikidata QIDs for the six tracked countries, used to scope the per-company
+# detail query below to the same set (avoids pulling every AI company on
+# Wikidata worldwide, which would be a much larger and slower query).
+COUNTRY_QIDS = {
+    "Israel": "Q801",
+    "Singapore": "Q334",
+    "United States": "Q30",
+    "South Korea": "Q884",
+    "United Kingdom": "Q145",
+    "China": "Q148",
+}
+
 QUERY = """
 SELECT ?countryLabel (COUNT(DISTINCT ?company) AS ?count) WHERE {
   ?company wdt:P452 wd:Q11660 .
   ?company wdt:P17 ?country .
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 } GROUP BY ?countryLabel
+"""
+
+COMPANY_DETAIL_QUERY = """
+SELECT ?company ?companyLabel ?countryLabel ?inception ?website ?description WHERE {{
+  ?company wdt:P452 wd:Q11660 .
+  ?company wdt:P17 ?country .
+  VALUES ?country {{ {country_values} }}
+  OPTIONAL {{ ?company wdt:P571 ?inception. }}
+  OPTIONAL {{ ?company wdt:P856 ?website. }}
+  OPTIONAL {{
+    ?company schema:description ?description .
+    FILTER(lang(?description) = "en")
+  }}
+  SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
+}}
 """
 
 
@@ -81,6 +109,62 @@ def fetch_counts():
     return counts
 
 
+def slugify(name, qid):
+    slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+    return slug or qid.lower()
+
+
+def fetch_company_details():
+    country_values = " ".join(f"wd:{qid}" for qid in COUNTRY_QIDS.values())
+    query = COMPANY_DETAIL_QUERY.format(country_values=country_values)
+    url = f"{ENDPOINT}?{urllib.parse.urlencode({'query': query})}"
+    req = urllib.request.Request(
+        url,
+        headers={
+            "Accept": "application/sparql-results+json",
+            "User-Agent": "AIStreamOnlineFetcher/1.0 (https://aistreamonline.com)",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=TIMEOUT, context=SSL_CONTEXT) as resp:
+        data = json.load(resp)
+
+    companies = {}
+    slug_counts = {}
+    for row in data.get("results", {}).get("bindings", []):
+        qid = row["company"]["value"].rsplit("/", 1)[-1]
+        name = row["companyLabel"]["value"]
+        country = LABEL_ALIASES.get(row["countryLabel"]["value"], row["countryLabel"]["value"])
+        if country not in TRACKED_COUNTRIES:
+            continue
+
+        if qid not in companies:
+            base_slug = slugify(name, qid)
+            n = slug_counts.get(base_slug, 0)
+            slug_counts[base_slug] = n + 1
+            slug = base_slug if n == 0 else f"{base_slug}-{qid.lower()}"
+            companies[qid] = {
+                "qid": qid,
+                "name": name,
+                "slug": slug,
+                "country": country,
+                "inception": None,
+                "website": None,
+                "description": None,
+            }
+
+        entry = companies[qid]
+        if "inception" in row and not entry["inception"]:
+            entry["inception"] = row["inception"]["value"][:4]
+        if "website" in row and not entry["website"]:
+            url_val = row["website"]["value"]
+            if urllib.parse.urlparse(url_val).scheme in ("http", "https"):
+                entry["website"] = url_val
+        if "description" in row and not entry["description"]:
+            entry["description"] = row["description"]["value"]
+
+    return list(companies.values())
+
+
 def main():
     try:
         counts = fetch_counts()
@@ -103,6 +187,27 @@ def main():
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print("wrote ai_companies_by_country.json:", result)
+
+    try:
+        companies = fetch_company_details()
+    except (urllib.error.URLError, urllib.error.HTTPError, ValueError, KeyError) as e:
+        print(f"warning: Wikidata company-detail query failed: {e} -- leaving ai_companies.json untouched")
+        return
+
+    if not companies:
+        print("warning: no company details from Wikidata -- leaving ai_companies.json untouched")
+        return
+
+    companies.sort(key=lambda c: c["name"].lower())
+    detail_output = {
+        "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "source": "Wikidata (companies tagged industry: artificial intelligence)",
+        "companies": companies,
+    }
+    with open("ai_companies.json", "w", encoding="utf-8") as f:
+        json.dump(detail_output, f, ensure_ascii=False, indent=2)
+
+    print(f"wrote ai_companies.json: {len(companies)} companies")
 
 
 if __name__ == "__main__":

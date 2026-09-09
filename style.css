@@ -2035,3 +2035,24 @@ img { max-width: 100%; display: block; }
   border-radius: 999px;
   color: var(--ink-soft);
 }
+
+.company-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 32px;
+}
+
+.company-chip {
+  font-size: 12px;
+  padding: 6px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--ink-soft);
+  transition: color .15s, border-color .15s;
+}
+
+.company-chip:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
