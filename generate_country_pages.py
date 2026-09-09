@@ -144,6 +144,123 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 """
 
 
+COMPANIES_PAGE_TEMPLATE = """<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Companies by Country — AI Stream Online</title>
+<meta name="description" content="{total_count} AI companies tracked across {country_count} countries, sourced from Wikidata. See which countries have the most tracked AI companies.">
+<link rel="canonical" href="https://aistreamonline.com/companies">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Companies by Country — AI Stream Online">
+<meta property="og:description" content="{total_count} AI companies tracked across {country_count} countries, sourced from Wikidata.">
+<meta property="og:url" content="https://aistreamonline.com/companies">
+<meta property="og:image" content="https://aistreamonline.com/logo-mascot.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI Companies by Country — AI Stream Online">
+<meta name="twitter:description" content="{total_count} AI companies tracked across {country_count} countries, sourced from Wikidata.">
+<meta name="twitter:image" content="https://aistreamonline.com/logo-mascot.png">
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{"@type": "ListItem", "position": 1, "name": "AI Stream Online", "item": "https://aistreamonline.com/"}},
+    {{"@type": "ListItem", "position": 2, "name": "AI Companies by Country", "item": "https://aistreamonline.com/companies"}}
+  ]
+}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=45">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="index.html">
+      <img class="mascot" src="logo-mascot.png" alt="AI Stream Online mascot">
+      <span class="logo-text">
+        <span class="logo-en">AI STREAM ONLINE</span>
+        <span class="logo-he">The World of AI. Live.</span>
+      </span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="section legal-page">
+    <div class="wrap legal-content">
+      <h1>AI Companies, by Country</h1>
+      <p class="legal-updated">Data updated automatically every 3 hours</p>
+
+      <div class="country-stat-block">
+        <span class="country-stat-number">{total_count}</span>
+        <span class="country-stat-label">AI companies tracked across {country_count} countries</span>
+        <p class="country-stat-source">Source: Wikidata (companies tagged industry: artificial intelligence) — coverage varies by country, not a full census. See our <a href="methodology.html">methodology</a>.</p>
+      </div>
+
+      <h2>By country</h2>
+      <ul class="country-news-list">
+{rows}
+      </ul>
+
+      <h2>About this page</h2>
+      <p>This is the same live Wikidata company count used throughout the site, aggregated into one view. Coverage is uneven — it reflects what volunteer editors have documented on Wikidata, not a complete census of the global AI industry. See the <a href="methodology.html">full methodology</a> for details, or click a country above for its recent AI news.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="footer-logo">AI STREAM ONLINE</span>
+    <p>&copy; 2026 aistreamonline.com — All rights reserved</p>
+    <nav class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="methodology.html">Methodology</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+"""
+
+
+def render_company_row(country, count):
+    return (
+        f'<li class="country-news-item">'
+        f'<h3><a href="country/{country["slug"]}.html">{country["flag"]} {esc(country["name"])}</a></h3>'
+        f'<span class="country-news-meta">{count} {"company" if count == 1 else "companies"} tracked</span>'
+        f"</li>"
+    )
+
+
+def generate_companies_page(company_counts):
+    ranked = []
+    for country in COUNTRIES:
+        count = company_counts.get(country["name"])
+        if isinstance(count, int) and count > 0:
+            ranked.append((country, count))
+    if not ranked:
+        print("skipping companies.html: no reliable company counts yet")
+        return
+
+    ranked.sort(key=lambda pair: pair[1], reverse=True)
+    rows = "\n".join(render_company_row(country, count) for country, count in ranked)
+    page = COMPANIES_PAGE_TEMPLATE.format(
+        total_count=sum(count for _, count in ranked),
+        country_count=len(ranked),
+        rows=rows,
+    )
+    with open("companies.html", "w", encoding="utf-8") as f:
+        f.write(page)
+    print(f"generated companies.html covering {len(ranked)} countries")
+
+
 def main():
     try:
         with open("news.json", "r", encoding="utf-8") as f:
@@ -189,6 +306,7 @@ def main():
         generated.append(country["slug"])
 
     print(f"generated {len(generated)} country pages: {', '.join(generated)}")
+    generate_companies_page(company_counts)
 
 
 if __name__ == "__main__":

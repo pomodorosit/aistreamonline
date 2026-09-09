@@ -11,6 +11,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/companies</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/country/israel</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
