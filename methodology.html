@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=50">
+<link rel="stylesheet" href="style.css?v=51">
 </head>
 <body>
 
@@ -59,11 +59,11 @@
       <p><strong>Known limitation, stated plainly:</strong> Wikidata is edited by volunteers, so coverage is uneven and skews toward companies that English-speaking contributors happened to document. It is not a census. As one concrete example, China's real AI industry is vastly larger than the handful of companies currently tagged this way on Wikidata. We label this metric "AI companies tracked on Wikidata," never "total AI companies," for exactly this reason. We evaluated several alternatives before settling on Wikidata — GitHub's organization search by location, a dedicated Wikidata "AI company" class, conference exhibitor lists, Y Combinator's directory, and paid B2B data platforms — and none had a free, structured, reliable path to this data. Refreshed automatically every 3 hours.</p>
       <p>A country gets its own page (and each of its companies a page) once it has at least 3 tracked companies — below that, the real data included a handful of Wikidata entries that were data-quality noise (a city mistagged as a country, a couple of exact duplicates of a larger country's name), so we set the floor there rather than publish those. Entities with no usable name on Wikidata are also excluded from every count and list, rather than shown as a bare database ID. This threshold is data-driven and can grow or shrink as Wikidata's coverage changes — it is not a fixed, curated list.</p>
 
-      <h2>5. Global AI Leadership map</h2>
-      <p>The six-country per-capita ranking on the homepage map (Israel, Singapore, United States, South Korea, United Kingdom, China) is an editorial selection reflecting widely-cited AI activity relative to population, not a single computed formula. We're stating this directly rather than implying it's an automated score: it currently updates periodically by hand, not live. The country drill-down panel (which stories are shown when you click a country) <em>is</em> computed live from real per-article country tags, per the limitation noted in section 3.</p>
+      <h2>5. Explore AI by Country</h2>
+      <p>This section previously showed a numbered 1–6 "Global AI Leadership" ranking. We removed the numbers: it was an editorial selection with no reproducible formula, population denominator, or measurement year behind it, and a numbered ranking implies exactly that kind of rigor. It's now an unranked, unordered-by-us grid of every country with at least 3 tracked companies (41 as of this writing), sorted only by that real Wikidata count — never described as a measure of "AI leadership." Each entry links to that country's full page (recent tagged stories, the same company list, always live).</p>
 
-      <h2>6. Live AI activity pulse</h2>
-      <p>The GitHub activity numbers (stars, open issues) are fetched from GitHub's official public API for 12 widely-used open-source AI projects (transformers, llama.cpp, langchain, vllm, and others). The "live" ticking number between refreshes is a real measured rate — the actual star growth observed between the last two automated snapshots, divided by the real elapsed time — not a simulated or arbitrary animation. It only appears once we have two real data points to measure a rate from, and is labeled "live estimate."</p>
+      <h2>6. GitHub activity (open-source AI sample)</h2>
+      <p>The GitHub numbers (stars, open issues) are fetched from GitHub's official public API for a fixed list of widely-used open-source AI projects (transformers, llama.cpp, langchain, vllm, and others) — a sample of open-source AI activity, not a measure of AI activity overall, and we say so next to the numbers. We show the last successfully fetched value and how long ago it was fetched, rather than a continuously ticking extrapolated estimate between refreshes — a smooth-looking live counter would imply a precision this data (two snapshots roughly 3 hours apart) doesn't have. If a fetch fails, the whole widget hides rather than show a stale or zeroed-out number as current.</p>
 
       <h2>7. Videos and podcasts</h2>
       <p>Featured videos are selected via the YouTube Data API: we search eight distinct AI sub-topics (large language models, agentic AI, robotics, AI chips, AI safety, and others) and take the top result from each by view count, so one viral topic can't crowd out the rest. Podcast episodes are pulled directly from each show's own public RSS feed — no API key involved, since every podcast host publishes one.</p>

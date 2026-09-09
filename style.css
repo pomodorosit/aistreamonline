@@ -1541,6 +1541,12 @@ img { max-width: 100%; display: block; }
   min-height: 16px;
 }
 
+.ai-pulse-updated {
+  margin: 10px 0 0;
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
 @media (max-width: 640px) {
   .ai-pulse-stats { gap: 32px; }
   .ai-pulse-number { font-size: 32px; }
@@ -2042,6 +2048,19 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
   gap: 8px;
   margin: 0 0 32px;
+}
+
+.country-explore-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 28px;
+}
+
+.country-chip {
+  font-size: 13px;
+  padding: 9px 18px;
 }
 
 .company-chip {

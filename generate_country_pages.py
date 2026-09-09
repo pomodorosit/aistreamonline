@@ -108,7 +108,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css?v=50">
+<link rel="stylesheet" href="../style.css?v=51">
 </head>
 <body>
 
@@ -144,7 +144,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
       {news_html}
 
       <h2>About this page</h2>
-      <p>This page is generated automatically from our tracked news archive and live company data. Country tagging on articles only fires when a story's text explicitly names the country, so coverage here reflects what's been published recently, not a complete picture of AI activity in {name}. See the <a href="../methodology.html">full methodology</a> for how every number here is produced, and the <a href="../index.html#leadership">Global AI Leadership map</a> for how {name} compares internationally.</p>
+      <p>This page is generated automatically from our tracked news archive and live company data. Country tagging on articles only fires when a story's text explicitly names the country, so coverage here reflects what's been published recently, not a complete picture of AI activity in {name}. See the <a href="../methodology.html">full methodology</a> for how every number here is produced, and the <a href="../index.html#countries">country explorer</a> for how {name} compares by tracked companies.</p>
     </div>
   </section>
 </main>
@@ -197,7 +197,7 @@ COMPANIES_PAGE_TEMPLATE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=50">
+<link rel="stylesheet" href="style.css?v=51">
 </head>
 <body>
 
@@ -320,7 +320,7 @@ COMPANY_PAGE_TEMPLATE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css?v=50">
+<link rel="stylesheet" href="../style.css?v=51">
 </head>
 <body>
 

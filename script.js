@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFeaturedVideos();
   initPodcasts();
   initAiPulse();
-  initAiCompaniesByCountry();
+  initCountryExplore();
   initAnalyticsConsent();
   initNewsletterForm();
 });
@@ -663,7 +663,6 @@ function initLiveNews() {
       });
 
       initVerdict(items);
-      initLeadershipDrilldown(items);
       initAskTheWorld(items);
       initReturnBanner(items);
     })
@@ -1003,15 +1002,28 @@ function initReturnBanner(newsItems) {
   } catch (e) { /* ignore */ }
 }
 
-function initAiCompaniesByCountry() {
-  const list = document.querySelector('.leadership-rank-list');
-  const sourceLabel = document.getElementById('leadership-source');
-  const sub = document.getElementById('leadership-mode-sub');
-  const companiesBtn = document.getElementById('mode-btn-companies');
-  const editorialBtn = document.querySelector('.mode-btn[data-mode="editorial"]');
-  if (!list) return;
+function countryFlagFallback() { return '🌐'; }
 
-  const editorialOrder = [...list.querySelectorAll('li')];
+const KNOWN_COUNTRY_FLAGS = {
+  'United States': '🇺🇸', 'United Kingdom': '🇬🇧', 'Germany': '🇩🇪', 'France': '🇫🇷',
+  'India': '🇮🇳', 'Canada': '🇨🇦', 'Spain': '🇪🇸', 'Australia': '🇦🇺', 'Switzerland': '🇨🇭',
+  'Netherlands': '🇳🇱', 'Singapore': '🇸🇬', 'Austria': '🇦🇹', 'Italy': '🇮🇹',
+  'United Arab Emirates': '🇦🇪', 'South Korea': '🇰🇷', 'Israel': '🇮🇱', 'Mexico': '🇲🇽',
+  'Japan': '🇯🇵', 'Sweden': '🇸🇪', 'Czech Republic': '🇨🇿', 'Brazil': '🇧🇷', 'Belgium': '🇧🇪',
+  'Poland': '🇵🇱', 'South Africa': '🇿🇦', 'Turkey': '🇹🇷', 'China': '🇨🇳', 'Ukraine': '🇺🇦',
+  'Lithuania': '🇱🇹', 'Portugal': '🇵🇹', 'Malaysia': '🇲🇾', 'Taiwan': '🇹🇼', 'Indonesia': '🇮🇩',
+  'Saudi Arabia': '🇸🇦', 'Romania': '🇷🇴', 'Norway': '🇳🇴', 'Slovakia': '🇸🇰', 'Finland': '🇫🇮',
+  'Denmark': '🇩🇰', 'Chile': '🇨🇱', 'Cyprus': '🇨🇾', 'Egypt': '🇪🇬', 'Estonia': '🇪🇪',
+  'Ireland': '🇮🇪', 'New Zealand': '🇳🇿', 'Russia': '🇷🇺', 'Argentina': '🇦🇷',
+};
+
+function countrySlugify(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+function initCountryExplore() {
+  const grid = document.getElementById('country-explore-grid');
+  if (!grid) return;
 
   fetch('ai_companies_by_country.json', { cache: 'no-store' })
     .then((res) => {
@@ -1020,195 +1032,26 @@ function initAiCompaniesByCountry() {
     })
     .then((data) => {
       const counts = data.countries || {};
+      const entries = Object.entries(counts).filter(([, n]) => n > 0).sort((a, b) => b[1] - a[1]);
 
-      editorialOrder.forEach((li) => {
-        const countrySpan = li.querySelector('.rank-country');
-        if (!countrySpan) return;
-        const country = countrySpan.textContent.trim();
-        const count = counts[country];
-        if (!(count > 0)) return;
-
-        const countSpan = document.createElement('span');
-        countSpan.className = 'rank-company-count';
-        const numberSpan = document.createElement('span');
-        numberSpan.textContent = '0';
-        countSpan.appendChild(numberSpan);
-        countSpan.appendChild(document.createTextNode(count === 1 ? ' company' : ' companies'));
-        li.appendChild(countSpan);
-
-        animateNumber(numberSpan, 0, count, 1200);
-      });
-
-      if (sourceLabel) {
-        sourceLabel.textContent = 'AI companies tracked on Wikidata — coverage varies by country, not a full census';
-        sourceLabel.hidden = false;
+      if (entries.length === 0) {
+        grid.innerHTML = '<p class="drilldown-empty">Country data unavailable right now.</p>';
+        return;
       }
 
-      const withCounts = editorialOrder.filter((li) => {
-        const country = li.querySelector('.rank-country').textContent.trim();
-        return counts[country] > 0;
+      grid.innerHTML = '';
+      entries.forEach(([country, count]) => {
+        const link = document.createElement('a');
+        link.className = 'company-chip country-chip';
+        link.href = 'country/' + countrySlugify(country) + '.html';
+        const flag = KNOWN_COUNTRY_FLAGS[country] || countryFlagFallback();
+        link.textContent = `${flag} ${country} · ${count}`;
+        grid.appendChild(link);
       });
-      if (!companiesBtn || withCounts.length < 2) return;
-
-      const companiesOrder = [...withCounts].sort((a, b) => {
-        const ca = counts[a.querySelector('.rank-country').textContent.trim()];
-        const cb = counts[b.querySelector('.rank-country').textContent.trim()];
-        return cb - ca;
-      });
-
-      function renderOrder(order, mode) {
-        order.forEach((li, i) => {
-          li.querySelector('.rank-badge').textContent = String(i + 1);
-          list.appendChild(li);
-        });
-        editorialBtn.classList.toggle('active', mode === 'editorial');
-        companiesBtn.classList.toggle('active', mode === 'companies');
-        if (sub) {
-          sub.textContent = mode === 'editorial'
-            ? 'AI activity per capita — editorial ranking, updated periodically'
-            : 'Sorted by AI companies tracked on Wikidata — live, but not a full census';
-        }
-      }
-
-      companiesBtn.disabled = false;
-      companiesBtn.addEventListener('click', () => renderOrder(companiesOrder, 'companies'));
-      editorialBtn.addEventListener('click', () => renderOrder(editorialOrder, 'editorial'));
     })
     .catch(() => {
-      // no data yet or fetch failed: leave the list without company counts
+      grid.innerHTML = '<p class="drilldown-empty">Country data unavailable right now.</p>';
     });
-}
-
-const COUNTRY_PAGE_SLUGS = {
-  'Israel': 'israel',
-  'Singapore': 'singapore',
-  'United States': 'united-states',
-  'South Korea': 'south-korea',
-  'United Kingdom': 'united-kingdom',
-  'China': 'china',
-};
-
-function initLeadershipDrilldown(newsItems) {
-  const list = document.querySelector('.leadership-rank-list');
-  const panel = document.getElementById('leadership-drilldown');
-  if (!list || !panel) return;
-
-  const items = newsItems || [];
-
-  function articlesForCountry(country) {
-    return items.filter(
-      (it) => it.aiAnalysis && Array.isArray(it.aiAnalysis.countries) && it.aiAnalysis.countries.includes(country)
-    );
-  }
-
-  function renderPanel(country, matches) {
-    panel.innerHTML = '';
-
-    const heading = document.createElement('h4');
-    heading.className = 'drilldown-heading';
-    heading.textContent = country + ' — recent AI stories';
-    panel.appendChild(heading);
-
-    if (matches.length === 0) {
-      const empty = document.createElement('p');
-      empty.className = 'drilldown-empty';
-      empty.textContent = 'No recent stories tagged to ' + country + ' yet.';
-      panel.appendChild(empty);
-    } else {
-      const list = document.createElement('ul');
-      list.className = 'drilldown-list';
-      matches.slice(0, 6).forEach((it) => {
-        const li = document.createElement('li');
-        const link = document.createElement('a');
-        link.textContent = it.title || '';
-        if (isSafeHttpUrl(it.link)) {
-          link.href = it.link;
-          link.rel = 'noopener noreferrer nofollow';
-          link.target = '_blank';
-        } else {
-          link.href = '#';
-        }
-        li.appendChild(link);
-        list.appendChild(li);
-      });
-      panel.appendChild(list);
-    }
-
-    const slug = COUNTRY_PAGE_SLUGS[country];
-    if (slug) {
-      const more = document.createElement('a');
-      more.className = 'drilldown-more-link';
-      more.href = 'country/' + slug + '.html';
-      more.textContent = 'View full ' + country + ' page →';
-      panel.appendChild(more);
-    }
-
-    panel.classList.add('visible');
-    if (typeof anime === 'function') {
-      anime({
-        targets: panel,
-        opacity: [0, 1],
-        translateY: [-8, 0],
-        duration: 350,
-        easing: 'easeOutQuad',
-      });
-      // safety net: guarantee the panel ends up fully visible even if
-      // anime's rAF-driven loop never gets to tick (see animateNumber)
-      setTimeout(() => {
-        panel.style.opacity = '';
-        panel.style.transform = '';
-      }, 400);
-    }
-  }
-
-  const markers = [...document.querySelectorAll('.map-marker')];
-
-  function setActive(country) {
-    list.querySelectorAll('li').forEach((li) => {
-      const span = li.querySelector('.rank-country');
-      li.classList.toggle('active', !!span && span.textContent.trim() === country);
-    });
-    markers.forEach((m) => m.classList.toggle('active', m.dataset.country === country));
-  }
-
-  function clearActive() {
-    list.querySelectorAll('li').forEach((li) => li.classList.remove('active'));
-    markers.forEach((m) => m.classList.remove('active'));
-  }
-
-  function activate(country, wasActive) {
-    if (wasActive) {
-      clearActive();
-      panel.classList.remove('visible');
-      return;
-    }
-    setActive(country);
-    renderPanel(country, articlesForCountry(country));
-  }
-
-  list.querySelectorAll('li').forEach((li) => {
-    const countrySpan = li.querySelector('.rank-country');
-    if (!countrySpan) return;
-    const country = countrySpan.textContent.trim();
-
-    li.classList.add('clickable');
-    li.setAttribute('role', 'button');
-    li.setAttribute('tabindex', '0');
-
-    li.addEventListener('click', () => activate(country, li.classList.contains('active')));
-    li.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        activate(country, li.classList.contains('active'));
-      }
-    });
-  });
-
-  markers.forEach((marker) => {
-    const country = marker.dataset.country;
-    if (!country) return;
-    marker.addEventListener('click', () => activate(country, marker.classList.contains('active')));
-  });
 }
 
 function initStockTicker() {
@@ -1298,24 +1141,28 @@ function animateNumber(el, from, to, duration) {
 // ticks the displayed number up every second at a rate measured for real
 // from the last two cron snapshots -- never a fabricated increment. Only
 // starts once the initial count-up animation has settled.
-function startLiveRateTicker(el, liveTag, baseValue, perSecond) {
-  if (!(perSecond > 0)) return;
-  liveTag.hidden = false;
-
-  let accumulated = 0;
-  setInterval(() => {
-    accumulated += perSecond;
-    el.textContent = Math.round(baseValue + accumulated).toLocaleString('en-US');
-  }, 1000);
+function relativeTimeFrom(isoString) {
+  const then = new Date(isoString).getTime();
+  if (Number.isNaN(then)) return null;
+  const mins = Math.max(0, Math.round((Date.now() - then) / 60000));
+  if (mins < 1) return 'moments ago';
+  if (mins < 60) return `${mins} minute${mins === 1 ? '' : 's'} ago`;
+  const hours = Math.round(mins / 60);
+  return `${hours} hour${hours === 1 ? '' : 's'} ago`;
 }
 
 function initAiPulse() {
   const starsEl = document.getElementById('ai-pulse-stars');
   const issuesEl = document.getElementById('ai-pulse-issues');
   const deltaEl = document.getElementById('ai-pulse-delta');
-  const liveTag = document.getElementById('ai-pulse-live-tag');
+  const updatedEl = document.getElementById('ai-pulse-updated');
   const pulse = document.getElementById('ai-pulse');
-  if (!starsEl || !issuesEl || !deltaEl || !liveTag || !pulse) return;
+  if (!starsEl || !issuesEl || !deltaEl || !pulse) return;
+
+  // don't show "0" while still loading -- an em dash reads as "not loaded
+  // yet," not "zero stars"
+  starsEl.textContent = '—';
+  issuesEl.textContent = '—';
 
   const ANIMATION_MS = 1400;
 
@@ -1328,7 +1175,7 @@ function initAiPulse() {
       const stars = Number(data.totalStars) || 0;
       const issues = Number(data.totalOpenIssues) || 0;
       const delta = Number(data.starsDeltaSinceLastRun) || 0;
-      const perSecond = Number(data.starsPerSecondEstimate) || 0;
+      const reposTracked = Number(data.reposTracked) || 0;
 
       animateNumber(starsEl, 0, stars, ANIMATION_MS);
       animateNumber(issuesEl, 0, issues, ANIMATION_MS);
@@ -1336,10 +1183,20 @@ function initAiPulse() {
         deltaEl.textContent = '+' + delta.toLocaleString('en-US') + ' stars since the last refresh';
       }
 
-      setTimeout(() => startLiveRateTicker(starsEl, liveTag, stars, perSecond), ANIMATION_MS + 50);
+      // Prefer the last actually-measured value and its timestamp over a
+      // continuously ticking extrapolated estimate -- a smooth-looking
+      // counter implies a precision this data doesn't have (two snapshots
+      // ~3 hours apart, not a real-time feed).
+      const when = relativeTimeFrom(data.generatedAt);
+      if (updatedEl) {
+        const sample = reposTracked > 0 ? ` across ${reposTracked} tracked repositories (a sample of open-source AI activity, not all of it)` : '';
+        updatedEl.textContent = when ? `Last updated ${when}${sample}.` : `${sample}`.replace(/^ /, '');
+        updatedEl.hidden = !updatedEl.textContent;
+      }
     })
     .catch(() => {
-      // no data yet (first cron run hasn't happened): hide rather than show zeros
+      // no data yet (first cron run hasn't happened) or fetch failed: hide
+      // the whole widget rather than show stale/zero numbers as current
       pulse.style.display = 'none';
     });
 }
