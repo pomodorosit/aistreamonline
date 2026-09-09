@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=55">
+<link rel="stylesheet" href="style.css?v=57">
 </head>
 <body>
 
@@ -61,7 +61,7 @@
 
       <h2>5. Explore AI by Country</h2>
       <p>This section previously showed a numbered 1–6 "Global AI Leadership" ranking. We removed the numbers: it was an editorial selection with no reproducible formula, population denominator, or measurement year behind it, and a numbered ranking implies exactly that kind of rigor. It's now an unranked, unordered-by-us grid of every country with at least 3 tracked companies (41 as of this writing), sorted only by that real Wikidata count — never described as a measure of "AI leadership." Each entry links to that country's full page (recent tagged stories, the same company list, always live).</p>
-      <p>The shaded world map above the list is the same dataset, not a second metric: each tracked country's fill color is set by a log scale of its real company count (darker = fewer, brighter gold = more) so one large country doesn't flatten every other color into the same shade. It's a visual index into the exact numbers already in the list below, nothing more. The base map itself is a public-domain map from Wikimedia Commons (originally adapted from a CIA World Factbook map), simplified for file size; country shapes are for visual reference only and carry no data of their own beyond the coloring we apply.</p>
+      <p>The shaded world map above the list is the same dataset, not a second metric: each tracked country is placed into one of six real, data-derived count ranges (3–4, 5–6, 7–10, 11–16, 17–31, 32+) and colored from dark brown to bright gold accordingly, with a legend showing exactly which color maps to which range. It's a visual index into the exact numbers already in the list below, nothing more — hovering or clicking a country shows its precise count. The base map itself is a public-domain map from Wikimedia Commons (originally adapted from a CIA World Factbook map), simplified for file size; country shapes are for visual reference only and carry no data of their own beyond the coloring we apply.</p>
 
       <h2>6. GitHub activity (open-source AI sample)</h2>
       <p>The GitHub numbers (stars, open issues) are fetched from GitHub's official public API for a fixed list of widely-used open-source AI projects (transformers, llama.cpp, langchain, vllm, and others) — a sample of open-source AI activity, not a measure of AI activity overall, and we say so next to the numbers. We show the last successfully fetched value and how long ago it was fetched, rather than a continuously ticking extrapolated estimate between refreshes — a smooth-looking live counter would imply a precision this data (two snapshots roughly 3 hours apart) doesn't have. If a fetch fails, the whole widget hides rather than show a stale or zeroed-out number as current.</p>

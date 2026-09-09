@@ -1038,6 +1038,27 @@ const COUNTRY_ISO_CODES = {
   'Ireland': 'ie', 'New Zealand': 'nz', 'Russia': 'ru', 'Argentina': 'ar',
 };
 
+// Discrete buckets read far more clearly than a continuous gradient at map
+// scale, where subtle differences between adjacent countries are hard to
+// tell apart. Boundaries chosen from the real distribution (not evenly
+// spaced) so each bucket holds a meaningful, roughly comparable group
+// rather than being dominated by outliers like the US's 278. Hue AND
+// saturation shift together with lightness (dark brown -> amber -> bright
+// gold), not lightness alone, so adjacent tiers stay visually distinct
+// even in a small legend swatch.
+const MAP_COLOR_BUCKETS = [
+  { max: 4, color: 'hsl(22, 45%, 24%)', label: '3–4' },
+  { max: 6, color: 'hsl(30, 55%, 34%)', label: '5–6' },
+  { max: 10, color: 'hsl(36, 65%, 45%)', label: '7–10' },
+  { max: 16, color: 'hsl(42, 72%, 56%)', label: '11–16' },
+  { max: 31, color: 'hsl(46, 82%, 67%)', label: '17–31' },
+  { max: Infinity, color: 'hsl(50, 92%, 80%)', label: '32+' },
+];
+
+function bucketForCount(count) {
+  return MAP_COLOR_BUCKETS.find((b) => count <= b.max);
+}
+
 function initWorldMap(counts) {
   const wrap = document.getElementById('world-map-wrap');
   const legend = document.getElementById('world-map-legend');
@@ -1045,10 +1066,6 @@ function initWorldMap(counts) {
 
   const entries = Object.entries(counts).filter(([name]) => COUNTRY_ISO_CODES[name]);
   if (entries.length === 0) return;
-
-  const maxCount = Math.max(...entries.map(([, n]) => n));
-  const minLog = Math.log(1);
-  const maxLog = Math.log(maxCount + 1);
 
   fetch('world-map.svg', { cache: 'force-cache' })
     .then((res) => {
@@ -1066,13 +1083,19 @@ function initWorldMap(counts) {
         const code = COUNTRY_ISO_CODES[name];
         const el = svg.getElementById(code);
         if (!el) return;
-        // log scale: a handful of countries (the US) have far more tracked
-        // companies than the rest, so a linear scale would render nearly
-        // everything else as the same flattest color
-        const t = (Math.log(count + 1) - minLog) / (maxLog - minLog || 1);
-        const lightness = 22 + t * 45; // 22% (dim) to 67% (bright gold)
-        el.style.fill = `hsl(42, 55%, ${lightness}%)`;
+        const bucket = bucketForCount(count);
+        // Some countries are a <g> wrapping many separate <path> pieces
+        // (mainland, islands, Alaska, etc.), each carrying its own
+        // "landxx" class from the base map. That class's fill beats an
+        // inline style set only on the parent group, so the fill has to
+        // be applied to the element itself AND every descendant path,
+        // not just the (possibly non-existent) top-level shape.
+        el.style.fill = bucket.color;
         el.style.cursor = 'pointer';
+        el.querySelectorAll('path').forEach((child) => {
+          child.style.fill = bucket.color;
+          child.style.cursor = 'pointer';
+        });
         const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
         title.textContent = `${name}: ${count} ${count === 1 ? 'company' : 'companies'} tracked`;
         el.appendChild(title);
@@ -1081,7 +1104,31 @@ function initWorldMap(counts) {
         });
       });
 
-      if (legend) legend.hidden = false;
+      if (legend) {
+        legend.innerHTML = '';
+        const label = document.createElement('span');
+        label.className = 'world-map-legend-label';
+        label.textContent = 'AI companies tracked: ';
+        legend.appendChild(label);
+        MAP_COLOR_BUCKETS.forEach((b) => {
+          const item = document.createElement('span');
+          item.className = 'world-map-legend-item';
+          const swatch = document.createElement('span');
+          swatch.className = 'world-map-legend-swatch';
+          swatch.style.background = b.color;
+          item.appendChild(swatch);
+          item.appendChild(document.createTextNode(b.label));
+          legend.appendChild(item);
+        });
+        const noneItem = document.createElement('span');
+        noneItem.className = 'world-map-legend-item';
+        const noneSwatch = document.createElement('span');
+        noneSwatch.className = 'world-map-legend-swatch world-map-legend-swatch-none';
+        noneItem.appendChild(noneSwatch);
+        noneItem.appendChild(document.createTextNode('No reliable data'));
+        legend.appendChild(noneItem);
+        legend.hidden = false;
+      }
     })
     .catch(() => {
       // leave the container empty -- the chip list below still has the

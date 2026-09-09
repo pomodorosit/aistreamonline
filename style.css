@@ -2088,10 +2088,38 @@ img { max-width: 100%; display: block; }
 }
 
 .world-map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 16px;
   text-align: center;
   color: var(--ink-faint);
   font-size: 12px;
   margin: 0 0 28px;
+}
+
+.world-map-legend-label {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.world-map-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.world-map-legend-swatch {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid var(--line-strong);
+}
+
+.world-map-legend-swatch-none {
+  background: #2a2350;
 }
 
 .country-explore-grid {
