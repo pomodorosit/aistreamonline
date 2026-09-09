@@ -1,6 +1,46 @@
 {
-  "generatedAt": "2026-09-09T20:41:23Z",
+  "generatedAt": "2026-09-09T23:03:05Z",
   "items": [
+    {
+      "title": "OpenAI adds a prominent AI doomer to its board of directors",
+      "link": "https://techcrunch.com/2026/09/09/openai-adds-a-prominent-ai-doomer-to-its-board-of-directors/",
+      "pubDate": "Wed, 09 Sep 2026 22:25:22 +0000",
+      "summary": "Paul Christiano, an influential AI researcher focused on alignment, is joining the OpenAI Foundation as a member of its board.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/openai-getty.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI safety"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Massachusetts hits data centers with new clean power rules",
+      "link": "https://techcrunch.com/2026/09/09/massachusetts-hits-data-centers-with-new-clean-power-rules/",
+      "pubDate": "Wed, 09 Sep 2026 21:43:34 +0000",
+      "summary": "Massachusetts has become the third state in as many months to slap new restrictions on data center development.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2001268132.jpeg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "AI infrastructure"
+        ],
+        "engine": "heuristic"
+      }
+    },
     {
       "title": "Apple Watch’s new AI features are normalizing the idea that technology is always listening",
       "link": "https://techcrunch.com/2026/09/09/apple-watchs-new-ai-features-are-normalizing-the-idea-that-technology-is-always-listening/",
@@ -66,7 +106,7 @@
       }
     },
     {
-      "title": "Apple has a new way prove your iPhone photos aren’t AI slop",
+      "title": "Apple has a new way to prove your iPhone photos aren’t AI slop",
       "link": "https://techcrunch.com/2026/09/09/apple-has-a-new-way-prove-your-iphone-photos-arent-ai-slop/",
       "pubDate": "Wed, 09 Sep 2026 18:08:35 +0000",
       "summary": "Apple introduced Apple Reference Image to help users determine whether photos have been edited, including alterations made by AI.",
@@ -1096,44 +1136,6 @@
         "technologies": [
           "Robotics"
         ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "OpenAI’s new reasoning technique alarms AI safety experts",
-      "link": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/",
-      "pubDate": "Wed, 02 Sep 2026 20:19:14 +0000",
-      "summary": "OpenAI’s new Astra model will use “recurrent depth,” a technique that allows the model to operate outside of the sequential thinking that characterizes most reasoning models.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/07/OpenAI-logo-in-Seoul.jpg?w=1024",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [
-          "OpenAI"
-        ],
-        "countries": [],
-        "technologies": [
-          "AI safety"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Pangram’s Max Spero on why AI detection is harder than ‘Real or Fake’",
-      "link": "https://techcrunch.com/video/pangrams-max-spero-on-why-ai-detection-is-harder-than-real-or-fake/",
-      "pubDate": "Wed, 02 Sep 2026 17:18:13 +0000",
-      "summary": "The internet has a trust problem, and it’s not just because social media feeds are filling up with AI slop. AI-generated text and images are now making their way into job applications, product...",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/07/Pangram-founders.png?resize=1200,675",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [],
         "engine": "heuristic"
       }
     }
