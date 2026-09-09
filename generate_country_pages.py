@@ -90,11 +90,11 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <meta property="og:title" content="AI in {name} — AI Stream Online">
 <meta property="og:description" content="{company_count} AI companies tracked in {name}, plus recent AI news and global context.">
 <meta property="og:url" content="https://aistreamonline.com/country/{slug}">
-<meta property="og:image" content="https://aistreamonline.com/char-glasses-head.png">
+<meta property="og:image" content="https://aistreamonline.com/char-mustache-head.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AI in {name} — AI Stream Online">
 <meta name="twitter:description" content="{company_count} AI companies tracked in {name}, plus recent AI news and global context.">
-<meta name="twitter:image" content="https://aistreamonline.com/char-glasses-head.png">
+<meta name="twitter:image" content="https://aistreamonline.com/char-mustache-head.png">
 <script type="application/ld+json">
 {{
   "@context": "https://schema.org",
@@ -115,7 +115,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="logo" href="../index.html">
-      <img class="mascot" src="../char-glasses-head.png" alt="AI Stream Online mascot">
+      <img class="mascot" src="../char-mustache-head.png" alt="AI Stream Online mascot">
       <span class="logo-text">
         <span class="logo-en">AI STREAM ONLINE</span>
         <span class="logo-he">The World of AI. Live.</span>
@@ -179,11 +179,11 @@ COMPANIES_PAGE_TEMPLATE = """<!DOCTYPE html>
 <meta property="og:title" content="AI Companies by Country — AI Stream Online">
 <meta property="og:description" content="{total_count} AI companies tracked across {country_count} countries, sourced from Wikidata.">
 <meta property="og:url" content="https://aistreamonline.com/companies">
-<meta property="og:image" content="https://aistreamonline.com/char-glasses-head.png">
+<meta property="og:image" content="https://aistreamonline.com/char-mustache-head.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AI Companies by Country — AI Stream Online">
 <meta name="twitter:description" content="{total_count} AI companies tracked across {country_count} countries, sourced from Wikidata.">
-<meta name="twitter:image" content="https://aistreamonline.com/char-glasses-head.png">
+<meta name="twitter:image" content="https://aistreamonline.com/char-mustache-head.png">
 <script type="application/ld+json">
 {{
   "@context": "https://schema.org",
@@ -204,7 +204,7 @@ COMPANIES_PAGE_TEMPLATE = """<!DOCTYPE html>
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="logo" href="index.html">
-      <img class="mascot" src="char-glasses-head.png" alt="AI Stream Online mascot">
+      <img class="mascot" src="char-mustache-head.png" alt="AI Stream Online mascot">
       <span class="logo-text">
         <span class="logo-en">AI STREAM ONLINE</span>
         <span class="logo-he">The World of AI. Live.</span>
@@ -301,11 +301,11 @@ COMPANY_PAGE_TEMPLATE = """<!DOCTYPE html>
 <meta property="og:title" content="{name} — AI Stream Online">
 <meta property="og:description" content="{name} is an AI company tracked in {country}{inception_suffix}.">
 <meta property="og:url" content="https://aistreamonline.com/company/{slug}">
-<meta property="og:image" content="https://aistreamonline.com/char-glasses-head.png">
+<meta property="og:image" content="https://aistreamonline.com/char-mustache-head.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{name} — AI Stream Online">
 <meta name="twitter:description" content="{name} is an AI company tracked in {country}{inception_suffix}.">
-<meta name="twitter:image" content="https://aistreamonline.com/char-glasses-head.png">
+<meta name="twitter:image" content="https://aistreamonline.com/char-mustache-head.png">
 <script type="application/ld+json">
 {{
   "@context": "https://schema.org",
@@ -327,7 +327,7 @@ COMPANY_PAGE_TEMPLATE = """<!DOCTYPE html>
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="logo" href="../index.html">
-      <img class="mascot" src="../char-glasses-head.png" alt="AI Stream Online mascot">
+      <img class="mascot" src="../char-mustache-head.png" alt="AI Stream Online mascot">
       <span class="logo-text">
         <span class="logo-en">AI STREAM ONLINE</span>
         <span class="logo-he">The World of AI. Live.</span>
