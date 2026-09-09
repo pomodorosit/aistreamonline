@@ -90,7 +90,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css?v=46">
+<link rel="stylesheet" href="../style.css?v=47">
 </head>
 <body>
 
@@ -111,6 +111,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
     <div class="wrap legal-content">
       <h1>{flag} AI in {name}</h1>
       <p class="legal-updated">Data updated automatically every 3 hours</p>
+      <button type="button" class="btn btn-outline share-btn" data-share-title="AI in {name} — AI Stream Online" data-share-url="https://aistreamonline.com/country/{slug}">Share this page</button>
 
       <div class="country-stat-block">
         <span class="country-stat-number">{company_count}</span>
@@ -139,6 +140,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   </div>
 </footer>
 
+<script src="../share.js"></script>
 </body>
 </html>
 """
@@ -174,7 +176,7 @@ COMPANIES_PAGE_TEMPLATE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=46">
+<link rel="stylesheet" href="style.css?v=47">
 </head>
 <body>
 
@@ -195,6 +197,7 @@ COMPANIES_PAGE_TEMPLATE = """<!DOCTYPE html>
     <div class="wrap legal-content">
       <h1>AI Companies, by Country</h1>
       <p class="legal-updated">Data updated automatically every 3 hours</p>
+      <button type="button" class="btn btn-outline share-btn" data-share-title="AI Companies by Country — AI Stream Online" data-share-url="https://aistreamonline.com/companies">Share this page</button>
 
       <div class="country-stat-block">
         <span class="country-stat-number">{total_count}</span>
@@ -225,6 +228,7 @@ COMPANIES_PAGE_TEMPLATE = """<!DOCTYPE html>
   </div>
 </footer>
 
+<script src="share.js"></script>
 </body>
 </html>
 """
