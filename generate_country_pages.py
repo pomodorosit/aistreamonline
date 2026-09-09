@@ -72,6 +72,21 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <meta property="og:title" content="AI in {name} — AI Stream Online">
 <meta property="og:description" content="{company_count} AI companies tracked in {name}, plus recent AI news and global context.">
 <meta property="og:url" content="https://aistreamonline.com/country/{slug}">
+<meta property="og:image" content="https://aistreamonline.com/logo-mascot.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI in {name} — AI Stream Online">
+<meta name="twitter:description" content="{company_count} AI companies tracked in {name}, plus recent AI news and global context.">
+<meta name="twitter:image" content="https://aistreamonline.com/logo-mascot.png">
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{"@type": "ListItem", "position": 1, "name": "AI Stream Online", "item": "https://aistreamonline.com/"}},
+    {{"@type": "ListItem", "position": 2, "name": "AI in {name}", "item": "https://aistreamonline.com/country/{slug}"}}
+  ]
+}}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
