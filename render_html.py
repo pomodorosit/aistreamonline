@@ -216,9 +216,6 @@ def render_hero(item):
         '<div class="hero-cta">'
         f'<a class="btn btn-gold" id="featured-hero-link" {link_attrs}>Read Full Story</a>'
         '<a href="#news" class="btn btn-outline">More News</a>'
-        '<button type="button" class="btn btn-outline share-btn" '
-        'data-share-title="AI Stream Online — AI News &amp; Live Streams" '
-        'data-share-url="https://aistreamonline.com/">Share this site</button>'
         "</div></div>"
     )
 
