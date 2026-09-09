@@ -1383,6 +1383,16 @@ img { max-width: 100%; display: block; }
 .drilldown-list a { color: var(--ink); }
 .drilldown-list a:hover { color: var(--gold); }
 
+.drilldown-more-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.drilldown-more-link:hover { text-decoration: underline; }
+
 /* ---------- live AI pulse (GitHub activity) ---------- */
 
 .ai-pulse {

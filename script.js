@@ -930,6 +930,15 @@ function initAiCompaniesByCountry() {
     });
 }
 
+const COUNTRY_PAGE_SLUGS = {
+  'Israel': 'israel',
+  'Singapore': 'singapore',
+  'United States': 'united-states',
+  'South Korea': 'south-korea',
+  'United Kingdom': 'united-kingdom',
+  'China': 'china',
+};
+
 function initLeadershipDrilldown(newsItems) {
   const list = document.querySelector('.leadership-rank-list');
   const panel = document.getElementById('leadership-drilldown');
@@ -974,6 +983,15 @@ function initLeadershipDrilldown(newsItems) {
         list.appendChild(li);
       });
       panel.appendChild(list);
+    }
+
+    const slug = COUNTRY_PAGE_SLUGS[country];
+    if (slug) {
+      const more = document.createElement('a');
+      more.className = 'drilldown-more-link';
+      more.href = 'country/' + slug + '.html';
+      more.textContent = 'View full ' + country + ' page →';
+      panel.appendChild(more);
     }
 
     panel.classList.add('visible');
