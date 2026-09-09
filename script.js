@@ -560,6 +560,24 @@ function initNewsArchive(items) {
   container.insertBefore(toggle, dayElements[0]);
 }
 
+function renderDataFreshness(generatedAt) {
+  const el = document.getElementById('data-freshness');
+  if (!el || !generatedAt) return;
+  const then = new Date(generatedAt).getTime();
+  if (Number.isNaN(then)) return;
+
+  const mins = Math.max(0, Math.round((Date.now() - then) / 60000));
+  let text;
+  if (mins < 1) text = 'Data refreshed moments ago';
+  else if (mins < 60) text = `Data refreshed ${mins} minute${mins === 1 ? '' : 's'} ago`;
+  else {
+    const hours = Math.round(mins / 60);
+    text = `Data refreshed ${hours} hour${hours === 1 ? '' : 's'} ago`;
+  }
+  el.textContent = text;
+  el.hidden = false;
+}
+
 function initLiveNews() {
   const grid = document.getElementById('news-grid');
   if (!grid) return;
@@ -573,6 +591,7 @@ function initLiveNews() {
       const items = Array.isArray(data.items) ? data.items : [];
       if (items.length === 0) return; // keep static fallback cards
 
+      renderDataFreshness(data.generatedAt);
       populateFeaturedHero(items[0]);
       const heroLink = items[0].link;
       const pool = items.filter((it) => it.link !== heroLink);

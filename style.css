@@ -328,6 +328,14 @@ img { max-width: 100%; display: block; }
 .section-head-light h2 { color: var(--ink); }
 .section-sub-light { color: var(--ink-faint); }
 
+.data-freshness {
+  margin-top: 8px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  color: var(--ink-faint);
+}
+
 /* ---------- return visit banner ---------- */
 
 .return-banner {
