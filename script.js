@@ -277,6 +277,32 @@ function buildWhyItMatters(analysis) {
   return box;
 }
 
+function buildEntityTags(analysis, maxTags) {
+  maxTags = maxTags || 4;
+  if (!analysis) return null;
+  const entities = [];
+  ['companies', 'countries', 'technologies'].forEach((key) => {
+    (analysis[key] || []).forEach((name) => {
+      if (!entities.includes(name)) entities.push(name);
+    });
+  });
+  if (entities.length === 0) return null;
+
+  const box = document.createElement('div');
+  box.className = 'entity-tags';
+  const label = document.createElement('span');
+  label.className = 'entity-tags-label';
+  label.textContent = 'Who it affects';
+  box.appendChild(label);
+  entities.slice(0, maxTags).forEach((name) => {
+    const tag = document.createElement('span');
+    tag.className = 'entity-tag';
+    tag.textContent = name;
+    box.appendChild(tag);
+  });
+  return box;
+}
+
 function buildRelatedSources(relatedSources) {
   if (!Array.isArray(relatedSources) || relatedSources.length === 0) return null;
   const box = document.createElement('div');
@@ -356,6 +382,9 @@ function buildNewsCard(item, isFeatured) {
 
   const whyItMatters = buildWhyItMatters(item.aiAnalysis);
   if (whyItMatters) body.appendChild(whyItMatters);
+
+  const entityTags = buildEntityTags(item.aiAnalysis);
+  if (entityTags) body.appendChild(entityTags);
 
   const relatedSources = buildRelatedSources(item.relatedSources);
   if (relatedSources) body.appendChild(relatedSources);

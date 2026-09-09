@@ -69,6 +69,21 @@ def render_why_it_matters(analysis):
     )
 
 
+def render_entity_tags(analysis, max_tags=4):
+    if not analysis:
+        return ""
+    entities = []
+    for key in ("companies", "countries", "technologies"):
+        for name in analysis.get(key) or []:
+            if name not in entities:
+                entities.append(name)
+    entities = entities[:max_tags]
+    if not entities:
+        return ""
+    tags = "".join(f'<span class="entity-tag">{esc(e)}</span>' for e in entities)
+    return f'<div class="entity-tags"><span class="entity-tags-label">Who it affects</span>{tags}</div>'
+
+
 def render_related_sources(related):
     if not related:
         return ""
@@ -106,6 +121,7 @@ def render_news_card(item, featured=False):
         body_top = ""
 
     why_html = render_why_it_matters(item.get("aiAnalysis"))
+    entity_html = render_entity_tags(item.get("aiAnalysis"))
     related_html = render_related_sources(item.get("relatedSources"))
     date_html = f"<span>{esc(format_date(item.get('pubDate')))}</span>"
     link_html = render_read_more(item.get("link"))
@@ -115,7 +131,7 @@ def render_news_card(item, featured=False):
         f'<div class="news-card-body">{body_top}'
         f'<h3>{esc(item.get("title"))}</h3>'
         f'<p>{esc(item.get("summary"))}</p>'
-        f"{why_html}{related_html}"
+        f"{why_html}{entity_html}{related_html}"
         f'<div class="news-meta">{date_html}{link_html}</div>'
         "</div></article>"
     )
