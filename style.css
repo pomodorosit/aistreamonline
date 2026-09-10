@@ -637,14 +637,16 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 480px) {
+  .verdict-section .wrap { padding: 0 14px; }
+  .verdict-card { padding: 22px 14px; }
   .vote-btn {
-    padding: 9px 12px;
-    gap: 6px;
-    font-size: 10px;
+    padding: 10px 14px;
+    gap: 7px;
+    font-size: 10.5px;
     letter-spacing: 0.5px;
     white-space: nowrap;
   }
-  .vote-btn-icon-wrap, .vote-btn-icon { width: 26px; height: 26px; }
+  .vote-btn-icon-wrap, .vote-btn-icon { width: 28px; height: 28px; }
   .verdict-vote { gap: 8px; }
   .vote-btn.chosen::after { width: 15px; height: 15px; font-size: 8px; top: -5px; right: -5px; }
 }
@@ -654,14 +656,14 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin: 2px 0 18px;
+  margin: 6px 0 26px;
 }
 
 .verdict-result-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 11px;
 }
 
 .verdict-result-tile-previous { opacity: 0.6; }
