@@ -518,8 +518,8 @@ img { max-width: 100%; display: block; }
 .vote-btn-icon-wrap::before {
   content: '';
   position: absolute;
-  inset: -45%;
-  background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.22) 40%, rgba(255,255,255,0) 72%);
+  inset: -35%;
+  background: radial-gradient(circle, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.09) 40%, rgba(255,255,255,0) 70%);
   border-radius: 50%;
   pointer-events: none;
 }
