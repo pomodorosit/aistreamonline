@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-10T20:36:02Z",
+  "generatedAt": "2026-09-10T22:59:38Z",
   "videos": [
     {
-      "videoId": "GzhfZy8-CjU",
-      "title": "AI EDAs: Is It Real?",
-      "channelTitle": "Asianometry",
-      "publishedAt": "2026-09-03T23:00:09Z",
-      "viewCount": 253863,
-      "likeCount": 4828,
+      "videoId": "Y5rSSvXfL4g",
+      "title": "5 open source tools that replaced my $320/mo AI stack...",
+      "channelTitle": "Fireship",
+      "publishedAt": "2026-09-07T17:24:51Z",
+      "viewCount": 1044516,
+      "likeCount": 17374,
       "topic": "Large language models"
     },
     {
@@ -15,17 +15,17 @@
       "title": "Google Flow छोड़ो! 😱 ये FREE AI Tool Unlimited Long Video बनाता है | image to video ai free 🔥",
       "channelTitle": "Arvind zone",
       "publishedAt": "2026-09-05T07:36:19Z",
-      "viewCount": 264727,
+      "viewCount": 266681,
       "likeCount": 3117,
       "topic": "Generative AI"
     },
     {
-      "videoId": "7ReHiROdPbE",
-      "title": "Build Your First AI Agent in 10 Minutes — No Coding",
-      "channelTitle": "The Tech Girl",
-      "publishedAt": "2026-09-05T13:00:33Z",
-      "viewCount": 105513,
-      "likeCount": 1093,
+      "videoId": "1qGH6NwTj3o",
+      "title": "GPT-6 Astra Doesn't Need Your Instructions Anymore.",
+      "channelTitle": "AI News & Strategy Daily | Nate B Jones",
+      "publishedAt": "2026-09-06T17:00:38Z",
+      "viewCount": 365544,
+      "likeCount": 6321,
       "topic": "Agentic AI"
     },
     {
@@ -33,8 +33,8 @@
       "title": "China Is Preparing Humanoid Robots for War. How Close Is It? | The Palki Sharma Show | IGR",
       "channelTitle": "India Global Review",
       "publishedAt": "2026-09-07T18:05:06Z",
-      "viewCount": 254714,
-      "likeCount": 2059,
+      "viewCount": 263549,
+      "likeCount": 2116,
       "topic": "Robotics"
     },
     {
@@ -42,8 +42,8 @@
       "title": "Nvidia DLSS 5 Might Break Your RTX 5090 (+ RX 9050 4GB Review)",
       "channelTitle": "Moore's Law Is Dead",
       "publishedAt": "2026-09-04T03:30:00Z",
-      "viewCount": 83340,
-      "likeCount": 2005,
+      "viewCount": 83445,
+      "likeCount": 2006,
       "topic": "AI chips"
     },
     {
@@ -51,8 +51,8 @@
       "title": "OpenAI's new warning",
       "channelTitle": "CNBC Television",
       "publishedAt": "2026-09-08T15:46:10Z",
-      "viewCount": 122349,
-      "likeCount": 836,
+      "viewCount": 122692,
+      "likeCount": 838,
       "topic": "AI safety"
     }
   ]

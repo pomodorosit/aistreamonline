@@ -1,6 +1,84 @@
 {
-  "generatedAt": "2026-09-10T20:35:57Z",
+  "generatedAt": "2026-09-10T22:59:33Z",
   "items": [
+    {
+      "title": "Jensen Huang explains why Nvidia will grow an astounding 70% next year",
+      "link": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/",
+      "pubDate": "Thu, 10 Sep 2026 21:51:59 +0000",
+      "summary": "Nvidia has its finger in every pie, and sees another year of plenty in its future, Jensen Huang says. But, he insists, its deals are not circular.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/03/jensen-huang-gtc-getty.jpg?resize=1200,781",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Nvidia"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Mark Wahlberg is coming to TechCrunch Disrupt 2026, and he wants to talk about your work, not his",
+      "link": "https://techcrunch.com/2026/09/10/mark-wahlberg-is-coming-to-techcrunch-disrupt-2026/",
+      "pubDate": "Thu, 10 Sep 2026 21:35:00 +0000",
+      "summary": "Mark Wahlberg joins Bruce K. Lee at Disrupt to discuss investing, entrepreneurship, healthcare, wellness and building businesses.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/TCD26_Wahlberg-Lee-16x9-Dark.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "OpenAI puts Pro subscriptions on hold due to Astra demand",
+      "link": "https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/",
+      "pubDate": "Thu, 10 Sep 2026 20:59:51 +0000",
+      "summary": "The company said Pro subscriptions put the most strain on its systems, so it's pausing sign-ups while adding more capacity.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/openai-getty.jpg?resize=1200,800",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Anthropic details distillation campaigns from Alibaba, Moonshot AI, and DeepSeek",
+      "link": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/",
+      "pubDate": "Thu, 10 Sep 2026 20:57:30 +0000",
+      "summary": "A new report released Thursday by Anthropic alleges persistent distillation attacks by China-based AI companies, which have escalated in recent months as competition in the space has intensified.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2287646148.jpg?resize=1200,901",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Anthropic",
+          "DeepSeek",
+          "Alibaba"
+        ],
+        "countries": [
+          "China"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
     {
       "title": "Meta’s AI agent Muse is now the No. 2 app in the US",
       "link": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/",
@@ -59,6 +137,25 @@
           "India"
         ],
         "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Supply chains detect fast, act slow: How AI agents fix it",
+      "link": "https://www.artificialintelligence-news.com/news/supply-chains-detect-fast-act-slow-how-ai-agents-fix-it/",
+      "pubDate": "Thu, 10 Sep 2026 16:34:43 +0000",
+      "summary": "Supply chain disruption cost businesses about $184 billion in 2025, according to the J.S. Held Global Risk Report, and most of that bill still buys faster detection, not faster action. That figure is...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/supply-chains-detect-fast-act-slow-ai-agents-fix-agentic-artificial-intelligence-logistics-risk-management-predictive-analytics.jpg",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": -1,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Agentic AI"
+        ],
         "engine": "heuristic"
       }
     },
@@ -1062,78 +1159,6 @@
         "technologies": [
           "AI infrastructure"
         ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Accel reportedly in talks to lead $1B round for Thinking Machines at $40B valuation",
-      "link": "https://techcrunch.com/2026/09/03/accel-reportedly-in-talks-to-lead-1b-round-for-thinking-machines-at-40b-valuation/",
-      "pubDate": "Thu, 03 Sep 2026 19:36:29 +0000",
-      "summary": "The high-profile startup's annual revenue run rate stands at over $100 million.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/06/Mira-Murati-at-Bloomberg.jpg?w=1024",
-      "aiAnalysis": {
-        "impactLevel": "Medium",
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Abliteration.ai is making a business out of removing AI guardrails",
-      "link": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/",
-      "pubDate": "Thu, 03 Sep 2026 18:37:57 +0000",
-      "summary": "Abliteration.AI is making powerful AI models without guardrails easier to access, arguing that giving defenders the same tools as bad actors could ultimately improve cybersecurity.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2024/09/vpn-privacy-cybersecurity-red-bright.jpg?resize=1200,831",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Meta is paying to peek at how you use their latest AI model",
-      "link": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/",
-      "pubDate": "Thu, 03 Sep 2026 18:19:56 +0000",
-      "summary": "For its new Muse Spark model, intended for operating coding and other agents, Meta is offering an explicit discount averaging out to about 95% for users who \"contribute\" to the development of future...",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2173579488.jpg?resize=1200,799",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [
-          "Meta"
-        ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "OpenAI launches Astra, its powerful (and controversial) new model",
-      "link": "https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model/",
-      "pubDate": "Thu, 03 Sep 2026 18:01:45 +0000",
-      "summary": "OpenAI claims that Astra represents \"a new frontier on computer and browser use,\" and that it handles tasks with unmatched \"speed, accuracy, and safety.\"",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2025/04/GettyImages-2182154299.jpg?w=1024",
-      "aiAnalysis": {
-        "impactLevel": "Medium",
-        "sentimentScore": 1,
-        "companies": [
-          "OpenAI"
-        ],
-        "countries": [],
-        "technologies": [],
         "engine": "heuristic"
       }
     }
