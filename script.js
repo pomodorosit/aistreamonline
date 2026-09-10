@@ -1596,12 +1596,15 @@ function initVerdict(newsItems) {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = `vote-btn vote-btn-${direction}` + (myVote === direction ? ' chosen' : '');
+      const iconWrap = document.createElement('span');
+      iconWrap.className = 'vote-btn-icon-wrap';
       const icon = document.createElement('img');
       icon.className = 'vote-btn-icon';
       icon.setAttribute('aria-hidden', 'true');
       icon.alt = '';
       icon.src = VOTE_ICONS[direction];
-      btn.appendChild(icon);
+      iconWrap.appendChild(icon);
+      btn.appendChild(iconWrap);
       btn.appendChild(document.createTextNode(VOTE_LABELS[direction]));
       btn.setAttribute('aria-label', 'Answer: ' + VOTE_LABELS[direction]);
       if (myVote) btn.disabled = true;

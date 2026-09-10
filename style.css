@@ -505,12 +505,30 @@ img { max-width: 100%; display: block; }
   transition: transform .15s, border-color .15s, color .15s, background .15s;
 }
 
+.vote-btn-icon-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.vote-btn-icon-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -45%;
+  background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.22) 40%, rgba(255,255,255,0) 72%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
 .vote-btn-icon {
+  position: relative;
   width: 44px;
   height: 44px;
   object-fit: contain;
-  background: #fff;
-  border-radius: 22%;
   flex-shrink: 0;
 }
 
