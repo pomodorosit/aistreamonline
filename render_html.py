@@ -216,6 +216,7 @@ def render_hero(item):
         '<div class="hero-cta">'
         f'<a class="btn btn-gold" id="featured-hero-link" {link_attrs}>Read Full Story</a>'
         '<a href="#news" class="btn btn-outline">More News</a>'
+        '<a href="#verdict" class="btn btn-outline">What Do You Think? →</a>'
         "</div></div>"
     )
 
