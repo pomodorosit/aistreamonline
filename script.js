@@ -1539,15 +1539,9 @@ function initVerdict(newsItems) {
         const pct = Math.round(((counts[d] || 0) / total) * 100);
         const item = document.createElement('div');
         item.className = `verdict-results-mini-item verdict-results-mini-item-${d}`;
-        const icon = document.createElement('img');
-        icon.className = 'verdict-results-mini-icon';
-        icon.src = VOTE_ICONS[d];
-        icon.alt = '';
-        icon.setAttribute('aria-hidden', 'true');
         const pctEl = document.createElement('span');
         pctEl.className = 'verdict-results-mini-pct';
         pctEl.textContent = pct + '%';
-        item.appendChild(icon);
         item.appendChild(pctEl);
         mini.appendChild(item);
       });
