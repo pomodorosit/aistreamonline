@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T10:54:27Z",
+  "generatedAt": "2026-09-10T16:03:39Z",
   "source": "Wikidata (companies tagged industry: artificial intelligence)",
   "companies": [
     {
@@ -1939,12 +1939,12 @@
     },
     {
       "qid": "Q140356046",
-      "name": "economAIcs Group",
-      "slug": "economaics-group",
+      "name": "economAIcs Group Ltd",
+      "slug": "economaics-group-ltd",
       "country": "United Kingdom",
       "inception": "2026",
       "website": "https://economaicsgroup.com",
-      "description": "British software company developing AI tools for public transport procurement bidding"
+      "description": "British software company developing AI tools and specialist AI consulting for the public transport industry"
     },
     {
       "qid": "Q140389363",
