@@ -1383,6 +1383,10 @@ function initVerdict(newsItems) {
       item: it,
       aiScore: aiSentimentScore(it.aiAnalysis),
       avatar: it.avatar || 'char-robot-head.png',
+      // the source-level avatar is shared by every article from that feed,
+      // so prefer the article's own photo when there is one -- that's what
+      // actually makes the tile recognizable as *this* story
+      image: (it.image && isSafeHttpUrl(it.image)) ? it.image : null,
     }));
 
   if (queue.length === 0) return; // nothing to show rather than fake data
@@ -1391,7 +1395,7 @@ function initVerdict(newsItems) {
   let index = 0;
   let serverAvailable = true; // flips permanently false on first failed call this session
   let currentCounts = null; // last known tally for the article on stage, so advance() can snapshot it as "previous"
-  let previousResult = null; // { avatar, leading } captured from the article just left, or null on the first card
+  let previousResult = null; // { avatar, image, leading } captured from the article just left, or null on the first card
 
   async function fetchCounts(id) {
     if (!serverAvailable) return null;
@@ -1436,7 +1440,7 @@ function initVerdict(newsItems) {
     return { direction: best, pct: Math.round(((counts[best] || 0) / total) * 100) };
   }
 
-  function buildResultTile(labelText, avatar, leading) {
+  function buildResultTile(labelText, avatar, image, leading) {
     const tile = document.createElement('div');
     tile.className = 'verdict-result-tile';
 
@@ -1448,7 +1452,10 @@ function initVerdict(newsItems) {
     const box = document.createElement('div');
     box.className = 'verdict-result-tile-box';
     const img = document.createElement('img');
-    img.src = avatar;
+    // prefer the article's own photo -- the shared per-feed avatar can't
+    // tell two stories apart, defeating the point of "this specific story"
+    img.src = image || avatar;
+    img.onerror = () => { img.onerror = null; img.src = avatar; };
     img.alt = '';
     img.setAttribute('aria-hidden', 'true');
     box.appendChild(img);
@@ -1479,12 +1486,12 @@ function initVerdict(newsItems) {
     }
   }
 
-  function renderResultsStrip(avatar) {
+  function renderResultsStrip(avatar, image) {
     const strip = document.createElement('div');
     strip.className = 'verdict-results-strip';
 
     if (previousResult) {
-      strip.appendChild(buildResultTile('Previous', previousResult.avatar, previousResult.leading));
+      strip.appendChild(buildResultTile('Previous', previousResult.avatar, previousResult.image, previousResult.leading));
       const arrow = document.createElement('span');
       arrow.className = 'verdict-result-arrow';
       arrow.setAttribute('aria-hidden', 'true');
@@ -1492,7 +1499,7 @@ function initVerdict(newsItems) {
       strip.appendChild(arrow);
     }
 
-    strip.appendChild(buildResultTile('This story', avatar, null));
+    strip.appendChild(buildResultTile('This story', avatar, image, null));
     return strip;
   }
 
@@ -1538,7 +1545,7 @@ function initVerdict(newsItems) {
   }
 
   async function renderCard() {
-    const { id, item, aiScore, avatar } = queue[index];
+    const { id, item, aiScore, avatar, image } = queue[index];
     progress.textContent = (index + 1) + ' / ' + queue.length;
     currentCounts = null;
 
@@ -1579,7 +1586,7 @@ function initVerdict(newsItems) {
     summaryEl.id = 'verdict-summary';
     card.appendChild(summaryEl);
 
-    const resultsStrip = renderResultsStrip(avatar);
+    const resultsStrip = renderResultsStrip(avatar, image);
     resultsStrip.id = 'verdict-results-strip';
     card.appendChild(resultsStrip);
 
@@ -1644,7 +1651,7 @@ function initVerdict(newsItems) {
   }
 
   function advance() {
-    previousResult = { avatar: queue[index].avatar, leading: computeLeading(currentCounts) };
+    previousResult = { avatar: queue[index].avatar, image: queue[index].image, leading: computeLeading(currentCounts) };
     index = (index + 1) % queue.length;
     renderCard();
   }
