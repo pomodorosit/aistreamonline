@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T16:03:39Z",
+  "generatedAt": "2026-09-10T20:36:05Z",
   "source": "Wikidata (companies tagged industry: artificial intelligence)",
   "countries": {
     "Germany": 46,
@@ -15,7 +15,7 @@
     "Italy": 13,
     "France": 46,
     "South Korea": 10,
-    "India": 52,
+    "India": 53,
     "Canada": 31,
     "Spain": 23,
     "Netherlands": 16,
@@ -27,21 +27,21 @@
     "Chile": 3,
     "Singapore": 13,
     "Japan": 9,
+    "Russia": 3,
     "United Arab Emirates": 13,
+    "Sweden": 5,
     "Estonia": 3,
     "Slovakia": 4,
     "Cyprus": 3,
-    "Sweden": 5,
-    "Lithuania": 6,
     "South Africa": 6,
     "Romania": 4,
     "Indonesia": 4,
     "Malaysia": 4,
     "New Zealand": 3,
-    "Russia": 3,
     "Turkey": 6,
     "Brazil": 6,
     "Czech Republic": 7,
+    "Lithuania": 6,
     "Argentina": 3
   }
 }

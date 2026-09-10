@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T16:03:39Z",
+  "generatedAt": "2026-09-10T20:36:05Z",
   "source": "Wikidata (companies tagged industry: artificial intelligence)",
   "companies": [
     {
@@ -3115,6 +3115,15 @@
       "inception": null,
       "website": "https://www.inhouse.app/",
       "description": "AI-based lawyer"
+    },
+    {
+      "qid": "Q141416322",
+      "name": "Innovista Labs",
+      "slug": "innovista-labs",
+      "country": "India",
+      "inception": null,
+      "website": "https://innovistalabs.io",
+      "description": "technology company in India specializing in artificial intelligence services"
     },
     {
       "qid": "Q140751180",
