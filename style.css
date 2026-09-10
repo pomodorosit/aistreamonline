@@ -499,6 +499,7 @@ img { max-width: 100%; display: block; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: 0;
   gap: 10px;
   padding: 12px 26px;
   font-size: 12px;
@@ -633,6 +634,19 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: center;
   line-height: 1;
+}
+
+@media (max-width: 480px) {
+  .vote-btn {
+    padding: 9px 12px;
+    gap: 6px;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  .vote-btn-icon-wrap, .vote-btn-icon { width: 26px; height: 26px; }
+  .verdict-vote { gap: 8px; }
+  .vote-btn.chosen::after { width: 15px; height: 15px; font-size: 8px; top: -5px; right: -5px; }
 }
 
 .verdict-results-strip {
