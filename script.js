@@ -1571,10 +1571,16 @@ function initVerdict(newsItems) {
     const card = document.createElement('article');
     card.className = 'verdict-card';
 
+    // three gently-bounded panels -- title, results, voting -- instead of
+    // one continuous block, so each part of the card reads as its own group
+    const titlePanel = document.createElement('div');
+    titlePanel.className = 'verdict-panel verdict-title-panel';
+    card.appendChild(titlePanel);
+
     const tag = document.createElement('span');
     tag.className = 'verdict-tag';
     tag.textContent = item.category || 'News';
-    card.appendChild(tag);
+    titlePanel.appendChild(tag);
 
     const h4 = document.createElement('h4');
     const link = document.createElement('a');
@@ -1587,33 +1593,41 @@ function initVerdict(newsItems) {
       link.href = '#';
     }
     h4.appendChild(link);
-    card.appendChild(h4);
+    titlePanel.appendChild(h4);
 
     const myVote = myVotes[id];
     if (myVote) {
       const already = document.createElement('p');
       already.className = 'verdict-already-voted';
       already.textContent = 'You answered: ' + VOTE_LABELS[myVote];
-      card.appendChild(already);
+      titlePanel.appendChild(already);
     } else {
       // the human vote is the primary action on this card -- the automated
       // sentiment line below is deliberately smaller/quieter than this
       const question = document.createElement('p');
       question.className = 'verdict-question';
       question.textContent = 'What do you think?';
-      card.appendChild(question);
+      titlePanel.appendChild(question);
     }
+
+    const resultsPanel = document.createElement('div');
+    resultsPanel.className = 'verdict-panel verdict-results-panel';
+    card.appendChild(resultsPanel);
 
     // real vote tally goes above the buttons, not below, so readers see
     // where things stand before (or right after) answering
     const summaryEl = document.createElement('div');
     summaryEl.className = 'verdict-summary';
     summaryEl.id = 'verdict-summary';
-    card.appendChild(summaryEl);
+    resultsPanel.appendChild(summaryEl);
 
     const resultsStrip = renderResultsStrip(avatar, image);
     resultsStrip.id = 'verdict-results-strip';
-    card.appendChild(resultsStrip);
+    resultsPanel.appendChild(resultsStrip);
+
+    const votePanel = document.createElement('div');
+    votePanel.className = 'verdict-panel verdict-voting-panel';
+    card.appendChild(votePanel);
 
     const vote = document.createElement('div');
     vote.className = 'verdict-vote';
@@ -1636,7 +1650,7 @@ function initVerdict(newsItems) {
       btn.addEventListener('click', () => handleVote(id, direction));
       vote.appendChild(btn);
     });
-    card.appendChild(vote);
+    votePanel.appendChild(vote);
 
     stage.appendChild(card);
 
@@ -1660,10 +1674,12 @@ function initVerdict(newsItems) {
     stage.querySelectorAll('.vote-btn').forEach((btn) => { btn.disabled = true; });
     stage.querySelector(`.vote-btn-${direction}`).classList.add('chosen');
     if (!stage.querySelector('.verdict-already-voted')) {
+      const questionEl = stage.querySelector('.verdict-question');
+      if (questionEl) questionEl.remove();
       const already = document.createElement('p');
       already.className = 'verdict-already-voted';
       already.textContent = 'You answered: ' + VOTE_LABELS[direction];
-      stage.querySelector('.verdict-card').insertBefore(already, stage.querySelector('.verdict-vote'));
+      stage.querySelector('.verdict-title-panel').appendChild(already);
     }
 
     const aiScore = queue[index].aiScore;
