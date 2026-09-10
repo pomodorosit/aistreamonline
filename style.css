@@ -754,11 +754,11 @@ img { max-width: 100%; display: block; }
 }
 
 .verdict-summary {
-  margin: 0 0 16px;
+  margin: 0 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   min-height: 34px;
 }
 
@@ -772,6 +772,46 @@ img { max-width: 100%; display: block; }
 .verdict-community {
   color: var(--ink-faint);
   font-size: 12px;
+}
+
+.verdict-results-mini {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 14px 0 18px;
+}
+
+.verdict-results-mini-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.verdict-results-mini-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.verdict-results-mini-pct {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.verdict-results-mini-item-positive .verdict-results-mini-pct { color: var(--jade); }
+.verdict-results-mini-item-negative .verdict-results-mini-pct { color: var(--coral); }
+.verdict-results-mini-item-uncertain .verdict-results-mini-pct { color: var(--gold); }
+
+@media (max-width: 480px) {
+  .verdict-results-mini { gap: 16px; }
+  .verdict-results-mini-pct { font-size: 18px; }
+  .verdict-results-mini-icon { width: 20px; height: 20px; }
 }
 
 .verdict-skip {

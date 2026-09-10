@@ -1523,26 +1523,49 @@ function initVerdict(newsItems) {
     aiSpan.textContent = automatedSentimentLabel(aiScore);
     summary.appendChild(aiSpan);
 
-    const communitySpan = document.createElement('span');
-    communitySpan.className = 'verdict-community';
-    if (counts) {
-      const total = VOTE_DIRECTIONS.reduce((sum, d) => sum + (counts[d] || 0), 0);
-      if (total > 0) {
-        const parts = VOTE_DIRECTIONS
-          .map((d) => `${Math.round(((counts[d] || 0) / total) * 100)}% ${VOTE_LABELS[d]}`)
-          .join(' · ');
-        communitySpan.textContent = `Reader responses (${total}): ${parts}`;
-      } else {
-        communitySpan.textContent = 'No reader responses yet — be the first';
-      }
-    } else if (myVote) {
-      // no shared backend available, but we can still honestly reflect the
-      // visitor's own choice -- never implying it represents other readers
-      communitySpan.textContent = `Your reaction: ${VOTE_LABELS[myVote]}`;
+    const total = counts ? VOTE_DIRECTIONS.reduce((sum, d) => sum + (counts[d] || 0), 0) : 0;
+
+    if (counts && total > 0) {
+      // big, odds-board-style numbers instead of a dense text line -- the
+      // count is the thing readers actually scan for here
+      const caption = document.createElement('span');
+      caption.className = 'verdict-community';
+      caption.textContent = `Reader responses (${total})`;
+      summary.appendChild(caption);
+
+      const mini = document.createElement('div');
+      mini.className = 'verdict-results-mini';
+      VOTE_DIRECTIONS.forEach((d) => {
+        const pct = Math.round(((counts[d] || 0) / total) * 100);
+        const item = document.createElement('div');
+        item.className = `verdict-results-mini-item verdict-results-mini-item-${d}`;
+        const icon = document.createElement('img');
+        icon.className = 'verdict-results-mini-icon';
+        icon.src = VOTE_ICONS[d];
+        icon.alt = '';
+        icon.setAttribute('aria-hidden', 'true');
+        const pctEl = document.createElement('span');
+        pctEl.className = 'verdict-results-mini-pct';
+        pctEl.textContent = pct + '%';
+        item.appendChild(icon);
+        item.appendChild(pctEl);
+        mini.appendChild(item);
+      });
+      summary.appendChild(mini);
     } else {
-      communitySpan.textContent = 'Reader responses unavailable right now';
+      const communitySpan = document.createElement('span');
+      communitySpan.className = 'verdict-community';
+      if (counts) {
+        communitySpan.textContent = 'No reader responses yet — be the first';
+      } else if (myVote) {
+        // no shared backend available, but we can still honestly reflect the
+        // visitor's own choice -- never implying it represents other readers
+        communitySpan.textContent = `Your reaction: ${VOTE_LABELS[myVote]}`;
+      } else {
+        communitySpan.textContent = 'Reader responses unavailable right now';
+      }
+      summary.appendChild(communitySpan);
     }
-    summary.appendChild(communitySpan);
   }
 
   async function renderCard() {
