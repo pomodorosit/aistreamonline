@@ -1,5 +1,6 @@
 {
   "dates": [
+    "2026-09-10",
     "2026-09-09",
     "2026-09-08",
     "2026-09-07",
@@ -9,6 +10,11 @@
     "2026-09-03"
   ],
   "entries": [
+    {
+      "date": "2026-09-10",
+      "count": 1,
+      "topHeadline": "AI research startup Listen Labs scrubbed a $1.5B funding round for Salesforce talks"
+    },
     {
       "date": "2026-09-09",
       "count": 19,

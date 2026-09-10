@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-09T23:03:09Z",
+  "generatedAt": "2026-09-10T03:47:18Z",
   "videos": [
     {
       "videoId": "Y5rSSvXfL4g",
       "title": "5 open source tools that replaced my $320/mo AI stack...",
       "channelTitle": "Fireship",
       "publishedAt": "2026-09-07T17:24:51Z",
-      "viewCount": 982254,
-      "likeCount": 16657,
+      "viewCount": 995759,
+      "likeCount": 16803,
       "topic": "Large language models"
     },
     {
@@ -15,8 +15,8 @@
       "title": "Suno v6 Is Here: Everything You Need to Know",
       "channelTitle": "Suno Music",
       "publishedAt": "2026-09-09T15:41:43Z",
-      "viewCount": 26730,
-      "likeCount": 1642,
+      "viewCount": 42677,
+      "likeCount": 1973,
       "topic": "Generative AI"
     },
     {
@@ -24,17 +24,17 @@
       "title": "GPT-6 Astra IS AGI - Greatest AI Model Ever (Fully Tested)",
       "channelTitle": "WorldofAI",
       "publishedAt": "2026-09-03T21:56:37Z",
-      "viewCount": 109221,
+      "viewCount": 109413,
       "likeCount": 1242,
       "topic": "Agentic AI"
     },
     {
-      "videoId": "gC8O1zro2Q8",
-      "title": "1 BILHAO DE ROBOS DAS RUAS DIZ MUSK",
-      "channelTitle": "Pr Augusto França",
-      "publishedAt": "2026-09-07T10:00:27Z",
-      "viewCount": 142806,
-      "likeCount": 10140,
+      "videoId": "qF5q_PxJupM",
+      "title": "エヌビディアが認めた！ニッポンのフィジカルAI企業【アンパラレルド】",
+      "channelTitle": "テレ東BIZ ダイジェスト",
+      "publishedAt": "2026-09-03T11:00:09Z",
+      "viewCount": 362419,
+      "likeCount": 769,
       "topic": "Robotics"
     },
     {
@@ -42,8 +42,8 @@
       "title": "Inside the AI Hardware Engine – Full Semiconductor Supply Chain Course",
       "channelTitle": "freeCodeCamp.org",
       "publishedAt": "2026-09-03T13:38:43Z",
-      "viewCount": 152044,
-      "likeCount": 1734,
+      "viewCount": 153076,
+      "likeCount": 1742,
       "topic": "AI chips"
     },
     {
@@ -51,8 +51,8 @@
       "title": "OpenAI's new warning",
       "channelTitle": "CNBC Television",
       "publishedAt": "2026-09-08T15:46:10Z",
-      "viewCount": 117825,
-      "likeCount": 815,
+      "viewCount": 119487,
+      "likeCount": 819,
       "topic": "AI safety"
     }
   ]
