@@ -1335,6 +1335,15 @@ img { max-width: 100%; display: block; }
   gap: 16px;
 }
 
+.radio-mascot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line-strong);
+  flex-shrink: 0;
+}
+
 .radio-eq {
   display: flex;
   align-items: flex-end;
@@ -1462,6 +1471,143 @@ img { max-width: 100%; display: block; }
 @media (max-width: 480px) {
   .radio-player-station { font-size: 14px; }
   .radio-player { padding: 18px; }
+}
+
+.radio-float {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 190;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100vw - 40px);
+  background: var(--bg-alt-2);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 10px 14px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.radio-float.visible { display: flex; }
+
+.radio-float-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--ink-faint);
+  font-size: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+  order: 3;
+}
+
+.radio-float-close:hover { border-color: var(--coral); color: var(--coral); }
+
+.radio-float-eq {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  width: 16px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.radio-float-eq span {
+  width: 3px;
+  height: 100%;
+  background: var(--gold-dim);
+  border-radius: 2px;
+  transform: scaleY(0.2);
+  transform-origin: bottom;
+}
+
+.radio-float.playing .radio-float-eq span {
+  background: var(--gold);
+  animation: radio-eq-bounce 0.9s ease-in-out infinite;
+}
+
+.radio-float.playing .radio-float-eq span:nth-child(1) { animation-delay: 0s; }
+.radio-float.playing .radio-float-eq span:nth-child(2) { animation-delay: .2s; }
+.radio-float.playing .radio-float-eq span:nth-child(3) { animation-delay: .4s; }
+.radio-float.playing .radio-float-eq span:nth-child(4) { animation-delay: .1s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .radio-float.playing .radio-float-eq span { animation: none; transform: scaleY(0.7); }
+}
+
+.radio-float-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.radio-float-status {
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.radio-float.playing .radio-float-status { color: var(--gold); }
+
+.radio-float-station {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;
+}
+
+.radio-float-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  font-size: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.radio-float-play:hover { background: rgba(230, 206, 142, 0.1); }
+
+.radio-float-restore {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 190;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: var(--bg-alt-2);
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.radio-float-restore.visible { display: flex; }
+
+@media (max-width: 480px) {
+  .radio-float { right: 12px; bottom: 12px; padding: 8px 10px; gap: 8px; }
+  .radio-float-station { max-width: 90px; }
+  .radio-float-restore { right: 12px; bottom: 12px; }
 }
 
 .reading-list {

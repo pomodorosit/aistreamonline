@@ -1683,6 +1683,8 @@ const RADIO_STATIONS = [
   { name: 'Zen', slug: 'zen' },
 ];
 
+const RADIO_FLOAT_CLOSED_KEY = 'ai_stream_radio_float_closed';
+
 function initRadio() {
   const player = document.getElementById('radio-player');
   const stationsWrap = document.getElementById('radio-stations');
@@ -1693,35 +1695,57 @@ function initRadio() {
   const nameEl = document.getElementById('radio-station-name');
   if (!player || !stationsWrap || !audio || !playBtn || !playIcon || !statusEl || !nameEl) return;
 
-  function setStatus(text) {
+  // the floating mini-player mirrors the same <audio> element and state --
+  // it's a persistent, always-visible remote for the section player below,
+  // not a second independent player
+  const floatEl = document.getElementById('radio-float');
+  const floatClose = document.getElementById('radio-float-close');
+  const floatPlay = document.getElementById('radio-float-play');
+  const floatPlayIcon = document.getElementById('radio-float-play-icon');
+  const floatStatus = document.getElementById('radio-float-status');
+  const floatStation = document.getElementById('radio-float-station');
+  const restoreBtn = document.getElementById('radio-float-restore');
+
+  function setStatus(text, isPlaying) {
     statusEl.textContent = text;
+    if (floatStatus) floatStatus.textContent = isPlaying ? text : 'AI Radio';
+  }
+
+  function setStationName(name) {
+    nameEl.textContent = name;
+    if (floatStation) floatStation.textContent = name;
+  }
+
+  function setPlayingUI(isPlaying) {
+    playIcon.textContent = isPlaying ? '❚❚' : '▶';
+    playBtn.setAttribute('aria-label', isPlaying ? 'Pause radio' : 'Play radio');
+    player.classList.toggle('playing', isPlaying);
+    if (floatPlayIcon) floatPlayIcon.textContent = isPlaying ? '❚❚' : '▶';
+    if (floatPlay) floatPlay.setAttribute('aria-label', isPlaying ? 'Pause AI Radio' : 'Play AI Radio');
+    if (floatEl) floatEl.classList.toggle('playing', isPlaying);
   }
 
   function play() {
-    setStatus('Loading…');
+    setStatus('Loading…', true);
     audio.play().then(() => {
-      setStatus('Live');
-      playIcon.textContent = '❚❚';
-      playBtn.setAttribute('aria-label', 'Pause radio');
-      player.classList.add('playing');
+      setStatus('Live', true);
+      setPlayingUI(true);
     }).catch(() => {
-      setStatus("Couldn't connect to the stream");
-      player.classList.remove('playing');
+      setStatus("Couldn't connect to the stream", true);
+      setPlayingUI(false);
     });
   }
 
   function pause() {
     audio.pause();
-    setStatus('Paused');
-    playIcon.textContent = '▶';
-    playBtn.setAttribute('aria-label', 'Play radio');
-    player.classList.remove('playing');
+    setStatus('Paused', false);
+    setPlayingUI(false);
   }
 
   function selectStation(station, btn) {
     stationsWrap.querySelectorAll('.radio-station-btn').forEach((b) => b.classList.remove('active'));
-    btn.classList.add('active');
-    nameEl.textContent = station.name;
+    if (btn) btn.classList.add('active');
+    setStationName(station.name);
     audio.src = `https://radio.musicradio.ai/listen/music_radio_${station.slug}/radio.mp3`;
     playBtn.disabled = false;
     play();
@@ -1742,10 +1766,56 @@ function initRadio() {
     if (audio.paused) play(); else pause();
   });
 
-  audio.addEventListener('waiting', () => setStatus('Buffering…'));
-  audio.addEventListener('playing', () => setStatus('Live'));
-  audio.addEventListener('error', () => {
-    setStatus('Stream unavailable right now');
-    player.classList.remove('playing');
+  if (floatPlay) {
+    floatPlay.addEventListener('click', () => {
+      if (!audio.src) {
+        selectStation(RADIO_STATIONS[0], stationsWrap.querySelector('.radio-station-btn'));
+        return;
+      }
+      if (audio.paused) play(); else pause();
+    });
+  }
+
+  // sync the button/EQ to the audio element's real state, not just to our
+  // own play()/pause() calls -- a hardware media key or OS media control
+  // can pause/resume it directly, bypassing our buttons entirely
+  audio.addEventListener('play', () => setPlayingUI(true));
+  audio.addEventListener('pause', () => {
+    setPlayingUI(false);
+    setStatus('Paused', false);
   });
+  audio.addEventListener('waiting', () => setStatus('Buffering…', true));
+  audio.addEventListener('playing', () => setStatus('Live', true));
+  audio.addEventListener('error', () => {
+    setStatus('Stream unavailable right now', false);
+    setPlayingUI(false);
+  });
+
+  // floating mini-player: visible by default so it's discoverable without
+  // scrolling; a closed choice is remembered, but a restore tab always
+  // stays reachable so it's never permanently gone
+  if (floatEl && restoreBtn) {
+    let closed = false;
+    try { closed = localStorage.getItem(RADIO_FLOAT_CLOSED_KEY) === '1'; } catch (e) { /* ignore */ }
+
+    if (closed) {
+      restoreBtn.classList.add('visible');
+    } else {
+      floatEl.classList.add('visible');
+    }
+
+    if (floatClose) {
+      floatClose.addEventListener('click', () => {
+        floatEl.classList.remove('visible');
+        restoreBtn.classList.add('visible');
+        try { localStorage.setItem(RADIO_FLOAT_CLOSED_KEY, '1'); } catch (e) { /* ignore */ }
+      });
+    }
+
+    restoreBtn.addEventListener('click', () => {
+      restoreBtn.classList.remove('visible');
+      floatEl.classList.add('visible');
+      try { localStorage.removeItem(RADIO_FLOAT_CLOSED_KEY); } catch (e) { /* ignore */ }
+    });
+  }
 }
