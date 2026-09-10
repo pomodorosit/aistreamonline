@@ -523,6 +523,91 @@ img { max-width: 100%; display: block; }
   border-color: var(--gold); color: var(--gold);
 }
 
+.verdict-results-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 4px 0 24px;
+}
+
+.verdict-result-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.verdict-result-tile-label {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.verdict-result-tile-box {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  overflow: visible;
+  animation: verdict-tile-in .45s cubic-bezier(.16,1,.3,1) both;
+}
+
+.verdict-result-tile:last-child .verdict-result-tile-box {
+  animation-delay: .12s;
+}
+
+@keyframes verdict-tile-in {
+  0% { opacity: 0; transform: translateY(8px) scale(.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.verdict-result-tile-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid var(--line-strong);
+  background: var(--bg-alt);
+}
+
+.verdict-result-tile-badge {
+  position: absolute;
+  bottom: -7px;
+  right: -7px;
+  min-width: 24px;
+  height: 20px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid var(--bg);
+  font-size: 10px;
+  font-weight: 700;
+  font-family: var(--font-body);
+  color: var(--bg);
+  transition: background-color .25s ease, color .25s ease;
+}
+
+.verdict-result-tile-badge-empty {
+  background: var(--bg-alt-2);
+  color: var(--ink-faint);
+  font-weight: 600;
+}
+
+.verdict-result-tile-badge-positive { background: var(--jade); color: #fff; }
+.verdict-result-tile-badge-negative { background: var(--coral); color: #fff; }
+.verdict-result-tile-badge-uncertain { background: var(--gold); color: var(--bg); }
+
+.verdict-result-arrow {
+  color: var(--ink-faint);
+  font-size: 15px;
+  transform: translateY(4px);
+}
+
 .verdict-summary {
   margin: 22px 0;
   display: flex;

@@ -1378,13 +1378,20 @@ function initVerdict(newsItems) {
   const queue = (newsItems || [])
     .filter((it) => it.aiAnalysis)
     .slice(0, VERDICT_MAX_ITEMS)
-    .map((it) => ({ id: hashId(it.link), item: it, aiScore: aiSentimentScore(it.aiAnalysis) }));
+    .map((it) => ({
+      id: hashId(it.link),
+      item: it,
+      aiScore: aiSentimentScore(it.aiAnalysis),
+      avatar: it.avatar || 'char-robot-head.png',
+    }));
 
   if (queue.length === 0) return; // nothing to show rather than fake data
 
   const myVotes = loadMyVerdictVotes();
   let index = 0;
   let serverAvailable = true; // flips permanently false on first failed call this session
+  let currentCounts = null; // last known tally for the article on stage, so advance() can snapshot it as "previous"
+  let previousResult = null; // { avatar, leading } captured from the article just left, or null on the first card
 
   async function fetchCounts(id) {
     if (!serverAvailable) return null;
@@ -1418,6 +1425,82 @@ function initVerdict(newsItems) {
       serverAvailable = false;
       return null;
     }
+  }
+
+  function computeLeading(counts) {
+    if (!counts) return null;
+    const total = VOTE_DIRECTIONS.reduce((sum, d) => sum + (counts[d] || 0), 0);
+    if (total === 0) return null;
+    let best = VOTE_DIRECTIONS[0];
+    VOTE_DIRECTIONS.forEach((d) => { if ((counts[d] || 0) > (counts[best] || 0)) best = d; });
+    return { direction: best, pct: Math.round(((counts[best] || 0) / total) * 100) };
+  }
+
+  function buildResultTile(labelText, avatar, leading) {
+    const tile = document.createElement('div');
+    tile.className = 'verdict-result-tile';
+
+    const label = document.createElement('span');
+    label.className = 'verdict-result-tile-label';
+    label.textContent = labelText;
+    tile.appendChild(label);
+
+    const box = document.createElement('div');
+    box.className = 'verdict-result-tile-box';
+    const img = document.createElement('img');
+    img.src = avatar;
+    img.alt = '';
+    img.setAttribute('aria-hidden', 'true');
+    box.appendChild(img);
+
+    const badge = document.createElement('span');
+    badge.className = 'verdict-result-tile-badge verdict-result-tile-badge-empty';
+    badge.textContent = '—';
+    box.appendChild(badge);
+
+    tile.appendChild(box);
+    applyLeadingToBadge(badge, leading);
+    return tile;
+  }
+
+  function applyLeadingToBadge(badge, leading) {
+    badge.classList.remove(
+      'verdict-result-tile-badge-empty',
+      'verdict-result-tile-badge-positive',
+      'verdict-result-tile-badge-negative',
+      'verdict-result-tile-badge-uncertain'
+    );
+    if (leading) {
+      badge.textContent = leading.pct + '%';
+      badge.classList.add('verdict-result-tile-badge-' + leading.direction);
+    } else {
+      badge.textContent = '—';
+      badge.classList.add('verdict-result-tile-badge-empty');
+    }
+  }
+
+  function renderResultsStrip(avatar) {
+    const strip = document.createElement('div');
+    strip.className = 'verdict-results-strip';
+
+    if (previousResult) {
+      strip.appendChild(buildResultTile('Previous', previousResult.avatar, previousResult.leading));
+      const arrow = document.createElement('span');
+      arrow.className = 'verdict-result-arrow';
+      arrow.setAttribute('aria-hidden', 'true');
+      arrow.textContent = '→';
+      strip.appendChild(arrow);
+    }
+
+    strip.appendChild(buildResultTile('This story', avatar, null));
+    return strip;
+  }
+
+  function updateCurrentTileBadge(leading) {
+    const strip = document.getElementById('verdict-results-strip');
+    if (!strip) return;
+    const badge = strip.querySelector('.verdict-result-tile:last-child .verdict-result-tile-badge');
+    if (badge) applyLeadingToBadge(badge, leading);
   }
 
   function renderSummary(counts, aiScore, myVote) {
@@ -1455,8 +1538,9 @@ function initVerdict(newsItems) {
   }
 
   async function renderCard() {
-    const { id, item, aiScore } = queue[index];
+    const { id, item, aiScore, avatar } = queue[index];
     progress.textContent = (index + 1) + ' / ' + queue.length;
+    currentCounts = null;
 
     stage.innerHTML = '';
     const card = document.createElement('article');
@@ -1495,6 +1579,10 @@ function initVerdict(newsItems) {
     summaryEl.id = 'verdict-summary';
     card.appendChild(summaryEl);
 
+    const resultsStrip = renderResultsStrip(avatar);
+    resultsStrip.id = 'verdict-results-strip';
+    card.appendChild(resultsStrip);
+
     const vote = document.createElement('div');
     vote.className = 'verdict-vote';
     VOTE_DIRECTIONS.forEach((direction) => {
@@ -1520,7 +1608,11 @@ function initVerdict(newsItems) {
     renderSummary(null, aiScore, myVote);
     const counts = await fetchCounts(id);
     // only apply if still showing the same card (user may have skipped ahead already)
-    if (queue[index].id === id) renderSummary(counts, aiScore, myVote);
+    if (queue[index].id === id) {
+      renderSummary(counts, aiScore, myVote);
+      currentCounts = counts;
+      updateCurrentTileBadge(computeLeading(counts));
+    }
   }
 
   async function handleVote(id, direction) {
@@ -1542,12 +1634,17 @@ function initVerdict(newsItems) {
     const aiScore = queue[index].aiScore;
     renderSummary(null, aiScore, direction); // clear stale counts while the vote is in flight
     const counts = await postVote(id, direction);
-    if (queue[index].id === id) renderSummary(counts, aiScore, direction);
+    if (queue[index].id === id) {
+      renderSummary(counts, aiScore, direction);
+      currentCounts = counts;
+      updateCurrentTileBadge(computeLeading(counts));
+    }
 
     setTimeout(advance, VERDICT_ADVANCE_DELAY_MS);
   }
 
   function advance() {
+    previousResult = { avatar: queue[index].avatar, leading: computeLeading(currentCounts) };
     index = (index + 1) % queue.length;
     renderCard();
   }
