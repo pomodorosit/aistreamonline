@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountryExplore();
   initAnalyticsConsent();
   initNewsletterForm();
+  initRadio();
 });
 
 const YOUTUBE_ID_RE = /^[\w-]{11}$/;
@@ -1668,4 +1669,83 @@ function initVerdict(newsItems) {
 
   skipBtn.addEventListener('click', advance);
   renderCard();
+}
+
+const RADIO_STATIONS = [
+  { name: 'Lo-Fi', slug: 'lo-fi' },
+  { name: 'Ambient', slug: 'ambient' },
+  { name: 'Synthwave', slug: 'synthwave' },
+  { name: 'Chillout', slug: 'chillout' },
+  { name: 'Focus Study', slug: 'focus_study' },
+  { name: 'Hip Hop', slug: 'hip_hop' },
+  { name: 'Jazz', slug: 'jazz' },
+  { name: 'Classical', slug: 'classical' },
+  { name: 'Zen', slug: 'zen' },
+];
+
+function initRadio() {
+  const player = document.getElementById('radio-player');
+  const stationsWrap = document.getElementById('radio-stations');
+  const audio = document.getElementById('radio-audio');
+  const playBtn = document.getElementById('radio-play-btn');
+  const playIcon = document.getElementById('radio-play-icon');
+  const statusEl = document.getElementById('radio-status');
+  const nameEl = document.getElementById('radio-station-name');
+  if (!player || !stationsWrap || !audio || !playBtn || !playIcon || !statusEl || !nameEl) return;
+
+  function setStatus(text) {
+    statusEl.textContent = text;
+  }
+
+  function play() {
+    setStatus('Loading…');
+    audio.play().then(() => {
+      setStatus('Live');
+      playIcon.textContent = '❚❚';
+      playBtn.setAttribute('aria-label', 'Pause radio');
+      player.classList.add('playing');
+    }).catch(() => {
+      setStatus("Couldn't connect to the stream");
+      player.classList.remove('playing');
+    });
+  }
+
+  function pause() {
+    audio.pause();
+    setStatus('Paused');
+    playIcon.textContent = '▶';
+    playBtn.setAttribute('aria-label', 'Play radio');
+    player.classList.remove('playing');
+  }
+
+  function selectStation(station, btn) {
+    stationsWrap.querySelectorAll('.radio-station-btn').forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
+    nameEl.textContent = station.name;
+    audio.src = `https://radio.musicradio.ai/listen/music_radio_${station.slug}/radio.mp3`;
+    playBtn.disabled = false;
+    play();
+  }
+
+  RADIO_STATIONS.forEach((station) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'radio-station-btn';
+    btn.textContent = station.name;
+    btn.setAttribute('role', 'listitem');
+    btn.addEventListener('click', () => selectStation(station, btn));
+    stationsWrap.appendChild(btn);
+  });
+
+  playBtn.addEventListener('click', () => {
+    if (!audio.src) return;
+    if (audio.paused) play(); else pause();
+  });
+
+  audio.addEventListener('waiting', () => setStatus('Buffering…'));
+  audio.addEventListener('playing', () => setStatus('Live'));
+  audio.addEventListener('error', () => {
+    setStatus('Stream unavailable right now');
+    player.classList.remove('playing');
+  });
 }

@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=80">
+<link rel="stylesheet" href="style.css?v=81">
 
 <!-- Google Analytics 4 is loaded only after cookie consent -- see initAnalyticsConsent() in script.js.
      Replace G-XXXXXXXXXX in script.js with your real Measurement ID from analytics.google.com -->
@@ -318,6 +318,33 @@
     </div>
   </section>
 
+  <section id="radio" class="section radio-section">
+    <div class="wrap">
+      <div class="section-head section-head-light">
+        <img class="section-avatar" src="char-glasses-head.png" alt="">
+        <h2>AI Radio</h2>
+        <p class="section-sub section-sub-light">Live, fully AI-generated music — pick a station</p>
+      </div>
+
+      <div class="radio-player" id="radio-player">
+        <audio id="radio-audio" preload="none"></audio>
+        <div class="radio-player-now">
+          <div class="radio-eq" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          <div class="radio-player-info">
+            <span class="radio-player-status" id="radio-status">Paused</span>
+            <span class="radio-player-station" id="radio-station-name">Select a station</span>
+          </div>
+          <button type="button" class="radio-play-btn" id="radio-play-btn" aria-label="Play radio" disabled>
+            <span id="radio-play-icon">▶</span>
+          </button>
+        </div>
+        <div class="radio-stations" id="radio-stations" role="list"></div>
+      </div>
+
+      <p class="radio-credit">Streaming live from <a href="https://musicradio.ai" target="_blank" rel="noopener noreferrer nofollow">MusicRadio.ai</a> — music generated entirely by AI, not curated or hosted by us. Playback quality and uptime depend on their service.</p>
+    </div>
+  </section>
+
   <section id="reading" class="section">
     <div class="wrap">
       <div class="section-head section-head-light">
@@ -386,6 +413,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
 <script src="share.js"></script>
-<script src="script.js?v=55"></script>
+<script src="script.js?v=56"></script>
 </body>
 </html>
