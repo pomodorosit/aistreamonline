@@ -1364,9 +1364,9 @@ function saveMyVerdictVotes(votes) {
 const VOTE_DIRECTIONS = ['positive', 'negative', 'uncertain'];
 const VOTE_LABELS = { positive: 'Positive', negative: 'Negative', uncertain: 'Uncertain' };
 const VOTE_ICONS = {
-  positive: 'char-mustache-thumbsup.png',
-  negative: 'char-mustache-thumbsdown.png',
-  uncertain: 'char-mustache-pointing.png',
+  positive: 'char-mustache-thumbsup2.png',
+  negative: 'char-mustache-thumbsdown2.png',
+  uncertain: 'char-mustache-pointing2.png',
 };
 
 function initVerdict(newsItems) {

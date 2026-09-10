@@ -504,8 +504,8 @@ img { max-width: 100%; display: block; }
 }
 
 .vote-btn-icon {
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
   object-fit: cover;
   border-radius: 50%;
 }
