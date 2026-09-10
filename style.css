@@ -482,6 +482,8 @@ img { max-width: 100%; display: block; }
 
 .vote-btn-uncertain {
   grid-column: 1 / -1;
+  justify-self: center;
+  width: calc(50% - 7px);
 }
 
 .vote-btn {
