@@ -1362,7 +1362,7 @@ function saveMyVerdictVotes(votes) {
 }
 
 const VOTE_DIRECTIONS = ['positive', 'negative', 'uncertain'];
-const VOTE_LABELS = { positive: 'Positive', negative: 'Negative', uncertain: 'Uncertain' };
+const VOTE_LABELS = { positive: 'Positive', negative: 'Negative', uncertain: 'Not Sure' };
 const VOTE_ICONS = {
   positive: 'char-mustache-thumbsup2.png',
   negative: 'char-mustache-thumbsdown2.png',
@@ -1440,9 +1440,9 @@ function initVerdict(newsItems) {
     return { direction: best, pct: Math.round(((counts[best] || 0) / total) * 100) };
   }
 
-  function buildResultTile(labelText, avatar, image, leading) {
+  function buildResultTile(labelText, avatar, image, leading, isCurrent) {
     const tile = document.createElement('div');
-    tile.className = 'verdict-result-tile';
+    tile.className = 'verdict-result-tile' + (isCurrent ? ' verdict-result-tile-current' : ' verdict-result-tile-previous');
 
     const label = document.createElement('span');
     label.className = 'verdict-result-tile-label';
@@ -1491,7 +1491,7 @@ function initVerdict(newsItems) {
     strip.className = 'verdict-results-strip';
 
     if (previousResult) {
-      strip.appendChild(buildResultTile('Previous', previousResult.avatar, previousResult.image, previousResult.leading));
+      strip.appendChild(buildResultTile('Previous', previousResult.avatar, previousResult.image, previousResult.leading, false));
       const arrow = document.createElement('span');
       arrow.className = 'verdict-result-arrow';
       arrow.setAttribute('aria-hidden', 'true');
@@ -1499,7 +1499,7 @@ function initVerdict(newsItems) {
       strip.appendChild(arrow);
     }
 
-    strip.appendChild(buildResultTile('This story', avatar, image, null));
+    strip.appendChild(buildResultTile('This story', avatar, image, null, true));
     return strip;
   }
 
@@ -1577,6 +1577,13 @@ function initVerdict(newsItems) {
       already.className = 'verdict-already-voted';
       already.textContent = 'You answered: ' + VOTE_LABELS[myVote];
       card.appendChild(already);
+    } else {
+      // the human vote is the primary action on this card -- the automated
+      // sentiment line below is deliberately smaller/quieter than this
+      const question = document.createElement('p');
+      question.className = 'verdict-question';
+      question.textContent = 'What do you think?';
+      card.appendChild(question);
     }
 
     // real vote tally goes above the buttons, not below, so readers see
