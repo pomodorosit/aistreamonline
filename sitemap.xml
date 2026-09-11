@@ -16,47 +16,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/united-kingdom</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/united-states</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/france</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/spain</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/singapore</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/india</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/japan</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://aistreamonline.com/country/australia</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/israel</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -66,57 +26,12 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/united-arab-emirates</loc>
+    <loc>https://aistreamonline.com/country/united-states</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/austria</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/canada</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/poland</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/estonia</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/slovakia</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/netherlands</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/switzerland</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/chile</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/mexico</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/cyprus</loc>
+    <loc>https://aistreamonline.com/country/united-kingdom</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -126,32 +41,47 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/south-africa</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/china</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/russia</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/taiwan</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/sweden</loc>
+    <loc>https://aistreamonline.com/country/brazil</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aistreamonline.com/country/new-zealand</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/austria</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/india</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/south-africa</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/switzerland</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/canada</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/cyprus</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/romania</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -166,7 +96,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/malaysia</loc>
+    <loc>https://aistreamonline.com/country/israel</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -176,17 +106,42 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/brazil</loc>
+    <loc>https://aistreamonline.com/country/portugal</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/romania</loc>
+    <loc>https://aistreamonline.com/country/mexico</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/czech-republic</loc>
+    <loc>https://aistreamonline.com/country/france</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/south-korea</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/spain</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/netherlands</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/taiwan</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/poland</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -196,12 +151,37 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/argentina</loc>
+    <loc>https://aistreamonline.com/country/china</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/portugal</loc>
+    <loc>https://aistreamonline.com/country/chile</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/singapore</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/japan</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/united-arab-emirates</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/estonia</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/slovakia</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -216,7 +196,27 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/south-korea</loc>
+    <loc>https://aistreamonline.com/country/malaysia</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/russia</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/sweden</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/czech-republic</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aistreamonline.com/country/argentina</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
