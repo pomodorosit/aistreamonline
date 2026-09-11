@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T03:44:32Z",
+  "generatedAt": "2026-09-11T10:52:30Z",
   "source": "Wikidata (companies tagged industry: artificial intelligence)",
   "companies": [
     {
@@ -3961,6 +3961,15 @@
       "inception": "2026",
       "website": "https://masheev.com",
       "description": "AI customer communications platform"
+    },
+    {
+      "qid": "Q141428162",
+      "name": "MasterKey",
+      "slug": "masterkey",
+      "country": "Australia",
+      "inception": "2026",
+      "website": "https://www.heymasterkey.com/",
+      "description": "Australian hotel management AI software company"
     },
     {
       "qid": "Q139677852",
