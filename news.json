@@ -1,6 +1,26 @@
 {
-  "generatedAt": "2026-09-11T10:52:20Z",
+  "generatedAt": "2026-09-11T16:07:18Z",
   "items": [
+    {
+      "title": "Palantir Foundry and cuOpt drive NVIDIA supply chain allocation",
+      "link": "https://www.artificialintelligence-news.com/news/palantir-foundry-cuopt-nvidia-supply-chain-allocation/",
+      "pubDate": "Fri, 11 Sep 2026 12:00:18 +0000",
+      "summary": "NVIDIA is using Palantir Foundry and cuOpt to automate its hardware supply chain allocation decisions across global manufacturing sites. The company measures operational delivery from wafer-out to...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/palantir-foundry-cuopt-nvidia-supply-chain-allocation-hardware-nemotron-lightning-ai-model.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Nvidia",
+          "Palantir"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
     {
       "title": "Jensen Huang explains why Nvidia will grow an astounding 70% next year",
       "link": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/",
@@ -1139,25 +1159,6 @@
         "countries": [],
         "technologies": [
           "Generative AI"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Crusoe reportedly raises $3B at a $30B valuation",
-      "link": "https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/",
-      "pubDate": "Fri, 04 Sep 2026 00:48:42 +0000",
-      "summary": "The round came together after the data center developer reportedly secured a $13 billion contract with Jane Street.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2245923419.jpg?resize=1200,800",
-      "aiAnalysis": {
-        "impactLevel": "High",
-        "sentimentScore": 1,
-        "companies": [],
-        "countries": [],
-        "technologies": [
-          "AI infrastructure"
         ],
         "engine": "heuristic"
       }
