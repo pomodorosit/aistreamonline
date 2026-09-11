@@ -1305,13 +1305,8 @@ img { max-width: 100%; display: block; }
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 600;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .voice-name {
@@ -2439,10 +2434,19 @@ img { max-width: 100%; display: block; }
 .platforms-list li {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   gap: 6px 16px;
   padding: 14px 0;
   border-bottom: 1px solid var(--line);
+}
+
+.platform-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  object-fit: contain;
+  background: #fff;
+  flex-shrink: 0;
 }
 
 .platform-name {
