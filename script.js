@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAnalyticsConsent();
   initNewsletterForm();
   initRadio();
+  initJokes();
 });
 
 const YOUTUBE_ID_RE = /^[\w-]{11}$/;
@@ -1851,4 +1852,61 @@ function initRadio() {
       try { localStorage.removeItem(RADIO_FLOAT_CLOSED_KEY); } catch (e) { /* ignore */ }
     });
   }
+}
+
+// Light palate cleanser between the reading list and the newsletter CTA.
+// The jokes are a fixed, hand-reviewed list in jokes.json -- nothing is
+// generated at runtime, so there's no cost, no API key, and nothing
+// unvetted can reach the page. The section stays hidden unless the file
+// actually loads, rather than showing an empty card.
+function initJokes() {
+  const section = document.getElementById('jokes');
+  const textEl = document.getElementById('joke-text');
+  const btn = document.getElementById('joke-next');
+  if (!section || !textEl || !btn) return;
+
+  let jokes = [];
+  let lastIndex = -1;
+
+  function pick() {
+    if (jokes.length === 0) return;
+    let i = Math.floor(Math.random() * jokes.length);
+    // avoid showing the same one twice in a row
+    while (jokes.length > 1 && i === lastIndex) {
+      i = Math.floor(Math.random() * jokes.length);
+    }
+    lastIndex = i;
+    return jokes[i];
+  }
+
+  function show(animate) {
+    const joke = pick();
+    if (!joke) return;
+    if (!animate) {
+      textEl.textContent = joke;
+      return;
+    }
+    textEl.classList.add('fading');
+    setTimeout(() => {
+      textEl.textContent = joke;
+      textEl.classList.remove('fading');
+    }, 180);
+  }
+
+  fetch('jokes.json', { cache: 'no-store' })
+    .then((res) => {
+      if (!res.ok) throw new Error('jokes.json not available');
+      return res.json();
+    })
+    .then((data) => {
+      jokes = Array.isArray(data.jokes) ? data.jokes.filter((j) => typeof j === 'string' && j.trim()) : [];
+      if (jokes.length === 0) return;
+      show(false);
+      section.hidden = false;
+    })
+    .catch(() => {
+      // leave the section hidden -- better than an empty card
+    });
+
+  btn.addEventListener('click', () => show(true));
 }

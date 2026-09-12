@@ -2492,6 +2492,37 @@ img { max-width: 100%; display: block; }
 
 /* ---------- newsletter ---------- */
 
+.jokes-section {
+  background: var(--bg-alt);
+  text-align: center;
+}
+
+.joke-card {
+  max-width: 620px;
+  margin: 0 auto;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 38px 32px 30px;
+}
+
+.joke-text {
+  color: var(--ink);
+  font-size: 19px;
+  line-height: 1.6;
+  font-weight: 500;
+  margin: 0 0 26px;
+  min-height: 60px;
+  transition: opacity .18s ease;
+}
+
+.joke-text.fading { opacity: 0; }
+
+@media (max-width: 640px) {
+  .joke-card { padding: 28px 20px 24px; }
+  .joke-text { font-size: 16.5px; }
+}
+
 .newsletter-section {
   background: var(--bg-alt-2);
   text-align: center;
