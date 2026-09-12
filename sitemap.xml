@@ -186,6 +186,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/country/singapore</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/country/japan</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -196,7 +201,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/sweden</loc>
+    <loc>https://aistreamonline.com/country/czech-republic</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -206,17 +211,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://aistreamonline.com/country/sweden</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://aistreamonline.com/country/argentina</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/singapore</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://aistreamonline.com/country/czech-republic</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

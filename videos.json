@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-12T03:47:57Z",
+  "generatedAt": "2026-09-12T10:20:02Z",
   "videos": [
     {
-      "videoId": "Y5rSSvXfL4g",
-      "title": "5 open source tools that replaced my $320/mo AI stack...",
-      "channelTitle": "Fireship",
-      "publishedAt": "2026-09-07T17:24:51Z",
-      "viewCount": 1079070,
-      "likeCount": 17766,
+      "videoId": "19KSjYpfVTA",
+      "title": "Hugging Face Revealed AI’s Biggest Problem",
+      "channelTitle": "Sabine Hossenfelder",
+      "publishedAt": "2026-09-08T15:00:14Z",
+      "viewCount": 483257,
+      "likeCount": 10313,
       "topic": "Large language models"
     },
     {
@@ -15,8 +15,8 @@
       "title": "New Absolute King of 3D & Blender - GPT-6 Astra",
       "channelTitle": "Stefan 3D AI",
       "publishedAt": "2026-09-07T13:59:20Z",
-      "viewCount": 497129,
-      "likeCount": 6462,
+      "viewCount": 503726,
+      "likeCount": 6507,
       "topic": "Generative AI"
     },
     {
@@ -24,17 +24,17 @@
       "title": "GPT-6 Astra Doesn't Need Your Instructions Anymore.",
       "channelTitle": "AI News & Strategy Daily | Nate B Jones",
       "publishedAt": "2026-09-06T17:00:38Z",
-      "viewCount": 377123,
-      "likeCount": 6400,
+      "viewCount": 378951,
+      "likeCount": 6415,
       "topic": "Agentic AI"
     },
     {
-      "videoId": "2_mJwvudG3Q",
-      "title": "America's New Humanoid Robot Is Shocking the Entire World",
-      "channelTitle": "States 2050",
-      "publishedAt": "2026-09-08T13:00:40Z",
-      "viewCount": 629065,
-      "likeCount": 9568,
+      "videoId": "7TKP3YRbVmM",
+      "title": "Unitree Brings Robots And Humans Together For An EPIC Routine! | Quarterfinals | AGT 2026",
+      "channelTitle": "America's Got Talent",
+      "publishedAt": "2026-09-09T02:23:35Z",
+      "viewCount": 794171,
+      "likeCount": 8891,
       "topic": "Robotics"
     },
     {
@@ -42,8 +42,8 @@
       "title": "GPUs falsas, juego sucio, el dominio de CUDA y el origen de la IA: ¿Qué pasó con Nvidia Tesla?",
       "channelTitle": "El Gamer Desempleado",
       "publishedAt": "2026-09-05T16:00:33Z",
-      "viewCount": 42317,
-      "likeCount": 1014,
+      "viewCount": 42890,
+      "likeCount": 1017,
       "topic": "AI chips"
     },
     {
@@ -51,8 +51,8 @@
       "title": "Anthropic Researcher QUITS & EXPOSED the DARK SIDE of the AI Race",
       "channelTitle": "FrontLinesMedia",
       "publishedAt": "2026-09-10T12:30:29Z",
-      "viewCount": 100147,
-      "likeCount": 460,
+      "viewCount": 106185,
+      "likeCount": 486,
       "topic": "AI safety"
     }
   ]
