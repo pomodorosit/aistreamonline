@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-11T23:04:11Z",
+  "generatedAt": "2026-09-12T03:47:57Z",
   "videos": [
     {
       "videoId": "Y5rSSvXfL4g",
       "title": "5 open source tools that replaced my $320/mo AI stack...",
       "channelTitle": "Fireship",
       "publishedAt": "2026-09-07T17:24:51Z",
-      "viewCount": 1077370,
-      "likeCount": 17723,
+      "viewCount": 1079070,
+      "likeCount": 17766,
       "topic": "Large language models"
     },
     {
@@ -15,8 +15,8 @@
       "title": "New Absolute King of 3D & Blender - GPT-6 Astra",
       "channelTitle": "Stefan 3D AI",
       "publishedAt": "2026-09-07T13:59:20Z",
-      "viewCount": 492243,
-      "likeCount": 6448,
+      "viewCount": 497129,
+      "likeCount": 6462,
       "topic": "Generative AI"
     },
     {
@@ -24,8 +24,8 @@
       "title": "GPT-6 Astra Doesn't Need Your Instructions Anymore.",
       "channelTitle": "AI News & Strategy Daily | Nate B Jones",
       "publishedAt": "2026-09-06T17:00:38Z",
-      "viewCount": 375716,
-      "likeCount": 6391,
+      "viewCount": 377123,
+      "likeCount": 6400,
       "topic": "Agentic AI"
     },
     {
@@ -33,8 +33,8 @@
       "title": "America's New Humanoid Robot Is Shocking the Entire World",
       "channelTitle": "States 2050",
       "publishedAt": "2026-09-08T13:00:40Z",
-      "viewCount": 620820,
-      "likeCount": 9378,
+      "viewCount": 629065,
+      "likeCount": 9568,
       "topic": "Robotics"
     },
     {
@@ -42,8 +42,8 @@
       "title": "GPUs falsas, juego sucio, el dominio de CUDA y el origen de la IA: ¿Qué pasó con Nvidia Tesla?",
       "channelTitle": "El Gamer Desempleado",
       "publishedAt": "2026-09-05T16:00:33Z",
-      "viewCount": 42065,
-      "likeCount": 1009,
+      "viewCount": 42317,
+      "likeCount": 1014,
       "topic": "AI chips"
     },
     {
@@ -51,8 +51,8 @@
       "title": "Anthropic Researcher QUITS & EXPOSED the DARK SIDE of the AI Race",
       "channelTitle": "FrontLinesMedia",
       "publishedAt": "2026-09-10T12:30:29Z",
-      "viewCount": 99028,
-      "likeCount": 459,
+      "viewCount": 100147,
+      "likeCount": 460,
       "topic": "AI safety"
     }
   ]
