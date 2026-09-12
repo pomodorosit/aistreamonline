@@ -1950,6 +1950,10 @@ img { max-width: 100%; display: block; }
   gap: 14px;
 }
 
+/* the class selector above outranks the UA's [hidden] rule, so the toggle
+   needs this to actually hide the bar view */
+.coverage-chart[hidden] { display: none; }
+
 .coverage-pie { max-width: 620px; margin: 0 auto; }
 .coverage-pie svg { width: 100%; height: auto; display: block; }
 .coverage-pie-label { font-family: var(--font-body); font-size: 12px; font-weight: 600; fill: var(--ink); }
