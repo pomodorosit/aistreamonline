@@ -1178,11 +1178,18 @@ function initStockTicker() {
   const track = document.getElementById('stock-ticker-track');
   if (!track) return;
 
-  fetch('stocks.json', { cache: 'no-store' })
-    .then((res) => {
-      if (!res.ok) throw new Error('stocks.json not available');
+  // /api/stocks is refreshed per minute during market hours; stocks.json is
+  // the cron's copy, up to 3 hours old. Prefer the live one, fall back to the
+  // file so a rate-limited upstream degrades to last-known-good instead of an
+  // empty ticker.
+  const load = (url) =>
+    fetch(url, { cache: 'no-store' }).then((res) => {
+      if (!res.ok) throw new Error(url + ' not available');
       return res.json();
-    })
+    });
+
+  load('/api/stocks')
+    .catch(() => load('stocks.json'))
     .then((data) => {
       const quotes = Array.isArray(data.quotes) ? data.quotes : [];
       if (quotes.length === 0) return;
