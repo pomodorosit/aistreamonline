@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNewsletterForm();
   initRadio();
   initJokes();
+  initCoverageChart();
 });
 
 const YOUTUBE_ID_RE = /^[\w-]{11}$/;
@@ -1909,4 +1910,220 @@ function initJokes() {
     });
 
   btn.addEventListener('click', () => show(true));
+}
+
+// Ranked bar chart of the companies named most often across tracked stories.
+// Counts are computed live from news.json so the chart tracks the 3-hourly
+// refresh instead of going stale.
+//
+// Form: a pie was the original ask, but the tail here is a run of near-equal
+// 1-2 story values -- unreadable as slivers. Ranked bars keep the long names
+// legible and make the ranking the point. Color is sequential (one hue,
+// brightest = largest), which is the correct job for magnitude and is
+// redundant with the printed value, so nothing is encoded by color alone.
+const COVERAGE_RAMP = ['#f9db8c', '#dfc57e', '#c7af6f', '#ae9961', '#978554', '#807046'];
+// Categorical hues for the pie view, in fixed order. Validated on this site's
+// dark surface: every hue sits in the dark lightness band, clears the chroma
+// floor, and clears 3:1 contrast. Adjacent pairs pass CVD separation; some
+// non-adjacent pairs do NOT (aqua/magenta are near-identical to deuteranopes),
+// which is why every slice is directly labeled -- colour is reinforcement
+// here, never the only way to tell slices apart.
+const COVERAGE_HUES = ['#3987e5', '#d95926', '#199e70', '#c98500', '#d55181', '#008300'];
+const COVERAGE_TOP_N = 6;
+const COVERAGE_VIEW_KEY = 'ai_stream_coverage_view';
+
+function initCoverageChart() {
+  const section = document.getElementById('coverage');
+  const chart = document.getElementById('coverage-chart');
+  const note = document.getElementById('coverage-note');
+  if (!section || !chart || !note) return;
+
+  fetch('news.json', { cache: 'no-store' })
+    .then((res) => {
+      if (!res.ok) throw new Error('news.json not available');
+      return res.json();
+    })
+    .then((data) => {
+      const items = Array.isArray(data.items) ? data.items : [];
+      if (items.length === 0) return;
+
+      const counts = new Map();
+      let taggedStories = 0;
+      items.forEach((item) => {
+        const companies = (item.aiAnalysis && item.aiAnalysis.companies) || [];
+        if (companies.length > 0) taggedStories += 1;
+        companies.forEach((name) => counts.set(name, (counts.get(name) || 0) + 1));
+      });
+
+      const top = [...counts.entries()]
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+        .slice(0, COVERAGE_TOP_N);
+      if (top.length === 0) return;
+
+      const max = top[0][1];
+      const frag = document.createDocumentFragment();
+
+      top.forEach(([name, count]) => {
+        const row = document.createElement('div');
+        row.className = 'coverage-row';
+        row.title = `${name}: ${count} of ${items.length} tracked stories`;
+
+        const label = document.createElement('span');
+        label.className = 'coverage-name';
+        label.textContent = name;
+
+        const track = document.createElement('div');
+        track.className = 'coverage-track';
+        const bar = document.createElement('div');
+        bar.className = 'coverage-bar';
+        // step the ramp by value, not by rank -- two companies on the same
+        // count must read as the same shade
+        const step = Math.round((1 - count / max) * (COVERAGE_RAMP.length - 1));
+        bar.style.background = COVERAGE_RAMP[Math.min(step, COVERAGE_RAMP.length - 1)];
+        track.appendChild(bar);
+
+        const value = document.createElement('span');
+        value.className = 'coverage-value';
+        value.textContent = count;
+
+        row.append(label, track, value);
+        frag.appendChild(row);
+        // widen after insertion so the transition actually runs
+        requestAnimationFrame(() => {
+          bar.style.width = Math.round((count / max) * 100) + '%';
+        });
+      });
+
+      chart.appendChild(frag);
+      renderCoveragePie(top, items.length);
+      initCoverageToggle();
+      note.innerHTML =
+        'Counted across ' + items.length + ' tracked stories; ' + taggedStories +
+        ' of them name at least one company. Names are extracted by keyword match, ' +
+        'so a story can name a company without being about it — see our ' +
+        '<a href="methodology.html">methodology</a>.';
+      section.hidden = false;
+    })
+    .catch(() => {
+      // leave the section hidden rather than show an empty chart
+    });
+}
+
+// Donut view of the same data. Every slice is directly labeled with its name
+// and value, so identity never depends on telling two hues apart.
+function renderCoveragePie(top, storyCount) {
+  const host = document.getElementById('coverage-pie');
+  if (!host) return;
+
+  const W = 460, H = 320, CX = 230, CY = 156, R = 84, RING = 30;
+  const total = top.reduce((sum, [, count]) => sum + count, 0);
+  if (total === 0) return;
+
+  const SVG = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(SVG, 'svg');
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  svg.setAttribute('role', 'img');
+  svg.setAttribute('aria-label', 'Donut chart of the most-mentioned companies in tracked stories');
+
+  const pt = (angle, radius) => [
+    CX + radius * Math.cos(angle - Math.PI / 2),
+    CY + radius * Math.sin(angle - Math.PI / 2),
+  ];
+
+  const GAP = 0.018; // ~2px of surface between segments
+  let angle = 0;
+
+  top.forEach(([name, count], i) => {
+    const sweep = (count / total) * Math.PI * 2;
+    const a0 = angle + GAP / 2;
+    const a1 = angle + sweep - GAP / 2;
+    const mid = angle + sweep / 2;
+    angle += sweep;
+    if (a1 <= a0) return;
+
+    const rOut = R + RING / 2, rIn = R - RING / 2;
+    const [x0, y0] = pt(a0, rOut), [x1, y1] = pt(a1, rOut);
+    const [x2, y2] = pt(a1, rIn), [x3, y3] = pt(a0, rIn);
+    const large = a1 - a0 > Math.PI ? 1 : 0;
+
+    const seg = document.createElementNS(SVG, 'path');
+    seg.setAttribute('d',
+      `M ${x0} ${y0} A ${rOut} ${rOut} 0 ${large} 1 ${x1} ${y1} ` +
+      `L ${x2} ${y2} A ${rIn} ${rIn} 0 ${large} 0 ${x3} ${y3} Z`);
+    seg.setAttribute('fill', COVERAGE_HUES[i % COVERAGE_HUES.length]);
+    const pct = Math.round((count / total) * 100);
+    const title = document.createElementNS(SVG, 'title');
+    title.textContent = `${name}: ${count} mentions (${pct}% of the top ${top.length})`;
+    seg.appendChild(title);
+    svg.appendChild(seg);
+
+    // leader line + direct label
+    const right = Math.cos(mid - Math.PI / 2) >= 0;
+    const [lx0, ly0] = pt(mid, rOut + 3);
+    const [lx1, ly1] = pt(mid, rOut + 14);
+    const tx = right ? lx1 + 6 : lx1 - 6;
+    const leader = document.createElementNS(SVG, 'path');
+    leader.setAttribute('class', 'coverage-pie-leader');
+    leader.setAttribute('d', `M ${lx0} ${ly0} L ${lx1} ${ly1} L ${tx} ${ly1}`);
+    svg.appendChild(leader);
+
+    const label = document.createElementNS(SVG, 'text');
+    label.setAttribute('class', 'coverage-pie-label');
+    label.setAttribute('x', right ? tx + 3 : tx - 3);
+    label.setAttribute('y', ly1 - 1);
+    label.setAttribute('text-anchor', right ? 'start' : 'end');
+    label.textContent = name;
+    svg.appendChild(label);
+
+    const sub = document.createElementNS(SVG, 'text');
+    sub.setAttribute('class', 'coverage-pie-sub');
+    sub.setAttribute('x', right ? tx + 3 : tx - 3);
+    sub.setAttribute('y', ly1 + 15);
+    sub.setAttribute('text-anchor', right ? 'start' : 'end');
+    sub.textContent = `${count} · ${pct}%`;
+    svg.appendChild(sub);
+  });
+
+  const cv = document.createElementNS(SVG, 'text');
+  cv.setAttribute('class', 'coverage-pie-center-value');
+  cv.setAttribute('x', CX); cv.setAttribute('y', CY + 2);
+  cv.setAttribute('text-anchor', 'middle');
+  cv.textContent = total;
+  svg.appendChild(cv);
+
+  const cl = document.createElementNS(SVG, 'text');
+  cl.setAttribute('class', 'coverage-pie-center-label');
+  cl.setAttribute('x', CX); cl.setAttribute('y', CY + 27);
+  cl.setAttribute('text-anchor', 'middle');
+  cl.textContent = 'MENTIONS';
+  svg.appendChild(cl);
+
+  host.innerHTML = '';
+  host.appendChild(svg);
+}
+
+function initCoverageToggle() {
+  const barsBtn = document.getElementById('coverage-view-bars');
+  const pieBtn = document.getElementById('coverage-view-pie');
+  const bars = document.getElementById('coverage-chart');
+  const pie = document.getElementById('coverage-pie');
+  if (!barsBtn || !pieBtn || !bars || !pie) return;
+
+  function setView(view) {
+    const isPie = view === 'pie';
+    pie.hidden = !isPie;
+    bars.hidden = isPie;
+    pieBtn.classList.toggle('is-active', isPie);
+    barsBtn.classList.toggle('is-active', !isPie);
+    pieBtn.setAttribute('aria-pressed', String(isPie));
+    barsBtn.setAttribute('aria-pressed', String(!isPie));
+    try { localStorage.setItem(COVERAGE_VIEW_KEY, view); } catch (e) { /* ignore */ }
+  }
+
+  barsBtn.addEventListener('click', () => setView('bars'));
+  pieBtn.addEventListener('click', () => setView('pie'));
+
+  let saved = null;
+  try { saved = localStorage.getItem(COVERAGE_VIEW_KEY); } catch (e) { /* ignore */ }
+  if (saved === 'pie') setView('pie');
 }

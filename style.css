@@ -1905,10 +1905,123 @@ img { max-width: 100%; display: block; }
   .stock-ticker-track { animation: none; }
 }
 
+/* ---------- coverage chart ---------- */
+
+.coverage-section {
+  background: var(--bg-alt);
+  text-align: center;
+}
+
+.coverage-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: -30px 0 36px;
+}
+
+.coverage-toggle-btn {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-faint);
+  border-radius: 999px;
+  padding: 7px 20px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color .2s, color .2s, background .2s;
+}
+
+.coverage-toggle-btn:hover { color: var(--ink); border-color: var(--line-strong); }
+
+.coverage-toggle-btn.is-active {
+  color: var(--bg);
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.coverage-chart {
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.coverage-pie { max-width: 620px; margin: 0 auto; }
+.coverage-pie svg { width: 100%; height: auto; display: block; }
+.coverage-pie-label { font-family: var(--font-body); font-size: 12px; font-weight: 600; fill: var(--ink); }
+.coverage-pie-sub { font-family: var(--font-body); font-size: 11px; fill: var(--ink-faint); }
+.coverage-pie-center-value { font-family: var(--font-display); font-size: 30px; font-weight: 700; fill: var(--ink); }
+.coverage-pie-center-label { font-family: var(--font-body); font-size: 10.5px; letter-spacing: 1px; fill: var(--ink-faint); }
+.coverage-pie-leader { stroke: var(--line-strong); stroke-width: 1; fill: none; }
+
+.coverage-row {
+  display: grid;
+  grid-template-columns: 122px 1fr 34px;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+}
+
+.coverage-name {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* recessive track; the fill is the only saturated mark */
+.coverage-track {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(243, 232, 200, 0.07);
+  overflow: hidden;
+}
+
+.coverage-bar {
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  transition: width .9s cubic-bezier(.22,.9,.3,1);
+}
+
+.coverage-value {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.coverage-row:hover .coverage-name,
+.coverage-row:hover .coverage-value { color: var(--gold); }
+
+.coverage-note {
+  max-width: 620px;
+  margin: 26px auto 0;
+  color: var(--ink-faint);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.coverage-note a { color: var(--gold); text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .coverage-row { grid-template-columns: 96px 1fr 28px; gap: 10px; }
+  .coverage-name { font-size: 13px; }
+}
+
 /* ---------- AI leadership section ---------- */
 
 .leadership-section {
   background: var(--bg-alt);
+  border-top: 1px solid var(--line);
   text-align: center;
 }
 
