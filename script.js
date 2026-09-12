@@ -1615,16 +1615,37 @@ function initVerdict(newsItems) {
     resultsPanel.className = 'verdict-panel verdict-results-panel';
     card.appendChild(resultsPanel);
 
+    // Back / Skip flank the results as square arrow buttons, so navigation
+    // sits beside the story it moves between instead of adding another row
+    // of height at the bottom of the card.
+    const makeNavBtn = (glyph, label, onClick) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'verdict-nav-btn';
+      b.textContent = glyph;
+      b.title = label;
+      b.setAttribute('aria-label', label);
+      b.addEventListener('click', onClick);
+      return b;
+    };
+    resultsPanel.appendChild(makeNavBtn('\u2190', 'Previous story', goBack));
+
+    const resultsInner = document.createElement('div');
+    resultsInner.className = 'verdict-results-inner';
+    resultsPanel.appendChild(resultsInner);
+
     // real vote tally goes above the buttons, not below, so readers see
     // where things stand before (or right after) answering
     const summaryEl = document.createElement('div');
     summaryEl.className = 'verdict-summary';
     summaryEl.id = 'verdict-summary';
-    resultsPanel.appendChild(summaryEl);
+    resultsInner.appendChild(summaryEl);
 
     const resultsStrip = renderResultsStrip(avatar, image);
     resultsStrip.id = 'verdict-results-strip';
-    resultsPanel.appendChild(resultsStrip);
+    resultsInner.appendChild(resultsStrip);
+
+    resultsPanel.appendChild(makeNavBtn('\u2192', 'Next story', advance));
 
     const votePanel = document.createElement('div');
     votePanel.className = 'verdict-panel verdict-voting-panel';
@@ -1652,29 +1673,6 @@ function initVerdict(newsItems) {
       vote.appendChild(btn);
     });
     votePanel.appendChild(vote);
-
-    // Back / Skip live inside the voting panel so they read as part of the
-    // card rather than floating loose on the section background.
-    const nav = document.createElement('div');
-    nav.className = 'verdict-nav';
-
-    const backBtn = document.createElement('button');
-    backBtn.type = 'button';
-    backBtn.className = 'btn btn-outline verdict-nav-btn';
-    backBtn.textContent = '← Back';
-    backBtn.setAttribute('aria-label', 'Previous story');
-    backBtn.addEventListener('click', goBack);
-    nav.appendChild(backBtn);
-
-    const skipBtn = document.createElement('button');
-    skipBtn.type = 'button';
-    skipBtn.className = 'btn btn-outline verdict-nav-btn';
-    skipBtn.textContent = 'Skip →';
-    skipBtn.setAttribute('aria-label', 'Next story');
-    skipBtn.addEventListener('click', advance);
-    nav.appendChild(skipBtn);
-
-    votePanel.appendChild(nav);
 
     stage.appendChild(card);
 
