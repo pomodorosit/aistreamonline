@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-12T15:14:38Z",
+  "generatedAt": "2026-09-12T20:21:16Z",
   "videos": [
     {
       "videoId": "19KSjYpfVTA",
       "title": "Hugging Face Revealed AI’s Biggest Problem",
       "channelTitle": "Sabine Hossenfelder",
       "publishedAt": "2026-09-08T15:00:14Z",
-      "viewCount": 486159,
-      "likeCount": 10354,
+      "viewCount": 491711,
+      "likeCount": 10421,
       "topic": "Large language models"
     },
     {
@@ -15,8 +15,8 @@
       "title": "New Absolute King of 3D & Blender - GPT-6 Astra",
       "channelTitle": "Stefan 3D AI",
       "publishedAt": "2026-09-07T13:59:20Z",
-      "viewCount": 507440,
-      "likeCount": 6552,
+      "viewCount": 513693,
+      "likeCount": 6585,
       "topic": "Generative AI"
     },
     {
@@ -24,8 +24,8 @@
       "title": "GPT-6 Astra Doesn't Need Your Instructions Anymore.",
       "channelTitle": "AI News & Strategy Daily | Nate B Jones",
       "publishedAt": "2026-09-06T17:00:38Z",
-      "viewCount": 379777,
-      "likeCount": 6429,
+      "viewCount": 381071,
+      "likeCount": 6442,
       "topic": "Agentic AI"
     },
     {
@@ -33,17 +33,17 @@
       "title": "America's New Humanoid Robot Is Shocking the Entire World",
       "channelTitle": "States 2050",
       "publishedAt": "2026-09-08T13:00:40Z",
-      "viewCount": 646158,
-      "likeCount": 9784,
+      "viewCount": 653700,
+      "likeCount": 9891,
       "topic": "Robotics"
     },
     {
-      "videoId": "Y0g7aD4P9IE",
-      "title": "GPUs falsas, juego sucio, el dominio de CUDA y el origen de la IA: ¿Qué pasó con Nvidia Tesla?",
-      "channelTitle": "El Gamer Desempleado",
-      "publishedAt": "2026-09-05T16:00:33Z",
-      "viewCount": 42946,
-      "likeCount": 1018,
+      "videoId": "n-bDXI_i1KI",
+      "title": "A Tiny Startup Helping Google Take On Nvidia Is Now Worth $18 Billion",
+      "channelTitle": "Forbes",
+      "publishedAt": "2026-09-08T16:30:35Z",
+      "viewCount": 73100,
+      "likeCount": 735,
       "topic": "AI chips"
     },
     {
@@ -51,7 +51,7 @@
       "title": "OpenAI's new warning",
       "channelTitle": "CNBC Television",
       "publishedAt": "2026-09-08T15:46:10Z",
-      "viewCount": 124018,
+      "viewCount": 124172,
       "likeCount": 846,
       "topic": "AI safety"
     }
