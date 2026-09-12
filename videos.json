@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-12T20:21:16Z",
+  "generatedAt": "2026-09-12T22:54:00Z",
   "videos": [
     {
-      "videoId": "19KSjYpfVTA",
-      "title": "Hugging Face Revealed AI’s Biggest Problem",
-      "channelTitle": "Sabine Hossenfelder",
-      "publishedAt": "2026-09-08T15:00:14Z",
-      "viewCount": 491711,
-      "likeCount": 10421,
+      "videoId": "Y5rSSvXfL4g",
+      "title": "5 open source tools that replaced my $320/mo AI stack...",
+      "channelTitle": "Fireship",
+      "publishedAt": "2026-09-07T17:24:51Z",
+      "viewCount": 1097170,
+      "likeCount": 17984,
       "topic": "Large language models"
     },
     {
@@ -15,8 +15,8 @@
       "title": "New Absolute King of 3D & Blender - GPT-6 Astra",
       "channelTitle": "Stefan 3D AI",
       "publishedAt": "2026-09-07T13:59:20Z",
-      "viewCount": 513693,
-      "likeCount": 6585,
+      "viewCount": 516225,
+      "likeCount": 6596,
       "topic": "Generative AI"
     },
     {
@@ -24,8 +24,8 @@
       "title": "GPT-6 Astra Doesn't Need Your Instructions Anymore.",
       "channelTitle": "AI News & Strategy Daily | Nate B Jones",
       "publishedAt": "2026-09-06T17:00:38Z",
-      "viewCount": 381071,
-      "likeCount": 6442,
+      "viewCount": 381674,
+      "likeCount": 6448,
       "topic": "Agentic AI"
     },
     {
@@ -33,8 +33,8 @@
       "title": "America's New Humanoid Robot Is Shocking the Entire World",
       "channelTitle": "States 2050",
       "publishedAt": "2026-09-08T13:00:40Z",
-      "viewCount": 653700,
-      "likeCount": 9891,
+      "viewCount": 656237,
+      "likeCount": 9944,
       "topic": "Robotics"
     },
     {
@@ -42,8 +42,8 @@
       "title": "A Tiny Startup Helping Google Take On Nvidia Is Now Worth $18 Billion",
       "channelTitle": "Forbes",
       "publishedAt": "2026-09-08T16:30:35Z",
-      "viewCount": 73100,
-      "likeCount": 735,
+      "viewCount": 73967,
+      "likeCount": 741,
       "topic": "AI chips"
     },
     {
@@ -51,7 +51,7 @@
       "title": "OpenAI's new warning",
       "channelTitle": "CNBC Television",
       "publishedAt": "2026-09-08T15:46:10Z",
-      "viewCount": 124172,
+      "viewCount": 124291,
       "likeCount": 846,
       "topic": "AI safety"
     }
