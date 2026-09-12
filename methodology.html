@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=96">
+<link rel="stylesheet" href="style.css?v=97">
 </head>
 <body>
 
@@ -44,7 +44,8 @@
       <p>AI Stream Online is built entirely on automated pipelines and openly available data. This page explains how every number and story on the site is produced, where it comes from, and — just as important — what it does <em>not</em> capture. We'd rather tell you a metric is incomplete than let it look more authoritative than it is.</p>
 
       <h2>1. News aggregation</h2>
-      <p>Articles are pulled from three public RSS feeds — TechCrunch's AI category, VentureBeat's AI category, and AI News — on an automated schedule that runs every 3 hours. Each run merges newly fetched articles into a rolling archive (capped at 60 current items), deduplicated by article URL. We link to and credit the original source for every story; we never republish full article text.</p>
+      <p>Articles are pulled from public RSS/Atom feeds on an automated schedule that runs every 3 hours. The current sources are the AI sections of TechCrunch, Ars Technica, MIT Technology Review and The Verge; the AI-focused outlets AI News, The Decoder, AI Business and IEEE Spectrum; the NVIDIA, Google DeepMind and MIT News research blogs; and Rest of World and the South China Morning Post for coverage from outside the usual US/EU sources. Each run merges newly fetched articles into a rolling archive (capped at 100 current items), deduplicated by article URL. We link to and credit the original source for every story; we never republish full article text.</p>
+      <p>Feeds that are not AI-only — the research blogs and the general-interest outlets — pass through a keyword relevance check first, so a chip earnings report or a phone review doesn't land here as AI news. That check is deliberately broad, so the occasional loosely-related story gets through.</p>
 
       <h2>2. Story clustering</h2>
       <p>When two articles from different feeds share at least one tagged company <em>and</em> have substantially similar titles on the same day, they're merged into a single story with an "Also covered by" credit to the other outlet(s), instead of appearing as unrelated duplicates. Company overlap alone isn't enough on its own to trigger a merge, so two unrelated stories that happen to mention the same company aren't grouped together.</p>

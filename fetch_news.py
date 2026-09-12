@@ -30,7 +30,8 @@ import ssl
 import time
 import urllib.request
 import xml.etree.ElementTree as ET
-from email.utils import mktime_tz, parsedate_tz
+import datetime
+from email.utils import format_datetime, mktime_tz, parsedate_tz
 from html import unescape
 from urllib.parse import urlparse
 
@@ -42,16 +43,62 @@ try:
 except ImportError:
     SSL_CONTEXT = ssl.create_default_context()
 
+# Each feed is an AI-topic feed from a publisher that offers one publicly.
+# "filter": True marks a general-interest feed whose items must pass the
+# AI-relevance keyword gate below -- without it, a general tech feed injects
+# phone reviews and chip earnings into an AI news site. Feeds that are
+# already AI-only sections don't need the gate.
+#
+# VentureBeat was removed: its feed returned HTTP 429 on every request and
+# contributed zero articles for the 10+ days before it was dropped, while
+# the site still named it as a live source.
 FEEDS = [
+    # -- AI-only sections of general outlets --
     {"url": "https://techcrunch.com/category/artificial-intelligence/feed/", "category": "Technology", "avatar": "char-robot-head.png"},
-    {"url": "https://venturebeat.com/category/ai/feed/", "category": "Business", "avatar": "char-woman-head.png"},
+    {"url": "https://arstechnica.com/ai/feed/", "category": "Technology", "avatar": "char-robot-head.png"},
+    {"url": "https://www.technologyreview.com/topic/artificial-intelligence/feed", "category": "Research", "avatar": "char-glasses-head.png"},
+    {"url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "category": "Technology", "avatar": "char-robot-head.png"},
+    # -- AI-native outlets --
     {"url": "https://www.artificialintelligence-news.com/feed/", "category": "World News", "avatar": "char-hooded-head.png"},
+    {"url": "https://the-decoder.com/feed/", "category": "Technology", "avatar": "char-mustache-head.png"},
+    {"url": "https://aibusiness.com/rss.xml", "category": "Business", "avatar": "char-woman-head.png"},
+    {"url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss", "category": "Research", "avatar": "char-glasses-head.png"},
+    # -- labs and institutions (they publish these to be picked up) --
+    {"url": "https://blogs.nvidia.com/feed/", "category": "Industry", "avatar": "char-cap-head.png", "filter": True},
+    {"url": "https://deepmind.google/blog/rss.xml", "category": "Research", "avatar": "char-glasses-head.png", "filter": True},
+    {"url": "https://news.mit.edu/rss/topic/artificial-intelligence2", "category": "Research", "avatar": "char-glasses-head.png", "filter": True},
+    # -- coverage outside the US/EU bubble, and a cross-outlet aggregator --
+    {"url": "https://restofworld.org/feed/latest/", "category": "World News", "avatar": "char-hooded-head.png", "filter": True},
+    {"url": "https://www.scmp.com/rss/36/feed", "category": "World News", "avatar": "char-hooded-head.png", "filter": True},
 ]
+
+# Deliberately not included: feeds that assert copyright inside the feed
+# itself (Wired/Conde Nast, Guardian News & Media), raw paper firehoses
+# (arXiv cs.AI ships ~270 items a day), and community post feeds
+# (Hugging Face ~860). Synced Review's feed is abandoned -- last item was
+# over a year old when checked.
+
+# Titles/summaries must mention something AI-shaped for feeds marked
+# "filter". Deliberately broad: a false negative just means one story is
+# skipped this run, while a false positive puts an unrelated story on an
+# AI news site.
+AI_RELEVANCE_RE = re.compile(
+    r"\b(a\.?i\.?|artificial intelligence|machine learning|deep learning|neural|"
+    r"llms?|genai|generative|chatbot|chatgpt|gpt|openai|anthropic|claude|gemini|"
+    r"deepmind|copilot|midjourney|mistral|hugging ?face|nvidia|transformer|"
+    r"inference|fine-?tun|training run|model|agentic|agents?|robot|autonomous|"
+    r"supercomputer|data ?cent(er|re)|chips?|semiconductor)\b",
+    re.IGNORECASE,
+)
+
+
+def is_ai_relevant(title, summary):
+    return bool(AI_RELEVANCE_RE.search(f"{title} {summary}"))
 
 MAX_BYTES = 2_000_000
 TIMEOUT = 10
 MAX_ITEMS_PER_FEED = 10
-ARCHIVE_MAX = 60
+ARCHIVE_MAX = 100
 SUMMARY_MAX = 200
 
 TAG_RE = re.compile(r"<[^>]+>")
@@ -107,20 +154,80 @@ def fetch(url):
         return data
 
 
-def parse_feed(xml_bytes, category, avatar, host):
+ATOM_NS = "{http://www.w3.org/2005/Atom}"
+
+
+def _to_rfc822(value):
+    """Atom dates are ISO 8601; the rest of the pipeline expects RFC 822.
+
+    sort_key and the daily-snapshot grouping both parse with parsedate_tz,
+    which returns None for ISO input -- that silently sorts an Atom feed's
+    items to the bottom, where the archive cap drops them. Normalising here
+    keeps one date format downstream.
+    """
+    value = (value or "").strip()
+    if not value:
+        return ""
+    try:
+        dt = datetime.datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return value  # already RFC 822, or unparseable -- leave it alone
+    return format_datetime(dt)
+
+
+def _atom_fields(entry):
+    """Pull the same four fields out of an Atom <entry> as we do from RSS.
+
+    Atom puts the URL in a link element's href rather than in element text,
+    and dates it with <updated>/<published> instead of <pubDate>.
+    """
+    title = entry.findtext(f"{ATOM_NS}title") or ""
+    link = ""
+    for candidate in entry.findall(f"{ATOM_NS}link"):
+        rel = candidate.get("rel") or "alternate"
+        if rel == "alternate" and candidate.get("href"):
+            link = candidate.get("href")
+            break
+    if not link:
+        first = entry.find(f"{ATOM_NS}link")
+        if first is not None:
+            link = first.get("href") or ""
+    pub_date = _to_rfc822(entry.findtext(f"{ATOM_NS}published")
+                          or entry.findtext(f"{ATOM_NS}updated") or "")
+    desc = (entry.findtext(f"{ATOM_NS}summary")
+            or entry.findtext(f"{ATOM_NS}content") or "")
+    return title, link, pub_date, desc
+
+
+def parse_feed(xml_bytes, category, avatar, host, filter_ai=False):
     items = []
     try:
         root = ET.fromstring(xml_bytes)
     except ET.ParseError:
         return items
 
-    for item in root.findall(".//item")[:MAX_ITEMS_PER_FEED]:
-        title = strip_html((item.findtext("title") or "").strip())
-        link = (item.findtext("link") or "").strip()
-        pub_date = (item.findtext("pubDate") or "").strip()
-        desc = strip_html(item.findtext("description") or "")
+    entries = root.findall(".//item")
+    is_atom = False
+    if not entries:
+        entries = root.findall(f".//{ATOM_NS}entry")
+        is_atom = True
+
+    for item in entries[:MAX_ITEMS_PER_FEED]:
+        if is_atom:
+            raw_title, link, pub_date, raw_desc = _atom_fields(item)
+            title = strip_html(raw_title.strip())
+            link = link.strip()
+            pub_date = pub_date.strip()
+            desc = strip_html(raw_desc)
+        else:
+            title = strip_html((item.findtext("title") or "").strip())
+            link = (item.findtext("link") or "").strip()
+            pub_date = (item.findtext("pubDate") or "").strip()
+            desc = strip_html(item.findtext("description") or "")
 
         if not title or not link:
+            continue
+        if filter_ai and not is_ai_relevant(title, desc):
             continue
         if not (link.startswith("https://") or link.startswith("http://")):
             continue
@@ -458,7 +565,8 @@ def main():
         try:
             raw = fetch(feed["url"])
             host = urlparse(feed["url"]).hostname
-            new_items.extend(parse_feed(raw, feed["category"], feed["avatar"], host))
+            new_items.extend(parse_feed(raw, feed["category"], feed["avatar"], host,
+                                        filter_ai=feed.get("filter", False)))
         except Exception as e:
             print(f"warning: failed to fetch {feed['url']}: {e}")
 

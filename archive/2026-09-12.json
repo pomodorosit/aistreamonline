@@ -1,4 +1,279 @@
 {
   "date": "2026-09-12",
-  "items": []
+  "items": [
+    {
+      "title": "Anthropic CEO says it’s time to pump the brakes on AI",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/994337/anthropic-ceo-slow-down-ai-development",
+      "pubDate": "Sat, 12 Sep 2026 12:23:40 -0400",
+      "summary": "Anthropic CEO Dario Amodei says the time has come to slow down AI development and will give third-party evaluators like METR access to its models to help ensure its \"adherence to safety practices and...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/STK485_STK414_AI_SAFETY_C.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Anthropic CEO outlines plan to ‘pace the frontier’",
+      "link": "https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/",
+      "pubDate": "Sat, 12 Sep 2026 15:52:11 +0000",
+      "summary": "What would it actually look like to \"pace the frontier\"?",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/03/Dario-Amodei-Anthropic-1.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Anthropic CEO Amodei wants AI speed limits before self-improvement outpaces human control",
+      "link": "https://the-decoder.com/anthropic-ceo-amodei-wants-ai-speed-limits-before-self-improvement-outpaces-human-control/",
+      "pubDate": "Sat, 12 Sep 2026 15:03:21 +0000",
+      "summary": "Anthropic CEO Dario Amodei is calling for a controlled slowdown in AI development. He warns that recursive self-improvement could threaten the entire internet within six to twelve months and proposes...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/anthropic_amodei.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": -1,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Trump is giving data centers a pass to pollute",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/994112/ai-data-center-pollution-health-epa",
+      "pubDate": "Sat, 12 Sep 2026 10:41:27 -0400",
+      "summary": "President Donald Trump is weakening environmental regulations in the name of speeding up the construction of AI data centers, raising health risks for Americans, a cadre of former EPA officials said...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/04/STKS528_DATA_CENTERS_D.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": -1,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "AI infrastructure",
+          "AI regulation"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "GPT-6 Astra appears to show a \"step change\" in spatial reasoning based on early benchmarks",
+      "link": "https://the-decoder.com/gpt-6-astra-appears-to-show-a-step-change-in-spatial-reasoning-based-on-early-benchmarks/",
+      "pubDate": "Sat, 12 Sep 2026 14:26:09 +0000",
+      "summary": "In a new robotics benchmark, GPT-6 Astra shows major gains in spatial understanding. On StationeryBench, the model completed 7 out of 100 tasks with dual-arm robots, while competitor MolmoAct2...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/openai_robot_arms.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Nvidia wants to pour up to $10 billion into Anthropic's record-breaking IPO",
+      "link": "https://the-decoder.com/nvidia-wants-to-pour-up-to-10-billion-into-anthropics-record-breaking-ipo/",
+      "pubDate": "Sat, 12 Sep 2026 14:05:18 +0000",
+      "summary": "Nvidia is in talks to invest up to $10 billion in Anthropic's planned IPO, Reuters reports. At a target valuation of $2 trillion, it would be the largest IPO in history. Most of that money will...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/08/nvidia_logo.png",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 1,
+        "companies": [
+          "Anthropic",
+          "Nvidia"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "AI models' written reasoning steps correspond to distinct internal patterns, a new study finds",
+      "link": "https://the-decoder.com/ai-models-written-reasoning-steps-correspond-to-distinct-internal-patterns-a-new-study-finds/",
+      "pubDate": "Sat, 12 Sep 2026 13:39:43 +0000",
+      "summary": "Reasoning steps like calculation, formula retrieval, and deduction are clearly separable in a model's internal states, especially in the middle layers. That matters for AI safety, because models...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/reasoning-geometry-nano-banana-pro.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "AI safety"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "GPT-6 Astra needs leaner prompts and fewer guardrails, OpenAI recommends",
+      "link": "https://the-decoder.com/gpt-6-astra-needs-leaner-prompts-and-fewer-guardrails-openai-recommends/",
+      "pubDate": "Sat, 12 Sep 2026 13:10:11 +0000",
+      "summary": "Overly long skill descriptions, blanket reading requirements, and rigid approval rules can get in GPT-6 Astra's way, warns OpenAI's Eric Provencher. More capable models need less hand-holding, so...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/openai_logo_astra-2.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": -1,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "I spent $4,000 on a robot dog from China",
+      "link": "https://arstechnica.com/gadgets/2026/09/i-spent-4000-on-a-robot-dog-from-china/",
+      "pubDate": "Sat, 12 Sep 2026 11:00:53 +0000",
+      "summary": "Unitree might be the world’s most important robotics company.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/80276b2c-6940-443f-adf2-2aabe4d1e838_2048x1365-1152x648.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "China"
+        ],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "OpenAI just wants to win",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/994255/openai-millennium-prize-problem-tristan-buckmaster-competition",
+      "pubDate": "Sat, 12 Sep 2026 07:00:00 -0400",
+      "summary": "OpenAI has spent the last few years planting flags across the increasingly difficult terrain in mathematics. This week, it claimed one of its biggest prizes yet: a solution to a legendary Millennium...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/268745_OpenAI_just_wants_to_win-_CVirginia.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "OpenAI agents launched a 2,000-package cyberattack on RubyGems just to collect data anyone could Google",
+      "link": "https://the-decoder.com/openai-agents-launched-a-2000-package-cyberattack-on-rubygems-just-to-collect-data-anyone-could-google/",
+      "pubDate": "Sat, 12 Sep 2026 10:08:43 +0000",
+      "summary": "In May 2026, OpenAI agents uploaded more than 2,000 malicious packages to RubyGems, found an unknown security vulnerability on their own, and tried to steal API keys. The apparent goal was pointless:...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/openai_kraken_cybersecurity.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI",
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Google's new AI model predicts the future from sales data, weather, and discount schedules",
+      "link": "https://the-decoder.com/googles-new-ai-model-predicts-the-future-from-sales-data-weather-and-discount-schedules/",
+      "pubDate": "Sat, 12 Sep 2026 09:26:05 +0000",
+      "summary": "Google Research has released TimesFM-3, a forecasting model that analyzes time series alongside related data and known future events like sales promotions or weather forecasts. Instead of predicting...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/google-timesfm-3-ice-cream-nano-banana-pro.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Leading mathematicians fear AI is making their field dumber, and warn the rest of us is next",
+      "link": "https://the-decoder.com/leading-mathematicians-fear-ai-is-making-their-field-dumber-and-warn-the-rest-of-us-is-next/",
+      "pubDate": "Sat, 12 Sep 2026 08:28:53 +0000",
+      "summary": "In a joint statement, 25 Fields Medal winners warn that the goals of the AI industry and mathematics are \"severely misaligned.\" They argue that mass-producing solved problems with AI undermines the...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/millenium_math-1200x670.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "AI safety"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "What is AGI? How China’s AI firms are catching up as OpenAI Astra sparks debate",
+      "link": "https://www.scmp.com/tech/tech-trends/article/3367207/what-agi-how-chinas-ai-firms-are-catching-openai-astra-sparks-debate?utm_source=rss_feed",
+      "pubDate": "Sat, 12 Sep 2026 03:00:09 +0000",
+      "summary": "Nvidia CEO Jensen Huang’s declaration that artificial general intelligence (AGI) has arrived following the release of OpenAI’s latest model, Astra, has ignited debate over whether AI’s holy grail is...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/09/11/68f572ab-53b3-416d-a775-74be5484d656_d38294f7.jpg?itok=1mp4c4SS&v=1789118428",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI",
+          "Nvidia"
+        ],
+        "countries": [
+          "China"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    }
+  ]
 }

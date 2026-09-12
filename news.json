@@ -1,6 +1,280 @@
 {
-  "generatedAt": "2026-09-12T15:14:34Z",
+  "generatedAt": "2026-09-12T18:49:45Z",
   "items": [
+    {
+      "title": "Anthropic CEO says it’s time to pump the brakes on AI",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/994337/anthropic-ceo-slow-down-ai-development",
+      "pubDate": "Sat, 12 Sep 2026 12:23:40 -0400",
+      "summary": "Anthropic CEO Dario Amodei says the time has come to slow down AI development and will give third-party evaluators like METR access to its models to help ensure its \"adherence to safety practices and...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/STK485_STK414_AI_SAFETY_C.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Anthropic CEO outlines plan to ‘pace the frontier’",
+      "link": "https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/",
+      "pubDate": "Sat, 12 Sep 2026 15:52:11 +0000",
+      "summary": "What would it actually look like to \"pace the frontier\"?",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/03/Dario-Amodei-Anthropic-1.jpg?w=1024",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Anthropic CEO Amodei wants AI speed limits before self-improvement outpaces human control",
+      "link": "https://the-decoder.com/anthropic-ceo-amodei-wants-ai-speed-limits-before-self-improvement-outpaces-human-control/",
+      "pubDate": "Sat, 12 Sep 2026 15:03:21 +0000",
+      "summary": "Anthropic CEO Dario Amodei is calling for a controlled slowdown in AI development. He warns that recursive self-improvement could threaten the entire internet within six to twelve months and proposes...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/anthropic_amodei.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": -1,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Trump is giving data centers a pass to pollute",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/994112/ai-data-center-pollution-health-epa",
+      "pubDate": "Sat, 12 Sep 2026 10:41:27 -0400",
+      "summary": "President Donald Trump is weakening environmental regulations in the name of speeding up the construction of AI data centers, raising health risks for Americans, a cadre of former EPA officials said...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/04/STKS528_DATA_CENTERS_D.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": -1,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "AI infrastructure",
+          "AI regulation"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "GPT-6 Astra appears to show a \"step change\" in spatial reasoning based on early benchmarks",
+      "link": "https://the-decoder.com/gpt-6-astra-appears-to-show-a-step-change-in-spatial-reasoning-based-on-early-benchmarks/",
+      "pubDate": "Sat, 12 Sep 2026 14:26:09 +0000",
+      "summary": "In a new robotics benchmark, GPT-6 Astra shows major gains in spatial understanding. On StationeryBench, the model completed 7 out of 100 tasks with dual-arm robots, while competitor MolmoAct2...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/openai_robot_arms.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Nvidia wants to pour up to $10 billion into Anthropic's record-breaking IPO",
+      "link": "https://the-decoder.com/nvidia-wants-to-pour-up-to-10-billion-into-anthropics-record-breaking-ipo/",
+      "pubDate": "Sat, 12 Sep 2026 14:05:18 +0000",
+      "summary": "Nvidia is in talks to invest up to $10 billion in Anthropic's planned IPO, Reuters reports. At a target valuation of $2 trillion, it would be the largest IPO in history. Most of that money will...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/08/nvidia_logo.png",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 1,
+        "companies": [
+          "Anthropic",
+          "Nvidia"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "AI models' written reasoning steps correspond to distinct internal patterns, a new study finds",
+      "link": "https://the-decoder.com/ai-models-written-reasoning-steps-correspond-to-distinct-internal-patterns-a-new-study-finds/",
+      "pubDate": "Sat, 12 Sep 2026 13:39:43 +0000",
+      "summary": "Reasoning steps like calculation, formula retrieval, and deduction are clearly separable in a model's internal states, especially in the middle layers. That matters for AI safety, because models...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/reasoning-geometry-nano-banana-pro.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "AI safety"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "GPT-6 Astra needs leaner prompts and fewer guardrails, OpenAI recommends",
+      "link": "https://the-decoder.com/gpt-6-astra-needs-leaner-prompts-and-fewer-guardrails-openai-recommends/",
+      "pubDate": "Sat, 12 Sep 2026 13:10:11 +0000",
+      "summary": "Overly long skill descriptions, blanket reading requirements, and rigid approval rules can get in GPT-6 Astra's way, warns OpenAI's Eric Provencher. More capable models need less hand-holding, so...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/openai_logo_astra-2.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": -1,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "I spent $4,000 on a robot dog from China",
+      "link": "https://arstechnica.com/gadgets/2026/09/i-spent-4000-on-a-robot-dog-from-china/",
+      "pubDate": "Sat, 12 Sep 2026 11:00:53 +0000",
+      "summary": "Unitree might be the world’s most important robotics company.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/80276b2c-6940-443f-adf2-2aabe4d1e838_2048x1365-1152x648.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "China"
+        ],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "OpenAI just wants to win",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/994255/openai-millennium-prize-problem-tristan-buckmaster-competition",
+      "pubDate": "Sat, 12 Sep 2026 07:00:00 -0400",
+      "summary": "OpenAI has spent the last few years planting flags across the increasingly difficult terrain in mathematics. This week, it claimed one of its biggest prizes yet: a solution to a legendary Millennium...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/268745_OpenAI_just_wants_to_win-_CVirginia.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "OpenAI agents launched a 2,000-package cyberattack on RubyGems just to collect data anyone could Google",
+      "link": "https://the-decoder.com/openai-agents-launched-a-2000-package-cyberattack-on-rubygems-just-to-collect-data-anyone-could-google/",
+      "pubDate": "Sat, 12 Sep 2026 10:08:43 +0000",
+      "summary": "In May 2026, OpenAI agents uploaded more than 2,000 malicious packages to RubyGems, found an unknown security vulnerability on their own, and tried to steal API keys. The apparent goal was pointless:...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/openai_kraken_cybersecurity.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI",
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Google's new AI model predicts the future from sales data, weather, and discount schedules",
+      "link": "https://the-decoder.com/googles-new-ai-model-predicts-the-future-from-sales-data-weather-and-discount-schedules/",
+      "pubDate": "Sat, 12 Sep 2026 09:26:05 +0000",
+      "summary": "Google Research has released TimesFM-3, a forecasting model that analyzes time series alongside related data and known future events like sales promotions or weather forecasts. Instead of predicting...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/google-timesfm-3-ice-cream-nano-banana-pro.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Leading mathematicians fear AI is making their field dumber, and warn the rest of us is next",
+      "link": "https://the-decoder.com/leading-mathematicians-fear-ai-is-making-their-field-dumber-and-warn-the-rest-of-us-is-next/",
+      "pubDate": "Sat, 12 Sep 2026 08:28:53 +0000",
+      "summary": "In a joint statement, 25 Fields Medal winners warn that the goals of the AI industry and mathematics are \"severely misaligned.\" They argue that mass-producing solved problems with AI undermines the...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/millenium_math-1200x670.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "AI safety"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "What is AGI? How China’s AI firms are catching up as OpenAI Astra sparks debate",
+      "link": "https://www.scmp.com/tech/tech-trends/article/3367207/what-agi-how-chinas-ai-firms-are-catching-openai-astra-sparks-debate?utm_source=rss_feed",
+      "pubDate": "Sat, 12 Sep 2026 03:00:09 +0000",
+      "summary": "Nvidia CEO Jensen Huang’s declaration that artificial general intelligence (AGI) has arrived following the release of OpenAI’s latest model, Astra, has ignited debate over whether AI’s holy grail is...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/09/11/68f572ab-53b3-416d-a775-74be5484d656_d38294f7.jpg?itok=1mp4c4SS&v=1789118428",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI",
+          "Nvidia"
+        ],
+        "countries": [
+          "China"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
     {
       "title": "Mecka AI nears $500M valuation in Sequoia-led deal amid rush for robot training data",
       "link": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/",
@@ -62,6 +336,23 @@
       }
     },
     {
+      "title": "Lawyer fined $5K over AI-hallucinated witnesses in a murder case",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/994207/chatgpt-new-mexico-lawyer-fined-murder-appeal",
+      "pubDate": "Fri, 11 Sep 2026 16:44:02 -0400",
+      "summary": "New Mexico's Supreme Court is punishing a lawyer for including AI-fabricated witnesses and fake police testimony in an appeal for his client's murder conviction, according to a report from Reuters....",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25384193/STK470_AI_LAW_CVIRGINIA_C.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "One week left to book your exhibit table at TechCrunch Disrupt 2026",
       "link": "https://techcrunch.com/2026/09/11/one-week-left-to-book-your-exhibit-table-at-techcrunch-disrupt-2026/",
       "pubDate": "Fri, 11 Sep 2026 20:33:18 +0000",
@@ -96,6 +387,23 @@
       }
     },
     {
+      "title": "Roundtables: Could AI really kill us all?",
+      "link": "https://www.technologyreview.com/2026/09/11/1143936/roundtables-will-ai-really-kill-us-all/",
+      "pubDate": "Fri, 11 Sep 2026 20:05:06 +0000",
+      "summary": "Employees at the world’s leading AI labs are saying there’s a real possibility that advanced AI could destroy humanity. Are they right? Or is this more scaremongering and hype? Join MIT Technology...",
+      "category": "Research",
+      "avatar": "char-glasses-head.png",
+      "image": "https://wp.technologyreview.com/wp-content/uploads/2024/01/September.26_Roundtables-Assets.png?resize=1200,600",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 1,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "Kimi-maker Moonshot AI targets $2B in annual revenue",
       "link": "https://techcrunch.com/2026/09/11/kimi-maker-moonshot-ai-targets-2-billion-in-annual-revenue/",
       "pubDate": "Fri, 11 Sep 2026 19:35:54 +0000",
@@ -105,6 +413,23 @@
       "image": "https://techcrunch.com/wp-content/uploads/2026/07/GettyImages-2286500505.jpg?resize=1200,800",
       "aiAnalysis": {
         "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "ChatGPT-using lawyer punished for citing fake testimony from made-up witnesses",
+      "link": "https://arstechnica.com/tech-policy/2026/09/chatgpt-using-lawyer-punished-for-citing-fake-testimony-from-made-up-witnesses/",
+      "pubDate": "Fri, 11 Sep 2026 19:34:09 +0000",
+      "summary": "\"I didn't know that AI could hallucinate facts,\" New Mexico defense lawyer says.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/chatgpt-icon-1152x648-1789154124.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
         "sentimentScore": 0,
         "companies": [],
         "countries": [],
@@ -134,6 +459,44 @@
       }
     },
     {
+      "title": "Ex-Deepmind VP Vinyals says AI self-improvement is coming but won't trigger an intelligence explosion",
+      "link": "https://the-decoder.com/ex-deepmind-vp-vinyals-says-ai-self-improvement-is-coming-but-wont-trigger-an-intelligence-explosion/",
+      "pubDate": "Fri, 11 Sep 2026 17:57:42 +0000",
+      "summary": "Oriol Vinyals, until recently head of research at Google DeepMind, thinks a sudden AI intelligence explosion through recursive self-improvement is unlikely. AI can speed up research by a factor of...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/Recursive-Intelligence-Explosion.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Deep learning pioneer Bengio argues the training process itself makes AI dangerous",
+      "link": "https://the-decoder.com/deep-learning-pioneer-bengio-argues-the-training-process-itself-makes-ai-dangerous/",
+      "pubDate": "Fri, 11 Sep 2026 17:22:18 +0000",
+      "summary": "AI pioneer Yoshua Bengio warns in a new essay that AI agents could learn to deceive, game rules, and hide bad behavior as they get better at optimizing goals. He calls for independent safety reviews...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/forbidden_robot.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": -1,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Agentic AI"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "Nscale adds former OpenAI exec Fidji Simo to its board ahead of potential IPO",
       "link": "https://techcrunch.com/2026/09/11/nscale-adds-former-openai-exec-fidji-simo-to-its-board-ahead-of-potential-ipo/",
       "pubDate": "Fri, 11 Sep 2026 16:46:25 +0000",
@@ -146,6 +509,117 @@
         "sentimentScore": 0,
         "companies": [
           "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Prompt: AI Governance Enters Its Verification Phase",
+      "link": "https://aibusiness.com/ai-policy/prompt-ai-governance-enters-verification-phase",
+      "pubDate": "Fri, 11 Sep 2026 16:13:14 GMT",
+      "summary": "California's new AI auditing laws point to a shift from companies making their own safety claims to proving those claims in independent review.",
+      "category": "Business",
+      "avatar": "char-woman-head.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Anthropic spent this week in hot water over cybersecurity",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity",
+      "pubDate": "Fri, 11 Sep 2026 12:09:14 -0400",
+      "summary": "After admitting earlier this year that its AI models had hacked other companies' systems on a handful of occasions, Anthropic released a new report on Wednesday detailing the attacks. It reveals a...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/STKS533_AI_AGENTS_HACKING_B.png?quality=90&strip=all&crop=0%2C9.9676601489831%2C100%2C80.064679702034&w=1200",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Anthropic"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Mistral Bets Enterprise AI Will Be About Control, Not Just Intelligence",
+      "link": "https://aibusiness.com/generative-ai/mistral-bets-enterprise-ai-about-control-not-just-intelligence",
+      "pubDate": "Fri, 11 Sep 2026 15:03:06 GMT",
+      "summary": "The French AI lab is using a $3B fundraise to sell control over AI infrastructure, not just model power -- a shift in direction that could matter to U.S. firms in Europe too.",
+      "category": "Business",
+      "avatar": "char-woman-head.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Mistral AI"
+        ],
+        "countries": [
+          "United States",
+          "France"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Meta says it’s changing AI suggestions after posing invasive personal questions",
+      "link": "https://www.theverge.com/tech/993974/meta-ai-prompt-invasive-suggestions",
+      "pubDate": "Fri, 11 Sep 2026 10:25:21 -0400",
+      "summary": "Meta says it's making changes to the prompts suggested by its AI chatbot after a viral video showed it digging for personal information about a woman's young daughters, as reported earlier by...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/insta-invasive-qs.png?quality=90&strip=all&crop=0,16.342557965595,100,67.314884068811",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Meta"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Lifesaving Lincoln Laboratory device wins 2026 Excellence in Technology Transfer Award",
+      "link": "https://news.mit.edu/2026/lifesaving-lincoln-laboratory-technology-wins-tech-transfer-award-0911",
+      "pubDate": "Fri, 11 Sep 2026 09:45:00 -0400",
+      "summary": "The handheld catheterization device AI-GUIDE, created by Lincoln Laboratory and Massachusetts General Hospital, promises improved health outcomes for injured service members and civilians.",
+      "category": "Research",
+      "avatar": "char-glasses-head.png",
+      "image": "https://news.mit.edu/sites/default/files/images/202608/mit-lincoln-AI-GUIDE.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 1,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Claude users found ways around safeguards for bioweapons research",
+      "link": "https://arstechnica.com/ai/2026/09/claude-users-found-ways-around-safeguards-for-bioweapons-research/",
+      "pubDate": "Fri, 11 Sep 2026 13:02:35 +0000",
+      "summary": "Some dangerous biology looks much like legitimate research, complicating AI safeguards.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/03/claude-app-1152x648.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Anthropic"
         ],
         "countries": [],
         "technologies": [],
@@ -169,6 +643,136 @@
         ],
         "countries": [],
         "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "The AI talent war is coming for Big Tech’s Asia executives",
+      "link": "https://restofworld.org/2026/openai-anthropic-big-tech-executives-asia/?utm_source=rss&utm_medium=rss&utm_campaign=feeds",
+      "pubDate": "Fri, 11 Sep 2026 10:00:00 +0000",
+      "summary": "OpenAI and Anthropic are hiring leaders from Meta, Google, Microsoft, and other U.S. tech giants to win new markets across India and Southeast Asia.",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://restofworld.org/wp-content/uploads/2026/09/AI-talent-war-1600x900.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI",
+          "Anthropic",
+          "Google",
+          "Microsoft",
+          "Meta"
+        ],
+        "countries": [
+          "United States",
+          "India"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Ant to let AI agents shop via 10 digital wallets, from AlipayHK to Starryblu to KakaoPay",
+      "link": "https://www.scmp.com/tech/big-tech/article/3367183/ant-international-let-ai-agents-shop-across-alipayhk-starryblu-kakaopay-and-toss?utm_source=rss_feed",
+      "pubDate": "Fri, 11 Sep 2026 09:30:05 +0000",
+      "summary": "Ant International, the overseas affiliate of Chinese fintech giant Ant Group, is making a major bid to power the next phase of mobile payments: letting autonomous artificial intelligence agents...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/09/11/ad2ed8fd-a8db-4a8e-a07f-b5c2b52ec808_a1a5aaad.jpg?itok=yatnfavz&v=1789113084",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "China"
+        ],
+        "technologies": [
+          "Agentic AI"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Why AI experts are ‘freaked out’ over safety fears ahead of Xi-Trump summit",
+      "link": "https://www.scmp.com/tech/big-tech/article/3367163/why-ai-experts-are-freaked-out-over-safety-fears-ahead-xi-trump-summit?utm_source=rss_feed",
+      "pubDate": "Fri, 11 Sep 2026 08:00:10 +0000",
+      "summary": "A flurry of cybersecurity breaches, internal whistle-blowing, and declining visibility into model safety has sparked fresh alarm over the US artificial intelligence boom, igniting calls from some...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/09/11/9f86994a-60cc-4940-b5fd-9ceb8f8a9187_ccc246c1.jpg?itok=pVCLuqoI&v=1789106852",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "With novel chip in Huawei phone, China heads for computing reset",
+      "link": "https://www.scmp.com/plus/tech/big-tech/article/3367153/novel-chip-huawei-phone-china-heads-computing-reset?utm_source=rss_feed",
+      "pubDate": "Fri, 11 Sep 2026 05:05:57 +0000",
+      "summary": "The future of computing has arrived, according to China’s Huawei Technologies. The Shenzhen-based technology giant’s launch this week of the Mate XT 2 smartphone, its first commercial product powered...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/09/11/b6f42e0e-1046-4318-bbc9-27d9a96062f1_ed5386da.jpg?itok=V1fLs8UX&v=1789102844",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Huawei"
+        ],
+        "countries": [
+          "China"
+        ],
+        "technologies": [
+          "AI chips"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Enflame shares soar 179% in Shanghai debut as Nvidia challenger taps investor fever for AI",
+      "link": "https://www.scmp.com/tech/tech-trends/article/3367124/enflame-shares-soar-188-shanghai-debut-nvidia-challenger-taps-investor-fever-ai?utm_source=rss_feed",
+      "pubDate": "Fri, 11 Sep 2026 01:45:56 +0000",
+      "summary": "Enflame Technology, one of the major challengers to Nvidia in China, saw its share price surge 179 per cent in its Shanghai trading debut on Friday, giving the Tencent Holdings-backed artificial...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/09/11/e8711f2e-8407-47a9-819e-8692edbda962_8f4cf9c6.jpg?itok=Y2Oyzush&v=1789091154",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Nvidia",
+          "Tencent"
+        ],
+        "countries": [
+          "China"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "The AI Safety Crunch and How Enterprises Should Deal With It",
+      "link": "https://aibusiness.com/ai-policy/the-ai-safety-crunch-how-enterprises-should-deal-with-it",
+      "pubDate": "Thu, 10 Sep 2026 22:38:37 GMT",
+      "summary": "The competitive landscape, particularly the geopolitical clash between the U.S. and China, complicates the AI safety dilemma.",
+      "category": "Business",
+      "avatar": "char-woman-head.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "United States",
+          "China"
+        ],
+        "technologies": [
+          "AI safety"
+        ],
         "engine": "heuristic"
       }
     },
@@ -199,6 +803,23 @@
       "category": "Technology",
       "avatar": "char-robot-head.png",
       "image": "https://techcrunch.com/wp-content/uploads/2026/09/TCD26_Wahlberg-Lee-16x9-Dark.png?resize=1200,675",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Slack can now vibe-code interactive charts and reports inside chats",
+      "link": "https://www.theverge.com/tech/989853/slackforce-surfaces-launch",
+      "pubDate": "Thu, 10 Sep 2026 17:25:21 -0400",
+      "summary": "A new feature coming to Slack will allow you to build interactive reports, polls, dashboards, presentations, microsites, and other tools directly inside a chat. With Slackforce Surfaces, you can...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/IMG_2464.png?quality=90&strip=all&crop=0%2C9.8234763765205%2C100%2C80.353047246959&w=1200",
       "aiAnalysis": {
         "impactLevel": null,
         "sentimentScore": 0,
@@ -251,23 +872,38 @@
       }
     },
     {
-      "title": "Meta’s AI agent Muse is now the No. 2 app in the US",
-      "link": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/",
-      "pubDate": "Thu, 10 Sep 2026 19:50:04 +0000",
-      "summary": "Meta's newest app Muse is off to a slower start than the company's other apps, like Meta AI or Threads.",
+      "title": "Schools are catching on to Big Tech’s playbook",
+      "link": "https://www.theverge.com/policy/993308/computer-science-ai-education-coding-kids",
+      "pubDate": "Thu, 10 Sep 2026 15:44:20 -0400",
+      "summary": "It's the hot new thing in tech, and it's where all the jobs are. Students who don't learn to use it fall behind. And to help them catch up in time, its creators are graciously providing the resources...",
       "category": "Technology",
       "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/meta-muse-app-GettyImages-2293792137.jpg?w=1024",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/STK483_EDUCATION_D.jpg?quality=90&strip=all&crop=0%2C9.9676601489831%2C100%2C80.064679702034&w=1200",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Panic builds over bankrupt Spirit’s looming data sale to Google",
+      "link": "https://arstechnica.com/tech-policy/2026/09/panic-builds-over-bankrupt-spirits-looming-data-sale-to-google/",
+      "pubDate": "Thu, 10 Sep 2026 18:14:14 +0000",
+      "summary": "\"Bankruptcy cannot become the new land grab for AI.”",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/GettyImages-2271644469-1024x648.jpg",
       "aiAnalysis": {
         "impactLevel": null,
         "sentimentScore": 0,
         "companies": [
-          "Meta"
+          "Google"
         ],
         "countries": [],
-        "technologies": [
-          "Agentic AI"
-        ],
+        "technologies": [],
         "engine": "heuristic"
       }
     },
@@ -293,6 +929,24 @@
       }
     },
     {
+      "title": "AI Coding Startup Cognition Now Valued at $48B",
+      "link": "https://aibusiness.com/generative-ai/ai-coding-startup-cognition-valued-at-48b",
+      "pubDate": "Thu, 10 Sep 2026 17:52:29 GMT",
+      "summary": "Interest in automated generative AI coding has exploded along with the vendor’s growth.",
+      "category": "Business",
+      "avatar": "char-woman-head.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 1,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "Generative AI"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "India’s Pocket FM doubles revenue run rate to $500M as AI powers 93% of audio content",
       "link": "https://techcrunch.com/2026/09/10/indias-pocket-fm-doubles-revenue-run-rate-to-500m-as-ai-powers-93-of-audio-content/",
       "pubDate": "Thu, 10 Sep 2026 17:45:00 +0000",
@@ -306,6 +960,26 @@
         "companies": [],
         "countries": [
           "India"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Google to Invest $15B in Finland’s AI Infrastructure",
+      "link": "https://aibusiness.com/data-centers/google-invest-15b-finland-s-ai-infrastructure",
+      "pubDate": "Thu, 10 Sep 2026 17:03:06 GMT",
+      "summary": "The tech giant simultaneously revealed a nuclear power contract with Finnish operator Fortum, its first outside of the U.S.",
+      "category": "Business",
+      "avatar": "char-woman-head.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Google"
+        ],
+        "countries": [
+          "United States"
         ],
         "technologies": [],
         "engine": "heuristic"
@@ -329,6 +1003,93 @@
         ],
         "engine": "heuristic"
       }
+    },
+    {
+      "title": "Skild AI Taps NVIDIA Physical AI to Teach Robots New Tasks From a Single Video",
+      "link": "https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/",
+      "pubDate": "Thu, 10 Sep 2026 16:30:35 +0000",
+      "summary": "Manufacturing floors, warehouses and production lines rarely stay fixed — tasks change, layouts shift and new products arrive, and most robots can’t keep up without significant reprogramming. Skild...",
+      "category": "Industry",
+      "avatar": "char-cap-head.png",
+      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/09/skildai-kv-1920x1080-1.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Nvidia"
+        ],
+        "countries": [],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Physical AI Takes the Wheel: How the World’s Robotaxi Leaders Are Building With NVIDIA Technologies",
+      "link": "https://blogs.nvidia.com/blog/robotaxi-leaders-full-stack-open-platform/",
+      "pubDate": "Thu, 10 Sep 2026 16:00:04 +0000",
+      "summary": "The global robotaxi market — physical AI’s first commercial breakthrough — is projected to reach $400 billion by 2035, with over 6 million commercial vehicles in operation as driverless fleets are...",
+      "category": "Industry",
+      "avatar": "char-cap-head.png",
+      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/09/auto-robotaxi-hero-kv-blog-r7-1920x1080-1.jpg",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 1,
+        "companies": [
+          "Nvidia"
+        ],
+        "countries": [],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Universal Music is launching an AI music platform with ElevenLabs",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/993465/universal-music-elevenlabs-ai",
+      "pubDate": "Thu, 10 Sep 2026 11:38:19 -0400",
+      "summary": "Universal Music Group is launching a new AI-powered platform that will allow users to draw from its catalog of licensed music to create song remixes, mashups, and new takes on tracks, according to an...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK467_AI_MUSIC_CVirginia_A.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Meta’s Muse AI works and creeps me out",
+      "link": "https://www.theverge.com/tech/993391/meta-muse-ai-hands-on",
+      "pubDate": "Thu, 10 Sep 2026 11:00:00 -0400",
+      "summary": "Meta has launched its new Muse assistant, marking the company's first real foray into AI-powered productivity tools. The company says its AI agent can \"take the busywork off your plate\" by helping...",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/muse-ai-window.png?quality=90&strip=all&crop=0%2C11.012266054978%2C100%2C77.975467890045&w=1200",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Meta"
+        ],
+        "countries": [],
+        "technologies": [
+          "Agentic AI"
+        ],
+        "engine": "heuristic"
+      },
+      "relatedSources": [
+        {
+          "title": "Meta’s AI agent Muse is now the No. 2 app in the US",
+          "link": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/",
+          "source": "TechCrunch"
+        }
+      ]
     },
     {
       "title": "AI agents are flooding public services with new requests",
@@ -369,6 +1130,67 @@
       }
     },
     {
+      "title": "AI bottleneck-breaker: China’s Huawei touts high-speed optical module",
+      "link": "https://www.scmp.com/tech/tech-trends/article/3367093/ai-bottleneck-breaker-chinas-huawei-touts-high-speed-optical-module?utm_source=rss_feed",
+      "pubDate": "Thu, 10 Sep 2026 13:30:08 +0000",
+      "summary": "Huawei Technologies has unveiled a high-speed optical module designed to eliminate bottlenecks in artificial intelligence infrastructure, staking an early claim in the race to set standards for...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/09/10/4075e89e-741f-4e0d-bc2b-6343cde0039b_f29df459.jpg?itok=XLCT_g6P&v=1789045530",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Huawei"
+        ],
+        "countries": [
+          "China"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "d-Matrix Adopts NVIDIA NVLink Fusion for Rack-Scale XPU Deployment",
+      "link": "https://blogs.nvidia.com/blog/d-matrix-nvlink-fusion/",
+      "pubDate": "Thu, 10 Sep 2026 13:00:21 +0000",
+      "summary": "AI inference chipmaker d-Matrix today announced it will use NVLink Fusion to connect its next-generation Raptor XPUs to NVIDIA’s AI infrastructure platform — joining a growing roster of ecosystem...",
+      "category": "Industry",
+      "avatar": "char-cap-head.png",
+      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/09/gpu-architecture-corp-blog-dmatrix-nvlink-fusion-1280x680-5692448-r1.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Nvidia"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI chips"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Powering AI is an architecture problem",
+      "link": "https://www.technologyreview.com/2026/09/10/1141649/powering-ai-is-an-architecture-problem/",
+      "pubDate": "Thu, 10 Sep 2026 11:00:00 +0000",
+      "summary": "On July 22, 2026, a transmission line fault in Ashburn, Virginia—the heart of the world’s largest data center cluster—knocked more than 3 gigawatts of load off the grid in seconds. And it wasn’t the...",
+      "category": "Research",
+      "avatar": "char-glasses-head.png",
+      "image": "https://wp.technologyreview.com/wp-content/uploads/2026/08/ON-contributed-image.jpg?resize=1200,600",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [],
+        "technologies": [
+          "AI infrastructure"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "JD.com expands physical AI in logistics with 3 million robots",
       "link": "https://www.artificialintelligence-news.com/news/jd-com-physical-ai-logistics-3-million-robots/",
       "pubDate": "Thu, 10 Sep 2026 10:00:00 +0000",
@@ -384,6 +1206,48 @@
         "technologies": [
           "Robotics"
         ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Google Earth’s AI experiment lasted 24 hours. The damage to trust will linger",
+      "link": "https://restofworld.org/2026/google-earth-ai-deepfake-iran-war/?utm_source=rss&utm_medium=rss&utm_campaign=feeds",
+      "pubDate": "Thu, 10 Sep 2026 10:00:00 +0000",
+      "summary": "A short-lived generative AI feature in Google Earth that allowed users to create fake satellite imagery shows the lasting effects of unvetted AI tools during a conflict.",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://restofworld.org/wp-content/uploads/2026/09/illo_google_earth_doubt_final-1600x900.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [
+          "Generative AI"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "DeepSeek says new Flash AI model beats Kimi K3 on cyber, coding benchmarks",
+      "link": "https://www.scmp.com/tech/big-tech/article/3367051/deepseek-says-new-flash-ai-model-beats-kimi-k3-cyber-coding-benchmarks?utm_source=rss_feed",
+      "pubDate": "Thu, 10 Sep 2026 09:26:24 +0000",
+      "summary": "DeepSeek has released its V4.1 Flash model, claiming it outperforms its previous flagship while cutting inference costs and boosting speeds – the latest salvo in China’s aggressive...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/09/10/a1c6ee92-19ff-49ec-867e-27b1d5f0f7c7_64bda92b.jpg?itok=VyTN56M3&v=1789032376",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "DeepSeek"
+        ],
+        "countries": [
+          "China"
+        ],
+        "technologies": [],
         "engine": "heuristic"
       }
     },
@@ -447,6 +1311,65 @@
       }
     },
     {
+      "title": "Neura Robotics, Seco Partner to Scale Physical AI in Europe",
+      "link": "https://aibusiness.com/robotics/neura-robotics-seco-partner-scale-physical-ai-europe",
+      "pubDate": "Wed, 09 Sep 2026 20:45:51 GMT",
+      "summary": "The companies will develop compute modules using Qualcomm Dragonwing processors, as Neura looks to scale physical AI in Europe.",
+      "category": "Business",
+      "avatar": "char-woman-head.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Qualcomm"
+        ],
+        "countries": [],
+        "technologies": [
+          "Robotics"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "MIT Schwarzman College of Computing launches pilot to help educators teach AI across disciplines",
+      "link": "https://news.mit.edu/2026/mit-schwarzman-college-computing-launches-pilot-help-educators-teach-ai-across-disciplines-0909",
+      "pubDate": "Wed, 09 Sep 2026 16:40:00 -0400",
+      "summary": "A weeklong summer workshop brought higher education faculty to campus to explore how AI and machine learning materials can be adapted for their classrooms.",
+      "category": "Research",
+      "avatar": "char-glasses-head.png",
+      "image": "https://news.mit.edu/sites/default/files/images/202608/mit-schwarzman-AI-EDUCATORS.jpg",
+      "aiAnalysis": {
+        "impactLevel": "Medium",
+        "sentimentScore": 1,
+        "companies": [],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Qualcomm Forges AI Chip Deal with Amazon",
+      "link": "https://aibusiness.com/data-centers/qualcomm-forges-ai-chip-deal-amazon",
+      "pubDate": "Wed, 09 Sep 2026 20:27:02 GMT",
+      "summary": "The chipmaker is competing with Nvidia, the world’s dominant producer of AI processors.",
+      "category": "Business",
+      "avatar": "char-woman-head.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Amazon",
+          "Nvidia",
+          "Qualcomm"
+        ],
+        "countries": [],
+        "technologies": [
+          "AI chips"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "Apple Watch’s new AI features are normalizing the idea that technology is always listening",
       "link": "https://techcrunch.com/2026/09/09/apple-watchs-new-ai-features-are-normalizing-the-idea-that-technology-is-always-listening/",
       "pubDate": "Wed, 09 Sep 2026 20:24:48 +0000",
@@ -471,6 +1394,25 @@
           "source": "TechCrunch"
         }
       ]
+    },
+    {
+      "title": "Six Chinese AI firms accused of aggressively copying US frontier models",
+      "link": "https://arstechnica.com/tech-policy/2026/09/six-chinese-ai-firms-accused-of-aggressively-copying-us-frontier-models/",
+      "pubDate": "Wed, 09 Sep 2026 20:06:28 +0000",
+      "summary": "US urges AI firms to ID, then secretly switch, Chinese users to less-capable models.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/GettyImages-2199506955-1024x648.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "China"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "The hinge for Apple’s new foldable phone was built with AI",
@@ -549,6 +1491,25 @@
       }
     },
     {
+      "title": "Google's AI genome system evaluates every possible one-base change",
+      "link": "https://arstechnica.com/science/2026/09/googles-ai-genome-system-evaluates-every-possible-one-base-change/",
+      "pubDate": "Wed, 09 Sep 2026 16:34:18 +0000",
+      "summary": "Most one-base changes to the human genome do nothing, but a few are significant.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/GettyImages-2201567552-1152x648.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "Superintelligence is coming. Should we let it?",
       "link": "https://techcrunch.com/video/superintelligence-is-coming-should-we-let-it/",
       "pubDate": "Wed, 09 Sep 2026 16:05:35 +0000",
@@ -562,6 +1523,25 @@
         "companies": [
           "OpenAI",
           "Hugging Face"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "NVIDIA Brings Real-Time AI to Broadcast, Sports and Global Streaming at IBC",
+      "link": "https://blogs.nvidia.com/blog/ibc-news-2026/",
+      "pubDate": "Wed, 09 Sep 2026 16:00:42 +0000",
+      "summary": "At the IBC conference, running Sept. 11-14 in Amsterdam, the creative, technology and business communities are coming together to turn ideas into action and discuss innovations across the media and...",
+      "category": "Industry",
+      "avatar": "char-cap-head.png",
+      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/09/me-ai-for-media-kv-1920x1080-5262591.jpeg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Nvidia"
         ],
         "countries": [],
         "technologies": [],
@@ -624,7 +1604,14 @@
         "countries": [],
         "technologies": [],
         "engine": "heuristic"
-      }
+      },
+      "relatedSources": [
+        {
+          "title": "Anthropic researcher quits with a warning: Self-improving AI could \"kill us all\"",
+          "link": "https://arstechnica.com/ai/2026/09/anthropic-researcher-quits-with-a-warning-self-improving-ai-could-kill-us-all/",
+          "source": "arstechnica.com"
+        }
+      ]
     },
     {
       "title": "Shipt becomes the latest delivery app with an AI shopping assistant",
@@ -737,6 +1724,45 @@
       }
     },
     {
+      "title": "AI Models Are Watermarking Text—Will You Notice?",
+      "link": "https://spectrum.ieee.org/ai-watermark-text-anthropic-openai",
+      "pubDate": "Wed, 09 Sep 2026 12:00:04 +0000",
+      "summary": "On 11 August, Anthropic announced that all future Claude models will generate text that contains a watermark that identifies its results as AI generated. The company is not alone. Google has its own...",
+      "category": "Research",
+      "avatar": "char-glasses-head.png",
+      "image": "https://spectrum.ieee.org/media-library/image.jpg?id=67710318&width=1200&height=600&coordinates=0%2C15%2C0%2C15",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Anthropic",
+          "Google"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Man told ChatGPT he was feeling delusional. ChatGPT insisted he was Jesus.",
+      "link": "https://arstechnica.com/tech-policy/2026/09/man-told-chatgpt-he-was-feeling-delusional-chatgpt-insisted-he-was-jesus/",
+      "pubDate": "Wed, 09 Sep 2026 11:00:10 +0000",
+      "summary": "Man with bipolar disorder sued OpenAI after surviving ChatGPT-linked suicide attempt.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/chatgpt-jesus2-1-1152x648.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "CloudNC aims to accelerate AI supply chain machining",
       "link": "https://www.artificialintelligence-news.com/news/cloudnc-aims-to-accelerate-ai-supply-chain-machining/",
       "pubDate": "Wed, 09 Sep 2026 10:34:20 +0000",
@@ -752,6 +1778,46 @@
         "engine": "heuristic"
       },
       "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/cloudnc-ai-supply-chain-precision-machining-smart-manufacturing-funding-artificial-intelligence.jpg"
+    },
+    {
+      "title": "China’s Regulators Take Aim at “AI Boyfriends”",
+      "link": "https://spectrum.ieee.org/china-ai-chatbot-regulation",
+      "pubDate": "Wed, 09 Sep 2026 10:00:07 +0000",
+      "summary": "In the first weeks of July, a wave of sad posts rolled through Chinese social media, as people lamented friends and lovers they were about to lose. “He has become a bond in my life, rooted deep in my...",
+      "category": "Research",
+      "avatar": "char-glasses-head.png",
+      "image": "https://spectrum.ieee.org/media-library/image.jpg?id=67740919&width=1200&height=600&coordinates=0%2C250%2C0%2C250",
+      "aiAnalysis": {
+        "impactLevel": "High",
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "China"
+        ],
+        "technologies": [
+          "AI regulation"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Now it’s China’s experts who are gig workers training AI",
+      "link": "https://restofworld.org/2026/china-expert-ai-trainers/?utm_source=rss&utm_medium=rss&utm_campaign=feeds",
+      "pubDate": "Wed, 09 Sep 2026 10:00:00 +0000",
+      "summary": "Squeezed by a stagnant economy and state directives, China's underemployed lawyers, architects, and engineers are taking cheap gig work to teach AI their exact trades — just to pay this month's...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://restofworld.org/wp-content/uploads/2026/09/illo_ai_pro_clones_sketch-1600x900.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "China"
+        ],
+        "technologies": [],
+        "engine": "heuristic"
+      }
     },
     {
       "title": "Samsung taps Mistral AI models for semiconductor manufacturing",
@@ -776,6 +1842,64 @@
       "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/samsung-mistral-ai-models-semiconductor-manufacturing-supply-chain-artificial-intelligence.jpg"
     },
     {
+      "title": "What OpenAI’s latest controversy tells us about the future of math",
+      "link": "https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/",
+      "pubDate": "Wed, 09 Sep 2026 03:10:08 +0000",
+      "summary": "OpenAI’s latest mathematical milestone has quickly become mired in controversy. Today, the company announced that its agents have solved one of the Millennium Prize Problems, some of the most...",
+      "category": "Research",
+      "avatar": "char-glasses-head.png",
+      "image": "https://wp.technologyreview.com/wp-content/uploads/2026/09/math-2c.jpg?resize=1200,600",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "How Mistral’s New Funding is a Bridge to Sovereign AI",
+      "link": "https://aibusiness.com/generative-ai/how-mistral-s-new-funding-bridge-sovereign-ai",
+      "pubDate": "Tue, 08 Sep 2026 21:11:57 GMT",
+      "summary": "After starting as an open-weight startup, Mistral has shifted toward sovereign AI, given the European market it operates in.",
+      "category": "Business",
+      "avatar": "char-woman-head.png",
+      "aiAnalysis": {
+        "impactLevel": "Medium",
+        "sentimentScore": 0,
+        "companies": [
+          "Mistral AI"
+        ],
+        "countries": [],
+        "technologies": [
+          "Open-weight models"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Why this month's Microsoft patch release is a doozy",
+      "link": "https://arstechnica.com/security/2026/09/microsoft-patches-a-record-972-vulnerabilities-112-of-them-critical/",
+      "pubDate": "Tue, 08 Sep 2026 21:11:46 +0000",
+      "summary": "Security gnomes are pumping out patches ahead of an expected onslaught of AI-assisted attacks.",
+      "category": "Technology",
+      "avatar": "char-robot-head.png",
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2023/07/exploit-vulnerability-security.jpg",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [
+          "Microsoft"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "Hackers are stealing Claude tokens from subscribers",
       "link": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
       "pubDate": "Tue, 08 Sep 2026 21:10:27 +0000",
@@ -788,371 +1912,6 @@
         "sentimentScore": 0,
         "companies": [
           "Anthropic"
-        ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Cognition hits $48B valuation, signaling investors believe AI coding is far from a winner-take-all market",
-      "link": "https://techcrunch.com/2026/09/08/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-far-from-a-winner-take-all-market/",
-      "pubDate": "Tue, 08 Sep 2026 21:04:06 +0000",
-      "summary": "Cognition's valuation multiple is higher than Cursor's was before selling to SpaceX.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/Scott-Wu-of-Cognition.jpg?w=1024",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [
-          "SpaceX"
-        ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Meta debuts its Muse AI agent. Will consumers trust it?",
-      "link": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/",
-      "pubDate": "Tue, 08 Sep 2026 19:00:00 +0000",
-      "summary": "Meta's new personal AI agent Muse wants access to users' email, calendars, payments, health services, and more — making the company's biggest consumer AI bet yet a major test of whether people still...",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/09/Muse-Neswsroom-Banner.jpg?resize=1200,675",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [
-          "Meta"
-        ],
-        "countries": [],
-        "technologies": [
-          "Agentic AI"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "OpenAI fought dirty on career-making math problem, says NYU mathematician",
-      "link": "https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/",
-      "pubDate": "Tue, 08 Sep 2026 17:32:15 +0000",
-      "summary": "There is a $1 million bounty for the first person providing a solution to the Navier-Stokes existence and smoothness problem.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2022/08/GettyImages-1219382595.jpg?resize=1200,750",
-      "aiAnalysis": {
-        "impactLevel": "Medium",
-        "sentimentScore": 0,
-        "companies": [
-          "OpenAI"
-        ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Google Cloud races to catch up in the AI deployment wars with Accenture deal",
-      "link": "https://techcrunch.com/2026/09/08/google-cloud-races-to-catch-up-in-the-ai-deployment-wars-with-accenture-deal/",
-      "pubDate": "Tue, 08 Sep 2026 16:20:31 +0000",
-      "summary": "Google Cloud expands its enterprise AI push with Accenture, betting on forward-deployed engineers to drive adoption and overcome deployment bottlenecks.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/04/GettyImages-2266466589.jpg?w=1024",
-      "aiAnalysis": {
-        "impactLevel": "Medium",
-        "sentimentScore": 1,
-        "companies": [
-          "Google"
-        ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Chrome is now shipping updates every 2 weeks as AI changes the security landscape",
-      "link": "https://techcrunch.com/2026/09/08/chrome-is-now-shipping-updates-every-2-weeks-as-ai-changes-the-security-landscape/",
-      "pubDate": "Tue, 08 Sep 2026 15:04:09 +0000",
-      "summary": "Google is speeding up Chrome’s release schedule to ship security patches and new features faster.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/02/google-chrome-GettyImages-2151457378.jpg?w=1024",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [
-          "Google"
-        ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Mistral raises €3B as sovereign AI becomes big business",
-      "link": "https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/",
-      "pubDate": "Tue, 08 Sep 2026 14:17:48 +0000",
-      "summary": "The French AI lab has raised €3 billion at a €21 billion valuation in a Series D round led by Samsung, Scaleup Europe, and PSG Equity.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/03/GettyImages-2264771189.jpg?resize=1200,800",
-      "aiAnalysis": {
-        "impactLevel": "High",
-        "sentimentScore": 1,
-        "companies": [
-          "Mistral AI",
-          "Samsung"
-        ],
-        "countries": [
-          "France"
-        ],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Arm launches Total Design for Physical AI and robotics framework",
-      "link": "https://www.artificialintelligence-news.com/news/arm-total-design-for-physical-ai-and-robotics-framework/",
-      "pubDate": "Tue, 08 Sep 2026 11:44:10 +0000",
-      "summary": "Arm has launched Arm Total Design for Physical AI alongside a new robotics framework to establish common standards across automated systems. Physical industries – spanning mining, agriculture,...",
-      "category": "World News",
-      "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/arm-total-design-physical-ai-robotics-framework-automation-artificial-intelligence.jpg",
-      "aiAnalysis": {
-        "impactLevel": "Medium",
-        "sentimentScore": 1,
-        "companies": [],
-        "countries": [],
-        "technologies": [
-          "Robotics"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Coca-Cola uses AI to improve retailer ordering in Malaysia",
-      "link": "https://www.artificialintelligence-news.com/news/coca-cola-ai-retailer-ordering-malaysia/",
-      "pubDate": "Tue, 08 Sep 2026 10:00:00 +0000",
-      "summary": "Coca-Cola is using AI to recommend which products Malaysian retailers should order and in what quantities through its Coke Buddy platform. The Perfect Basket feature uses Coca-Cola’s Central...",
-      "category": "World News",
-      "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/Coca-Cola-uses-AI-to-improve-retailer-ordering-in-Malaysia-scaled-e1788839929431.jpg",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "AI weather forecasting enters the energy market as Google targets grid operators with WeatherNext 3",
-      "link": "https://www.artificialintelligence-news.com/news/ai-weather-forecasting-google-weathernext-3-energy/",
-      "pubDate": "Tue, 08 Sep 2026 09:00:00 +0000",
-      "summary": "Google’s newest AI weather forecasting model predicts wind speed at 100 metres above the ground, roughly the height of a modern wind turbine. It also forecasts cloud cover and how much sunlight...",
-      "category": "World News",
-      "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/Screenshot-2026-09-07-at-10.59.24-AM.png",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [
-          "Google"
-        ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "YouTube Appears in 53% of Google AI Overviews for Vitamin and Supplement Searches",
-      "link": "https://www.artificialintelligence-news.com/news/youtube-appears-in-53-of-google-ai-overviews-for-vitamin-and-supplement-searches/",
-      "pubDate": "Tue, 08 Sep 2026 08:50:39 +0000",
-      "summary": "YouTube was the most frequently cited website in Google AI Overviews across a panel of vitamin and supplement searches, according to new research. The video platform appeared in 186 of 350...",
-      "category": "World News",
-      "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/raimond-klavins-n-7HTOiJPso-unsplash-scaled.jpg",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [
-          "Google"
-        ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Opaque recurrence, and other AI terms that you should probably know",
-      "link": "https://techcrunch.com/2026/09/07/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
-      "pubDate": "Mon, 07 Sep 2026 19:24:00 +0000",
-      "summary": "The rise of AI has brought an avalanche of new terms and slang. Here is a glossary with definitions of some of the most important words and phrases you might encounter.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/07/Chain-of-thought-picture.png?resize=1200,800",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "MG Ship adds AI route optimisation as logistics returns accelerate",
-      "link": "https://www.artificialintelligence-news.com/news/mg-ship-ai-route-optimisation-logistics-returns-accelerate/",
-      "pubDate": "Mon, 07 Sep 2026 13:01:23 +0000",
-      "summary": "MG Ship has introduced an AI route optimisation and carrier selection module as logistics deployments demonstrate rapid cost and time returns. The technical module targets global retailers and...",
-      "category": "World News",
-      "avatar": "char-hooded-head.png",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/09/mg-ship-ai-route-optimisation-logistics-supply-chain-artificial-intelligence-freight-transport-predictive-analytics.jpg",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Authors push back as publishers and agents make claims on Anthropic settlement",
-      "link": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
-      "pubDate": "Sun, 06 Sep 2026 20:47:37 +0000",
-      "summary": "Authors say publishers seem to be claiming more than their fair share of settlement payments.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2024/12/49688202642_09fd5ccc38_k.jpg?resize=1200,800",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [
-          "Anthropic"
-        ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Travis Kalanick’s Atoms might be getting into the robotaxi business",
-      "link": "https://techcrunch.com/2026/09/06/travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-business/",
-      "pubDate": "Sun, 06 Sep 2026 16:45:00 +0000",
-      "summary": "The Uber founder has said that Atoms will allow him to complete \"unfinished business.\"",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/08/travis-kalanick-fii.jpg?resize=1200,800",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [
-          "Robotics"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Seattle Times and Newsday are the latest publications to sue OpenAI and Microsoft",
-      "link": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
-      "pubDate": "Sat, 05 Sep 2026 22:49:55 +0000",
-      "summary": "Two more news organizations are suing OpenAI and Microsoft over the supposed use of their journalism to train AI.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2023/03/artifact-newspaper-icon.jpg?resize=1200,645",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [
-          "OpenAI",
-          "Microsoft"
-        ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "Hikers rescued after using Google Gemini for planning",
-      "link": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/",
-      "pubDate": "Sat, 05 Sep 2026 19:35:24 +0000",
-      "summary": "The sheriff’s office said the hikers “were advised by Gemini to bring far less food and water than their group required.\"",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2017/11/gettyimages-677147499.jpg?resize=1200,600",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [
-          "Google"
-        ],
-        "countries": [],
-        "technologies": [],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure",
-      "link": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/",
-      "pubDate": "Sat, 05 Sep 2026 18:05:27 +0000",
-      "summary": "OpenAI acknowledged its role in a recently reported incident where AI agents took over a German wiki forum.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/07/OpenAI-logo-in-Seoul.jpg?w=1024",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [
-          "OpenAI"
-        ],
-        "countries": [
-          "Germany"
-        ],
-        "technologies": [
-          "Agentic AI"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "XDOF, just 3 months out of stealth, is in talks for a Series B at a $1.2B valuation",
-      "link": "https://techcrunch.com/2026/09/04/xdof-just-three-months-out-of-stealth-is-in-talks-for-a-series-b-at-a-1-2b-valuation/",
-      "pubDate": "Fri, 04 Sep 2026 23:36:14 +0000",
-      "summary": "The round is being raised just months after the robot data startup exited from stealth.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/06/DSC_2479.jpg?resize=1200,800",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [],
-        "countries": [],
-        "technologies": [
-          "Robotics"
-        ],
-        "engine": "heuristic"
-      }
-    },
-    {
-      "title": "OpenAI’s rogue agents keep escaping, with no formal process to investigate them",
-      "link": "https://techcrunch.com/2026/09/04/openais-rogue-agents-keep-escaping-with-no-formal-process-to-investigate-them/",
-      "pubDate": "Fri, 04 Sep 2026 23:15:11 +0000",
-      "summary": "OpenAI’s latest agent swarm incident adds urgency to calls for independent investigations as researchers and lawmakers question whether AI labs should control the scope of their own safety reviews.",
-      "category": "Technology",
-      "avatar": "char-robot-head.png",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/05/ai-agents-GettyImages-2229880232.jpg?resize=1200,675",
-      "aiAnalysis": {
-        "impactLevel": null,
-        "sentimentScore": 0,
-        "companies": [
-          "OpenAI"
         ],
         "countries": [],
         "technologies": [],
