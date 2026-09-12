@@ -1375,8 +1375,7 @@ const VOTE_ICONS = {
 function initVerdict(newsItems) {
   const stage = document.getElementById('verdict-stage');
   const progress = document.getElementById('verdict-progress');
-  const skipBtn = document.getElementById('verdict-skip');
-  if (!stage || !progress || !skipBtn) return;
+  if (!stage || !progress) return;
 
   const queue = (newsItems || [])
     .filter((it) => it.aiAnalysis)
@@ -1654,6 +1653,29 @@ function initVerdict(newsItems) {
     });
     votePanel.appendChild(vote);
 
+    // Back / Skip live inside the voting panel so they read as part of the
+    // card rather than floating loose on the section background.
+    const nav = document.createElement('div');
+    nav.className = 'verdict-nav';
+
+    const backBtn = document.createElement('button');
+    backBtn.type = 'button';
+    backBtn.className = 'btn btn-outline verdict-nav-btn';
+    backBtn.textContent = '← Back';
+    backBtn.setAttribute('aria-label', 'Previous story');
+    backBtn.addEventListener('click', goBack);
+    nav.appendChild(backBtn);
+
+    const skipBtn = document.createElement('button');
+    skipBtn.type = 'button';
+    skipBtn.className = 'btn btn-outline verdict-nav-btn';
+    skipBtn.textContent = 'Skip →';
+    skipBtn.setAttribute('aria-label', 'Next story');
+    skipBtn.addEventListener('click', advance);
+    nav.appendChild(skipBtn);
+
+    votePanel.appendChild(nav);
+
     stage.appendChild(card);
 
     renderSummary(null, aiScore, myVote);
@@ -1696,13 +1718,15 @@ function initVerdict(newsItems) {
     setTimeout(advance, VERDICT_ADVANCE_DELAY_MS);
   }
 
-  function advance() {
+  function step(delta) {
     previousResult = { avatar: queue[index].avatar, image: queue[index].image, leading: computeLeading(currentCounts) };
-    index = (index + 1) % queue.length;
+    index = (index + delta + queue.length) % queue.length;
     renderCard();
   }
 
-  skipBtn.addEventListener('click', advance);
+  function advance() { step(1); }
+  function goBack() { step(-1); }
+
   renderCard();
 }
 

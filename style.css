@@ -841,14 +841,27 @@ img { max-width: 100%; display: block; }
   .verdict-results-mini-pct { font-size: 18px; }
 }
 
-.verdict-skip {
-  margin-top: 20px;
-  padding: 9px 22px;
-  font-size: 10px;
-  opacity: 0.7;
+.verdict-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
 }
 
-.verdict-skip:hover { opacity: 1; }
+.verdict-nav-btn {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px; /* comfortable tap target on a phone */
+  padding: 11px 18px;
+  font-size: 10.5px;
+  white-space: nowrap;
+  opacity: 0.75;
+}
+
+.verdict-nav-btn:hover { opacity: 1; }
 
 @media (min-width: 1024px) {
   .verdict-widget { zoom: 1.3; }
