@@ -2168,7 +2168,6 @@ const TREND_COLORS = { up: '#3987e5', down: '#d95926', flat: '#8b8499' };
 const TREND_SIGNAL_LABELS = {
   articles: 'News (Hacker News)',
   interest: 'Wikipedia views',
-  videos: 'YouTube videos',
   developers: 'Developer downloads',
 };
 const TRENDS_VIEW_KEY = 'ai_stream_trends_view';

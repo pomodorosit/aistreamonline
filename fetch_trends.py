@@ -16,8 +16,10 @@ Signals (all free and official):
               as Wikipedia, never as "searches".
   developers  SDK downloads, PyPI (pypistats.org) + npm (api.npmjs.org);
               each registry scored separately, then averaged
-  videos      YouTube videos published about the subject (YouTube Data API;
-              needs YOUTUBE_API_KEY, the same secret Featured Videos uses)
+
+YouTube search counts are deliberately not used: totalResults is a rough
+estimate that isn't comparable between a fresh date window and an older one.
+In testing it put almost every subject at the x4 clamp at once.
 
 Formula (published verbatim on the methodology page)
 -----------------------------------------------------
@@ -25,8 +27,6 @@ Formula (published verbatim on the methodology page)
   daily    recent = latest complete day
            base   = mean(same weekday in each of the 4 prior weeks)
            -- same-weekday because downloads and pageviews dip every weekend.
-           Videos use a trailing 28-day daily average instead: YouTube quota
-           only allows three counts per subject per day.
 
   m     = ln((recent + 1) / (base + 1)), clamped to [-ln 4, +ln 4]
   M     = mean of m over signals whose baseline clears its volume floor
@@ -40,7 +40,6 @@ defensible basis for valuing a pageview above or below a download.
 import datetime as dt
 import json
 import math
-import os
 import ssl
 import sys
 import time
@@ -56,11 +55,8 @@ except ImportError:
 UA = "aistreamonline-trends/1.0 (https://aistreamonline.com; contact@aistreamonline.com)"
 TIMEOUT = 20
 HISTORY_DAYS = 40  # 28-day baseline + 7-day window + lag headroom
-YT_KEY = os.environ.get("YOUTUBE_API_KEY", "").strip()
-
-# The YouTube search quota is shared with fetch_videos.py (~3,200 units/day
-# at the 3-hourly cadence). This index spends ~2,700, so it may only compute
-# once per day; later runs within the window are no-ops.
+# Every source publishes daily figures, so recomputing on each 3-hourly run
+# would only re-hit their APIs for the same numbers.
 MIN_HOURS_BETWEEN_RUNS = 20
 
 ALL_PYPI = ["openai", "anthropic", "google-genai", "mistralai", "xai-sdk"]
@@ -69,33 +65,33 @@ ALL_NPM = ["openai", "@anthropic-ai/sdk", "@google/genai", "@mistralai/mistralai
 OVERALL = {
     "id": "ai", "name": "AI overall",
     "wiki": ["Artificial_intelligence", "Large_language_model", "Generative_artificial_intelligence"],
-    "hn": "LLM", "yt": "artificial intelligence",
+    "hn": "LLM",
     "pypi": ALL_PYPI, "npm": ALL_NPM,
 }
 
 ENTITIES = [
     {"id": "openai", "name": "OpenAI", "wiki": ["OpenAI", "ChatGPT"],
-     "hn": "OpenAI", "yt": "OpenAI ChatGPT", "pypi": ["openai"], "npm": ["openai"]},
+     "hn": "OpenAI", "pypi": ["openai"], "npm": ["openai"]},
     {"id": "anthropic", "name": "Anthropic", "wiki": ["Anthropic", "Claude_(language_model)"],
-     "hn": "Anthropic", "yt": "Anthropic Claude", "pypi": ["anthropic"], "npm": ["@anthropic-ai/sdk"]},
+     "hn": "Anthropic", "pypi": ["anthropic"], "npm": ["@anthropic-ai/sdk"]},
     {"id": "google", "name": "Google Gemini", "wiki": ["Google_Gemini"],
-     "hn": "Google Gemini", "yt": "Google Gemini AI", "pypi": ["google-genai"], "npm": ["@google/genai"]},
+     "hn": "Google Gemini", "pypi": ["google-genai"], "npm": ["@google/genai"]},
     {"id": "meta", "name": "Meta Llama", "wiki": ["Llama_(language_model)"],
-     "hn": "Llama", "yt": "Meta Llama AI", "pypi": [], "npm": []},
+     "hn": "Llama", "pypi": [], "npm": []},
     {"id": "deepseek", "name": "DeepSeek", "wiki": ["DeepSeek"],
-     "hn": "DeepSeek", "yt": "DeepSeek", "pypi": [], "npm": []},
+     "hn": "DeepSeek", "pypi": [], "npm": []},
     {"id": "mistral", "name": "Mistral", "wiki": ["Mistral_AI"],
-     "hn": "Mistral", "yt": "Mistral AI", "pypi": ["mistralai"], "npm": ["@mistralai/mistralai"]},
+     "hn": "Mistral", "pypi": ["mistralai"], "npm": ["@mistralai/mistralai"]},
     {"id": "xai", "name": "xAI Grok", "wiki": ["Grok_(chatbot)", "XAI_(company)"],
-     "hn": "Grok", "yt": "xAI Grok", "pypi": ["xai-sdk"], "npm": []},
+     "hn": "Grok", "pypi": ["xai-sdk"], "npm": []},
     {"id": "nvidia", "name": "Nvidia", "wiki": ["Nvidia"],
-     "hn": "Nvidia", "yt": "Nvidia AI", "pypi": [], "npm": []},
+     "hn": "Nvidia", "pypi": [], "npm": []},
 ]
 
 # Baseline volume a signal needs (per day) before its momentum means anything.
 FLOORS = {
-    "daily":  {"articles": 3.0, "interest": 150.0, "developers": 1000.0, "videos": 5.0},
-    "weekly": {"articles": 1.0, "interest": 100.0, "developers": 500.0, "videos": 3.0},
+    "daily":  {"articles": 3.0, "interest": 150.0, "developers": 1000.0},
+    "weekly": {"articles": 1.0, "interest": 100.0, "developers": 500.0},
 }
 # Registry-wide counting changes. On 25 Aug 2026 the openai, anthropic,
 # google-genai and mistralai PyPI series all stepped down 30-58% on the same
@@ -202,28 +198,6 @@ def hn_series(query, start, end):
     return counts
 
 
-def yt_count(query, after_day, before_day):
-    """Videos published in [after_day, before_day). YouTube's totalResults is
-    an estimate, not an exact count; used only as momentum against its own
-    baseline, where a consistent estimation bias largely cancels out."""
-    params = {
-        "part": "id", "type": "video", "q": query, "maxResults": 1, "key": YT_KEY,
-        "publishedAfter": f"{after_day:%Y-%m-%d}T00:00:00Z",
-        "publishedBefore": f"{before_day:%Y-%m-%d}T00:00:00Z",
-    }
-    data = get_json("https://www.googleapis.com/youtube/v3/search?" + urllib.parse.urlencode(params))
-    return int(data.get("pageInfo", {}).get("totalResults", 0))
-
-
-def yt_windows(query, anchor):
-    one = dt.timedelta(days=1)
-    return {
-        "yesterday": yt_count(query, anchor, anchor + one),
-        "last7": yt_count(query, anchor - dt.timedelta(days=6), anchor + one),
-        "prior28": yt_count(query, anchor - dt.timedelta(days=34), anchor - dt.timedelta(days=6)),
-    }
-
-
 # -- the formula -------------------------------------------------------------
 
 def momentum(series, end, mode):
@@ -262,12 +236,6 @@ def developer_momentum(registries, end, mode, floor):
             "base": sum(r["base"] for r in scored)}
 
 
-def video_momentum(w, mode):
-    base = w["prior28"] / 28
-    recent = w["last7"] / 7 if mode == "weekly" else w["yesterday"]
-    return finish(recent, base)
-
-
 def finish(recent, base):
     m = math.log((recent + 1) / (base + 1))
     return {"m": max(-CLAMP, min(CLAMP, m)), "recent": recent, "base": base}
@@ -278,9 +246,7 @@ def score_subject(sig, anchor, mode):
     for name, data in sig.items():
         if not data:
             continue
-        if name == "videos":
-            r = video_momentum(data, mode)
-        elif name == "developers":
+        if name == "developers":
             r = developer_momentum(data, anchor, mode, FLOORS[mode][name])
         else:
             r = momentum(data, anchor, mode)
@@ -352,14 +318,9 @@ def fetch_subject(e, start, end):
 
 
 def recently_generated():
-    """True only for a recent file that already includes the videos signal.
-    The guard exists to protect YouTube quota, so a file computed without
-    videos (no key available) never blocks the next run from adding them."""
     try:
         with open("trends.json", encoding="utf-8") as f:
             data = json.load(f)
-        if not data.get("videosIncluded"):
-            return False
         age = dt.datetime.now(dt.timezone.utc) - dt.datetime.strptime(
             data.get("generatedAt", ""), "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=dt.timezone.utc)
         return age < dt.timedelta(hours=MIN_HOURS_BETWEEN_RUNS)
@@ -369,7 +330,7 @@ def recently_generated():
 
 def main():
     if "--force" not in sys.argv and recently_generated():
-        print(f"trends.json is under {MIN_HOURS_BETWEEN_RUNS}h old -- skipping (protects YouTube quota)")
+        print(f"trends.json is under {MIN_HOURS_BETWEEN_RUNS}h old -- skipping")
         return
 
     end = dt.datetime.now(dt.timezone.utc).date() - dt.timedelta(days=1)
@@ -383,19 +344,9 @@ def main():
         print("warning: no usable trend data this run; leaving trends.json untouched")
         return
 
-    if YT_KEY:
-        for e in subjects:
-            try:
-                all_sig[e["id"]]["videos"] = yt_windows(e["yt"], anchor)
-            except Exception as ex:
-                print(f"warning: youtube {e['id']}: {ex}")
-    else:
-        print("YOUTUBE_API_KEY not set -- scoring without the videos signal")
-
     out = {
         "generatedAt": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "dataThrough": anchor.isoformat(),
-        "videosIncluded": bool(YT_KEY),
         "overall": {},
         "daily": [], "weekly": [],
     }
@@ -412,8 +363,7 @@ def main():
     with open("trends.json", "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
     print(f"wrote trends.json: data through {anchor}, overall={sorted(out['overall'])}, "
-          f"{len(out['daily'])} daily / {len(out['weekly'])} weekly company scores, "
-          f"videos={'on' if YT_KEY else 'off'}")
+          f"{len(out['daily'])} daily / {len(out['weekly'])} weekly company scores")
 
 
 if __name__ == "__main__":

@@ -32,11 +32,9 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python fetch_videos.py
 
-      # Computes at most once per ~20h (it shares YouTube quota with the
-      # videos step above), so most 3-hourly runs are a quick no-op.
+      # Sources publish daily figures, so this recomputes at most once per
+      # ~20h; most 3-hourly runs are a quick no-op.
       - name: Compute AI trends index
-        env:
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python fetch_trends.py
 
       - name: Fetch live GitHub AI activity pulse
