@@ -2261,7 +2261,7 @@ function renderTrendGauge(host, overall, mode) {
   const score = Math.max(0, Math.min(100, overall.score));
   const dir = trendDirection(score);
   const svg = el('svg', {
-    viewBox: `0 0 ${W} ${H}`, role: 'img',
+    viewBox: `0 24 ${W} ${H - 24}`, role: 'img',
     'aria-label': `AI overall ${mode} trend score ${score} of 100, ${formatTrendChange(overall.changePct)} versus normal`,
   });
 

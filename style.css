@@ -3141,9 +3141,16 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 480px) {
-  .trends-section { padding: 48px 0 56px; }
+  .trends-section { padding: 32px 0 36px; }
+  .trends-section .section-head { margin-bottom: 26px; }
+  .trends-section .section-sub { font-size: 11px; letter-spacing: 1px; }
+  .trends-toggle { margin: -12px 0 14px; }
+  .trends-board { gap: 10px; }
+  .trends-gauge { max-width: 240px; }
+  .trends-gauge-change { margin-top: 0; font-size: 13px; }
+  .trends-list { gap: 2px; }
   /* proportional name column: a fixed 92px clipped "Google Gemini" */
-  .trends-row { grid-template-columns: minmax(0, 1.25fr) minmax(40px, 1fr) 28px 50px; gap: 8px; padding: 8px 6px; }
+  .trends-row { grid-template-columns: minmax(0, 1.25fr) minmax(40px, 1fr) 28px 50px; gap: 8px; padding: 6px 4px; }
   .trends-row-name { font-size: 13px; }
   .trends-row-change { font-size: 11.5px; }
 }
