@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-13T03:56:46Z",
+  "generatedAt": "2026-09-13T09:25:32Z",
   "videos": [
     {
       "videoId": "Y5rSSvXfL4g",
       "title": "5 open source tools that replaced my $320/mo AI stack...",
       "channelTitle": "Fireship",
       "publishedAt": "2026-09-07T17:24:51Z",
-      "viewCount": 1100227,
-      "likeCount": 18006,
+      "viewCount": 1103425,
+      "likeCount": 18046,
       "topic": "Large language models"
     },
     {
@@ -15,8 +15,8 @@
       "title": "New Absolute King of 3D & Blender - GPT-6 Astra",
       "channelTitle": "Stefan 3D AI",
       "publishedAt": "2026-09-07T13:59:20Z",
-      "viewCount": 519877,
-      "likeCount": 6612,
+      "viewCount": 523140,
+      "likeCount": 6642,
       "topic": "Generative AI"
     },
     {
@@ -24,17 +24,17 @@
       "title": "GPT-6 Astra Doesn't Need Your Instructions Anymore.",
       "channelTitle": "AI News & Strategy Daily | Nate B Jones",
       "publishedAt": "2026-09-06T17:00:38Z",
-      "viewCount": 382613,
-      "likeCount": 6454,
+      "viewCount": 383505,
+      "likeCount": 6462,
       "topic": "Agentic AI"
     },
     {
-      "videoId": "2_mJwvudG3Q",
-      "title": "America's New Humanoid Robot Is Shocking the Entire World",
-      "channelTitle": "States 2050",
-      "publishedAt": "2026-09-08T13:00:40Z",
-      "viewCount": 660543,
-      "likeCount": 10042,
+      "videoId": "7TKP3YRbVmM",
+      "title": "Unitree Brings Robots And Humans Together For An EPIC Routine! | Quarterfinals | AGT 2026",
+      "channelTitle": "America's Got Talent",
+      "publishedAt": "2026-09-09T02:23:35Z",
+      "viewCount": 1058542,
+      "likeCount": 10680,
       "topic": "Robotics"
     },
     {
@@ -42,17 +42,17 @@
       "title": "A Tiny Startup Helping Google Take On Nvidia Is Now Worth $18 Billion",
       "channelTitle": "Forbes",
       "publishedAt": "2026-09-08T16:30:35Z",
-      "viewCount": 75584,
-      "likeCount": 760,
+      "viewCount": 79208,
+      "likeCount": 783,
       "topic": "AI chips"
     },
     {
-      "videoId": "ji16F4NYRX4",
-      "title": "OpenAI's new warning",
-      "channelTitle": "CNBC Television",
-      "publishedAt": "2026-09-08T15:46:10Z",
-      "viewCount": 124424,
-      "likeCount": 847,
+      "videoId": "i30jVPqQeOM",
+      "title": "Ex-Anthropic insider tells CNN how AI could kill all humans by 2030",
+      "channelTitle": "CNN",
+      "publishedAt": "2026-09-10T02:00:38Z",
+      "viewCount": 5640931,
+      "likeCount": 40229,
       "topic": "AI safety"
     }
   ]

@@ -186,7 +186,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/united-arab-emirates</loc>
+    <loc>https://aistreamonline.com/country/malaysia</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -196,12 +196,12 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/malaysia</loc>
+    <loc>https://aistreamonline.com/country/singapore</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aistreamonline.com/country/singapore</loc>
+    <loc>https://aistreamonline.com/country/united-arab-emirates</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

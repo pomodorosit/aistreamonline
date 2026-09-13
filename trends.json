@@ -1,10 +1,11 @@
 {
- "generatedAt": "2026-09-13T09:04:04Z",
+ "generatedAt": "2026-09-13T09:26:16Z",
  "dataThrough": "2026-09-12",
+ "videosIncluded": true,
  "overall": {
   "daily": {
-   "score": 77,
-   "changePct": 35,
+   "score": 91,
+   "changePct": 77,
    "signals": {
     "interest": {
      "changePct": 67,
@@ -20,12 +21,17 @@
      "changePct": 16,
      "recent": 12651015,
      "baseline": 10941578
+    },
+    "videos": {
+     "changePct": 300,
+     "recent": 72693,
+     "baseline": 15982
     }
    }
   },
   "weekly": {
-   "score": 68,
-   "changePct": 21,
+   "score": 90,
+   "changePct": 75,
    "signals": {
     "interest": {
      "changePct": 36,
@@ -36,6 +42,11 @@
      "changePct": 7,
      "recent": 37,
      "baseline": 35
+    },
+    "videos": {
+     "changePct": 265,
+     "recent": 58376,
+     "baseline": 15982
     }
    }
   }
@@ -44,8 +55,8 @@
   {
    "id": "anthropic",
    "name": "Anthropic",
-   "score": 92,
-   "changePct": 85,
+   "score": 96,
+   "changePct": 125,
    "signals": {
     "interest": {
      "changePct": 183,
@@ -61,14 +72,19 @@
      "changePct": 15,
      "recent": 4303398,
      "baseline": 3738678
+    },
+    "videos": {
+     "changePct": 300,
+     "recent": 19162,
+     "baseline": 1883
     }
    }
   },
   {
    "id": "google",
    "name": "Google Gemini",
-   "score": 88,
-   "changePct": 65,
+   "score": 96,
+   "changePct": 122,
    "signals": {
     "interest": {
      "changePct": 136,
@@ -79,14 +95,19 @@
      "changePct": 15,
      "recent": 2911216,
      "baseline": 2521022
+    },
+    "videos": {
+     "changePct": 300,
+     "recent": 22354,
+     "baseline": 2422
     }
    }
   },
   {
    "id": "openai",
    "name": "OpenAI",
-   "score": 81,
-   "changePct": 43,
+   "score": 92,
+   "changePct": 85,
    "signals": {
     "interest": {
      "changePct": 71,
@@ -102,50 +123,19 @@
      "changePct": 16,
      "recent": 4191645,
      "baseline": 3620746
-    }
-   }
-  },
-  {
-   "id": "xai",
-   "name": "xAI Grok",
-   "score": 74,
-   "changePct": 30,
-   "signals": {
-    "interest": {
-     "changePct": 46,
-     "recent": 2540,
-     "baseline": 1744
     },
-    "articles": {
-     "changePct": 16,
-     "recent": 15,
-     "baseline": 13
-    }
-   }
-  },
-  {
-   "id": "mistral",
-   "name": "Mistral",
-   "score": 73,
-   "changePct": 28,
-   "signals": {
-    "interest": {
-     "changePct": 40,
-     "recent": 908,
-     "baseline": 648
-    },
-    "developers": {
-     "changePct": 17,
-     "recent": 1244756,
-     "baseline": 1061132
+    "videos": {
+     "changePct": 300,
+     "recent": 18852,
+     "baseline": 2092
     }
    }
   },
   {
    "id": "deepseek",
    "name": "DeepSeek",
-   "score": 68,
-   "changePct": 20,
+   "score": 91,
+   "changePct": 80,
    "signals": {
     "interest": {
      "changePct": 54,
@@ -156,14 +146,19 @@
      "changePct": -6,
      "recent": 3,
      "baseline": 3
+    },
+    "videos": {
+     "changePct": 300,
+     "recent": 14164,
+     "baseline": 1833
     }
    }
   },
   {
    "id": "nvidia",
    "name": "Nvidia",
-   "score": 59,
-   "changePct": 10,
+   "score": 89,
+   "changePct": 69,
    "signals": {
     "interest": {
      "changePct": -6,
@@ -174,6 +169,75 @@
      "changePct": 28,
      "recent": 7,
      "baseline": 5
+    },
+    "videos": {
+     "changePct": 300,
+     "recent": 24385,
+     "baseline": 2362
+    }
+   }
+  },
+  {
+   "id": "xai",
+   "name": "xAI Grok",
+   "score": 84,
+   "changePct": 51,
+   "signals": {
+    "interest": {
+     "changePct": 46,
+     "recent": 2540,
+     "baseline": 1744
+    },
+    "articles": {
+     "changePct": 16,
+     "recent": 15,
+     "baseline": 13
+    },
+    "videos": {
+     "changePct": 101,
+     "recent": 2758,
+     "baseline": 1368
+    }
+   }
+  },
+  {
+   "id": "mistral",
+   "name": "Mistral",
+   "score": 51,
+   "changePct": 1,
+   "signals": {
+    "interest": {
+     "changePct": 40,
+     "recent": 908,
+     "baseline": 648
+    },
+    "developers": {
+     "changePct": 17,
+     "recent": 1244756,
+     "baseline": 1061132
+    },
+    "videos": {
+     "changePct": -38,
+     "recent": 686,
+     "baseline": 1101
+    }
+   }
+  },
+  {
+   "id": "meta",
+   "name": "Meta Llama",
+   "score": 21,
+   "changePct": -29,
+   "signals": {
+    "interest": {
+     "changePct": 5,
+     "recent": 388,
+     "baseline": 370
+    },
+    "videos": {
+     "changePct": -52,
+     "recent": 719,
+     "baseline": 1484
     }
    }
   }
@@ -182,8 +246,8 @@
   {
    "id": "anthropic",
    "name": "Anthropic",
-   "score": 92,
-   "changePct": 83,
+   "score": 96,
+   "changePct": 119,
    "signals": {
     "interest": {
      "changePct": 91,
@@ -191,17 +255,22 @@
      "baseline": 6967
     },
     "articles": {
-     "changePct": 75,
+     "changePct": 72,
      "recent": 19,
-     "baseline": 10
+     "baseline": 11
+    },
+    "videos": {
+     "changePct": 222,
+     "recent": 6057,
+     "baseline": 1883
     }
    }
   },
   {
    "id": "mistral",
    "name": "Mistral",
-   "score": 90,
-   "changePct": 73,
+   "score": 94,
+   "changePct": 102,
    "signals": {
     "interest": {
      "changePct": 68,
@@ -209,17 +278,22 @@
      "baseline": 867
     },
     "articles": {
-     "changePct": 78,
+     "changePct": 86,
      "recent": 4,
      "baseline": 2
+    },
+    "videos": {
+     "changePct": 165,
+     "recent": 2917,
+     "baseline": 1101
     }
    }
   },
   {
    "id": "google",
    "name": "Google Gemini",
-   "score": 80,
-   "changePct": 42,
+   "score": 93,
+   "changePct": 89,
    "signals": {
     "interest": {
      "changePct": 90,
@@ -230,14 +304,19 @@
      "changePct": 6,
      "recent": 2,
      "baseline": 1
+    },
+    "videos": {
+     "changePct": 236,
+     "recent": 8134,
+     "baseline": 2422
     }
    }
   },
   {
    "id": "openai",
    "name": "OpenAI",
-   "score": 78,
-   "changePct": 38,
+   "score": 93,
+   "changePct": 94,
    "signals": {
     "interest": {
      "changePct": 30,
@@ -248,14 +327,19 @@
      "changePct": 46,
      "recent": 30,
      "baseline": 20
+    },
+    "videos": {
+     "changePct": 286,
+     "recent": 8078,
+     "baseline": 2092
     }
    }
   },
   {
    "id": "deepseek",
    "name": "DeepSeek",
-   "score": 73,
-   "changePct": 29,
+   "score": 89,
+   "changePct": 67,
    "signals": {
     "interest": {
      "changePct": 29,
@@ -263,17 +347,22 @@
      "baseline": 1994
     },
     "articles": {
-     "changePct": 29,
+     "changePct": 31,
      "recent": 6,
      "baseline": 4
+    },
+    "videos": {
+     "changePct": 177,
+     "recent": 5081,
+     "baseline": 1833
     }
    }
   },
   {
    "id": "xai",
    "name": "xAI Grok",
-   "score": 61,
-   "changePct": 11,
+   "score": 80,
+   "changePct": 41,
    "signals": {
     "interest": {
      "changePct": 36,
@@ -284,6 +373,34 @@
      "changePct": -9,
      "recent": 17,
      "baseline": 18
+    },
+    "videos": {
+     "changePct": 126,
+     "recent": 3092,
+     "baseline": 1368
+    }
+   }
+  },
+  {
+   "id": "nvidia",
+   "name": "Nvidia",
+   "score": 71,
+   "changePct": 25,
+   "signals": {
+    "interest": {
+     "changePct": -12,
+     "recent": 4727,
+     "baseline": 5344
+    },
+    "articles": {
+     "changePct": -42,
+     "recent": 4,
+     "baseline": 8
+    },
+    "videos": {
+     "changePct": 279,
+     "recent": 8954,
+     "baseline": 2362
     }
    }
   },
@@ -302,24 +419,11 @@
      "changePct": -4,
      "recent": 2,
      "baseline": 2
-    }
-   }
-  },
-  {
-   "id": "nvidia",
-   "name": "Nvidia",
-   "score": 21,
-   "changePct": -29,
-   "signals": {
-    "interest": {
-     "changePct": -12,
-     "recent": 4727,
-     "baseline": 5344
     },
-    "articles": {
-     "changePct": -42,
-     "recent": 4,
-     "baseline": 8
+    "videos": {
+     "changePct": -4,
+     "recent": 1421,
+     "baseline": 1484
     }
    }
   }

@@ -2,6 +2,46 @@
   "date": "2026-09-13",
   "items": [
     {
+      "title": "Altman, Musk, and Hassabis back Amodei's call to add independent oversight",
+      "link": "https://the-decoder.com/altman-musk-and-hassabis-back-amodeis-call-to-add-independent-oversight/",
+      "pubDate": "Sun, 13 Sep 2026 08:53:00 +0000",
+      "summary": "Sam Altman, Elon Musk, and Demis Hassabis back Dario Amodei's call to slow down AI development, at least in part. Altman says OpenAI is pushing its IPO to 2027 over safety concerns. The article...",
+      "category": "Technology",
+      "avatar": "char-mustache-head.png",
+      "image": "https://the-decoder.com/wp-content/uploads/2026/09/RSI_recursive_self_improvement.png",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": -1,
+        "companies": [
+          "OpenAI"
+        ],
+        "countries": [],
+        "technologies": [],
+        "engine": "heuristic"
+      }
+    },
+    {
+      "title": "Beijing pushes AI-assisted chip design as part of self-sufficiency drive",
+      "link": "https://www.scmp.com/tech/tech-trends/article/3367245/beijing-pushes-ai-assisted-chip-design-part-self-sufficiency-drive?utm_source=rss_feed",
+      "pubDate": "Sun, 13 Sep 2026 06:00:08 +0000",
+      "summary": "Artificial intelligence agents are increasingly taking the wheel in designing China’s next-generation semiconductors, as Beijing and domestic technology firms accelerate efforts to integrate AI into...",
+      "category": "World News",
+      "avatar": "char-hooded-head.png",
+      "image": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/09/11/d324aac2-fd0e-4aa9-99d3-0fbbe929fd3e_777f3f1e.jpg?itok=umpy1aG2&v=1789129887",
+      "aiAnalysis": {
+        "impactLevel": null,
+        "sentimentScore": 0,
+        "companies": [],
+        "countries": [
+          "China"
+        ],
+        "technologies": [
+          "AI chips"
+        ],
+        "engine": "heuristic"
+      }
+    },
+    {
       "title": "The US and China are racing to build ‘self-improving AI’. Here’s what’s at stake",
       "link": "https://www.scmp.com/tech/big-tech/article/3367237/us-and-china-are-racing-build-self-improving-ai-heres-whats-stake?utm_source=rss_feed",
       "pubDate": "Sun, 13 Sep 2026 00:00:10 +0000",
