@@ -32,6 +32,13 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python fetch_videos.py
 
+      # Computes at most once per ~20h (it shares YouTube quota with the
+      # videos step above), so most 3-hourly runs are a quick no-op.
+      - name: Compute AI trends index
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python fetch_trends.py
+
       - name: Fetch live GitHub AI activity pulse
         run: python fetch_github_pulse.py
 
@@ -50,7 +57,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
 
           git add news.json stocks.json archive/ country/ company/ companies.html sitemap.xml
-          for f in videos.json github_pulse.json podcasts.json ai_companies_by_country.json ai_companies.json; do
+          for f in videos.json github_pulse.json podcasts.json ai_companies_by_country.json ai_companies.json trends.json; do
             if [ -f "$f" ]; then
               git add "$f"
             fi

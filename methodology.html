@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=97">
+<link rel="stylesheet" href="style.css?v=98">
 </head>
 <body>
 
@@ -74,13 +74,27 @@
       <p>Each story shows two independent things, kept visually separate: an automated sentiment read (see section 3) and a reader poll asking "How will this affect people?" with Positive / Negative / Not Sure as answers.</p>
       <p>The poll is backed by a real shared counter with basic per-IP rate limiting and input validation on the server. When that backend isn't attached, the widget shows "Your reaction: [your answer]" instead of a fabricated or purely-local "community" figure — your own answer is never presented as if it represents other readers. <strong>Honest limitation:</strong> duplicate-vote prevention is per-browser only — nothing stops the same person from answering again in a different browser or after clearing site data. This is a lightweight reaction poll, not a scientifically controlled survey.</p>
 
-      <h2>9. Update frequency</h2>
-      <p>News, stock quotes, videos, GitHub activity, podcasts, and AI company counts all refresh automatically every 3 hours via a scheduled job. The Top AI Platforms / Top AI Voices lists are editorial and updated periodically by hand, not on a fixed schedule.</p>
+      <h2 id="trends">9. AI Trends Index</h2>
+      <p>The index measures how much attention a subject is getting right now <em>compared with its own normal</em> — not how big it is. ChatGPT's Wikipedia page gets roughly 70 times Claude's traffic, so ranking raw volume would simply rank size. Every signal is converted into momentum against that same subject's own history, which puts large and small players on one comparable scale.</p>
+      <p><strong>Signals.</strong> Up to four, all from free, official sources: <strong>news</strong> — Hacker News stories mentioning the subject; <strong>Wikipedia views</strong> of its company and product pages; <strong>YouTube</strong> — videos published about it; and <strong>developer downloads</strong> of its SDKs from PyPI and npm. Each registry is scored separately and the two are averaged, so an outage at one registry doesn't void the signal.</p>
+      <p><strong>Formula.</strong> For each signal, a recent value is compared with a baseline:</p>
+      <ul>
+        <li><strong>Weekly:</strong> the average of the last 7 days against the average of the 28 days before them.</li>
+        <li><strong>Daily:</strong> the latest complete day against the average of the same weekday in each of the four prior weeks — downloads and pageviews dip every weekend, so a plain average would read every Sunday as a collapse. YouTube uses a trailing 28-day daily average instead.</li>
+      </ul>
+      <p>Momentum is <code>m = ln((recent + 1) / (baseline + 1))</code>, capped at a factor of 4 in either direction so a single freak day can't dominate. A subject's combined momentum <code>M</code> is the plain average of its qualifying signals, and the score is <code>round(50 + 50 × tanh(M / 0.5))</code>. <strong>50 means exactly normal</strong> for that subject; above means more attention than usual, below means less. A log ratio treats doubling and halving as equal and opposite, and tanh keeps the score on a bounded 0–100 scale.</p>
+      <p><strong>When a signal is left out.</strong> A signal only counts when its baseline clears a minimum daily volume — momentum measured on a handful of stories is noise — and when enough days of data are present. Below that it is excluded, never counted as zero. A subject needs at least two qualifying signals to be scored at all, which is why a company can appear in the weekly view but not the daily one.</p>
+      <p><strong>Source changes.</strong> When a data source changes how it counts — visible as several unrelated subjects stepping up or down on the same day and staying there — readings from before the change are excluded from baselines, so a new counting rule isn't reported as a real rise or fall.</p>
+      <p><strong>Weighting.</strong> Signals are weighted equally. There's no defensible basis for claiming a pageview is worth more or less than a download, so we don't pretend otherwise.</p>
+      <p><strong>Known limitations, stated plainly:</strong> Wikipedia views are a proxy for public search interest, not search data — Google Trends has no public API. YouTube's result counts are estimates rather than exact tallies; comparing each subject only against its own history cancels much of that bias, but not all of it. Hacker News skews toward a technical, English-speaking audience. Download counts include automated installs from build systems, so they track developer activity rather than individual people. The index is a measure of attention, not of quality, sentiment, or market value.</p>
 
-      <h2>10. What we deliberately don't do</h2>
+      <h2>10. Update frequency</h2>
+      <p>News, stock quotes, videos, GitHub activity, podcasts, and AI company counts all refresh automatically every 3 hours via a scheduled job. The AI Trends Index is recalculated once a day, since its underlying sources publish daily figures. The Top AI Platforms / Top AI Voices lists are editorial and updated periodically by hand, not on a fixed schedule.</p>
+
+      <h2>11. What we deliberately don't do</h2>
       <p>We don't fabricate metrics to fill a gap. Where we don't have a reliable free data source — for example, a genuine live count of "how many people use AI worldwide," or a comprehensive count of AI companies from trademark or social-media data — we say so and leave the metric out, rather than presenting an invented number as fact.</p>
 
-      <h2>11. Questions or corrections</h2>
+      <h2>12. Questions or corrections</h2>
       <p>If you spot a data error or have a source suggestion, contact us at <a href="mailto:contact@aistreamonline.com">contact@aistreamonline.com</a>.</p>
     </div>
   </section>

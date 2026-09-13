@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=97">
+<link rel="stylesheet" href="style.css?v=98">
 
 <!-- Google Analytics 4 is loaded only after cookie consent -- see initAnalyticsConsent() in script.js.
      Replace G-XXXXXXXXXX in script.js with your real Measurement ID from analytics.google.com -->
@@ -84,6 +84,24 @@
   </div>
 
   <section class="hero featured-hero" id="featured-hero"><!--SSR:HERO:START--><img class="featured-hero-bg" id="featured-hero-bg" alt="" src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/STK485_STK414_AI_SAFETY_C.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200" style="display:block"><div class="featured-hero-scrim"></div><div class="wrap hero-inner"><p class="hero-eyebrow">Top Story</p><span class="news-tag hero-tag" id="featured-hero-tag">Technology</span><h1 class="hero-title" id="featured-hero-title">Anthropic CEO says it’s time to pump the brakes on AI</h1><p class="hero-sub" id="featured-hero-sub">Anthropic CEO Dario Amodei says the time has come to slow down AI development and will give third-party evaluators like METR access to its models to help ensure its &quot;adherence to safety practices and...</p><div class="related-sources hero-related-sources" id="featured-hero-related"></div><div class="hero-cta"><a class="btn btn-gold" id="featured-hero-link" href="https://www.theverge.com/ai-artificial-intelligence/994337/anthropic-ceo-slow-down-ai-development" rel="noopener noreferrer nofollow" target="_blank">Read Full Story</a><a href="#news" class="btn btn-outline">More News</a><a href="#verdict" class="btn btn-outline">What Do You Think? →</a></div></div><!--SSR:HERO:END--></section>
+
+  <section id="trends" class="section trends-section" hidden>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>AI Trends Index</h2>
+        <p class="section-sub">How much attention AI is getting right now, against its own normal — news, Wikipedia, YouTube &amp; developer downloads</p>
+      </div>
+      <div class="coverage-toggle trends-toggle" role="group" aria-label="Index period">
+        <button type="button" class="coverage-toggle-btn is-active" id="trends-view-daily" aria-pressed="true">Daily</button>
+        <button type="button" class="coverage-toggle-btn" id="trends-view-weekly" aria-pressed="false">Weekly</button>
+      </div>
+      <div class="trends-board">
+        <div class="trends-gauge" id="trends-gauge"></div>
+        <ol class="trends-list" id="trends-list"></ol>
+      </div>
+      <p class="trends-note" id="trends-note"></p>
+    </div>
+  </section>
 
   <div class="return-banner" id="return-banner" hidden></div>
 
@@ -471,6 +489,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
 <script src="share.js"></script>
-<script src="script.js?v=65"></script>
+<script src="script.js?v=66"></script>
 </body>
 </html>

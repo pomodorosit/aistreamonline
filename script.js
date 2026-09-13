@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initRadio();
   initJokes();
   initCoverageChart();
+  initTrends();
 });
 
 const YOUTUBE_ID_RE = /^[\w-]{11}$/;
@@ -2155,4 +2156,220 @@ function initCoverageToggle() {
   let saved = null;
   try { saved = localStorage.getItem(COVERAGE_VIEW_KEY); } catch (e) { /* ignore */ }
   if (saved === 'pie') setView('pie');
+}
+
+
+// AI Trends Index -- scores computed once a day by fetch_trends.py.
+// Diverging job (above/below each subject's own normal), so: two poles of
+// equal lightness plus a neutral grey midpoint, validated on this surface.
+// Values and labels stay in ink; only the marks carry direction colour, and
+// every number is printed, so nothing is encoded by colour alone.
+const TREND_COLORS = { up: '#3987e5', down: '#d95926', flat: '#8b8499' };
+const TREND_SIGNAL_LABELS = {
+  articles: 'News (Hacker News)',
+  interest: 'Wikipedia views',
+  videos: 'YouTube videos',
+  developers: 'Developer downloads',
+};
+const TRENDS_VIEW_KEY = 'ai_stream_trends_view';
+
+function trendDirection(score) {
+  if (score >= 53) return 'up';
+  if (score <= 47) return 'down';
+  return 'flat';
+}
+
+function formatTrendChange(pct) {
+  if (pct === 0) return '0%';
+  return (pct > 0 ? '+' : '−') + Math.abs(pct) + '%';
+}
+
+function initTrends() {
+  const section = document.getElementById('trends');
+  const gauge = document.getElementById('trends-gauge');
+  const list = document.getElementById('trends-list');
+  const note = document.getElementById('trends-note');
+  const dailyBtn = document.getElementById('trends-view-daily');
+  const weeklyBtn = document.getElementById('trends-view-weekly');
+  if (!section || !gauge || !list || !note || !dailyBtn || !weeklyBtn) return;
+
+  fetch('trends.json', { cache: 'no-store' })
+    .then((res) => {
+      if (!res.ok) throw new Error('trends.json not available');
+      return res.json();
+    })
+    .then((data) => {
+      const hasMode = (m) => (data.overall && data.overall[m]) || (Array.isArray(data[m]) && data[m].length);
+      if (!hasMode('daily') && !hasMode('weekly')) return;
+
+      function render(mode) {
+        const overall = data.overall ? data.overall[mode] : null;
+        renderTrendGauge(gauge, overall, mode);
+        renderTrendList(list, Array.isArray(data[mode]) ? data[mode] : []);
+        const on = mode === 'daily';
+        dailyBtn.classList.toggle('is-active', on);
+        weeklyBtn.classList.toggle('is-active', !on);
+        dailyBtn.setAttribute('aria-pressed', String(on));
+        weeklyBtn.setAttribute('aria-pressed', String(!on));
+        try { localStorage.setItem(TRENDS_VIEW_KEY, mode); } catch (e) { /* ignore */ }
+      }
+
+      dailyBtn.addEventListener('click', () => render('daily'));
+      weeklyBtn.addEventListener('click', () => render('weekly'));
+
+      let mode = 'daily';
+      try { if (localStorage.getItem(TRENDS_VIEW_KEY) === 'weekly') mode = 'weekly'; } catch (e) { /* ignore */ }
+      if (!hasMode(mode)) mode = mode === 'daily' ? 'weekly' : 'daily';
+      render(mode);
+
+      const through = new Date(data.dataThrough + 'T00:00:00Z');
+      const label = isNaN(through) ? data.dataThrough
+        : through.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+      note.innerHTML =
+        '50 = normal for that subject; above means more attention than usual, below means less. ' +
+        'Daily compares the latest day with the same weekday in the prior 4 weeks; weekly compares the last 7 days with the 28 before. ' +
+        'Data through ' + label + ', updated daily. ' +
+        '<a href="methodology.html#trends">How the index is calculated</a>.';
+      section.hidden = false;
+    })
+    .catch(() => {
+      // stay hidden rather than show an empty gauge
+    });
+}
+
+function renderTrendGauge(host, overall, mode) {
+  host.innerHTML = '';
+  if (!overall) return;
+
+  const SVG = 'http://www.w3.org/2000/svg';
+  const W = 300, H = 186, CX = 150, CY = 160, R = 118;
+  const el = (tag, attrs) => {
+    const n = document.createElementNS(SVG, tag);
+    Object.entries(attrs).forEach(([k, v]) => n.setAttribute(k, v));
+    return n;
+  };
+  // value 0..100 -> point on the upper semicircle, 0 at the left end
+  const pt = (v) => {
+    const a = Math.PI * (1 - v / 100);
+    return [CX + R * Math.cos(a), CY - R * Math.sin(a)];
+  };
+  const arc = (a, b) => {
+    const [x0, y0] = pt(a), [x1, y1] = pt(b);
+    return `M ${x0.toFixed(2)} ${y0.toFixed(2)} A ${R} ${R} 0 0 1 ${x1.toFixed(2)} ${y1.toFixed(2)}`;
+  };
+
+  const score = Math.max(0, Math.min(100, overall.score));
+  const dir = trendDirection(score);
+  const svg = el('svg', {
+    viewBox: `0 0 ${W} ${H}`, role: 'img',
+    'aria-label': `AI overall ${mode} trend score ${score} of 100, ${formatTrendChange(overall.changePct)} versus normal`,
+  });
+
+  const defs = el('defs', {});
+  const grad = el('linearGradient', { id: 'trends-track-grad', x1: '0', x2: '1', y1: '0', y2: '0' });
+  [['0%', TREND_COLORS.down], ['50%', TREND_COLORS.flat], ['100%', TREND_COLORS.up]].forEach(([o, c]) => {
+    grad.appendChild(el('stop', { offset: o, 'stop-color': c }));
+  });
+  defs.appendChild(grad);
+  svg.appendChild(defs);
+
+  // faint full-range track, drawn as two quarter arcs (a single 180deg arc is ambiguous)
+  svg.appendChild(el('path', { class: 'trends-gauge-track', d: arc(0, 50), stroke: 'url(#trends-track-grad)', 'stroke-opacity': '0.28' }));
+  svg.appendChild(el('path', { class: 'trends-gauge-track', d: arc(50, 100), stroke: 'url(#trends-track-grad)', 'stroke-opacity': '0.28' }));
+
+  if (Math.abs(score - 50) >= 1) {
+    const [a, b] = score > 50 ? [50, score] : [score, 50];
+    svg.appendChild(el('path', { class: 'trends-gauge-fill', d: arc(a, b), stroke: TREND_COLORS[dir] }));
+  }
+
+  const [tx, ty] = pt(50);
+  svg.appendChild(el('line', { class: 'trends-gauge-tick', x1: tx, y1: ty - 13, x2: tx, y2: ty + 13 }));
+
+  const [mx, my] = pt(score);
+  svg.appendChild(el('circle', { cx: mx, cy: my, r: 9, fill: TREND_COLORS[dir], stroke: '#1C1440', 'stroke-width': 3 }));
+
+  const text = (cls, x, y, anchor, content) => {
+    const t = el('text', { class: cls, x, y, 'text-anchor': anchor });
+    t.textContent = content;
+    svg.appendChild(t);
+  };
+  text('trends-gauge-score', CX, CY - 22, 'middle', String(score));
+  text('trends-gauge-label', CX, CY + 4, 'middle', 'AI OVERALL');
+  text('trends-gauge-scale', CX - R, H - 4, 'middle', 'Cooling');
+  text('trends-gauge-scale', CX + R, H - 4, 'middle', 'Heating up');
+
+  host.appendChild(svg);
+
+  const change = document.createElement('p');
+  change.className = 'trends-gauge-change';
+  const arrow = document.createElement('span');
+  arrow.className = 'trends-arrow';
+  arrow.style.color = TREND_COLORS[dir];
+  arrow.textContent = dir === 'up' ? '▲' : dir === 'down' ? '▼' : '●';
+  change.appendChild(arrow);
+  change.appendChild(document.createTextNode(formatTrendChange(overall.changePct) + ' vs normal'));
+  host.appendChild(change);
+}
+
+function renderTrendList(list, rows) {
+  list.innerHTML = '';
+  rows.forEach((r) => {
+    const score = Math.max(0, Math.min(100, r.score));
+    const dir = trendDirection(score);
+    const li = document.createElement('li');
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'trends-row';
+    btn.setAttribute('aria-expanded', 'false');
+
+    const name = document.createElement('span');
+    name.className = 'trends-row-name';
+    name.textContent = r.name;
+
+    const meter = document.createElement('span');
+    meter.className = 'trends-meter';
+    const fill = document.createElement('span');
+    fill.className = 'trends-meter-fill';
+    fill.style.background = TREND_COLORS[dir];
+    const lo = Math.min(score, 50), hi = Math.max(score, 50);
+    fill.style.left = lo + '%';
+    fill.style.width = Math.max(hi - lo, 1) + '%';
+    meter.appendChild(fill);
+
+    const sc = document.createElement('span');
+    sc.className = 'trends-row-score';
+    sc.textContent = score;
+
+    const ch = document.createElement('span');
+    ch.className = 'trends-row-change';
+    const arrow = document.createElement('span');
+    arrow.className = 'trends-arrow';
+    arrow.style.color = TREND_COLORS[dir];
+    arrow.textContent = dir === 'up' ? '▲' : dir === 'down' ? '▼' : '●';
+    ch.appendChild(arrow);
+    ch.appendChild(document.createTextNode(formatTrendChange(r.changePct)));
+
+    btn.append(name, meter, sc, ch);
+
+    const detail = document.createElement('div');
+    detail.className = 'trends-row-detail';
+    detail.hidden = true;
+    const parts = Object.entries(r.signals || {}).map(([k, v]) =>
+      (TREND_SIGNAL_LABELS[k] || k) + ' ' + formatTrendChange(v.changePct));
+    detail.textContent = parts.length
+      ? 'What moved it: ' + parts.join(' · ')
+      : 'No signal breakdown available.';
+
+    btn.setAttribute('aria-label',
+      `${r.name}: score ${score}, ${formatTrendChange(r.changePct)} versus normal. Show breakdown.`);
+    btn.addEventListener('click', () => {
+      const open = detail.hidden;
+      detail.hidden = !open;
+      btn.setAttribute('aria-expanded', String(open));
+    });
+
+    li.append(btn, detail);
+    list.appendChild(li);
+  });
 }
