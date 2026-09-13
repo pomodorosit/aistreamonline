@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T22:54:04Z",
+  "generatedAt": "2026-09-13T03:56:51Z",
   "source": "Wikidata (companies tagged industry: artificial intelligence)",
   "countries": {
     "Germany": 46,
@@ -26,22 +26,22 @@
     "Cyprus": 3,
     "Romania": 4,
     "Turkey": 6,
-    "Indonesia": 4,
+    "Taiwan": 5,
+    "Poland": 7,
     "Saudi Arabia": 5,
+    "China": 5,
+    "Chile": 3,
+    "Japan": 9,
+    "Slovakia": 4,
+    "Sweden": 5,
+    "Lithuania": 6,
+    "Estonia": 3,
+    "United Arab Emirates": 13,
+    "Indonesia": 4,
     "Malaysia": 4,
     "Singapore": 13,
-    "Japan": 9,
-    "United Arab Emirates": 13,
-    "Poland": 7,
-    "Estonia": 3,
-    "Slovakia": 4,
-    "Chile": 3,
-    "Czech Republic": 7,
     "Russia": 3,
-    "Taiwan": 5,
-    "Argentina": 3,
-    "China": 5,
-    "Sweden": 5,
-    "Lithuania": 6
+    "Czech Republic": 7,
+    "Argentina": 3
   }
 }
